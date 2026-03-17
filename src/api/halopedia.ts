@@ -54,18 +54,18 @@ export async function fetchCategoryMembers(
   return (json.query?.categorymembers ?? []) as CategoryMember[];
 }
 
-/** Fetch page summary (extract + thumbnail) for one or more titles */
+/** Fetch page summary (extract + thumbnail) for one or more titles — max 50 per call */
 export async function fetchPageSummaries(titles: string[]): Promise<PageSummary[]> {
   if (titles.length === 0) return [];
   const url = buildUrl({
     action: 'query',
-    titles: titles.slice(0, 20).join('|'), // MediaWiki max 50, we use 20
+    titles: titles.slice(0, 50).join('|'),
     prop: 'extracts|pageimages|info',
     exintro: '1',
     explaintext: '1',
-    exsentences: '3',
+    exsentences: '6',
     piprop: 'thumbnail',
-    pithumbsize: '400',
+    pithumbsize: '500',
     inprop: 'url',
   });
   const res = await fetch(url);
@@ -73,6 +73,16 @@ export async function fetchPageSummaries(titles: string[]): Promise<PageSummary[
   const json = await res.json();
   const pages = json.query?.pages ?? {};
   return Object.values(pages).filter((p: unknown) => (p as { pageid?: number }).pageid !== -1) as PageSummary[];
+}
+
+/** Fetch summaries for a large list of titles, batching in groups of 50 */
+async function fetchPageSummariesBatched(titles: string[]): Promise<PageSummary[]> {
+  const results: PageSummary[] = [];
+  for (let i = 0; i < titles.length; i += 50) {
+    const batch = await fetchPageSummaries(titles.slice(i, i + 50));
+    results.push(...batch);
+  }
+  return results;
 }
 
 /** Fetch a single page */
@@ -146,7 +156,7 @@ export function pageToCharacter(page: PageSummary): Character {
     name: page.title,
     description: page.extract ?? '',
     imageUrl: page.thumbnail?.source,
-    species: inferSpecies(page.extract ?? ''),
+    species: inferSpecies(page.title, page.extract ?? ''),
     affiliation: inferFaction(page.title, page.extract ?? ''),
     appearances: [],
     wikiUrl: wikiUrl(page.title),
@@ -190,11 +200,19 @@ export function pageToGame(page: PageSummary): Game {
 
 function inferFaction(title: string, text: string): string {
   const combined = (title + ' ' + text).toLowerCase();
-  if (combined.includes('unsc') || combined.includes('human') || combined.includes('marine')) return 'UNSC';
-  if (combined.includes('covenant') || combined.includes('elite') || combined.includes('brute')) return 'Covenant';
-  if (combined.includes('forerunner') || combined.includes('promethean')) return 'Forerunner';
-  if (combined.includes('banished')) return 'Banished';
-  return 'Unknown';
+  if (combined.includes('unsc') || combined.includes('human') || combined.includes('marine') ||
+      combined.includes('oni') || combined.includes('spartan') || combined.includes('odst') ||
+      combined.includes('vtol') || combined.includes('warthog') || combined.includes('scorpion') ||
+      combined.includes('pelican') || combined.includes('hornet') || combined.includes('falcon') ||
+      combined.includes('mongoose') || combined.includes('elephant') || combined.includes('mammoth')) return 'UNSC';
+  if (combined.includes('covenant') || combined.includes('elite') || combined.includes('sangheili') ||
+      combined.includes('brute') || combined.includes('jiralhanae') || combined.includes('grunt') ||
+      combined.includes('unggoy') || combined.includes('hunter') || combined.includes('mgalekgolo') ||
+      combined.includes('banshee') || combined.includes('ghost') || combined.includes('wraith') ||
+      combined.includes('phantom') || combined.includes('spirit')) return 'Covenant';
+  if (combined.includes('forerunner') || combined.includes('promethean') || combined.includes('sentinel')) return 'Forerunner';
+  if (combined.includes('banished') || combined.includes('atriox') || combined.includes('escharum')) return 'Banished';
+  return '';
 }
 
 function inferWeaponType(title: string, text: string): string {
@@ -207,19 +225,37 @@ function inferWeaponType(title: string, text: string): string {
   if (combined.includes('sword') || combined.includes('blade') || combined.includes('hammer')) return 'Melee';
   if (combined.includes('grenade')) return 'Explosive';
   if (combined.includes('cannon') || combined.includes('turret')) return 'Heavy';
-  return 'Unknown';
+  return '';
 }
 
 function inferVehicleType(title: string, text: string): string {
   const combined = (title + ' ' + text).toLowerCase();
-  if (combined.includes('fighter') || combined.includes('banshee') || combined.includes('hornet') || combined.includes('pelican') || combined.includes('falcon')) return 'Air';
-  if (combined.includes('cruiser') || combined.includes('frigate') || combined.includes('destroyer') || combined.includes('ship') || combined.includes('carrier')) return 'Space';
+  if (combined.includes('vtol') || combined.includes('fighter') || combined.includes('banshee') ||
+      combined.includes('hornet') || combined.includes('pelican') || combined.includes('falcon') ||
+      combined.includes('wasp') || combined.includes('broadsword') || combined.includes('longsword')) return 'Air';
+  if (combined.includes('cruiser') || combined.includes('frigate') || combined.includes('destroyer') ||
+      combined.includes(' ship') || combined.includes('carrier') || combined.includes('corvette') ||
+      combined.includes('prowler')) return 'Space';
   if (combined.includes('boat') || combined.includes('naval') || combined.includes('submarine')) return 'Naval';
   return 'Ground';
 }
 
-function inferSpecies(_text: string): string {
-  return 'Unknown';
+function inferSpecies(title: string, text: string): string {
+  const combined = (title + ' ' + text).toLowerCase();
+  if (combined.includes('spartan') || combined.includes('human') || combined.includes('marine') ||
+      combined.includes('odst') || combined.includes('oni') || combined.includes('john-117') ||
+      combined.includes('master chief')) return 'Human';
+  if (combined.includes('sangheili') || combined.includes('elite')) return 'Sangheili';
+  if (combined.includes('jiralhanae') || combined.includes('brute')) return 'Jiralhanae';
+  if (combined.includes('unggoy') || combined.includes('grunt')) return 'Unggoy';
+  if (combined.includes('mgalekgolo') || combined.includes('hunter')) return 'Mgalekgolo';
+  if (combined.includes('kig-yar') || combined.includes('jackal') || combined.includes('skirmisher')) return 'Kig-Yar';
+  if (combined.includes('yanme\'e') || combined.includes('drone')) return 'Yanme\'e';
+  if (combined.includes('lekgolo')) return 'Lekgolo';
+  if (combined.includes('forerunner') || combined.includes('didact') || combined.includes('librarian')) return 'Forerunner';
+  if (combined.includes('flood') || combined.includes('gravemind')) return 'Flood';
+  if (combined.includes('monitor') || combined.includes('343 guilty') || combined.includes('343 spark') || combined.includes('cortana') || combined.includes('a.i.') || combined.includes(' ai ')) return 'AI';
+  return '';
 }
 
 // ── High-level category fetchers ──────────────────────────────────────────────
@@ -240,19 +276,70 @@ export async function fetchVehicles(limit = 20): Promise<Vehicle[]> {
   return pages.map(pageToVehicle);
 }
 
-export async function fetchCharacters(limit = 20): Promise<Character[]> {
-  const pages = await fetchCategoryAsSummaries('Characters', limit);
-  return pages.map(pageToCharacter);
+const CHARACTER_CATEGORIES: Array<{ category: string; species: string }> = [
+  { category: 'Human_characters',      species: 'Human'      },
+  { category: 'Sangheili_characters',  species: 'Sangheili'  },
+  { category: 'AI_characters',         species: 'AI'         },
+  { category: 'Jiralhanae_characters', species: 'Jiralhanae' },
+  { category: 'Forerunner_characters', species: 'Forerunner' },
+  { category: 'Unggoy_characters',     species: 'Unggoy'     },
+  { category: 'Kig-Yar_characters',    species: 'Kig-Yar'   },
+  { category: 'Flood_characters',      species: 'Flood'      },
+];
+
+export async function fetchCharacters(limitPerSpecies = 15): Promise<Character[]> {
+  // Fetch member lists from all species categories in parallel
+  const membersByCat = await Promise.all(
+    CHARACTER_CATEGORIES.map(({ category, species }) =>
+      fetchCategoryMembers(category, limitPerSpecies)
+        .then(members => ({ members, species }))
+        .catch(() => ({ members: [], species }))
+    )
+  );
+
+  // Merge all titles, deduplicate, track species per title
+  const seen = new Set<string>();
+  const allTitles: string[] = [];
+  const speciesMap: Record<string, string> = {};
+
+  for (const { members, species } of membersByCat) {
+    for (const m of members) {
+      if (!seen.has(m.title)) {
+        seen.add(m.title);
+        allTitles.push(m.title);
+        speciesMap[m.title] = species;
+      }
+    }
+  }
+
+  // Fetch all summaries in batches of 50
+  const summaries = await fetchPageSummariesBatched(allTitles);
+
+  return summaries.map(page => ({
+    ...pageToCharacter(page),
+    species: speciesMap[page.title] ?? inferSpecies(page.title, page.extract ?? ''),
+  }));
 }
 
-export async function fetchRaces(limit = 20): Promise<Race[]> {
-  const pages = await fetchCategoryAsSummaries('Sentient species', limit);
+export async function fetchRaces(limit = 30): Promise<Race[]> {
+  const pages = await fetchCategoryAsSummaries('Sapient_species', limit);
   return pages.map(pageToRace);
 }
 
-export async function fetchPlanets(limit = 20): Promise<Planet[]> {
-  const pages = await fetchCategoryAsSummaries('Locations', limit);
-  return pages.map(pageToPlanet);
+export async function fetchPlanets(limitPerCat = 30): Promise<Planet[]> {
+  const [planets, installations] = await Promise.all([
+    fetchCategoryMembers('Planets', limitPerCat).catch(() => []),
+    fetchCategoryMembers('Forerunner_installations', limitPerCat).catch(() => []),
+  ]);
+
+  const seen = new Set<string>();
+  const titles: string[] = [];
+  for (const m of [...planets, ...installations]) {
+    if (!seen.has(m.title)) { seen.add(m.title); titles.push(m.title); }
+  }
+
+  const summaries = await fetchPageSummariesBatched(titles);
+  return summaries.map(pageToPlanet);
 }
 
 export async function fetchGames(limit = 20): Promise<Game[]> {
