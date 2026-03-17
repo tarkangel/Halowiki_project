@@ -113,13 +113,14 @@ export async function searchPages(query: string, limit = 10): Promise<PageSummar
 // These transform raw wiki pages into typed domain objects.
 
 import type { Weapon, Vehicle, Character, Race, Planet, Game } from '../types';
+import generatedImages from '../generated-images.json';
+
+function generatedImage(title: string): string | undefined {
+  return (generatedImages as Record<string, string>)[title];
+}
 
 function slugify(title: string) {
   return title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-}
-
-function wikiUrl(title: string) {
-  return `https://www.halopedia.org/wiki/${encodeURIComponent(title.replace(/ /g, '_'))}`;
 }
 
 export function pageToWeapon(page: PageSummary): Weapon {
@@ -127,11 +128,10 @@ export function pageToWeapon(page: PageSummary): Weapon {
     id: slugify(page.title),
     name: page.title,
     description: page.extract ?? '',
-    imageUrl: page.thumbnail?.source,
+    imageUrl: page.thumbnail?.source ?? generatedImage(page.title),
     faction: inferFaction(page.title, page.extract ?? ''),
     type: inferWeaponType(page.title, page.extract ?? ''),
     appearances: [],
-    wikiUrl: wikiUrl(page.title),
   };
 }
 
@@ -140,11 +140,10 @@ export function pageToVehicle(page: PageSummary): Vehicle {
     id: slugify(page.title),
     name: page.title,
     description: page.extract ?? '',
-    imageUrl: page.thumbnail?.source,
+    imageUrl: page.thumbnail?.source ?? generatedImage(page.title),
     faction: inferFaction(page.title, page.extract ?? ''),
     type: inferVehicleType(page.title, page.extract ?? ''),
     appearances: [],
-    wikiUrl: wikiUrl(page.title),
   };
 }
 
@@ -153,11 +152,10 @@ export function pageToCharacter(page: PageSummary): Character {
     id: slugify(page.title),
     name: page.title,
     description: page.extract ?? '',
-    imageUrl: page.thumbnail?.source,
+    imageUrl: page.thumbnail?.source ?? generatedImage(page.title),
     species: inferSpecies(page.title, page.extract ?? ''),
     affiliation: inferFaction(page.title, page.extract ?? ''),
     appearances: [],
-    wikiUrl: wikiUrl(page.title),
   };
 }
 
@@ -166,10 +164,9 @@ export function pageToRace(page: PageSummary): Race {
     id: slugify(page.title),
     name: page.title,
     description: page.extract ?? '',
-    imageUrl: page.thumbnail?.source,
+    imageUrl: page.thumbnail?.source ?? generatedImage(page.title),
     affiliation: inferFaction(page.title, page.extract ?? ''),
     appearances: [],
-    wikiUrl: wikiUrl(page.title),
   };
 }
 
@@ -178,9 +175,8 @@ export function pageToPlanet(page: PageSummary): Planet {
     id: slugify(page.title),
     name: page.title,
     description: page.extract ?? '',
-    imageUrl: page.thumbnail?.source,
+    imageUrl: page.thumbnail?.source ?? generatedImage(page.title),
     appearances: [],
-    wikiUrl: wikiUrl(page.title),
   };
 }
 
@@ -190,7 +186,6 @@ export function pageToGame(page: PageSummary): Game {
     name: page.title,
     description: page.extract ?? '',
     imageUrl: page.thumbnail?.source,
-    wikiUrl: wikiUrl(page.title),
   };
 }
 

@@ -8,5 +8,4 @@ export interface Vehicle {
   crew?: number;
   armament?: string[];
   appearances: string[];
-  wikiUrl?: string;
 }

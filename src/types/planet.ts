@@ -7,5 +7,4 @@ export interface Planet {
   type?: string; // Terrestrial, Gas Giant, etc.
   significance?: string;
   appearances: string[];
-  wikiUrl?: string;
 }

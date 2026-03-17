@@ -20,7 +20,6 @@ interface WikiItem {
   crew?: number;
   armament?: string[];
   appearances?: string[];
-  wikiUrl?: string;
 }
 
 interface WikiGridProps {

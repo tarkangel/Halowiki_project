@@ -9,5 +9,4 @@ export interface Character {
   rank?: string;
   status?: 'Alive' | 'Deceased' | 'Unknown';
   appearances: string[];
-  wikiUrl?: string;
 }

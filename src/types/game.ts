@@ -7,5 +7,4 @@ export interface Game {
   developer?: string;
   publisher?: string;
   platforms?: string[];
-  wikiUrl?: string;
 }

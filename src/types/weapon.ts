@@ -9,5 +9,4 @@ export interface Weapon {
   range?: string;
   magazineSize?: number;
   appearances: string[]; // game titles
-  wikiUrl?: string;
 }

@@ -8,5 +8,4 @@ export interface Race {
   biology?: string;
   notableMembers?: string[];
   appearances: string[];
-  wikiUrl?: string;
 }
