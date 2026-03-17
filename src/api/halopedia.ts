@@ -77,12 +77,10 @@ export async function fetchPageSummaries(titles: string[]): Promise<PageSummary[
 
 /** Fetch summaries for a large list of titles, batching in groups of 50 */
 async function fetchPageSummariesBatched(titles: string[]): Promise<PageSummary[]> {
-  const results: PageSummary[] = [];
-  for (let i = 0; i < titles.length; i += 50) {
-    const batch = await fetchPageSummaries(titles.slice(i, i + 50));
-    results.push(...batch);
-  }
-  return results;
+  const batches: string[][] = [];
+  for (let i = 0; i < titles.length; i += 50) batches.push(titles.slice(i, i + 50));
+  const results = await Promise.all(batches.map(fetchPageSummaries));
+  return results.flat();
 }
 
 /** Fetch a single page */
@@ -266,14 +264,34 @@ async function fetchCategoryAsSummaries(category: string, limit = 20): Promise<P
   return fetchPageSummaries(titles);
 }
 
-export async function fetchWeapons(limit = 20): Promise<Weapon[]> {
-  const pages = await fetchCategoryAsSummaries('Weapons', limit);
-  return pages.map(pageToWeapon);
+export async function fetchWeapons(limitPerCat = 15): Promise<Weapon[]> {
+  const [unsc, covenant, forerunner] = await Promise.all([
+    fetchCategoryMembers('UNSC_infantry_weapons', limitPerCat).catch(() => []),
+    fetchCategoryMembers('Covenant_weapons', limitPerCat).catch(() => []),
+    fetchCategoryMembers('Forerunner_weapons', limitPerCat).catch(() => []),
+  ]);
+  const seen = new Set<string>();
+  const titles: string[] = [];
+  for (const m of [...unsc, ...covenant, ...forerunner]) {
+    if (!seen.has(m.title)) { seen.add(m.title); titles.push(m.title); }
+  }
+  const summaries = await fetchPageSummariesBatched(titles);
+  return summaries.map(pageToWeapon);
 }
 
-export async function fetchVehicles(limit = 20): Promise<Vehicle[]> {
-  const pages = await fetchCategoryAsSummaries('Vehicles', limit);
-  return pages.map(pageToVehicle);
+export async function fetchVehicles(limitPerCat = 20): Promise<Vehicle[]> {
+  const [unsc, covenant, banished] = await Promise.all([
+    fetchCategoryMembers('UNSC_vehicles', limitPerCat).catch(() => []),
+    fetchCategoryMembers('Covenant_vehicles', limitPerCat).catch(() => []),
+    fetchCategoryMembers('Banished_vehicles', limitPerCat).catch(() => []),
+  ]);
+  const seen = new Set<string>();
+  const titles: string[] = [];
+  for (const m of [...unsc, ...covenant, ...banished]) {
+    if (!seen.has(m.title)) { seen.add(m.title); titles.push(m.title); }
+  }
+  const summaries = await fetchPageSummariesBatched(titles);
+  return summaries.map(pageToVehicle);
 }
 
 const CHARACTER_CATEGORIES: Array<{ category: string; species: string }> = [
@@ -315,10 +333,23 @@ export async function fetchCharacters(limitPerSpecies = 15): Promise<Character[]
   // Fetch all summaries in batches of 50
   const summaries = await fetchPageSummariesBatched(allTitles);
 
-  return summaries.map(page => ({
-    ...pageToCharacter(page),
-    species: speciesMap[page.title] ?? inferSpecies(page.title, page.extract ?? ''),
-  }));
+  return summaries
+    .map(page => ({
+      ...pageToCharacter(page),
+      species: speciesMap[page.title] ?? inferSpecies(page.title, page.extract ?? ''),
+    }))
+    .filter(isUsableCharacter);
+}
+
+/** Returns false for stub/junk character entries not worth showing */
+function isUsableCharacter(c: Character): boolean {
+  // Must have a meaningful description
+  if (!c.description || c.description.trim().length < 80) return false;
+  // Must have either an image OR a real name (not a pure callsign/designation)
+  // Callsign pattern: "4 Charlie 27", "2 Lima 4", "'D'", "'S'", "1 Alpha 3"
+  const callsign = /^[\d\s'"`]+$|^\d[\w\s'-]{0,12}\d$|^'[A-Z]'$/;
+  if (callsign.test(c.name.trim())) return false;
+  return true;
 }
 
 export async function fetchRaces(limit = 30): Promise<Race[]> {
@@ -339,10 +370,106 @@ export async function fetchPlanets(limitPerCat = 30): Promise<Planet[]> {
   }
 
   const summaries = await fetchPageSummariesBatched(titles);
-  return summaries.map(pageToPlanet);
+  const result = summaries.map(pageToPlanet).filter(isUsablePlanet);
+
+  // Fill in images for planets that the page-image prop missed
+  const needsImage = result.filter(p => !p.imageUrl).map(p => p.name);
+  if (needsImage.length > 0) {
+    const fallbacks = await fetchFallbackImages(needsImage);
+    for (const p of result) {
+      if (!p.imageUrl) p.imageUrl = fallbacks.get(p.name);
+    }
+  }
+
+  return result;
 }
 
-export async function fetchGames(limit = 20): Promise<Game[]> {
-  const pages = await fetchCategoryAsSummaries('Halo games', limit);
-  return pages.map(pageToGame);
+/**
+ * For pages with no page-image set, walk the list of images embedded on the
+ * page and resolve the URL of the first non-icon image.
+ */
+async function fetchFallbackImages(pageNames: string[]): Promise<Map<string, string>> {
+  if (pageNames.length === 0) return new Map();
+
+  // Step 1: get image lists for each page (batch, max 50 titles)
+  const batches: string[][] = [];
+  for (let i = 0; i < pageNames.length; i += 50) batches.push(pageNames.slice(i, i + 50));
+
+  const titleToFile = new Map<string, string>();
+  await Promise.all(batches.map(async batch => {
+    const url = buildUrl({
+      action: 'query',
+      titles: batch.join('|'),
+      prop: 'images',
+      imlimit: '15',
+    });
+    const res = await fetch(url).catch(() => null);
+    if (!res?.ok) return;
+    const json = await res.json();
+    for (const page of Object.values(json.query?.pages ?? {}) as Array<{ title: string; images?: Array<{ title: string }> }>) {
+      if (!page.images?.length) continue;
+      // Skip wiki badges/decorations — prefer landscape/planet/installation art
+      const candidate = page.images.find(i =>
+        !/(icon|logo|flag|emblem|symbol|sigil|banner|seal|insignia|wikia|nav|stub|edit|canon|featured|article|disambig|delete|merge|cleanup|spoiler|ambox|tmbox|ombox|fmbox|cmbox|portal|award|rating|quality|tier|status|badge|tag|notice|warning|protected|locked)/i.test(i.title)
+      );
+      if (candidate) titleToFile.set(page.title, candidate.title);
+    }
+  }));
+
+  if (titleToFile.size === 0) return new Map();
+
+  // Step 2: resolve File: titles → actual CDN URLs
+  const fileNames = [...new Set(titleToFile.values())];
+  const fileToUrl = new Map<string, string>();
+  const fileBatches: string[][] = [];
+  for (let i = 0; i < fileNames.length; i += 50) fileBatches.push(fileNames.slice(i, i + 50));
+
+  await Promise.all(fileBatches.map(async batch => {
+    const url = buildUrl({
+      action: 'query',
+      titles: batch.join('|'),
+      prop: 'imageinfo',
+      iiprop: 'url',
+      iiurlwidth: '500',
+    });
+    const res = await fetch(url).catch(() => null);
+    if (!res?.ok) return;
+    const json = await res.json();
+    for (const page of Object.values(json.query?.pages ?? {}) as Array<{ title: string; imageinfo?: Array<{ thumburl?: string; url?: string }> }>) {
+      const imgUrl = page.imageinfo?.[0]?.thumburl ?? page.imageinfo?.[0]?.url;
+      if (imgUrl) fileToUrl.set(page.title, imgUrl);
+    }
+  }));
+
+  // Combine
+  const result = new Map<string, string>();
+  for (const [pageName, file] of titleToFile) {
+    const imgUrl = fileToUrl.get(file);
+    if (imgUrl) result.set(pageName, imgUrl);
+  }
+  return result;
+}
+
+const GENERIC_PLANET_NAMES = new Set([
+  'penal colony', 'agriculture world', 'human colonies',
+  'outer colonies', 'inner colonies',
+]);
+
+function isUsablePlanet(p: Planet): boolean {
+  if (GENERIC_PLANET_NAMES.has(p.name.toLowerCase())) return false;
+  if (!p.description || p.description.trim().length < 100) {
+    return !!p.imageUrl;
+  }
+  return true;
+}
+
+const JUNK_GAME_PATTERNS = /^User(Wiki)?:|cancelled|canceled|rejected|sequel|GURPS|Saga|game jam|pitch$/i;
+
+export async function fetchGames(): Promise<Game[]> {
+  const members = await fetchCategoryMembers('Halo_games', 50).catch(() => []);
+  const titles = members
+    .map(m => m.title)
+    .filter(t => !JUNK_GAME_PATTERNS.test(t));
+  const summaries = await fetchPageSummariesBatched(titles);
+  return summaries.map(pageToGame);
 }

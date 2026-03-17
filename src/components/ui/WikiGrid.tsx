@@ -69,79 +69,79 @@ function DetailPanel({ item, onClose }: { item: WikiItem; onClose: () => void })
   const fields = buildFields(item);
 
   return (
-    <>
-      {/* Backdrop */}
-      <motion.div
-        className="fixed inset-0 bg-black/60 z-40"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+    <motion.div
+      className="fixed inset-0 z-50 flex flex-col"
+      initial={{ y: '100%' }}
+      animate={{ y: 0 }}
+      exit={{ y: '100%' }}
+      transition={{ type: 'spring', damping: 32, stiffness: 280 }}
+    >
+      {/* Full-screen image background */}
+      {item.imageUrl ? (
+        <img
+          src={item.imageUrl}
+          alt={item.name}
+          className="absolute inset-0 w-full h-full object-contain"
+          style={{ background: '#000' }}
+        />
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950 flex items-center justify-center">
+          <span
+            className="text-zinc-700 text-[20vw] font-black select-none"
+            style={{ fontFamily: "'Orbitron', sans-serif" }}
+          >
+            {item.name.charAt(0)}
+          </span>
+        </div>
+      )}
+
+      {/* Close button — top right, always visible */}
+      <button
         onClick={onClose}
-      />
-
-      {/* Panel */}
-      <motion.div
-        className="fixed top-0 right-0 h-full w-full max-w-md bg-zinc-900 border-l border-zinc-700 z-50 overflow-y-auto"
-        initial={{ x: '100%' }}
-        animate={{ x: 0 }}
-        exit={{ x: '100%' }}
-        transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+        className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center transition-colors"
+        aria-label="Close"
       >
-        {/* Image / placeholder */}
-        {item.imageUrl ? (
-          <img
-            src={item.imageUrl}
-            alt={item.name}
-            className="w-full h-56 object-cover"
-          />
-        ) : (
-          <div className="w-full h-56 bg-gradient-to-br from-zinc-700 to-zinc-900 flex items-center justify-center">
-            <span className="text-zinc-500 text-6xl font-bold tracking-tight select-none">
-              {item.name.charAt(0)}
-            </span>
-          </div>
-        )}
+        ✕
+      </button>
 
-        <div className="p-6">
-          {/* Header */}
-          <div className="flex items-start justify-between gap-3 mb-1">
-            <h2 className="text-2xl font-bold text-white leading-tight">{item.name}</h2>
-            <button
-              onClick={onClose}
-              className="text-zinc-400 hover:text-white transition-colors shrink-0 mt-1"
-              aria-label="Close"
+      {/* Click upper area to close */}
+      <div className="flex-1 cursor-pointer" onClick={onClose} />
+
+      {/* Bottom 1/3 — floating text over image */}
+      <div className="relative z-10 max-h-[40vh] overflow-y-auto"
+        style={{ background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.75) 18%, rgba(0,0,0,0.95) 40%)' }}
+      >
+        <div className="px-6 pt-10 pb-8">
+          {/* Title + badge */}
+          <div className="flex items-center gap-3 flex-wrap mb-2">
+            <h2
+              className="text-3xl font-black text-white leading-tight"
+              style={{ fontFamily: "'Orbitron', sans-serif", textShadow: '0 2px 12px rgba(0,0,0,0.8)' }}
             >
-              ✕
-            </button>
+              {item.name}
+            </h2>
+            {knownBadge(item) && <Badge label={knownBadge(item)!} />}
           </div>
 
-          {/* Badge */}
-          {knownBadge(item) && (
-            <div className="mb-4">
-              <Badge label={knownBadge(item)!} />
-            </div>
-          )}
-
-          {/* Full description */}
+          {/* Description */}
           {item.description && (
-            <p className="text-zinc-300 text-sm leading-relaxed mb-6">{item.description}</p>
+            <p className="text-zinc-200 text-sm leading-relaxed mb-5">{item.description}</p>
           )}
 
           {/* Fields */}
           {fields.length > 0 && (
-            <dl className="space-y-3">
+            <dl className="grid grid-cols-2 gap-x-6 gap-y-2">
               {fields.map(({ label, value }) => (
-                <div key={label} className="flex gap-3">
-                  <dt className="text-zinc-500 text-sm w-28 shrink-0">{label}</dt>
-                  <dd className="text-zinc-200 text-sm">{value}</dd>
+                <div key={label}>
+                  <dt className="text-zinc-500 text-xs uppercase tracking-wider">{label}</dt>
+                  <dd className="text-zinc-100 text-sm mt-0.5">{value}</dd>
                 </div>
               ))}
             </dl>
           )}
-
         </div>
-      </motion.div>
-    </>
+      </div>
+    </motion.div>
   );
 }
 

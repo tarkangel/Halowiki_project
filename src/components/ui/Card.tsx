@@ -18,7 +18,7 @@ export default function Card({ title, description, imageUrl, badge, onClick }: C
       className={`bg-zinc-800 rounded-lg overflow-hidden ${onClick ? 'cursor-pointer' : ''}`}
     >
       {imageUrl ? (
-        <img src={imageUrl} alt={title} className="w-full h-40 object-cover" />
+        <img src={imageUrl} alt={title} className="w-full h-40 object-cover object-top" />
       ) : (
         <div className="w-full h-40 bg-gradient-to-br from-zinc-700 to-zinc-900 flex items-center justify-center">
           <span className="text-zinc-500 text-4xl">🌐</span>
