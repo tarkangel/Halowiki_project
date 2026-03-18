@@ -245,6 +245,11 @@ export const LORE_PROMPTS: LorePrompt[] = [
     prompt: `Halo game concept art of the Kig-Yar species (Jackals) as seen in the Halo games. A lean avian-reptilian bipedal alien humanoid: slim digitigrade legs ending in three-toed taloned feet, elongated neck, narrow crested head with a sharp hooked beak and large amber eyes with vertical slit pupils, mottled teal-green and sand-brown scaly skin, three-fingered clawed hands. Wearing a lightweight Covenant equipment harness with a circular point-defence energy shield gauntlet on the forearm projecting a glowing blue-purple energy disc. Holding a plasma pistol in a combat ready stance. Full-body creature design showcasing silhouette and distinctive avian features. Dramatic rim lighting against a dark background. Painterly sci-fi concept art in the style of official Halo game artwork. Highly detailed, 4k.`,
   },
   {
+    title: 'Unggoy',
+    type: 'race',
+    prompt: `Halo game concept art of the Unggoy species (Grunts) as seen in the Halo games. A short stocky bipedal alien: compact rounded body covered in mottled grey-blue skin, four stubby limbs, a wide flat face dominated by large black compound eyes and a small toothless mouth, two small nostrils. Wearing the iconic bulky methane rebreather apparatus — a large cylindrical backpack connected by ribbed hoses to a facemask with glowing green methane filters, and a lightweight Covenant armour harness. Carrying a plasma pistol. Full-body creature design showcasing the diminutive silhouette and distinctive methane gear. Dramatic rim lighting against a dark atmospheric background. Painterly sci-fi concept art in the style of official Halo game artwork. Highly detailed, 4k.`,
+  },
+  {
     title: 'Lekgolo',
     type: 'race',
     prompt: `Halo concept art of the Lekgolo species, worm-like colonial organisms. A Mgalekgolo (Hunter) form — two-metre-tall symbiotic colony of orange worm clusters coiled into a bipedal shape within heavy teal-green armour plating with a fuel rod gun arm. The exposed colony mass of writhing orange worms visible at joints. Dark atmospheric background. Dramatic rim lighting. 4k painterly concept art.`,

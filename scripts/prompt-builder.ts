@@ -53,7 +53,8 @@ export function buildPrompt(type: string, name: string, description: string): st
 
   // Known Forerunner-specific weapon names that have no "forerunner" in their description.
   // Uses prefix match (no $) so "Class-1 directed energy cannon" still matches "class-[12] directed energy".
-  const isForerunnerWeaponName = type === 'weapon' && /^(class-[12] directed energy|destructor beam|focus beam|gravity wrench|halo array|hard light stave|lightblade|focus cannon|forerunner automated turret|forerunner turret)/i.test(name);
+  // Also covers Halo Infinite Forerunner weapons (Cindershot, Heatwave) and Didact-associated weapons.
+  const isForerunnerWeaponName = type === 'weapon' && /^(class-[12] directed energy|destructor beam|focus beam|gravity wrench|halo array|hard light stave|lightblade|focus cannon|forerunner automated turret|forerunner turret|cindershot|backdraft cindershot|heatwave|didact|arcane sentinel beam|dying star)/i.test(name);
 
   // ── Pass 2: keyword scan of name + description ───────────────────────────
   const nameLower = (name + ' ' + desc).toLowerCase();
@@ -62,18 +63,27 @@ export function buildPrompt(type: string, name: string, description: string): st
   // Forerunner entities almost always have "forerunner" in their Halopedia description.
   const isForerunnerKw = /forerunner|promethean|hardlight|hard light|sentinel beam|lithos|composer|forerunner-built/.test(nameLower);
 
-  // Banished: faction keywords + all known Banished workshop/manufacturer names
-  const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b/.test(nameLower);
+  // Banished: faction keywords, workshop names, and distinctive Banished weapon names.
+  const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b|barbed lance|berserker|fire-wand|loathsome thing|blamex/.test(nameLower);
 
-  // Covenant: species + role names. Jiralhanae included — Banished check runs first so
-  // Banished-affiliated Jiralhanae get the correct palette from isBanishedKw.
+  // Covenant: species + role names + plasma weaponry (exclusively Covenant/Forerunner tech).
+  // Jiralhanae included — Banished check runs first so Banished Brutes get the correct palette.
+  // Forerunner check runs before Covenant, so Forerunner plasma weapons are not misclassified.
   const isCovenantKw = isCovenantPatternItem || isSangheiliName
-    || /covenant|sangheili|elite|unggoy|grunt|kig-yar|jackal|jiralhanae|brute|huragok|engineer|yanme|drone|lekgolo|hunter|san.shyuum|prophet|methane rebreather/.test(nameLower);
+    || /covenant|sangheili|elite|unggoy|grunt|kig-yar|jackal|jiralhanae|brute|huragok|engineer|yanme|drone|lekgolo|hunter|san.shyuum|prophet|methane rebreather|plasma (pistol|rifle|cannon|mortar|launcher|grenade)|assault cannon/.test(nameLower);
 
-  // UNSC: service branches, vehicle names, M-series weapon/vehicle prefix
+  // UNSC: service branches, vehicle names, M-series weapon/vehicle prefix.
+  // Use ^m\d+ (no \b) so variants like M247H, M247T also match.
+  // Also covers BR battle rifles, CQS shotgun, ARC railgun, AIE machine guns.
   const isUNSCKw = isSpartanName
     || /unsc|spartan|marine|oni|odst|warthog|scorpion|hornet|longsword|mongoose|elephant|pelican|grizzly|jackrabbit/.test(nameLower)
-    || ((type === 'weapon' || type === 'vehicle') && /^m\d+\b/i.test(name));  // M392 DMR, M850 Grizzly, etc.
+    || ((type === 'weapon' || type === 'vehicle') && (
+        /^m\d+/i.test(name)         // M392 DMR, M247H, M850 Grizzly, etc.
+        || /^br[\dx]+/i.test(name)   // BR55, BR75, BR85, BRXX battle rifles
+        || /^cqs\d+/i.test(name)    // CQS48 Bulldog
+        || /^arc-\d+/i.test(name)   // ARC-920 railgun
+        || /^aie-\d+/i.test(name)   // AIE-207H, AIE-486H machine guns
+    ));
 
   // Flood faction (Gravemind, infection forms)
   const isFloodKw = /gravemind|flood form|infection form|the flood/.test(nameLower)

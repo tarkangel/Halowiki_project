@@ -320,8 +320,9 @@ function inferFaction(title: string, text: string): string {
   // Covenant manufacturer-pattern items: all "-pattern" named entries are Covenant
   const isCovenantPatternItem = /-pattern\b/i.test(title);
 
-  // Known Forerunner weapons/installations that lack "forerunner" in description
-  const isForerunnerSpecificName = /^(class-[12] directed energy|destructor beam|focus beam|gravity wrench|halo array|hard light stave|lightblade|focus cannon|forerunner automated turret|forerunner turret)/i.test(title);
+  // Known Forerunner weapons/installations that lack "forerunner" in description.
+  // Includes Halo Infinite Forerunner weapons (Cindershot, Heatwave) and Didact weapons.
+  const isForerunnerSpecificName = /^(class-[12] directed energy|destructor beam|focus beam|gravity wrench|halo array|hard light stave|lightblade|focus cannon|forerunner automated turret|forerunner turret|cindershot|backdraft cindershot|heatwave|didact|arcane sentinel beam|dying star)/i.test(title);
 
   // ── Pass 2: keyword scan of title + description ───────────────────────────
   const combined = (title + ' ' + text).toLowerCase();
@@ -332,20 +333,24 @@ function inferFaction(title: string, text: string): string {
     || isForerunnerMonitorName || isForerunnerSpecificName
     || /forerunner|promethean|hardlight|hard light|sentinel beam|lithos|composer/.test(combined);
 
-  // Banished: faction keyword + all known Banished workshop/manufacturer names
-  const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b/.test(combined);
+  // Banished: faction keywords, workshop names, and distinctive Banished weapon names.
+  const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b|barbed lance|berserker|fire-wand|loathsome thing|blamex/.test(combined);
 
   // Covenant: species keywords + structural name patterns.
   // Jiralhanae included — Banished check runs first so Banished-affiliated
   // Jiralhanae still get the correct label.
   const isCovenantKw = isCovenantPatternItem || isSangheiliName
-    || /covenant|sangheili|elite|unggoy|grunt|kig-yar|jackal|jiralhanae|brute|huragok|engineer|yanme|drone|lekgolo|hunter|san.shyuum|prophet|methane rebreather/.test(combined);
+    || /covenant|sangheili|elite|unggoy|grunt|kig-yar|jackal|jiralhanae|brute|huragok|engineer|yanme|drone|lekgolo|hunter|san.shyuum|prophet|methane rebreather|plasma (pistol|rifle|cannon|mortar|launcher|grenade)|assault cannon/.test(combined);
 
   // UNSC: Spartan name formats, service branch keywords, named UNSC vehicles,
-  // and M-series designation prefix (M392 DMR, M850 Grizzly, etc.)
+  // M-series prefix, BR battle rifles, CQS shotgun, ARC railgun, AIE machine guns.
   const isUNSCKw = isSpartanName
     || /unsc|spartan|marine|oni|odst|warthog|scorpion|hornet|longsword|mongoose|elephant|pelican|grizzly|jackrabbit|mammoth|falcon|vtol/.test(combined)
-    || /^m\d+\b/i.test(title);
+    || /^m\d+/i.test(title)      // M392 DMR, M247H, M850 Grizzly, etc.
+    || /^br[\dx]+/i.test(title)  // BR55, BR75, BR85, BRXX battle rifles
+    || /^cqs\d+/i.test(title)    // CQS48 Bulldog
+    || /^arc-\d+/i.test(title)   // ARC-920 railgun
+    || /^aie-\d+/i.test(title);  // AIE-207H, AIE-486H machine guns
 
   // Flood
   const isFloodKw = /gravemind|flood form|infection form|the flood/.test(combined)
