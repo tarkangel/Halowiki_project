@@ -97,6 +97,12 @@ export const LORE_PROMPTS: LorePrompt[] = [
     prompt: `Halo universe concept art of 343 Guilty Spark, Forerunner Monitor. Small floating orb robot with a single glowing blue optical sensor eye, polished dark chrome body with faint Forerunner geometric engravings, hovering with a small repulsor field glow beneath. Ancient ring installation corridor background with luminescent panels. Mysterious eerie lighting. 4k painterly concept art.`,
   },
 
+  {
+    title: 'Gravemind',
+    type: 'character',
+    prompt: `Halo game concept art of the Gravemind, the ancient central intelligence of the Flood parasite. An immense colossal horror: a mountain of writhing grotesque biomass formed from the merged and consumed bodies of countless victims — vast dark grey-green Flood tissue forming a tentacled mass of nightmarish scale. A cavernous central maw surrounded by enormous crushing tentacles stretching into shadow. Bioluminescent yellow-green infection pustules pulse and glow across the entire surface. Set deep within the Flood-corrupted interior of High Charity — Covenant cathedral spires and architecture engulfed and overgrown by organic Flood tendrils, the alien grandeur of the city consumed into a nest of biological horror. Eerie bioluminescent green-yellow atmospheric lighting emanating from within the mass itself. Grotesque biological horror aesthetic. Painterly sci-fi concept art in the style of official Halo game artwork (Halo 2 / Halo 3). Dramatic cinematic lighting, highly detailed, 4k.`,
+  },
+
   // ── FORERUNNER MONITORS ────────────────────────────────────────────────────
 
   {
@@ -228,6 +234,16 @@ export const LORE_PROMPTS: LorePrompt[] = [
 
   // ── RACES ──────────────────────────────────────────────────────────────────
 
+  {
+    title: 'Jiralhanae',
+    type: 'race',
+    prompt: `Halo game concept art of the Jiralhanae species (Brutes) as seen in Halo 2. A massive powerfully-built primate-like alien humanoid: enormous barrel-chested muscular body covered in thick grey-brown fur, wide flat ape-like face with pronounced brow ridge and large curving yellowed fangs, forward-hunched aggressive stance conveying raw brutish power. Wearing heavy scavenged Covenant battle plate — dark gunmetal shoulder pauldrons, chest armour, and greaves fitted over the fur, decorated with tribal claw markings and battle damage. Full-body creature concept art showcasing intimidating scale against a dark atmospheric background. Dramatic rim lighting. Painterly sci-fi concept art in the style of official Halo game artwork (Halo 2 / Halo 3). Highly detailed, 4k.`,
+  },
+  {
+    title: 'Kig-Yar',
+    type: 'race',
+    prompt: `Halo game concept art of the Kig-Yar species (Jackals) as seen in the Halo games. A lean avian-reptilian bipedal alien humanoid: slim digitigrade legs ending in three-toed taloned feet, elongated neck, narrow crested head with a sharp hooked beak and large amber eyes with vertical slit pupils, mottled teal-green and sand-brown scaly skin, three-fingered clawed hands. Wearing a lightweight Covenant equipment harness with a circular point-defence energy shield gauntlet on the forearm projecting a glowing blue-purple energy disc. Holding a plasma pistol in a combat ready stance. Full-body creature design showcasing silhouette and distinctive avian features. Dramatic rim lighting against a dark background. Painterly sci-fi concept art in the style of official Halo game artwork. Highly detailed, 4k.`,
+  },
   {
     title: 'Lekgolo',
     type: 'race',
