@@ -102,6 +102,13 @@ export function buildPrompt(type: string, name: string, description: string): st
     || /^(adjutant|catalog(?!\s+triad)|auditor|confirmer|boundless)/i.test(name)
   );
 
+  // ── Species-specific character variants ──────────────────────────────────
+  // These override the generic humanoid portrait for visually distinctive species.
+  const isJiralhanaeChar = type === 'character' && /jiralhanae|brute/i.test(nameLower);
+  const isKigYarChar     = type === 'character' && /kig-yar|kig.yar|jackal|skirmisher/i.test(nameLower);
+  const isUnggoyChar     = type === 'character' && /unggoy|grunt/i.test(nameLower);
+  const isFloodChar      = type === 'character' && isFlood;
+
   let factionPalette = '';
   if (isForerunner) {
     factionPalette = 'Forerunner aesthetic: pale cream-ivory angular alloy panels with beveled geometric edges, glowing orange hardlight energy conduits, precise Forerunner glyph engravings.';
@@ -134,7 +141,7 @@ export function buildPrompt(type: string, name: string, description: string): st
     ].filter(Boolean).join(' '),
 
     character: isMonitorConstruct
-      // ── Forerunner monitor / construct — floating orb machine, NOT humanoid ──
+      // ── Forerunner monitor / construct — floating orb machine ──────────────
       ? [
           `Halo game concept art of the Forerunner monitor "${name}".`,
           desc ? `${desc}.` : '',
@@ -142,7 +149,51 @@ export function buildPrompt(type: string, name: string, description: string): st
           'Centuries of wear and tarnish on the chrome surface. Forerunner ring-installation corridor background with luminescent wall panels. Eerie atmospheric lighting, the orb\'s eye casting a blue glow.',
           baseStyle,
         ].filter(Boolean).join(' ')
-      // ── Standard biological character — humanoid portrait ────────────────────
+
+      // ── Jiralhanae (Brute) — massive gorilla-like primate warrior ───────────
+      : isJiralhanaeChar
+      ? [
+          `Halo game concept art portrait of the Jiralhanae (Brute) character "${name}".`,
+          desc ? `${desc}.` : '',
+          'A massive powerfully-built primate-like alien humanoid: enormous barrel-chested muscular body covered in thick grey-brown fur, wide flat ape-like face with pronounced brow ridge and large curving fangs, forward-hunched aggressive stance.',
+          factionPalette,
+          'Three-quarter bust portrait showing the imposing bulk and fearsome face. Cinematic three-point lighting — strong key light, cool fill, warm rim separating the figure from a dark atmospheric background.',
+          baseStyle,
+        ].filter(Boolean).join(' ')
+
+      // ── Kig-Yar (Jackal / Skirmisher) — avian-reptilian alien ──────────────
+      : isKigYarChar
+      ? [
+          `Halo game concept art portrait of the Kig-Yar (Jackal) character "${name}".`,
+          desc ? `${desc}.` : '',
+          'A lean avian-reptilian bipedal alien: elongated neck, narrow crested head with a sharp hooked beak and large amber eyes with vertical slit pupils, mottled teal-green and sand-brown scaly skin, three-fingered clawed hands.',
+          factionPalette,
+          'Three-quarter bust portrait emphasising the distinctive avian head and scaly features. Cinematic three-point lighting — strong key light, cool fill, warm rim separating the figure from a dark atmospheric background.',
+          baseStyle,
+        ].filter(Boolean).join(' ')
+
+      // ── Unggoy (Grunt) — short stocky methane-breather ─────────────────────
+      : isUnggoyChar
+      ? [
+          `Halo game concept art portrait of the Unggoy (Grunt) character "${name}".`,
+          desc ? `${desc}.` : '',
+          'A short stocky bipedal alien: compact rounded body, large black compound eyes, a wide toothless mouth, wearing a bulky methane rebreather pack on its back connected by hoses to its face mask.',
+          factionPalette,
+          'Three-quarter bust portrait showing the distinctive methane gear and large eyes. Cinematic three-point lighting — strong key light, cool fill, warm rim separating the figure from a dark atmospheric background.',
+          baseStyle,
+        ].filter(Boolean).join(' ')
+
+      // ── Flood character — grotesque biomass horror ──────────────────────────
+      : isFloodChar
+      ? [
+          `Halo game concept art of the Flood entity "${name}".`,
+          desc ? `${desc}.` : '',
+          'Grotesque corrupted Flood biomass: dark grey-green writhing organic tissue, bioluminescent yellow-green infection pustules pulsing across the surface, biological horror.',
+          'Flood-infested environment background — corrupted architecture overgrown with organic tendrils and pulsating Flood matter. Eerie bioluminescent green-yellow atmospheric lighting.',
+          baseStyle,
+        ].filter(Boolean).join(' ')
+
+      // ── Standard biological character — generic humanoid portrait ───────────
       : [
           `Halo game concept art portrait of the character "${name}".`,
           desc ? `${desc}.` : '',
