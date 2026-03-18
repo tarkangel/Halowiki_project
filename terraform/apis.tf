@@ -11,6 +11,7 @@ locals {
     "iamcredentials.googleapis.com",
     "cloudresourcemanager.googleapis.com",
     "secretmanager.googleapis.com",
+    "compute.googleapis.com",
   ]
 }
 

@@ -1,3 +1,8 @@
+output "load_balancer_ip" {
+  description = "Global static IP — create an A record in Cloudflare pointing to this"
+  value       = google_compute_global_address.halowiki_ip.address
+}
+
 output "cloud_run_url" {
   description = "Public URL of the Cloud Run service"
   value       = google_cloud_run_v2_service.halowiki.uri

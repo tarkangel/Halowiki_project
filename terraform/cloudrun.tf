@@ -43,6 +43,16 @@ resource "google_cloud_run_v2_service" "halowiki" {
     }
   }
 
+  lifecycle {
+    # CI/CD manages the image and deploy labels — Terraform must not overwrite them.
+    ignore_changes = [
+      template[0].containers[0].image,
+      template[0].labels,
+      client,
+      client_version,
+    ]
+  }
+
   depends_on = [
     google_project_service.apis,
     google_artifact_registry_repository.halowiki,
