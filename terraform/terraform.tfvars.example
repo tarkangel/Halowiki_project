@@ -1,0 +1,18 @@
+# Copy this file to terraform.tfvars and fill in your values.
+# terraform.tfvars is gitignored — never commit real values.
+
+project_id  = "halowiki"
+region      = "us-central1"
+github_repo = "tarkangel/Halowiki_project"
+
+# Optional overrides (defaults are fine for this project)
+# cloud_run_service      = "halowiki"
+# artifact_registry_repo = "halowiki"
+# github_actions_sa      = "github-actions-halowiki"
+# images_bucket          = "halowiki-generated-images"
+
+# Cost control: set to 0 to scale to zero when idle (default)
+# cloud_run_min_instances = 0
+
+# Danger zone: set to true only when you want to permanently delete generated images
+# destroy_images_bucket = false
