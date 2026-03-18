@@ -7,7 +7,15 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:images": "tsx scripts/generate-missing-images.ts",
+    "generate:weapon": "GEN_TYPE=weapon tsx scripts/generate-type.ts",
+    "generate:vehicle": "GEN_TYPE=vehicle tsx scripts/generate-type.ts",
+    "generate:character": "GEN_TYPE=character tsx scripts/generate-type.ts",
+    "generate:race": "GEN_TYPE=race tsx scripts/generate-type.ts",
+    "generate:planet": "GEN_TYPE=planet tsx scripts/generate-type.ts",
+    "generate:merge": "tsx scripts/merge-generated-images.ts",
+    "generate:all": "FORCE_ALL=true tsx scripts/generate-type.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
@@ -18,6 +26,7 @@
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
+    "@google-cloud/storage": "^7.19.0",
     "@types/node": "^25.5.0",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",

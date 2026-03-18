@@ -83,13 +83,6 @@ jobs:
       - name: Configure Docker for Artifact Registry
         run: gcloud auth configure-docker ${{ env.ARTIFACT_REGISTRY }} --quiet
 
-      - name: Cache generated images
-        uses: actions/cache@v4
-        with:
-          path: public/generated
-          key: generated-images-${{ hashFiles('src/generated-images.json') }}
-          restore-keys: generated-images-
-
       - name: Setup Node for image generation
         uses: actions/setup-node@v4
         with:
@@ -103,6 +96,7 @@ jobs:
         run: npx tsx scripts/generate-missing-images.ts
         env:
           GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+          GCS_BUCKET: ${{ vars.GCS_IMAGES_BUCKET || format('{0}-generated-images', secrets.GCP_PROJECT_ID) }}
 
       - name: Commit updated image map
         run: |

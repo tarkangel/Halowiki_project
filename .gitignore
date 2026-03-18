@@ -31,3 +31,12 @@ coverage/
 
 # Misc
 *.local
+
+# Locally generated images (served from GCS, not git)
+public/generated/
+
+# Imagen regeneration progress sidecars
+src/regeneration-progress*.json
+
+# Temp audit files
+src/faction-audit.json
