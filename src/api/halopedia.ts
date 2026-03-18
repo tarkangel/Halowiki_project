@@ -197,9 +197,6 @@ const RACE_DESCRIPTION_OVERRIDES: Record<string, string> = {
   'Denisovan':
     'The Denisovans are an ancient hominin subspecies known in the Halo universe as one of the forerunner-era human variants that existed before the Forerunner-imposed devolution of humanity. Related to but distinct from anatomically modern Homo sapiens, Denisovans coexisted with other human populations across prehistoric Earth and represent part of the genetic diversity that the Librarian sought to preserve and catalogue in her extensive life surveys.',
 
-  'Mgalekgolo':
-    'Mgalekgolo are the paired Hunter combat form of the Lekgolo colonial worm organism. Two Lekgolo colonies merge into a single bonded warrior unit clad in heavy interlocked armour plates, standing over two metres tall and wielding fuel rod assault cannons. The bond between a Hunter pair is absolute — killing one drives the other into an unstoppable berserker rage. They serve as heavy shock troops in Covenant and Banished forces, and are among the most feared infantry units in the galaxy.',
-
   "K'tamanune":
     "The K'tamanune are a form adopted by Lekgolo colonial worm organisms when multiple colonies merge into a large mobile mass for locomotion and exploration rather than combat. Unlike the armoured Mgalekgolo Hunter form, K'tamanune colonies flow together into a fluid orange mass capable of moving through tight spaces and environments inaccessible to bulkier combat forms. They represent the Lekgolo's remarkable adaptive biology — the same colonial organism can take radically different configurations depending on the number of worms and the role they need to fulfil.",
 
