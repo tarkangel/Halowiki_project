@@ -177,13 +177,65 @@ export function pageToCharacter(page: PageSummary): Character {
   };
 }
 
+// Curated descriptions for species whose Halopedia extract is too thin (< 200 chars).
+const RACE_DESCRIPTION_OVERRIDES: Record<string, string> = {
+  'Flood':
+    'The Flood is an ancient parasitic species of interstellar scourge, capable of infecting and assimilating any sentient biomass with sufficient neural complexity. Originally created by the Precursors as an instrument of vengeance against the Forerunners, the Flood nearly consumed all life in the galaxy before the activation of the Halo Array halted its spread. The Flood is coordinated by a composite intelligence known as the Gravemind, which accumulates the memories and knowledge of every organism it absorbs.',
+
+  'Forerunner':
+    'The Forerunners were an ancient and extraordinarily advanced humanoid species who built a galaxy-spanning civilisation over the course of millions of years. Masters of technological manipulation at the subatomic level, they constructed the Halo Array, Shield Worlds, and the Ark — megastructures of unparalleled scale. At their height the Forerunner ecumene spanned hundreds of thousands of star systems. They were ultimately consumed by the war against the Flood, and in a final act of desperation fired the Halo Array, sacrificing themselves to starve the parasite and allow life to begin again.',
+
+  'Human':
+    'Humanity is a resilient spacefaring species native to Earth, organised under the Unified Earth Government and its military arm the United Nations Space Command. By the 26th century humans had colonised hundreds of worlds across the Orion Arm. The Human-Covenant War nearly drove the species to extinction before a fragile alliance with the Elites turned the tide. Humanity has since been revealed to carry a unique genetic legacy from the ancient Forerunner civilisation, whose Librarian encoded evolutionary potential into the human genome before the firing of the Halo Array.',
+
+  'Mgalekgolo':
+    'The Mgalekgolo, known to humans as Hunters, are a paired combat form of the Lekgolo colonial worm organism. Two colonies of Lekgolo bond together into a single symbiotic warrior unit, encased in a thick plate of interlocked orange-brown armour and wielding a devastating fuel rod assault cannon or melee arm. Hunters are among the most physically powerful infantry units in Covenant and Banished forces, their bonded-pair psychology making them extraordinarily motivated — if one is killed the survivor will fight with berserker ferocity until it is destroyed or joins a new colony.',
+
+  'Florian':
+    'The Florians, also called Robustus or the Rubble-people, are a diminutive subspecies of ancient humanity who coexisted with anatomically modern humans before the Forerunner-Human War. Small in stature, Florians were child-sized beings who lived in close proximity to larger human populations. The Forerunners devolved them along with all of humanity as collective punishment after the ancient human empire was defeated. One Florian individual, known as Chakas or Prone to Drift, became entangled in the events surrounding Installation 07 and the Didact.',
+
+  'Denisovan':
+    'The Denisovans are an ancient hominin subspecies known in the Halo universe as one of the forerunner-era human variants that existed before the Forerunner-imposed devolution of humanity. Related to but distinct from anatomically modern Homo sapiens, Denisovans coexisted with other human populations across prehistoric Earth and represent part of the genetic diversity that the Librarian sought to preserve and catalogue in her extensive life surveys.',
+
+  'Mgalekgolo':
+    'Mgalekgolo are the paired Hunter combat form of the Lekgolo colonial worm organism. Two Lekgolo colonies merge into a single bonded warrior unit clad in heavy interlocked armour plates, standing over two metres tall and wielding fuel rod assault cannons. The bond between a Hunter pair is absolute — killing one drives the other into an unstoppable berserker rage. They serve as heavy shock troops in Covenant and Banished forces, and are among the most feared infantry units in the galaxy.',
+
+  "K'tamanune":
+    "The K'tamanune are a form adopted by Lekgolo colonial worm organisms when multiple colonies merge into a large mobile mass for locomotion and exploration rather than combat. Unlike the armoured Mgalekgolo Hunter form, K'tamanune colonies flow together into a fluid orange mass capable of moving through tight spaces and environments inaccessible to bulkier combat forms. They represent the Lekgolo's remarkable adaptive biology — the same colonial organism can take radically different configurations depending on the number of worms and the role they need to fulfil.",
+
+  "B'ashamanune":
+    "The B'ashamanune is a resting or dormant configuration of the Lekgolo colonial worm organism, in which the colony disperses into a flat distributed mass to conserve energy and process information. Lekgolo worms in this state form a low-profile orange mat that can remain motionless for extended periods, sharing neural information across the colony before reconsolidating into an active form. The B'ashamanune state represents one of several configurations the extraordinarily adaptable Lekgolo can adopt.",
+
+  'Dipholekgolo':
+    'The Dipholekgolo are a two-colony Lekgolo configuration in which a pair of colonial worm masses bond together for mutual support and enhanced cognition. This pairing is an intermediate form between a single loose colony and the fully armoured Mgalekgolo Hunter configuration. Dipholekgolo retain greater flexibility than armoured Hunters while still benefiting from the enhanced processing power and emotional bonding that Lekgolo experience when multiple colonies are in close contact.',
+
+  'Khantolekgolo':
+    'The Khantolekgolo are a Lekgolo colonial configuration specifically adapted for integration with large Covenant vehicles and weapons platforms. Multiple Lekgolo colonies merge to form the control nervous system of Scarab walkers, Locust units, and other large Covenant war machines, with the colony acting as the vehicle\'s living brain and motivation system. This biological-mechanical integration makes Covenant super-heavy vehicles semi-autonomous and capable of sophisticated battlefield decisions.',
+
+  'Gasgira':
+    'The Gasgira are a species of alien organisms encountered in the Halo universe, notable for their unusual biology and the role they play in the broader ecosystem of the worlds they inhabit. As with many non-sapient species catalogued by Forerunner Lifeworkers during the Conservation Measure, the Gasgira represent the extraordinary biological diversity seeded and preserved across the galaxy by the Forerunner civilisation before the firing of the Halo Array.',
+
+  'Lacerta erectus':
+    'Lacerta erectus is an ancient reptilian species catalogued in the Halo universe, representing one of the many non-human sapient or near-sapient species that inhabited the galaxy during earlier epochs. The Forerunners\' extensive biological survey programme, led by the Librarian, documented and preserved many such species before the firing of the Halo Array, ensuring that the galaxy\'s biodiversity could be restored in the aftermath of the Flood war.',
+
+  'Dazreme':
+    'The Dazreme are an alien species encountered in the Halo universe, part of the broader array of non-human life forms that populated the galaxy alongside humanity and the Covenant species. Like many species peripheral to the main Covenant conflict, the Dazreme\'s biology and culture were documented as part of the scientific record maintained by UNSC and Covenant xenobiological archives.',
+
+  'Netherop species':
+    'The Netherop species is a fierce predatory alien race native to the harsh desert world of Netherop. Encountered by UNSC forces during covert operations on Netherop, these creatures are apex predators adapted to the brutal environment of their homeworld — fast, aggressive, and capable of overwhelming even armoured UNSC marines. They are referenced in the events of the novel Halo: The Rubicon Protocol as a dangerous complication for stranded UNSC survivors fighting to escape the planet.',
+};
+
 export function pageToRace(page: PageSummary): Race {
+  const extract = page.extract ?? '';
+  const description = extract.length < 200 && RACE_DESCRIPTION_OVERRIDES[page.title]
+    ? RACE_DESCRIPTION_OVERRIDES[page.title]
+    : extract;
   return {
     id: slugify(page.title),
     name: page.title,
-    description: page.extract ?? '',
+    description,
     imageUrl: generatedImage(page.title) ?? page.thumbnail?.source,
-    affiliation: inferFaction(page.title, page.extract ?? ''),
+    affiliation: inferFaction(page.title, description),
     appearances: [],
   };
 }
@@ -333,14 +385,14 @@ function inferFaction(title: string, text: string): string {
     || isForerunnerMonitorName || isForerunnerSpecificName
     || /forerunner|promethean|hardlight|hard light|sentinel beam|lithos|composer/.test(combined);
 
-  // Banished: faction keywords, workshop names, and distinctive Banished weapon names.
-  const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b|barbed lance|berserker|fire-wand|loathsome thing|blamex/.test(combined);
+  // Banished: faction keywords, workshop names, distinctive weapon/vehicle names.
+  const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b|barbed lance|berserker|fire-wand|loathsome thing|blamex|breacher exosuit|decimus/.test(combined);
 
   // Covenant: species keywords + structural name patterns.
   // Jiralhanae included — Banished check runs first so Banished-affiliated
   // Jiralhanae still get the correct label.
   const isCovenantKw = isCovenantPatternItem || isSangheiliName
-    || /covenant|sangheili|elite|unggoy|grunt|kig-yar|jackal|jiralhanae|brute|huragok|engineer|yanme|drone|lekgolo|hunter|san.shyuum|prophet|methane rebreather|plasma (pistol|rifle|cannon|mortar|launcher|grenade)|assault cannon/.test(combined);
+    || /covenant|sangheili|elite|unggoy|grunt|kig-yar|jackal|jiralhanae|brute|huragok|engineer|yanme|drone|lekgolo|hunter|san.shyuum|prophet|methane rebreather|plasma (pistol|rifle|cannon|mortar|launcher|grenade)|assault cannon|anti-gravity barge|methane wagon|mudoat/.test(combined);
 
   // UNSC: Spartan name formats, service branch keywords, named UNSC vehicles,
   // M-series prefix, BR battle rifles, CQS shotgun, ARC railgun, AIE machine guns.

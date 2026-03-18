@@ -192,6 +192,51 @@ export const LORE_PROMPTS: LorePrompt[] = [
   // ── VEHICLES ───────────────────────────────────────────────────────────────
 
   {
+    title: 'Warthog',
+    type: 'vehicle',
+    prompt: `Halo concept art of the UNSC M12 Force Application Vehicle, the iconic Warthog. Rugged olive-drab military 4x4 all-terrain vehicle with aggressive knobby off-road tyres, open roll-cage frame, and an M41 LAAG rotating three-barrel chaingun mounted on the rear tray. Matte weathered military paint, stencilled UNSC markings, battle-scarred plating. Dynamic low-angle hero shot on rocky alien terrain, dust kicked up by the tyres. Dramatic cinematic rim lighting. Painterly sci-fi concept art in the style of official Halo game artwork (Halo 3 / Halo: Reach). Highly detailed, 4k.`,
+  },
+  {
+    title: 'Ghost',
+    type: 'vehicle',
+    prompt: `Halo concept art of the Covenant Type-32 Ghost rapid assault vehicle. Sleek one-man Covenant anti-gravity speeder bike floating low above the ground, deep purple-violet alloy hull with smooth organic flowing curves, twin forward plasma cannon prongs glowing blue-purple, canopy-less open cockpit with a molded seat. Plasma exhaust trailing from the rear anti-gravity thrusters. Dynamic action shot at speed over alien terrain. Dramatic cinematic lighting. Painterly sci-fi concept art in the style of official Halo game artwork (Halo 3 / Halo: Reach). Highly detailed, 4k.`,
+  },
+  {
+    title: 'Scorpion',
+    type: 'vehicle',
+    prompt: `Halo concept art of the UNSC M808 Scorpion main battle tank. Hulking matte olive-drab military tank with a wide tracked chassis, large central turret mounting a massive smooth-bore 90mm high-velocity cannon barrel, secondary coaxial machine gun. Heavy angular armour plating, UNSC stencilled markings. Low dramatic hero angle showing the imposing scale. Alien battlefield background. Cinematic rim lighting. Painterly sci-fi concept art in the style of official Halo game artwork. Highly detailed, 4k.`,
+  },
+  {
+    title: 'Pelican',
+    type: 'vehicle',
+    prompt: `Halo concept art of the UNSC D77-TC Pelican dropship, the iconic troop carrier. Large atmospheric and space-capable UNSC gunship-dropship with a blunt nose, swept stub wings with engine nacelles, a large rear troop bay ramp, and chin-mounted autocannon. Matte grey-green military paint with UNSC markings, atmospheric re-entry heat trails. Descending through a planet's upper atmosphere with contrails streaming from the wingtips. Dramatic cinematic lighting. Painterly sci-fi concept art in the style of official Halo game artwork. Highly detailed, 4k.`,
+  },
+  {
+    title: 'Falcon',
+    type: 'vehicle',
+    prompt: `Halo concept art of the UNSC UH-144 Falcon multi-purpose helicopter. Compact UNSC military helicopter with twin counter-rotating ducted fan rotors (no tail rotor), open side gunner stations with M247 machine guns, armoured fuselage. Matte grey-green military paint, UNSC stencil markings. Banking in flight above the misty highlands of Reach, enemy AA fire in the distance. Dramatic atmospheric lighting. Painterly sci-fi concept art in the style of official Halo: Reach artwork. Highly detailed, 4k.`,
+  },
+  {
+    title: 'Banshee',
+    type: 'vehicle',
+    prompt: `Halo concept art of the Covenant Type-26 Banshee ground-support aircraft. Iconic single-seat Covenant fighter with a distinctive organic fuselage shaped like a manta ray, swept cranked delta wings terminating in twin fuel-rod bomb pods, a cockpit canopy blending into the smooth purple hull, twin plasma cannon emitters at the nose. Flying at speed in a dramatic banking turn above an alien landscape. Deep purple hull catching dramatic sunlight. Painterly sci-fi concept art in the style of official Halo game artwork. Highly detailed, 4k.`,
+  },
+  {
+    title: 'Chopper',
+    type: 'vehicle',
+    prompt: `Halo concept art of the Jiralhanae Type-25 Chopper assault vehicle. Brutal Brute-designed bipedal wheeled bike — two massive front wheels on articulated struts forward of a compact engine block, no rear wheel, the Brute rider perched high at the back. Dark gunmetal grey alloy with crude iron banding, two forward-facing autocannons. Aggressive low-slung attack profile. Dynamic hero angle, alien dust terrain. Banished red war markings. Painterly sci-fi concept art in the style of official Halo 3 artwork. Highly detailed, 4k.`,
+  },
+  {
+    title: 'Mongoose',
+    type: 'vehicle',
+    prompt: `Halo concept art of the UNSC M274 Mongoose ultra-light all-terrain vehicle. Tiny nimble military ATV — low-slung open quad-bike frame on four wide off-road tyres, no armament, just raw speed. Matte olive-drab paint with UNSC stencilled markings. Airborne over a rocky alien terrain crest, motion blur on the wheels. Dramatic cinematic lighting. Painterly sci-fi concept art in the style of official Halo 3 artwork. Highly detailed, 4k.`,
+  },
+  {
+    title: 'Elephant',
+    type: 'vehicle',
+    prompt: `Halo concept art of the UNSC Elephant, the colossal mobile base vehicle from Halo 3 multiplayer. An enormous slow-moving armoured land battleship dwarfing nearby soldiers — a vast flat-topped rectangular fortified platform on massive exposed independent drive wheels, bristling with UNSC military structures, defensive emplacements, and a central flag tower. Matte olive-drab and gunmetal grey paint. Wide dramatic exterior shot showing its immense scale against an open alien terrain sky. Cinematic lighting. Painterly sci-fi concept art. Highly detailed, 4k.`,
+  },
+  {
     title: 'Lich',
     type: 'vehicle',
     prompt: `Halo concept art of the Covenant Lich heavy dropship and command vessel. Enormous purple Covenant anti-gravity capital dropship, flattened disc-like fuselage with cascading energy projectors along the underside, three massive gravity lift deployment bays, forward command bridge prow. Dark stormy alien sky background, dramatic lighting beneath the vessel casting a vast shadow. 4k painterly concept art.`,

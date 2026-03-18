@@ -64,13 +64,13 @@ export function buildPrompt(type: string, name: string, description: string): st
   const isForerunnerKw = /forerunner|promethean|hardlight|hard light|sentinel beam|lithos|composer|forerunner-built/.test(nameLower);
 
   // Banished: faction keywords, workshop names, and distinctive Banished weapon names.
-  const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b|barbed lance|berserker|fire-wand|loathsome thing|blamex/.test(nameLower);
+  const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b|barbed lance|berserker|fire-wand|loathsome thing|blamex|breacher exosuit|decimus/.test(nameLower);
 
   // Covenant: species + role names + plasma weaponry (exclusively Covenant/Forerunner tech).
   // Jiralhanae included — Banished check runs first so Banished Brutes get the correct palette.
   // Forerunner check runs before Covenant, so Forerunner plasma weapons are not misclassified.
   const isCovenantKw = isCovenantPatternItem || isSangheiliName
-    || /covenant|sangheili|elite|unggoy|grunt|kig-yar|jackal|jiralhanae|brute|huragok|engineer|yanme|drone|lekgolo|hunter|san.shyuum|prophet|methane rebreather|plasma (pistol|rifle|cannon|mortar|launcher|grenade)|assault cannon/.test(nameLower);
+    || /covenant|sangheili|elite|unggoy|grunt|kig-yar|jackal|jiralhanae|brute|huragok|engineer|yanme|drone|lekgolo|hunter|san.shyuum|prophet|methane rebreather|plasma (pistol|rifle|cannon|mortar|launcher|grenade)|assault cannon|anti-gravity barge|methane wagon|mudoat/.test(nameLower);
 
   // UNSC: service branches, vehicle names, M-series weapon/vehicle prefix.
   // Use ^m\d+ (no \b) so variants like M247H, M247T also match.
