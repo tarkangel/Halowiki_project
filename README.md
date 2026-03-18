@@ -133,44 +133,66 @@ docker compose up preview  # production build preview → http://localhost:8080
 
 ---
 
-## GCP Setup (one-time)
+## Infrastructure as Code (Terraform)
+
+All GCP infrastructure is fully codified under `terraform/`. A single `terraform apply` provisions everything from scratch; `terraform destroy` tears it all down to eliminate costs when the project is paused.
+
+### Resources managed
+
+| File | Resources |
+|---|---|
+| `apis.tf` | All required GCP project service APIs |
+| `storage.tf` | GCS bucket for AI-generated images (public CDN) |
+| `registry.tf` | Artifact Registry Docker repository |
+| `iam.tf` | GitHub Actions service account, IAM bindings, Workload Identity Federation pool + provider |
+| `cloudrun.tf` | Cloud Run v2 service (scale-to-zero, public ingress) |
+
+### Bring the project up
 
 ```bash
-# Enable required APIs
-gcloud services enable run.googleapis.com \
-  artifactregistry.googleapis.com \
-  aiplatform.googleapis.com \
-  storage.googleapis.com
-
-# Artifact Registry
-gcloud artifacts repositories create halowiki \
-  --repository-format=docker --location=us-central1
-
-# Service account for GitHub Actions
-gcloud iam service-accounts create github-actions-halowiki
-
-# Grant roles
-gcloud projects add-iam-policy-binding $PROJECT_ID \
-  --member="serviceAccount:github-actions-halowiki@$PROJECT_ID.iam.gserviceaccount.com" \
-  --role="roles/run.admin"
-gcloud projects add-iam-policy-binding $PROJECT_ID \
-  --member="serviceAccount:github-actions-halowiki@$PROJECT_ID.iam.gserviceaccount.com" \
-  --role="roles/artifactregistry.writer"
-gcloud projects add-iam-policy-binding $PROJECT_ID \
-  --member="serviceAccount:github-actions-halowiki@$PROJECT_ID.iam.gserviceaccount.com" \
-  --role="roles/storage.objectAdmin"
-gcloud projects add-iam-policy-binding $PROJECT_ID \
-  --member="serviceAccount:github-actions-halowiki@$PROJECT_ID.iam.gserviceaccount.com" \
-  --role="roles/aiplatform.user"
+cd terraform
+cp terraform.tfvars.example terraform.tfvars
+# fill in project_id and github_repo
+terraform init
+terraform apply
+# outputs the GitHub secret values to paste into repo settings
 ```
 
-### GitHub Secrets required
+Then trigger CI to deploy the app:
+
+```bash
+git commit --allow-empty -m "chore: trigger deploy" && git push
+```
+
+### Pause the project (eliminate costs)
+
+```bash
+terraform destroy
+```
+
+The GCS images bucket is **preserved by default** — your generated image library survives the teardown. Only Cloud Run, Artifact Registry, WIF, and the service account are destroyed. Storage cost while paused: ~$0.02/GB/month.
+
+To also wipe the images bucket:
+
+```bash
+terraform destroy -var="destroy_images_bucket=true"
+```
+
+### GitHub Secrets (output by Terraform)
+
+After `terraform apply`, run:
+
+```bash
+terraform output github_secrets_summary
+```
+
+Paste the three values into `github.com/<you>/<repo>/settings/secrets/actions`:
 
 | Secret | Description |
 |---|---|
 | `GCP_PROJECT_ID` | GCP project ID |
-| `GCP_WORKLOAD_IDENTITY_PROVIDER` | Workload Identity Federation provider resource name |
-| `GCP_SERVICE_ACCOUNT` | Service account email |
+| `GCP_SERVICE_ACCOUNT` | Service account email (from Terraform output) |
+| `GCP_WORKLOAD_IDENTITY_PROVIDER` | WIF provider resource name (from Terraform output) |
 
 ---
 
