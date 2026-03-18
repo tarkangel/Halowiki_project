@@ -191,26 +191,13 @@ async function processCategory(type: string, categories: string[]) {
   await generateItems(type, missing);
 }
 
-async function ensureBucket() {
-  const [exists] = await bucket.exists();
-  if (!exists) {
-    await storage.createBucket(BUCKET_NAME, {
-      location: 'US',
-      storageClass: 'STANDARD',
-    });
-    console.log(`Created bucket: gs://${BUCKET_NAME}`);
-  } else {
-    console.log(`Using bucket: gs://${BUCKET_NAME}`);
-  }
-}
-
 async function main() {
   if (!PROJECT_ID) {
     console.error('ERROR: GCP_PROJECT_ID environment variable is not set.');
     process.exit(1);
   }
 
-  await ensureBucket();
+  console.log(`Using bucket: gs://${BUCKET_NAME}`);
 
   await processLoreCurated();
 
