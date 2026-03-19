@@ -1,0 +1,86 @@
+[
+  {
+    "id": "halo-combat-evolved",
+    "name": "Halo: Combat Evolved",
+    "description": "Halo: Combat Evolved es el shooter en primera persona que lanzó la franquicia Halo en 2001. Los jugadores controlan al Master Chief, quien aterriza de emergencia en el misterioso mundo anular Installation 04, donde estalla un conflicto entre tres facciones: la UNSC, el Covenant y el parásito Flood. El juego introdujo muchas de las mecánicas e íconos que definen la serie, culminando con que el Master Chief y Cortana detonen los motores del Pillar of Autumn para destruir Alpha Halo e impedir la fuga del Flood.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-combat-evolved.png"
+  },
+  {
+    "id": "halo-2",
+    "name": "Halo 2",
+    "description": "Halo 2 es la secuela de 2004 que expandió el universo Halo introduciendo al Arbiter como segundo protagonista jugable. La historia sigue al Master Chief defendiendo la Tierra de un ataque del Covenant antes de perseguir a su flota hasta Installation 05, Delta Halo, mientras el Arbiter navega el colapso político del Covenant desde adentro. Halo 2 introdujo el multijugador en línea a través de Xbox Live y estableció muchos mapas multijugador icónicos que definieron el Halo competitivo.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-2.jpg"
+  },
+  {
+    "id": "halo-3",
+    "name": "Halo 3",
+    "description": "Halo 3 es la conclusión de 2007 de la trilogía Halo original, llevando la Guerra Humano-Covenant a su clímax. El Master Chief y el Arbiter persiguen al Prophet of Truth hasta el Ark — la superestructura extragaláctica desde la cual fue construido y disparado el Halo Array — donde derrotan a Truth, destruyen al Gravemind e impiden la activación de todos los anillos Halo. El destino del Master Chief tras la batalla, a la deriva en la mitad de una nave destruida hacia un planeta desconocido, preparó el escenario para el siguiente capítulo de la saga.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-3.jpg"
+  },
+  {
+    "id": "halo-wars",
+    "name": "Halo Wars",
+    "description": "Halo Wars es un juego de estrategia en tiempo real de 2009 ambientado en 2531 durante los primeros años de la Guerra Humano-Covenant, siguiendo a la tripulación de la UNSC Spirit of Fire — incluyendo al Sargento Forge y a la Profesora Anders — mientras se enfrentan al Covenant y a una antigua amenaza Forerunner en el Mundo Escudo Forerunner Etran Harborage. El juego fue desarrollado por Ensemble Studios y ofreció una mirada profunda a la guerra terrestre décadas antes de la historia del Master Chief, expandiendo la lore de la UNSC y el Covenant con nuevas facciones y ubicaciones.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-wars.jpg"
+  },
+  {
+    "id": "halo-3-odst",
+    "name": "Halo 3: ODST",
+    "description": "Halo 3: ODST es la expansión de campaña de 2009 ambientada durante los eventos de Halo 2, siguiendo a un escuadrón de Orbital Drop Shock Troopers — incluyendo al Rookie, Buck, Dutch, Mickey, Romeo y Dare — mientras navegan las ruinas de Nueva Mombasa, Tierra, ocupadas por el Covenant. Al jugar como un ODST en lugar de un Spartan, el juego enfatizó la exploración atmosférica y una estructura de misterio detectivesco de estilo noir, e introdujo el querido modo de supervivencia cooperativo Firefight.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-3-odst.png"
+  },
+  {
+    "id": "halo-reach",
+    "name": "Halo: Reach",
+    "description": "Halo: Reach es la precuela de 2010 a la trilogía original, que narra la historia del Noble Team — un escuadrón de Spartan-IIIs — durante la Caída de Reach en 2552, la derrota militar más devastadora de la humanidad. Los jugadores viven el costo humano de la invasión Covenant a través de los ojos de Noble Six, un Spartan solitario incorporado a un equipo existente. El juego es una trágica despedida al planeta Reach y a los Spartans que murieron defendiéndolo, terminando con Noble Six resistiendo hasta el final para asegurar la huida del Pillar of Autumn.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-reach.png"
+  },
+  {
+    "id": "halo-combat-evolved-anniversary",
+    "name": "Halo: Combat Evolved Anniversary",
+    "description": "Halo: Combat Evolved Anniversary es la remasterización de 2011 del Halo: Combat Evolved original, desarrollada por 343 Industries para celebrar el décimo aniversario de la franquicia. Presenta gráficos reconstruidos en alta definición que se alternan de forma fluida con el estilo artístico original, audio remasterizado e integración con el servicio Halo Waypoint. La edición Anniversary añadió terminales a lo largo de la campaña que expandieron la lore sobre los Forerunners, preparando la trama de Halo 4.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-combat-evolved-anniversary.jpg"
+  },
+  {
+    "id": "halo-4",
+    "name": "Halo 4",
+    "description": "Halo 4 es la entrega de 2012 que inició la Saga del Reclamador, desarrollada por 343 Industries. El Master Chief y Cortana, a la deriva en el Forward Unto Dawn desde los eventos de Halo 3, son atraídos hacia Requiem — un Mundo Escudo Forerunner — donde despiertan al Didact, un poderoso guerrero Forerunner que ve a la humanidad como una amenaza para su visión de la galaxia. El juego exploró la condición de rampage de Cortana y su vínculo cada vez más profundo con el Master Chief, culminando con el sacrificio de ella para salvarlo, e introdujo a los enemigos Prometeos y la tecnología Forerunner como parte central del universo expandido.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-4.png"
+  },
+  {
+    "id": "halo-spartan-assault",
+    "name": "Halo: Spartan Assault",
+    "description": "Halo: Spartan Assault es el shooter de vista cenital con dos palancas de 2013 que llevó la jugabilidad de Halo a plataformas móviles y de PC. La historia sigue a la Spartan Sarah Palmer y al Comandante Spartan Davis durante los primeros días del programa Spartan-IV mientras combaten a las fuerzas remanentes del Covenant. Diseñado para sesiones de juego más cortas, expandió la lore en torno a los conflictos del Covenant posteriores a la guerra y la recién formada rama Spartan-IV.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-spartan-assault.jpg"
+  },
+  {
+    "id": "halo-the-master-chief-collection",
+    "name": "Halo: The Master Chief Collection",
+    "description": "Halo: The Master Chief Collection es la antología remasterizada de 2014 que reúne Halo: Combat Evolved Anniversary, Halo 2 Anniversary, Halo 3 y Halo 4 — con Halo 3: ODST y Halo: Reach añadidos posteriormente — en un solo paquete para Xbox One y PC. Cada juego recibió un sistema de emparejamiento actualizado, y Halo 2 recibió un tratamiento Anniversary completo con cinemáticas remasterizadas producidas por Blur Studio. La colección sirve como el punto de entrada definitivo a toda la historia del Master Chief.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-the-master-chief-collection.jpg"
+  },
+  {
+    "id": "halo-5-guardians",
+    "name": "Halo 5: Guardians",
+    "description": "Halo 5: Guardians es la entrega de 2015 que dividió la campaña entre dos escuadras — el Blue Team del Master Chief y el Osiris del Spartan Locke — mientras se persiguen mutuamente por varios mundos al tiempo que Cortana ensambla una coalición de inteligencias artificiales a escala galáctica llamada los Created. El juego presentó habilidades expandidas para los Spartans, campaña cooperativa para cuatro jugadores y un enfoque multijugador dedicado con el modo competitivo Warzone. Su polémica conclusión — Cortana tomando el control de los Guardianes Forerunner para imponer la paz a la fuerza — preparó el conflicto de Halo Infinite.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-5-guardians.png"
+  },
+  {
+    "id": "halo-spartan-strike",
+    "name": "Halo: Spartan Strike",
+    "description": "Halo: Spartan Strike es la secuela de 2015 de Spartan Assault, otro shooter de vista cenital con dos palancas que sigue a un operativo Spartan en dos arcos de campaña: uno ambientado durante la Batalla de Nueva Mombasa junto a los eventos de Halo 2 y ODST, y otro durante la campaña de Requiem de Halo 4. El juego introdujo nuevos tipos de enemigos, configuraciones de armas y expandió la historia de los Spartan-IV establecida en su predecesor.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-spartan-strike.jpg"
+  },
+  {
+    "id": "halo-wars-2",
+    "name": "Halo Wars 2",
+    "description": "Halo Wars 2 es la secuela de estrategia en tiempo real de 2017 desarrollada por 343 Industries y Creative Assembly. La tripulación de la UNSC Spirit of Fire despierta del sueño criogénico sobre el Ark — la superestructura Forerunner extragaláctica — y se encuentra enfrentando a un nuevo señor de guerra de los Banished, Atriox, uno de los Jiralhanae más poderosos de la historia. El juego introdujo a los Banished como la facción antagonista principal de la era Halo moderna y estableció la amenaza que culminaría en Halo Infinite.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-wars-2.png"
+  },
+  {
+    "id": "halo-infinite",
+    "name": "Halo Infinite",
+    "description": "Halo Infinite es la entrega de 2021 que recuperó el espíritu de mundo abierto de la trilogía original. Ambientada en Installation 07 (Zeta Halo) seis meses después del asalto de los Banished que destruyó la UNSC Infinity, un Master Chief solitario es rescatado por un piloto de la UNSC y debe reconquistar el enorme anillo de las fuerzas Banished de Escharum. El juego introdujo una mecánica de desplazamiento con garfio, una estructura de mundo semiabierto y a la enigmática Harbinger como antagonista secundaria. Es la entrega más aclamada por la crítica de la era Halo moderna.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-infinite.png"
+  }
+]
