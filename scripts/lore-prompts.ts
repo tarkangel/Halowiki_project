@@ -22,6 +22,11 @@ export const LORE_PROMPTS: LorePrompt[] = [
   // ── CHARACTERS ─────────────────────────────────────────────────────────────
 
   {
+    title: 'Cortana',
+    type: 'character',
+    prompt: `Halo universe concept art portrait of Cortana, the UNSC's most advanced "Smart" AI, as she appears in Halo 3 and Halo 4. A luminous holographic humanoid figure rendered entirely in electric blue light — translucent glowing blue-white female form with flowing shoulder-length hair, her entire body covered in shifting Forerunner-style circuit patterns and data glyphs that ripple across her skin like living code. She radiates a cool blue ambient light. Close three-quarter portrait. Expression intelligent and determined, eyes bright with inner light. Dark atmospheric background with faint holographic data streams. Cinematic rim lighting. Painterly sci-fi concept art in the style of official Halo game artwork (Halo 3 / Halo 4). Highly detailed, 4k.`,
+  },
+  {
     title: 'Serin Osman',
     type: 'character',
     prompt: `Halo universe concept art portrait of Serin Osman, director of ONI Section Three. Human woman in her mid-40s, sharp angular face, short black hair, cold calculating dark eyes. Wearing a tailored ONI black naval uniform with Admiral insignia. Cinematic rim lighting, shadowed background implying secrecy and authority. Hyper-detailed, painterly sci-fi concept art style. 4k.`,
