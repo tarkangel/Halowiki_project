@@ -356,7 +356,8 @@
     "description": "Abovian es un miembro de los Orbital Drop Shock Troopers del Cuerpo de Marines de la UNSC.",
     "species": "Human",
     "affiliation": "UNSC",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/abovian.jpg"
   },
   {
     "id": "abalan",
@@ -364,7 +365,8 @@
     "description": "La Spartan Abalan es una supersoldado SPARTAN-IV que sirve en la división de Operaciones Spartan del Comando Espacial de las Naciones Unidas. Es una de las Spartans asignadas al Fireteam Jorogumo, una unidad involucrada en operaciones conjuntas con las Espadas de Sanghelios en Sanghelios.",
     "species": "Human",
     "affiliation": "UNSC",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/abalan.jpg"
   },
   {
     "id": "araqiel",
@@ -372,7 +374,8 @@
     "description": "Araqiel fue una IA 'inteligente' de tercera generación de la UNSC asignada al Coronel James Ackerson.",
     "species": "AI",
     "affiliation": "UNSC",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/araqiel.jpg"
   },
   {
     "id": "aine",
@@ -407,7 +410,8 @@
     "description": "Archie es un constructo de inteligencia artificial que estuvo en servicio con el Comando Espacial de las Naciones Unidas. Estaba a cargo de las operaciones de envío de la UNSC en Oban, pero posteriormente desertaría a los Created el 27 de octubre de 2558.",
     "species": "AI",
     "affiliation": "UNSC",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/archie.jpg"
   },
   {
     "id": "andarta",
@@ -415,7 +419,8 @@
     "description": "Andarta es un constructo de inteligencia artificial que estaba a cargo de gestionar los sistemas agrícolas de la Instalación Homestead, pero que posteriormente desertaría a los Created el 27 de octubre de 2558.",
     "species": "AI",
     "affiliation": "",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/andarta.jpg"
   },
   {
     "id": "amitbha",
@@ -423,7 +428,8 @@
     "description": "Amitābha es un constructo de inteligencia artificial que es investigador de bioinformática para Levihan Industries en la Tierra. El 28 de octubre de 2558, juró lealtad a los Created.",
     "species": "AI",
     "affiliation": "",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/amitbha.jpg"
   },
   {
     "id": "adequate-observer",
@@ -440,7 +446,8 @@
     "description": "Argie fue una ancila creada como un aspecto remoto de la ancila Forerunner de clase archeon Intrepid Eye.",
     "species": "AI",
     "affiliation": "Forerunner",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/argie.jpg"
   },
   {
     "id": "adjutant-resolution",
@@ -698,7 +705,7 @@
     "id": "gravemind",
     "name": "Gravemind",
     "description": "El Gravemind (Inferi sententia, que significa \"Muertos Pensantes\"), denominado infrecuentemente el Antiguo, y formalmente conocido como inteligencia compuesta, es la conciencia compartida de toda la especie Flood que emerge por primera vez cuando el Flood alcanza la Etapa Coordinada. Aunque esta mente compuesta habita todas las formas del Flood, se encarna distintivamente en los nodos de procesamiento de biomasa del Flood aglomerada conocidos como mentes clave. El Gravemind es la etapa más elevada del desarrollo del Flood, aunque su complejidad y capacidades dependen del tamaño y número de las mentes clave que, en el apogeo de un brote del Flood, pueden engullir mundos enteros.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/gravemind.jpg",
+    "imageUrl": "https://halo.wiki.gallery/images/2/26/HTMCC-H2A_Gravemind.png",
     "species": "Flood",
     "affiliation": "Flood",
     "appearances": []
@@ -725,7 +732,7 @@
     "id": "krith",
     "name": "Krith",
     "description": "Krith fue un notorio señor pirata Kig-Yar dentro del dominio del imperio del Covenant. Ha sido referido con títulos variados, incluyendo el de señor pirata, príncipe pirata y Rey Pirata.",
-    "imageUrl": "https://halo.wiki.gallery/images/thumb/b/b7/H5G_Krith%27s_Left_Hand.png/500px-H5G_Krith%27s_Left_Hand.png",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/krith.jpg",
     "species": "Kig-Yar",
     "affiliation": "Covenant",
     "appearances": []
@@ -770,7 +777,7 @@
     "id": "dahks",
     "name": "Dahks",
     "description": "Dahks es un mercenario Kig-Yar Ruuhtian que sirve como francotirador dentro de las Espadas de Sanghelios.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/dahks.jpg",
+    "imageUrl": "https://halo.wiki.gallery/images/5/53/HINF_Dahks.png",
     "species": "Kig-Yar",
     "affiliation": "Covenant",
     "appearances": []
@@ -781,7 +788,8 @@
     "description": "Ke'jah es un empresario Kig-Yar que opera en Venezia. Gestiona un negocio de transporte a escala colonial en el planeta.",
     "species": "Kig-Yar",
     "affiliation": "Covenant",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/kejah.jpg"
   },
   {
     "id": "caomar",

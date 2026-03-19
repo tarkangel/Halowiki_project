@@ -356,7 +356,8 @@
     "description": "Abovian is a member of the Orbital Drop Shock Troopers in the UNSC Marine Corps.",
     "species": "Human",
     "affiliation": "UNSC",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/abovian.jpg"
   },
   {
     "id": "abalan",
@@ -364,7 +365,8 @@
     "description": "Spartan Abalan is a SPARTAN-IV supersoldier serving in the United Nations Space Command's Spartan Operations division. She is one of the Spartans attached to Fireteam Jorogumo, a unit involved in joint-operations with the Swords of Sanghelios on Sanghelios.",
     "species": "Human",
     "affiliation": "UNSC",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/abalan.jpg"
   },
   {
     "id": "araqiel",
@@ -372,7 +374,8 @@
     "description": "Araqiel was a UNSC third-generation \"smart\" AI assigned to Colonel James Ackerson.",
     "species": "AI",
     "affiliation": "UNSC",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/araqiel.jpg"
   },
   {
     "id": "aine",
@@ -407,7 +410,8 @@
     "description": "Archie is an artificial intelligence construct who was in service with the United Nations Space Command. He was in charge of UNSC shipping operations on Oban, but would later defect to the Created on October 27, 2558.",
     "species": "AI",
     "affiliation": "UNSC",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/archie.jpg"
   },
   {
     "id": "andarta",
@@ -415,7 +419,8 @@
     "description": "Andarta is an artificial intelligence construct who was in charge of managing agricultural systems at Homestead Facility, but would later defect to the Created on October 27, 2558.",
     "species": "AI",
     "affiliation": "",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/andarta.jpg"
   },
   {
     "id": "amitbha",
@@ -423,7 +428,8 @@
     "description": "Amitābha is an artificial intelligence construct who is a bioinformatics researcher for Levihan Industries on Earth. On October 28, 2558, he pledged allegiance to the Created.",
     "species": "AI",
     "affiliation": "",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/amitbha.jpg"
   },
   {
     "id": "adequate-observer",
@@ -440,7 +446,8 @@
     "description": "Argie was an ancilla created as a remote aspect of the Forerunner archeon-class ancilla Intrepid Eye.",
     "species": "AI",
     "affiliation": "Forerunner",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/argie.jpg"
   },
   {
     "id": "adjutant-resolution",
@@ -698,7 +705,7 @@
     "id": "gravemind",
     "name": "Gravemind",
     "description": "The Gravemind (Inferi sententia, meaning \"Thinking Dead\"), infrequently referred to as the Ancient One, and formally known as a compound intelligence, is the shared consciousness of the entire Flood species which first emerges when the Flood reaches the Coordinated Stage. While this compound mind inhabits all Flood forms, it is distinctly embodied in processing nodes of agglomerated Flood biomatter known as key minds. The Gravemind is the highest stage of the Flood's development, though its complexity and capabilities depend on the size and number of the key minds which can, at the height of a Flood outbreak, engulf entire worlds.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/gravemind.jpg",
+    "imageUrl": "https://halo.wiki.gallery/images/2/26/HTMCC-H2A_Gravemind.png",
     "species": "Flood",
     "affiliation": "Flood",
     "appearances": []
@@ -725,7 +732,7 @@
     "id": "krith",
     "name": "Krith",
     "description": "Krith was a notorious Kig-Yar pirate lord within the Covenant empire's domain. He has been referred to by varying titles, including that of a pirate-lord, a pirate prince, and a Pirate King.",
-    "imageUrl": "https://halo.wiki.gallery/images/thumb/b/b7/H5G_Krith%27s_Left_Hand.png/500px-H5G_Krith%27s_Left_Hand.png",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/krith.jpg",
     "species": "Kig-Yar",
     "affiliation": "Covenant",
     "appearances": []
@@ -770,7 +777,7 @@
     "id": "dahks",
     "name": "Dahks",
     "description": "Dahks is a Ruuhtian Kig-Yar mercenary serving as a sniper within the Swords of Sanghelios.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/dahks.jpg",
+    "imageUrl": "https://halo.wiki.gallery/images/5/53/HINF_Dahks.png",
     "species": "Kig-Yar",
     "affiliation": "Covenant",
     "appearances": []
@@ -781,7 +788,8 @@
     "description": "Ke'jah is a Kig-Yar businessman operating on Venezia. He manages a colony-wide transport business on the planet.",
     "species": "Kig-Yar",
     "affiliation": "Covenant",
-    "appearances": []
+    "appearances": [],
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/kejah.jpg"
   },
   {
     "id": "caomar",
