@@ -67,11 +67,14 @@ export default function About() {
           </div>
           <div>
             <h2 className="text-xl font-bold text-white mb-1">Angel Calderon</h2>
+            <p className="text-zinc-400 text-xs mb-2 font-semibold tracking-wide uppercase" style={{ color: '#00B4D8' }}>
+              DevOps · Cloud &amp; AI Engineer · Full-Stack
+            </p>
             <p className="text-zinc-400 text-sm leading-relaxed">
-              Full-stack developer and Halo enthusiast. Built this project to combine
-              a passion for the Halo universe with a hands-on showcase of modern cloud
-              infrastructure, AI image generation, and React SPA architecture — all
-              orchestrated through an AI-native development workflow.
+              DevOps and Cloud AI engineer with a passion for the Halo universe. Built this project
+              to combine lore fandom with a hands-on showcase of GCP infrastructure, AI-driven
+              image generation, CI/CD automation, and full-stack React development — all
+              orchestrated through an AI-native workflow.
             </p>
           </div>
         </div>
