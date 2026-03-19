@@ -6,10 +6,12 @@ interface CardProps {
   description: string;
   imageUrl?: string;
   badge?: string;
+  badges?: string[];
   onClick?: () => void;
 }
 
-export default function Card({ title, description, imageUrl, badge, onClick }: CardProps) {
+export default function Card({ title, description, imageUrl, badge, badges, onClick }: CardProps) {
+  const allBadges = badges ?? (badge ? [badge] : []);
   return (
     <motion.div
       whileHover={{ y: -4, boxShadow: '0 10px 30px rgba(0,180,216,0.15)' }}
@@ -27,7 +29,11 @@ export default function Card({ title, description, imageUrl, badge, onClick }: C
       <div className="p-4">
         <div className="flex items-start justify-between gap-2 mb-2">
           <h3 className="text-white font-semibold text-base leading-tight">{title}</h3>
-          {badge && <Badge label={badge} />}
+          {allBadges.length > 0 && (
+            <div className="flex flex-wrap gap-1 justify-end">
+              {allBadges.map(b => <Badge key={b} label={b} />)}
+            </div>
+          )}
         </div>
         <p className="text-zinc-400 text-sm line-clamp-3">{description}</p>
       </div>

@@ -13,6 +13,7 @@ interface WikiItem {
   imageUrl?: string;
   faction?: string;
   affiliation?: string;
+  affiliations?: string[];
   type?: string;
   species?: string;
   rank?: string;
@@ -37,9 +38,10 @@ function isKnown(value: string | number | undefined | null): boolean {
   return !UNKNOWN_VALUES.has(String(value).toLowerCase().trim());
 }
 
-function knownBadge(item: WikiItem): string | undefined {
-  const candidate = item.faction ?? item.affiliation ?? item.type;
-  return candidate && isKnown(candidate) ? candidate : undefined;
+function knownBadges(item: WikiItem): string[] {
+  if (item.affiliations && item.affiliations.length > 0) return item.affiliations;
+  const single = item.faction ?? item.affiliation ?? item.type;
+  return single && isKnown(single) ? [single] : [];
 }
 
 // ── Detail Panel ─────────────────────────────────────────────────────────────
@@ -49,7 +51,7 @@ interface Field { label: string; value: string }
 function buildFields(item: WikiItem): Field[] {
   const candidates: Array<[string, string | number | string[] | undefined]> = [
     ['Faction',      item.faction],
-    ['Affiliation',  item.affiliation],
+    ['Affiliation',  item.affiliations ? item.affiliations.join(', ') : item.affiliation],
     ['Type',         item.type],
     ['Species',      item.species],
     ['Rank',         item.rank],
@@ -121,7 +123,7 @@ function DetailPanel({ item, onClose }: { item: WikiItem; onClose: () => void })
             >
               {item.name}
             </h2>
-            {knownBadge(item) && <Badge label={knownBadge(item)!} />}
+            {knownBadges(item).map(b => <Badge key={b} label={b} />)}
           </div>
 
           {/* Description */}
@@ -228,7 +230,7 @@ export default function WikiGrid({ items, loading, error }: WikiGridProps) {
               title={item.name}
               description={item.description}
               imageUrl={item.imageUrl}
-              badge={knownBadge(item)}
+              badges={knownBadges(item)}
               onClick={() => setSelected(item)}
             />
           </motion.div>

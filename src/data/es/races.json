@@ -76,16 +76,25 @@
     "name": "Unggoy",
     "description": "Los Unggoy — conocidos por los humanos como Grunts — son una especie baja que respira metano, proveniente del gélido mundo Balaho, que fue conquistada por el Covenant y enrolada a la fuerza en su servicio militar como la infantería más numerosa. A pesar de ser despreciados como cobardes por otras especies del Covenant, los Unggoy son resistentes, se reproducen rápidamente y en cantidad suficiente forman fuerzas de enjambre efectivas. Su historia incluye la Rebelión Unggoy de 2462, en la cual se levantaron contra la opresión del Covenant y solo fueron sometidos cuando los Huragok los pacificaron inadvertidamente con narcóticos recreativos. Hoy en día, los Unggoy sirven indistintamente en las Espadas de Sanghelios, en los remanentes del Covenant y entre los Banished.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/unggoy.png",
-    "affiliation": "Banished",
-    "appearances": []
+    "affiliation": "Covenant",
+    "appearances": [],
+    "affiliations": [
+      "Covenant",
+      "Swords of Sanghelios",
+      "Banished"
+    ]
   },
   {
     "id": "kig-yar",
     "name": "Kig-Yar",
     "description": "Los Kig-Yar — conocidos por los humanos como Jackals y Skirmishers — son una especie mercenaria aviano-reptiliana de corsarios provenientes de Eayn, una luna del gigante gaseoso Te. Motivados por el lucro en lugar de la devoción religiosa, los Kig-Yar se unieron al Covenant principalmente por el acceso a tecnología avanzada y la oportunidad de saquear colonias humanas. Su aguda vista natural y paciencia táctica los convirtieron en excelentes exploradores, francotiradores y especialistas en defensa de punto dentro de las formaciones del Covenant. Los portadores de escudo Kig-Yar eran notorios entre los Marines de la UNSC por proyectar barreras de energía personales que desviaban el fuego de armas ligeras mientras avanzaban. En la era posterior a la guerra, facciones Kig-Yar sirven a múltiples empleadores, incluyendo a los Banished.",
     "imageUrl": "https://halo.wiki.gallery/images/b/b4/H5G-Render-Jackal.png",
-    "affiliation": "Banished",
-    "appearances": []
+    "affiliation": "Covenant",
+    "appearances": [],
+    "affiliations": [
+      "Covenant",
+      "Banished"
+    ]
   },
   {
     "id": "precursor",
