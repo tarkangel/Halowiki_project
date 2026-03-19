@@ -163,35 +163,26 @@ export default function Sidebar() {
               HALO WIKI
             </motion.span>
             {/* Ring — right of HALO WIKI when expanded */}
-            <motion.svg
-              viewBox="0 0 120 58"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              animate={{ opacity: expanded ? 0.9 : 0 }}
+            <motion.img
+              src="https://storage.googleapis.com/halowiki-generated-images/ui/halo-ring-icon.png"
+              alt=""
+              aria-hidden
+              animate={{ opacity: expanded ? 0.92 : 0 }}
               transition={{ duration: 0.2 }}
-              className="flex-shrink-0"
-              style={{ width: 66, height: 32, filter: 'drop-shadow(0 0 8px #00B4D8cc)' }}
-            >
-              <ellipse cx="60" cy="29" rx="55" ry="21" stroke="#00B4D8" strokeWidth="26" strokeOpacity="0.07"/>
-              <ellipse cx="60" cy="29" rx="55" ry="21" stroke="#a8dcf0" strokeWidth="12" strokeOpacity="0.9"/>
-              <ellipse cx="60" cy="29" rx="55" ry="21" stroke="#ffffff" strokeWidth="1.5" strokeOpacity="0.22"/>
-              <ellipse cx="60" cy="29" rx="43" ry="12" stroke="#00B4D8" strokeWidth="2" strokeOpacity="0.65"/>
-            </motion.svg>
+              className="flex-shrink-0 object-contain"
+              style={{ width: 66, height: 66, mixBlendMode: 'screen', filter: 'drop-shadow(0 0 8px #00B4D8aa)' }}
+            />
           </div>
           {/* Ring — below HW when collapsed */}
-          <motion.svg
-            viewBox="0 0 120 58"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            animate={{ opacity: expanded ? 0 : 0.8 }}
+          <motion.img
+            src="https://storage.googleapis.com/halowiki-generated-images/ui/halo-ring-icon.png"
+            alt=""
+            aria-hidden
+            animate={{ opacity: expanded ? 0 : 0.85 }}
             transition={{ duration: 0.2 }}
-            style={{ width: 56, height: 27, filter: 'drop-shadow(0 0 8px #00B4D8cc)' }}
-          >
-            <ellipse cx="60" cy="29" rx="55" ry="21" stroke="#00B4D8" strokeWidth="26" strokeOpacity="0.07"/>
-            <ellipse cx="60" cy="29" rx="55" ry="21" stroke="#a8dcf0" strokeWidth="12" strokeOpacity="0.9"/>
-            <ellipse cx="60" cy="29" rx="55" ry="21" stroke="#ffffff" strokeWidth="1.5" strokeOpacity="0.22"/>
-            <ellipse cx="60" cy="29" rx="43" ry="12" stroke="#00B4D8" strokeWidth="2" strokeOpacity="0.65"/>
-          </motion.svg>
+            className="object-contain"
+            style={{ width: 56, height: 56, mixBlendMode: 'screen', filter: 'drop-shadow(0 0 8px #00B4D8aa)' }}
+          />
         </button>
 
         <nav className="flex-1 flex flex-col gap-1 mt-2">
