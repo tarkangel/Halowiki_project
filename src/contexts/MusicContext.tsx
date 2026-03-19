@@ -8,12 +8,16 @@ import {
 } from 'react';
 import type { ReactNode } from 'react';
 
+const GCS = 'https://storage.googleapis.com/halowiki-generated-images/music';
+
 const TRACKS = [
-  '/music/halo-2-epilogue.mp3',
-  '/music/brothers-in-arms.mp3',
-  '/music/on-a-pale-horse.mp3',
-  '/music/halo-main-theme.mp3',
-  '/music/spirit-of-fire.mp3',
+  `${GCS}/halo-2-epilogue.mp3`,
+  `${GCS}/brothers-in-arms.mp3`,
+  `${GCS}/on-a-pale-horse.mp3`,
+  `${GCS}/halo-main-theme.mp3`,
+  `${GCS}/spirit-of-fire.mp3`,
+  `${GCS}/heavy-price-paid.mp3`,
+  `${GCS}/greatest-journey.mp3`,
 ];
 
 const STORAGE_KEY = 'halowiki-music';
