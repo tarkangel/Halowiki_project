@@ -39,6 +39,7 @@ export const FACTION_OVERRIDES: Record<string, string> = {
   'Noble Six':        'UNSC',
   'Catherine Halsey': 'UNSC',
   'Roland':           'UNSC',
+  'Thomas Lasky':     'UNSC',  // description mentions "Promethean attack on Requiem" — triggers false Forerunner
   // ── UNSC vehicles — descriptions mention "Covenant" in battle context ─────
   'Warthog':   'UNSC',
   'Scorpion':  'UNSC',
