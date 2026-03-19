@@ -216,6 +216,15 @@
     "appearances": []
   },
   {
+    "id": "adjutant-reflex",
+    "name": "Adjutant Reflex",
+    "description": "Adjutant Reflex, username on Bungie.net and halo.bungie.org AdjutantReflex, was a Facilitator-class Forerunner ancilla, whose operation was facilitation of Array requirements.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/adjutant-reflex.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
     "id": "686-ebullient-prism",
     "name": "686 Ebullient Prism",
     "description": "686 Ebullient Prism was a Forerunner AI construct, and the Monitor of Line Installation 1-4. Prism's functions included collecting and inspecting any specimens captured for evidence of immunity to infestation by the Flood. Assistance from the specimen when inspecting was not required to be voluntary according to protocol.",
@@ -366,15 +375,6 @@
     "appearances": []
   },
   {
-    "id": "adjutant-reflex",
-    "name": "Adjutant Reflex",
-    "description": "Adjutant Reflex, username on Bungie.net and halo.bungie.org AdjutantReflex, was a Facilitator-class Forerunner ancilla, whose operation was facilitation of Array requirements.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/adjutant-reflex.jpg",
-    "species": "AI",
-    "affiliation": "Forerunner",
-    "appearances": []
-  },
-  {
     "id": "aine",
     "name": "Aine",
     "description": "Aine (AI Serial Number: ANE 3567-7) was an artificial intelligence construct built by the United Nations Space Command. She was the original shipboard AI of the UNSC Infinity before her destruction during the Battle of Requiem.",
@@ -465,6 +465,15 @@
     "name": "Amphium",
     "description": "Amphium is a heavy-jawed Jiralhanae pilot serving in the Banished. In 2559, he led the first Banshee talon of the Clan of the Long Shields on the Ark.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/amphium.jpg",
+    "species": "Jiralhanae",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "atrioxsilver",
+    "name": "Atriox/Silver",
+    "description": "Atriox is a Jiralhanae warrior that serves the Covenant/Silver during their crusade against humanity.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/atrioxsilver.jpg",
     "species": "Jiralhanae",
     "affiliation": "Banished",
     "appearances": []
@@ -614,6 +623,15 @@
     "appearances": []
   },
   {
+    "id": "bakz",
+    "name": "Bakz",
+    "description": "Bakz is a Kig-Yar who served in Chol Von's crew while she searched for the Pious Inquisitor.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/bakz.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
     "id": "bibjam",
     "name": "Bibjam",
     "description": "Bibjam was an Unggoy squad leader within Jul 'Mdama's reformed Covenant who attempted to defect to the Swords of Sanghelios.",
@@ -629,15 +647,6 @@
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/angnapnap-the-enlightened.jpg",
     "species": "Unggoy",
     "affiliation": "Covenant",
-    "appearances": []
-  },
-  {
-    "id": "capital-enforcer",
-    "name": "Capital-Enforcer",
-    "description": "Capital-Enforcer, also known as Capital, was a Forerunner Warrior-Servant who served during the Forerunner-Flood war.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/capital-enforcer.jpg",
-    "species": "Forerunner",
-    "affiliation": "Forerunner",
     "appearances": []
   },
   {
@@ -722,6 +731,15 @@
     "appearances": []
   },
   {
+    "id": "krith",
+    "name": "Krith",
+    "description": "Krith was a notorious Kig-Yar pirate lord within the Covenant empire's domain. He has been referred to by varying titles, including that of a pirate-lord, a pirate prince, and a Pirate King.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/b/b7/H5G_Krith%27s_Left_Hand.png/500px-H5G_Krith%27s_Left_Hand.png",
+    "species": "Kig-Yar",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
     "id": "huz-mor-kha",
     "name": "Huz Mor-Kha",
     "description": "Huz Mor-Kha is a Kig-Yar scrap dealer operating in the post-Human-Covenant War era.",
@@ -735,15 +753,6 @@
     "name": "Isk",
     "description": "Isk is an elderly Kig-Yar contract broker operating in the post-Human-Covenant War era.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/isk.jpg",
-    "species": "Kig-Yar",
-    "affiliation": "Covenant",
-    "appearances": []
-  },
-  {
-    "id": "bakz",
-    "name": "Bakz",
-    "description": "Bakz is a Kig-Yar who served in Chol Von's crew while she searched for the Pious Inquisitor.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/bakz.jpg",
     "species": "Kig-Yar",
     "affiliation": "Covenant",
     "appearances": []
