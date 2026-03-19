@@ -153,14 +153,48 @@ export function pageToWeapon(page: PageSummary): Weapon {
   };
 }
 
+// Curated descriptions for vehicles whose Halopedia extract is too thin (< 200 chars).
+const VEHICLE_DESCRIPTION_OVERRIDES: Record<string, string> = {
+  'Banshee':
+    'The Banshee is the Covenant\'s primary atmospheric fighter and ground-support aircraft, deployed across every major engagement of the Human-Covenant War. A single-pilot anti-gravity flier built around a swept-wing hull of violet-purple alloy, it is armed with twin rapid-fire plasma cannons and a ventral fuel rod cannon for heavy strikes. Banshees are fast, agile, and capable of both atmospheric and brief exoatmospheric flight, making them versatile air superiority assets feared by UNSC pilots and ground forces alike.',
+
+  'Wraith':
+    'The Wraith is the Covenant\'s principal main battle tank — a heavy, mortar-firing anti-gravity vehicle that anchors Covenant armoured assaults. Its distinctive smooth hull of deep-blue Covenant alloy rides on a repulsor-lift field, giving it remarkable cross-terrain mobility despite its mass. The Wraith fires high-yield superheated plasma in a lobbing mortar arc capable of destroying fortified positions, vehicles, and groups of infantry in a single shot. It is complemented by a pintle-mounted plasma cannon for close defence.',
+
+  'Ghost':
+    'The Ghost is the Covenant\'s standard rapid-assault one-man speeder bike — a low-profile anti-gravity vehicle that combines blistering speed with twin rapid-fire plasma cannons. Ridden in a reclined forward posture with the pilot partially enclosed by curved sponsons, Ghosts are deployed as light cavalry for reconnaissance, flanking manoeuvres, and harassment of infantry. Their small profile, high speed, and ability to traverse almost any terrain make them among the most versatile vehicles in the Covenant and Banished arsenal.',
+
+  'Phantom':
+    'The Phantom is the Covenant\'s primary troop transport and fire-support dropship, serving the same battlefield role as the UNSC Pelican. Larger and more heavily armed than its predecessor the Spirit, the Phantom features a distinctive ventral gravity lift for troop deployment and three heavy plasma cannon turrets. Its distinctive hull silhouette — a broad, blunt nose with swept wings and a deep fuselage — became one of the most recognisable shapes of the Human-Covenant War. The Phantom\'s heavy armament allows it to provide covering fire during insertions and extractions.',
+
+  'Spirit':
+    'The Spirit is an early-model Covenant troop transport dropship characterised by its distinctive tuning-fork silhouette — two parallel troop bays flanking a central engine nacelle. Spirits were the primary Covenant insertion craft during the early Human-Covenant War, deploying infantry via gravity lifts from hovering altitude. Though later supplemented and largely replaced by the more capable Phantom, Spirits remained in active service with Covenant remnant and Banished forces. Their open troop bay design made them vulnerable to UNSC small-arms fire but their speed and lift capacity kept them operationally relevant.',
+
+  'Scarab':
+    'The Scarab is the Covenant\'s most fearsome ground combat platform — a massive quadrupedal walker operated by a Lekgolo colony gestalt rather than a conventional crew. Standing over ten metres tall, the Scarab mounts a devastating focus cannon capable of cutting through the armour of UNSC warships at close range, making it an existential threat to any ground position or fortification. Its four articulated legs carry the platform across any terrain, while its elevated firing position provides unobstructed line of sight. Destroying a Scarab requires boarding it directly and eliminating the Lekgolo colonies controlling its systems.',
+
+  'Mantis':
+    'The Mantis is a UNSC bipedal combat mech first deployed aboard Halo Installation 03 and seen extensively on Requiem. Operated by a single pilot seated in a central cockpit, the Mantis carries a dual rotary cannon on one arm and a missile pod on the other, giving it formidable anti-infantry and anti-vehicle capabilities. Despite its imposing silhouette it is agile enough to navigate the same terrain as infantry, allowing it to operate as heavy support in environments where conventional vehicles cannot follow. The Mantis represented a significant step forward in UNSC exo-suit combat technology.',
+
+  'Falcon':
+    'The Falcon is a UNSC light multi-role helicopter deployed prominently during the Fall of Reach. It serves as a utility aircraft for troop transport, close air support, and reconnaissance, typically operating with two door gunners on open side sponsons providing suppressive fire. The Falcon\'s twin-rotor design gives it stable hovering capability and good payload capacity for its size, making it the backbone of UNSC light aviation during engagements where heavier dropships cannot safely operate. Noble Team relied on Falcons extensively during the defence of Reach in 2552.',
+
+  'Scorpion':
+    'The Scorpion is the UNSC\'s primary main battle tank — a heavy tracked vehicle that has served as the backbone of UNSC armoured formations for decades. Armed with a 90mm high-velocity cannon capable of defeating most Covenant vehicles at range and a coaxial machine gun for anti-infantry work, the Scorpion is slow but extraordinarily durable. Its low silhouette and wide tracks give it stability on diverse terrain. During the Human-Covenant War, Scorpions formed the core of UNSC armoured counter-attacks and defensive lines, trading mobility for sheer firepower.',
+};
+
 export function pageToVehicle(page: PageSummary): Vehicle {
+  const extract = page.extract ?? '';
+  const description = extract.length < 200 && VEHICLE_DESCRIPTION_OVERRIDES[page.title]
+    ? VEHICLE_DESCRIPTION_OVERRIDES[page.title]
+    : extract;
   return {
     id: slugify(page.title),
     name: page.title,
-    description: page.extract ?? '',
+    description,
     imageUrl: generatedImage(page.title) ?? page.thumbnail?.source,
-    faction: inferFaction(page.title, page.extract ?? ''),
-    type: inferVehicleType(page.title, page.extract ?? ''),
+    faction: inferFaction(page.title, description),
+    type: inferVehicleType(page.title, description),
     appearances: [],
   };
 }
@@ -317,6 +351,24 @@ const PLANET_DESCRIPTION_OVERRIDES: Record<string, string> = {
 
   'Invicta':
     'Invicta is a UNSC colony world known for its resilient population and strong ties to the UNSC military establishment. The planet\'s name — Latin for "unconquered" — reflected its settlers\' determination to maintain independence and self-sufficiency in the outer colonies. During the Human-Covenant War, Invicta\'s citizens and garrison mounted fierce resistance when Covenant forces moved against the planet, embodying the stubborn defiance that characterised humanity\'s long struggle for survival.',
+
+  'Harvest':
+    'Harvest, also known as Epsilon Indi IV, was humanity\'s most remote Outer Colony and the first human world to be discovered and destroyed by the Covenant. Founded in 2468 as an agricultural "breadbasket" colony in the Epsilon Indi system, Harvest was a peaceful and prosperous world of rolling farmland and scattered cities. In 2525, a Covenant fleet made first contact in orbit and, deeming the planet sacred ground due to Forerunner artifacts, launched an orbital bombardment that glassed the surface. The battle for Harvest — and Sergeant Avery Johnson\'s role in it — marked the true beginning of the Human-Covenant War.',
+
+  'Reach':
+    'Reach, also known as Epsilon Eridani II, was humanity\'s most important military colony and the headquarters of the UNSC Armed Forces. Just 10.5 light-years from Earth, Reach was a heavily fortified Inner Colony world hosting SPARTAN training facilities, vast shipyards, and major fleet anchorages. In August 2552 the Covenant launched a massive invasion that overwhelmed Reach\'s formidable defences. The Fall of Reach — humanity\'s greatest military defeat — cost the lives of most of the SPARTAN-IIs and millions of civilians, and nearly opened a direct path to Earth.',
+
+  'Circumstance':
+    'Circumstance is a human Outer Colony world in UNSC space, notable for its role in the turbulent political climate of the early 26th century. The planet\'s colonial government navigated the difficult balance between loyalty to the Unified Earth Government and the growing insurrectionist sentiment that was fracturing the outer colonies in the decades before the Covenant War. Circumstance became caught up in the escalating conflict between the UNSC Office of Naval Intelligence and rebel factions, its citizens drawn into a war that was as much political as military.',
+
+  'Concord':
+    'Concord is a human colony world in UNSC space that endured significant hardship during the Human-Covenant War. The planet\'s settlements and infrastructure bore the scars of Covenant raids and orbital engagements as the war pushed ever closer to the Inner Colonies. In the post-war era Concord became a focal point for reconstruction efforts, its surviving population working to rebuild civic life amid the fragile peace between humanity and the former Covenant species.',
+
+  'Kholo':
+    'Kholo is a human Outer Colony world that was glassed by the Covenant during the Human-Covenant War, its surface rendered uninhabitable by sustained plasma bombardment. Before its destruction, Kholo was a inhabited colony with a sizeable civilian population. The planet\'s fall was one of the countless tragedies of the Covenant\'s systematic extermination campaign against humanity\'s outer colonies, each glassing eliminating worlds, populations, and centuries of human settlement in a matter of hours.',
+
+  'Bhedalon':
+    'Bhedalon is a world of significance within Covenant and former Covenant space, positioned in a region shaped by the complex politics of the post-war era. Following the collapse of the Covenant in 2552, Bhedalon\'s strategic location made it a contested prize for the various successor factions — Covenant remnants, the Swords of Sanghelios, and Banished warlords — all seeking to consolidate power over former Covenant territory. UNSC intelligence flagged the planet as a flashpoint in the years of political instability that followed the end of the Human-Covenant War.',
 };
 
 export function pageToPlanet(page: PageSummary): Planet {
@@ -591,10 +643,13 @@ export async function fetchCharacters(limitPerSpecies = 15): Promise<Character[]
 function isUsableCharacter(c: Character): boolean {
   // Must have a meaningful description
   if (!c.description || c.description.trim().length < 80) return false;
-  // Must have either an image OR a real name (not a pure callsign/designation)
-  // Callsign pattern: "4 Charlie 27", "2 Lima 4", "'D'", "'S'", "1 Alpha 3"
+  const name = c.name.trim();
+  // Pure radio callsigns: "4 Charlie 27", "2 Lima 4", "'D'", "'S'"
   const callsign = /^[\d\s'"`]+$|^\d[\w\s'-]{0,12}\d$|^'[A-Z]'$/;
-  if (callsign.test(c.name.trim())) return false;
+  if (callsign.test(name)) return false;
+  // Pure SPARTAN designations with no given name (SPARTAN-B170, SPARTAN-G059)
+  // Keep names like "Carter-A259" or "Jun-A266" (real name + tag)
+  if (/^SPARTAN-[A-Z0-9]+$/i.test(name)) return false;
   return true;
 }
 
