@@ -115,11 +115,15 @@ export async function searchPages(query: string, limit = 10): Promise<PageSummar
 
 import type { Weapon, Vehicle, Character, Race, Planet, Game } from '../types';
 import _generatedImages   from '../generated-images.json';
-import _weaponImages      from '../generated-weapon-images.json'    assert { type: 'json' };
-import _vehicleImages     from '../generated-vehicle-images.json'   assert { type: 'json' };
-import _characterImages   from '../generated-character-images.json' assert { type: 'json' };
-import _raceImages        from '../generated-race-images.json'      assert { type: 'json' };
-import _planetImages      from '../generated-planet-images.json'    assert { type: 'json' };
+import _weaponImages      from '../generated-weapon-images.json'      assert { type: 'json' };
+import _vehicleImages     from '../generated-vehicle-images.json'     assert { type: 'json' };
+import _characterImages   from '../generated-character-images.json'   assert { type: 'json' };
+import _raceImages        from '../generated-race-images.json'        assert { type: 'json' };
+import _planetImages      from '../generated-planet-images.json'      assert { type: 'json' };
+import _descriptions      from '../generated-descriptions.json'       assert { type: 'json' };
+
+/** Central description database — populated by scripts/sync-descriptions.ts */
+const descriptionDb: Record<string, string> = _descriptions as Record<string, string>;
 
 const generatedImages: Record<string, string> = {
   ..._generatedImages,
@@ -156,14 +160,30 @@ function slugify(title: string) {
   return title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 }
 
+/**
+ * Resolve final description for any entity.
+ * Priority: Halopedia extract (if ≥ minLen) → descriptionDb → hardcoded override → raw extract
+ */
+function resolveDescription(
+  title: string,
+  extract: string,
+  hardcodedOverride?: string,
+  minLen = 80,
+): string {
+  if (extract.trim().length >= minLen) return extract;
+  return descriptionDb[title] || hardcodedOverride || extract;
+}
+
 export function pageToWeapon(page: PageSummary): Weapon {
+  const extract     = page.extract ?? '';
+  const description = resolveDescription(page.title, extract);
   return {
     id: slugify(page.title),
     name: page.title,
-    description: page.extract ?? '',
+    description,
     imageUrl: generatedImage(page.title) ?? page.thumbnail?.source,
-    faction: inferFaction(page.title, page.extract ?? ''),
-    type: inferWeaponType(page.title, page.extract ?? ''),
+    faction: inferFaction(page.title, description),
+    type: inferWeaponType(page.title, description),
     appearances: [],
   };
 }
@@ -199,10 +219,8 @@ const VEHICLE_DESCRIPTION_OVERRIDES: Record<string, string> = {
 };
 
 export function pageToVehicle(page: PageSummary): Vehicle {
-  const extract = page.extract ?? '';
-  const description = extract.length < 200 && VEHICLE_DESCRIPTION_OVERRIDES[page.title]
-    ? VEHICLE_DESCRIPTION_OVERRIDES[page.title]
-    : extract;
+  const extract     = page.extract ?? '';
+  const description = resolveDescription(page.title, extract, VEHICLE_DESCRIPTION_OVERRIDES[page.title], 200);
   return {
     id: slugify(page.title),
     name: page.title,
@@ -264,10 +282,8 @@ const CHARACTER_DESCRIPTION_OVERRIDES: Record<string, string> = {
 };
 
 export function pageToCharacter(page: PageSummary): Character {
-  const extract = page.extract ?? '';
-  const description = (!extract || extract.trim().length < 80) && CHARACTER_DESCRIPTION_OVERRIDES[page.title]
-    ? CHARACTER_DESCRIPTION_OVERRIDES[page.title]
-    : extract;
+  const extract     = page.extract ?? '';
+  const description = resolveDescription(page.title, extract, CHARACTER_DESCRIPTION_OVERRIDES[page.title]);
   return {
     id: slugify(page.title),
     name: page.title,
@@ -325,10 +341,8 @@ const RACE_DESCRIPTION_OVERRIDES: Record<string, string> = {
 };
 
 export function pageToRace(page: PageSummary): Race {
-  const extract = page.extract ?? '';
-  const description = extract.length < 200 && RACE_DESCRIPTION_OVERRIDES[page.title]
-    ? RACE_DESCRIPTION_OVERRIDES[page.title]
-    : extract;
+  const extract     = page.extract ?? '';
+  const description = resolveDescription(page.title, extract, RACE_DESCRIPTION_OVERRIDES[page.title], 200);
   return {
     id: slugify(page.title),
     name: page.title,
@@ -440,10 +454,8 @@ const PLANET_DESCRIPTION_OVERRIDES: Record<string, string> = {
 };
 
 export function pageToPlanet(page: PageSummary): Planet {
-  const extract = page.extract ?? '';
-  const description = extract.length < 200 && PLANET_DESCRIPTION_OVERRIDES[page.title]
-    ? PLANET_DESCRIPTION_OVERRIDES[page.title]
-    : extract;
+  const extract     = page.extract ?? '';
+  const description = resolveDescription(page.title, extract, PLANET_DESCRIPTION_OVERRIDES[page.title], 200);
   return {
     id: slugify(page.title),
     name: page.title,

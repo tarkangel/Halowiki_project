@@ -98,21 +98,33 @@ jobs:
           GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
           GCS_BUCKET: ${{ vars.GCS_IMAGES_BUCKET || format('{0}-generated-images', secrets.GCP_PROJECT_ID) }}
 
+      - name: Sync descriptions to GCS and JSON
+        run: npx tsx scripts/sync-descriptions.ts
+        env:
+          GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+          GCS_BUCKET: ${{ vars.GCS_IMAGES_BUCKET || format('{0}-generated-images', secrets.GCP_PROJECT_ID) }}
+
       - name: Generate missing images
         run: npx tsx scripts/generate-missing-images.ts
         env:
           GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
           GCS_BUCKET: ${{ vars.GCS_IMAGES_BUCKET || format('{0}-generated-images', secrets.GCP_PROJECT_ID) }}
 
-      - name: Commit updated image maps
+      - name: Commit updated image maps and descriptions
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/generated-images.json src/generated-character-images.json
+          git add src/generated-images.json \
+                  src/generated-character-images.json \
+                  src/generated-weapon-images.json \
+                  src/generated-vehicle-images.json \
+                  src/generated-planet-images.json \
+                  src/generated-race-images.json \
+                  src/generated-descriptions.json
           if git diff --cached --quiet; then
-            echo "No new images, skipping commit"
+            echo "No changes, skipping commit"
           else
-            git commit -m "chore: update generated image maps [skip ci]"
+            git commit -m "chore: update image maps and description database [skip ci]"
             git push
           fi
 

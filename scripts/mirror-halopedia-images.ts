@@ -1,29 +1,28 @@
 /**
  * Mirror Halopedia thumbnail images to GCS.
  *
- * For every character in LORE_CHARACTERS that has a Halopedia thumbnail,
- * this script downloads the image and re-uploads it to the GCS bucket so
- * the app never has to call the Halopedia API at runtime for images.
+ * For every lore entity (characters, weapons, vehicles, planets, races)
+ * that has a Halopedia thumbnail, this script downloads the image and
+ * re-uploads it to the GCS bucket so the app never has to call the
+ * Halopedia API at runtime for images.
  *
- * Updates src/generated-character-images.json in-place.
+ * Updates the corresponding src/generated-*-images.json files.
  * Run: GCP_PROJECT_ID=... GCS_BUCKET=... npx tsx scripts/mirror-halopedia-images.ts
  */
 
 import { Storage } from '@google-cloud/storage';
 import { writeFileSync, existsSync, readFileSync } from 'fs';
 import { join } from 'path';
-import { LORE_CHARACTERS } from '../src/lore-titles.js';
+import {
+  LORE_CHARACTERS, LORE_WEAPONS, LORE_VEHICLES, LORE_PLANETS, LORE_RACES,
+} from '../src/lore-titles.js';
 
 const PROJECT_ID  = process.env.GCP_PROJECT_ID!;
 const BUCKET_NAME = process.env.GCS_BUCKET ?? `${PROJECT_ID}-generated-images`;
 const HALOPEDIA   = 'https://www.halopedia.org/api.php';
-const MAP_PATH    = join(process.cwd(), 'src', 'generated-character-images.json');
 
 const storage = new Storage({ projectId: PROJECT_ID });
 const bucket  = storage.bucket(BUCKET_NAME);
-
-const imageMap: Record<string, string> = existsSync(MAP_PATH)
-  ? JSON.parse(readFileSync(MAP_PATH, 'utf8')) : {};
 
 function slugify(name: string) {
   return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
@@ -31,6 +30,26 @@ function slugify(name: string) {
 
 function gcsUrl(path: string) {
   return `https://storage.googleapis.com/${BUCKET_NAME}/${path}`;
+}
+
+function jsonPath(type: string): string {
+  const fileMap: Record<string, string> = {
+    character: 'generated-character-images.json',
+    weapon:    'generated-weapon-images.json',
+    vehicle:   'generated-vehicle-images.json',
+    planet:    'generated-planet-images.json',
+    race:      'generated-race-images.json',
+  };
+  return join(process.cwd(), 'src', fileMap[type]);
+}
+
+function loadImageMap(type: string): Record<string, string> {
+  const path = jsonPath(type);
+  return existsSync(path) ? JSON.parse(readFileSync(path, 'utf8')) : {};
+}
+
+function saveImageMap(type: string, map: Record<string, string>): void {
+  writeFileSync(jsonPath(type), JSON.stringify(map, null, 2));
 }
 
 async function halopediaThumbnails(titles: string[]): Promise<Map<string, string>> {
@@ -42,15 +61,27 @@ async function halopediaThumbnails(titles: string[]): Promise<Map<string, string
     url.searchParams.set('origin', '*');
     url.searchParams.set('action', 'query');
     url.searchParams.set('titles', batch.join('|'));
+    url.searchParams.set('redirects', '1');
     url.searchParams.set('prop', 'pageimages');
     url.searchParams.set('piprop', 'thumbnail');
     url.searchParams.set('pithumbsize', '600');
     const res = await fetch(url.toString());
     const json = await res.json();
+
+    // Build redirect map: normalised/redirect-target title → original title
+    const redirectMap = new Map<string, string>();
+    for (const r of (json.query?.redirects ?? []) as Array<{ from: string; to: string }>) {
+      redirectMap.set(r.to, r.from);
+    }
+
     for (const page of Object.values(json.query?.pages ?? {}) as Array<{
       title: string; pageid: number; thumbnail?: { source: string };
     }>) {
       if (page.pageid > 0 && page.thumbnail?.source) {
+        // Use original title if this page was a redirect target
+        const originalTitle = redirectMap.get(page.title) ?? page.title;
+        result.set(originalTitle, page.thumbnail.source);
+        // Also set under resolved title so either lookup works
         result.set(page.title, page.thumbnail.source);
       }
     }
@@ -66,8 +97,6 @@ async function downloadBuffer(url: string): Promise<Buffer> {
 
 async function uploadToGCS(gcsPath: string, buf: Buffer, contentType: string): Promise<void> {
   const file = bucket.file(gcsPath);
-  // uniform_bucket_level_access is enabled; allUsers objectViewer is set at
-  // bucket level in Terraform — per-object makePublic() is not needed.
   await file.save(buf, { contentType, resumable: false });
 }
 
@@ -88,31 +117,19 @@ async function canWriteToGCS(): Promise<boolean> {
   }
 }
 
-async function main() {
-  if (!PROJECT_ID) {
-    console.error('ERROR: GCP_PROJECT_ID is not set.');
-    process.exit(1);
-  }
+async function mirrorType(type: string, titles: string[]): Promise<void> {
+  console.log(`\n[${type}] Checking ${titles.length} titles for Halopedia thumbnails...`);
 
-  console.log(`Bucket: gs://${BUCKET_NAME}`);
+  const imageMap = loadImageMap(type);
 
-  const writable = await canWriteToGCS();
-  if (!writable) {
-    console.warn('⚠  GCS bucket is not writable — skipping mirror step.');
-    console.warn('   Run `terraform apply` in /terraform to grant the SA write access.');
-    process.exit(0);
-  }
-
-  console.log(`Checking ${LORE_CHARACTERS.length} lore characters for Halopedia thumbnails...\n`);
-
-  // Only process characters that don't already have a GCS URL
-  const needed = LORE_CHARACTERS.filter(t => !imageMap[t]?.startsWith('https://storage.googleapis.com/'));
+  // Only fetch thumbnails for titles not already mirrored to GCS
+  const needed = titles.filter(t => !imageMap[t]?.startsWith('https://storage.googleapis.com/'));
   if (needed.length === 0) {
-    console.log('All lore characters already mirrored — nothing to do.');
+    console.log(`[${type}] All entries already mirrored — skipping.`);
     return;
   }
 
-  console.log(`Fetching thumbnails for: ${needed.join(', ')}\n`);
+  console.log(`[${type}] Fetching thumbnails for: ${needed.join(', ')}`);
   const thumbnails = await halopediaThumbnails(needed);
 
   let mirrored = 0;
@@ -128,7 +145,7 @@ async function main() {
 
     const slug    = slugify(title);
     const ext     = thumbUrl.includes('.png') ? 'png' : 'jpg';
-    const gcsPath = `character/${slug}.${ext}`;
+    const gcsPath = `${type}/${slug}.${ext}`;
 
     // Check if already in GCS (resume-safe)
     try {
@@ -136,7 +153,7 @@ async function main() {
       if (exists) {
         imageMap[title] = gcsUrl(gcsPath);
         console.log(`  → already in GCS: ${title}`);
-        writeFileSync(MAP_PATH, JSON.stringify(imageMap, null, 2));
+        saveImageMap(type, imageMap);
         mirrored++;
         continue;
       }
@@ -148,15 +165,37 @@ async function main() {
       await uploadToGCS(gcsPath, buf, contentTypeFromUrl(thumbUrl));
       imageMap[title] = gcsUrl(gcsPath);
       console.log(`  ✓  mirrored: ${title} → gs://${BUCKET_NAME}/${gcsPath}`);
-      writeFileSync(MAP_PATH, JSON.stringify(imageMap, null, 2));
+      saveImageMap(type, imageMap);
       mirrored++;
     } catch (err) {
       console.warn(`  ✗  failed: ${title} —`, (err as Error).message);
     }
   }
 
-  writeFileSync(MAP_PATH, JSON.stringify(imageMap, null, 2));
-  console.log(`\nDone. ${mirrored} mirrored, ${skipped} had no Halopedia thumbnail.`);
+  saveImageMap(type, imageMap);
+  console.log(`[${type}] Done. ${mirrored} mirrored, ${skipped} had no thumbnail.`);
+}
+
+async function main() {
+  if (!PROJECT_ID) {
+    console.error('ERROR: GCP_PROJECT_ID is not set.');
+    process.exit(1);
+  }
+
+  console.log(`Bucket: gs://${BUCKET_NAME}`);
+
+  const writable = await canWriteToGCS();
+  if (!writable) {
+    console.warn('⚠  GCS bucket is not writable — skipping mirror step.');
+    console.warn('   Run `terraform apply` in /terraform to grant the SA write access.');
+    process.exit(0);
+  }
+
+  await mirrorType('character', LORE_CHARACTERS);
+  await mirrorType('weapon',    LORE_WEAPONS);
+  await mirrorType('vehicle',   LORE_VEHICLES);
+  await mirrorType('planet',    LORE_PLANETS);
+  await mirrorType('race',      LORE_RACES);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
