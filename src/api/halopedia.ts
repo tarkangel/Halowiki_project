@@ -622,6 +622,15 @@ export async function fetchWeapons(limitPerCat = 15): Promise<Weapon[]> {
   return result;
 }
 
+// Silver Timeline (Halo TV series) character variants — duplicates of game-canon characters.
+// Halopedia uses a "/Silver" suffix for these pages; we only want the canon game versions.
+const CHARACTER_BLOCKLIST = new Set([
+  '343 Guilty Spark/Silver',
+  'John-117/Silver',
+  "Makee/Silver",
+  'Cortana/Silver',
+]);
+
 // Individual named vehicles and stub entries that should not appear in the wiki.
 // These are specific unit instances (not classes) or pages too thin to be useful.
 const VEHICLE_BLOCKLIST = new Set([
@@ -694,7 +703,7 @@ export async function fetchCharacters(limitPerSpecies = 15): Promise<Character[]
 
   for (const { members, species } of membersByCat) {
     for (const m of members) {
-      if (!seen.has(m.title)) {
+      if (!seen.has(m.title) && !CHARACTER_BLOCKLIST.has(m.title)) {
         seen.add(m.title);
         allTitles.push(m.title);
         speciesMap[m.title] = species;

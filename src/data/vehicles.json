@@ -39,7 +39,7 @@
     "id": "pelican",
     "name": "Pelican",
     "description": "\"Pelican\" is the name applied to a series of tactical aerospace lifters operated by the UNSC Air Force, the UNSC Marine Corps, the UNSC Navy, corporate entities and the civilian security forces.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/pelican.jpg",
+    "imageUrl": "https://halo.wiki.gallery/images/9/9f/Pelican_render.png",
     "faction": "UNSC",
     "type": "Air",
     "appearances": []
@@ -48,7 +48,7 @@
     "id": "scorpion",
     "name": "Scorpion",
     "description": "The Scorpion is the UNSC's primary main battle tank — a heavy tracked vehicle armed with a 90mm high-velocity cannon capable of defeating most vehicles at range and a coaxial machine gun for anti-infantry work. Slow but extraordinarily durable, the Scorpion formed the core of UNSC armoured counter-attacks and defensive lines throughout the Human-Covenant War, trading mobility for sheer firepower.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/scorpion.jpg",
+    "imageUrl": "https://halo.wiki.gallery/images/a/a3/Scorpion2011.png",
     "faction": "UNSC",
     "type": "Ground",
     "appearances": []
