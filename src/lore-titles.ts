@@ -86,14 +86,25 @@ export const LORE_RACES = [
 ];
 
 export const LORE_PLANETS = [
+  // ── Iconic UNSC / human worlds ────────────────────────────────────────────
+  'Reach',
+  'Earth',
   'Harvest',
   'Meridian',
   'Gao',
   'Circumstance',
   'Venezia',
   'Kholo',
-  'Site 17',
+  'Concord',
+  // ── Covenant / alien worlds ───────────────────────────────────────────────
+  'Sanghelios',
+  'High Charity',
+  // ── Forerunner installations ──────────────────────────────────────────────
+  'Installation 04',
+  'Installation 05',
+  'Installation 07',
+  'The Ark',
+  // ── Other notable worlds ──────────────────────────────────────────────────
   'Bhedalon',
   'Anvarl',
-  'Concord',
 ];

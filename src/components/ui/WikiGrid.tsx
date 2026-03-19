@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSearch } from '../../contexts/SearchContext';
 import Card from './Card';
 import Spinner from './Spinner';
 import Badge from './Badge';
@@ -150,6 +151,17 @@ function DetailPanel({ item, onClose }: { item: WikiItem; onClose: () => void })
 export default function WikiGrid({ items, loading, error }: WikiGridProps) {
   const [selected, setSelected] = useState<WikiItem | null>(null);
   const [searchParams, setSearchParams] = useSearchParams();
+  const { query } = useSearch();
+
+  const displayItems = useMemo(() => {
+    if (!items) return items;
+    const q = query.trim().toLowerCase();
+    if (q.length < 2) return items;
+    return items.filter(item =>
+      item.name.toLowerCase().includes(q) ||
+      item.description?.toLowerCase().includes(q),
+    );
+  }, [items, query]);
 
   // Auto-open item when navigating from Factions page (?open=item-id)
   useEffect(() => {
@@ -181,10 +193,14 @@ export default function WikiGrid({ items, loading, error }: WikiGridProps) {
     );
   }
 
-  if (!items || items.length === 0) {
+  if (!displayItems || displayItems.length === 0) {
     return (
       <div className="p-8 text-center">
-        <p className="text-zinc-500">No items found.</p>
+        {query.trim().length >= 2 ? (
+          <p className="text-zinc-500">No results for "<span className="text-zinc-300">{query}</span>"</p>
+        ) : (
+          <p className="text-zinc-500">No items found.</p>
+        )}
       </div>
     );
   }
@@ -200,7 +216,7 @@ export default function WikiGrid({ items, loading, error }: WikiGridProps) {
           visible: { transition: { staggerChildren: 0.05 } },
         }}
       >
-        {items.map(item => (
+        {displayItems.map(item => (
           <motion.div
             key={item.id}
             variants={{

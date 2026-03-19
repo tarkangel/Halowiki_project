@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Sidebar from './Sidebar';
 import Header from './Header';
+import { SearchProvider } from '../../contexts/SearchContext';
 
 /**
  * Per-route background wallpapers.
@@ -61,6 +62,7 @@ export default function Layout() {
   const bg = PAGE_BG[location.pathname];
 
   return (
+    <SearchProvider>
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
       <Sidebar />
       <Header />
@@ -95,5 +97,6 @@ export default function Layout() {
         <Outlet />
       </main>
     </div>
+    </SearchProvider>
   );
 }
