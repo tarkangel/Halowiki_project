@@ -2,7 +2,7 @@
 
 A production-grade, AI-powered encyclopedia for the Halo universe — built end-to-end as a showcase of modern cloud engineering, AI agent orchestration, and DevOps practices.
 
-Live at: [halowiki on Cloud Run](https://halowiki-*.run.app)
+Live at: **[halo-wiki.com](https://halo-wiki.com)**
 
 ---
 

@@ -7,20 +7,35 @@
  */
 
 export const LORE_CHARACTERS = [
+  // ── Iconic protagonists & deuteragonists ─────────────────────────────────
+  'John-117',           // Master Chief — confirmed Halopedia image
+  "Thel 'Vadam",        // The Arbiter — confirmed Halopedia image
+  'Cortana',            // UNSC AI — confirmed Halopedia image
+  'Catherine Halsey',   // Creator of the Spartans — confirmed Halopedia image
+  // ── UNSC officers & allies ──────────────────────────────────────────────
+  'Avery Johnson',
+  'Miranda Keyes',
+  'Jacob Keyes',        // Captain Keyes, CE — confirmed Halopedia image
+  'Thomas Lasky',       // Halo 4/5 Commander — confirmed Halopedia image
+  'Edward Buck',        // ODST → Spartan-IV — confirmed Halopedia image
   'Serin Osman',
   'Margaret Parangosky',
+  // ── Covenant / Swords of Sanghelios ─────────────────────────────────────
   "Jul 'Mdama",
   "Rtas 'Vadum",
-  'Dadab',
-  'Lighter Than Some',
+  "Usze 'Taham",
+  // ── Banished ────────────────────────────────────────────────────────────
+  'Escharum',           // Halo Infinite main antagonist — confirmed Halopedia image
+  // ── Reach Spartan-IIIs ──────────────────────────────────────────────────
   'Kat-B320',
   'Jorge-052',
   'Emile-A239',
+  // ── Forerunner / AI ─────────────────────────────────────────────────────
   'The Librarian',
-  'Avery Johnson',
-  'Miranda Keyes',
-  "Usze 'Taham",
   'Guilty Spark',
+  // ── Unggoy ──────────────────────────────────────────────────────────────
+  'Dadab',
+  'Lighter Than Some',
 ];
 
 export const LORE_WEAPONS = [
