@@ -6,7 +6,7 @@ import { fetchPageSummaries } from '../api/halopedia';
 const FEATURED = [
   { label: 'Weapons',    path: '/weapons',    representative: 'Energy sword',         description: 'UNSC, Covenant, Forerunner & Banished arsenal' },
   { label: 'Vehicles',   path: '/vehicles',   representative: 'Scorpion',             description: 'Ground, air, naval and space craft',
-    imageUrl: 'https://halo.wiki.gallery/images/a/a3/Scorpion2011.png' },
+    imageUrl: 'https://halo.wiki.gallery/images/a/a3/Scorpion2011.png', objectFit: 'contain', objectPosition: 'center' },
   { label: 'Characters', path: '/characters', representative: 'John-117',             description: 'Spartans, Elites, and key figures' },
   { label: 'Races',      path: '/races',      representative: 'Sangheili',            description: 'Species across the Halo universe',
     objectPosition: 'top' },
@@ -50,7 +50,7 @@ export default function Home() {
       <div className="px-8">
         <h2 className="text-xl font-semibold text-zinc-300 mb-4">Browse Categories</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {FEATURED.map(({ label, path, representative, description, imageUrl, objectPosition }, i) => {
+          {FEATURED.map(({ label, path, representative, description, imageUrl, objectPosition, objectFit }, i) => {
             const img = imageUrl ?? thumbs[representative];
             return (
               <motion.div
@@ -71,8 +71,8 @@ export default function Home() {
                       <motion.img
                         src={img}
                         alt={representative}
-                        className="w-full h-full object-cover"
-                        style={{ objectPosition: objectPosition ?? 'center' }}
+                        className="w-full h-full"
+                        style={{ objectFit: (objectFit as 'cover' | 'contain') ?? 'cover', objectPosition: objectPosition ?? 'center' }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.4 }}
