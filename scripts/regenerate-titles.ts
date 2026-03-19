@@ -126,7 +126,7 @@ async function main() {
     try {
       const buf = await vertexImagenGenerate(prompt);
       await bucket.file(gcsPath).save(buf, { contentType: 'image/jpeg', resumable: false });
-      await bucket.file(gcsPath).makePublic();
+      // uniform bucket-level access is set via Terraform — per-object makePublic() is not needed
       succeeded++;
       console.log(`  ✓ uploaded`);
     } catch (err) {

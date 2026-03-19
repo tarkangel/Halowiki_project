@@ -83,9 +83,9 @@
   {
     "id": "doozy",
     "name": "Doozy",
-    "description": "",
+    "description": "The Doozy is a UNSC snowmobile designed for rapid movement across snowy and arctic terrain, used for medical transport, courier duties, and diversionary operations where larger vehicles cannot operate effectively. Its lightweight profile and high maneuverability make it well-suited to extreme cold-weather environments, operating quietly and quickly in conditions that would ground conventional UNSC ground vehicles. Deployed most notably during the Fall of Reach, the Doozy represents the UNSC's adaptability in equipping personnel for operations in every planetary climate.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/doozy.jpg",
-    "faction": "",
+    "faction": "UNSC",
     "type": "Ground",
     "appearances": []
   },
@@ -96,15 +96,6 @@
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/av-30-kestrel.jpg",
     "faction": "UNSC",
     "type": "Air",
-    "appearances": []
-  },
-  {
-    "id": "long-range-stealth-orbital-drop-pod",
-    "name": "Long range stealth orbital drop pod",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/long-range-stealth-orbital-drop-pod.jpg",
-    "faction": "",
-    "type": "Ground",
     "appearances": []
   },
   {
@@ -144,15 +135,6 @@
     "appearances": []
   },
   {
-    "id": "hj3-213",
-    "name": "HJ3-213",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/hj3-213.jpg",
-    "faction": "",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
     "id": "spirit",
     "name": "Spirit",
     "description": "Spirit is a name applied to a series of troop transports and logistical dropships employed by the Covenant and its remnants.",
@@ -180,15 +162,6 @@
     "appearances": []
   },
   {
-    "id": "030569",
-    "name": "030569",
-    "description": "030569 was a UNSC M808B Main Battle Tank that was attached to Fireteam Zulu during the Battle of Installation 04 in September 2552.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/030569.jpg",
-    "faction": "UNSC",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
     "id": "ghost",
     "name": "Ghost",
     "description": "The Ghost is the Covenant's standard rapid-assault one-man speeder bike — a low-profile anti-gravity vehicle combining blistering speed with twin rapid-fire plasma cannons. Ridden in a reclined forward posture with the pilot enclosed by curved sponsons, Ghosts are deployed as light cavalry for reconnaissance, flanking manoeuvres, and infantry harassment. Their small profile, high speed, and all-terrain capability make them among the most versatile vehicles in the Covenant and Banished arsenal.",
@@ -203,6 +176,15 @@
     "description": "The Locust is a Covenant light walker designed for anti-fortification and precision fire-support roles. Standing on four articulated legs, the Locust mounts a powerful plasma focus beam capable of cutting through fortified walls, hardened bunkers, and armoured vehicle hulls with surgical precision. Smaller and faster than the Scarab, the Locust sacrifices raw firepower for mobility, allowing it to advance with infantry formations and engage fixed targets in difficult terrain.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/locust.jpg",
     "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "contrition-class-transport",
+    "name": "Contrition-class transport",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/contrition-class-transport.jpg",
+    "faction": "",
     "type": "Ground",
     "appearances": []
   },
@@ -229,16 +211,7 @@
     "name": "Harvester",
     "description": "The Harvester is an enormous Covenant excavation and resource extraction platform repurposed as a mobile forward base and heavy weapons platform. Originally designed to bore through planetary crust and extract Forerunner artefacts, the Harvester's industrial scale and durability make it a formidable battlefield presence. Its sheer size and heavily armoured hull render it nearly impervious to conventional infantry weapons.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/harvester.jpg",
-    "faction": "Forerunner",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "civet",
-    "name": "Civet",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/civet.jpg",
-    "faction": "",
+    "faction": "Covenant",
     "type": "Ground",
     "appearances": []
   },
@@ -254,10 +227,10 @@
   {
     "id": "cargo-walker",
     "name": "Cargo walker",
-    "description": "",
+    "description": "The cargo walker is a UNSC-operated powered exoskeleton approximately three metres tall and two metres wide, designed to transport heavy cargo loads across shipboard and dockyard environments. The operator stands within the bipedal frame, using the exoskeleton's hydraulic arms to lift and carry loads far beyond human capability. Cargo walkers are a ubiquitous sight in UNSC logistics operations — used aboard warships, on starport loading docks, and at forward operating bases wherever heavy materiel needs to be moved rapidly without heavy equipment. Their bipedal design allows them to operate in environments too confined for conventional forklifts or cargo trucks.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/cargo-walker.jpg",
-    "faction": "",
-    "type": "Ground",
+    "faction": "UNSC",
+    "type": "Space",
     "appearances": []
   },
   {
@@ -297,6 +270,15 @@
     "appearances": []
   },
   {
+    "id": "brhi-xur-pattern-leech",
+    "name": "Brhi Xur-pattern Leech",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/brhi-xur-pattern-leech.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
     "id": "armored-warthog",
     "name": "Armored Warthog",
     "description": "The Armored Warthog is an up-armored variant of the M12B Warthog employed by the forces of the UNSC Spirit of Fire on Installation 00.",
@@ -306,46 +288,46 @@
     "appearances": []
   },
   {
-    "id": "fireball-warthog",
-    "name": "Fireball Warthog",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/fireball-warthog.jpg",
-    "faction": "UNSC",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "john-forges-warthog",
-    "name": "John Forge's Warthog",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/john-forges-warthog.jpg",
-    "faction": "UNSC",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
     "id": "bloodfuel-locust",
     "name": "Bloodfuel Locust",
-    "description": "",
+    "description": "Bloodfuel Locust are a specialised type of Locust employed by the Banished.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/bloodfuel-locust.jpg",
-    "faction": "Covenant",
+    "faction": "Banished",
     "type": "Ground",
     "appearances": []
   },
   {
     "id": "unsc-starship",
     "name": "UNSC starship",
-    "description": "",
+    "description": "UNSC starships are the military and civilian vessels operated by the United Nations Space Command, ranging from small prowlers and frigates to the massive Infinity-class supercarrier. Built across dozens of shipyards throughout human space, UNSC warships are characterised by their use of magnetic accelerator cannons — railgun-based weapons that accelerate kinetic projectiles to a fraction of the speed of light — alongside missile batteries and point-defence autocannons. Unlike Covenant ships which rely on plasma-based energy weapons, UNSC vessels emphasise kinetic firepower and armour. The backbone of UNSC fleet doctrine, these vessels defended human space throughout the Human-Covenant War and beyond.",
     "imageUrl": "https://halo.wiki.gallery/images/thumb/4/47/HM_Infinity.jpg/500px-HM_Infinity.jpg",
     "faction": "UNSC",
-    "type": "Ground",
+    "type": "Space",
     "appearances": []
   },
   {
     "id": "h9-mid-capacity-hauler",
     "name": "H9 mid-capacity hauler",
-    "description": "",
+    "description": "The H9 mid-capacity hauler is a military-grade heavy truck manufactured by AMG Transport Dynamics for UNSC service, introduced late in the Human-Covenant War for logistics and resupply operations. Designed for maximum load capacity combined with cross-terrain reliability, the H9 is used across UNSC Army and Marine Corps supply chains to move ammunition, provisions, and equipment between forward positions. Its armoured cab and reinforced chassis allow it to operate in contested areas where standard civilian trucks would not survive. Seen on Reach and other UNSC worlds, the H9 became a backbone vehicle of UNSC ground logistics in the war's final years.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/h9-mid-capacity-hauler.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "combat-support-vehicle",
+    "name": "Combat support vehicle",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-support-vehicle.jpg",
+    "faction": "",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "combat-bridging-vehicle",
+    "name": "Combat bridging vehicle",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-bridging-vehicle.jpg",
     "faction": "",
     "type": "Ground",
     "appearances": []
@@ -353,9 +335,18 @@
   {
     "id": "liang-dortmund-mining-rig",
     "name": "Liang-Dortmund mining rig",
-    "description": "",
+    "description": "The Liang-Dortmund mining rig is a massive mobile surface-mining and processing platform manufactured by the Liang-Dortmund Corporation, deployed primarily on Meridian for large-scale mineral extraction. Built on enormous tracked undercarriage, the rig moves slowly across the planetary surface while its drilling arrays bore into rock strata, processing extracted material on-board. Its industrial scale dwarfs most conventional vehicles — the rig effectively constitutes a moving facility rather than a vehicle in the traditional sense. The UNSC and UEG came to rely on Liang-Dortmund's extraction infrastructure to sustain the post-war rebuilding effort across the outer colonies.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/liang-dortmund-mining-rig.jpg",
-    "faction": "",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "bolroci-workshop-chopper",
+    "name": "Bolroci Workshop Chopper",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/bolroci-workshop-chopper.jpg",
+    "faction": "Banished",
     "type": "Ground",
     "appearances": []
   },
@@ -389,9 +380,9 @@
   {
     "id": "ceromax",
     "name": "Ceromax",
-    "description": "",
+    "description": "The Ceromax is a heavy utility truck platform manufactured by Braithwaite Ltd and adopted by both the Unified Earth Government and the UNSC in the years following the Human-Covenant War. Designed for multi-role logistical use — cargo transport, equipment transfer, and forward supply — the Ceromax's modular flatbed configuration allows it to be rapidly reconfigured for different payloads. Its robust construction and straightforward mechanical design make it easy to maintain in field conditions, contributing to its widespread adoption during the post-war reconstruction era when durable, simple logistics vehicles were in urgent demand across rebuilding human colonies.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/ceromax.jpg",
-    "faction": "",
+    "faction": "UNSC",
     "type": "Ground",
     "appearances": []
   },
@@ -400,6 +391,15 @@
     "name": "Barug'qel Workshop Trespasser",
     "description": "The Barug'qel Workshop Sky Raider, colloquially known as the Trespasser, is a transport aircraft employed by the Banished and other ex-Covenant raiders.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/barugqel-workshop-trespasser.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "catulus-chopper",
+    "name": "Catulus Chopper",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/catulus-chopper.jpg",
     "faction": "Banished",
     "type": "Ground",
     "appearances": []
@@ -446,15 +446,6 @@
     "description": "The Guntower is a Banished fixed defensive emplacement — a towering automated plasma cannon installation deployed to control chokepoints and key terrain features on captured worlds and installations. Equipped with rapid-fire plasma cannons capable of tracking both infantry and armoured vehicles, a single Guntower can deny entire corridors to enemy forces. The Banished deployed Guntowers extensively across Installation 07 during their occupation in 2560.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/lore/guntower.jpg",
     "faction": "Banished",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "contrition-class-transport",
-    "name": "Contrition-class transport",
-    "description": "The Contrition-class transport is an older Covenant military transport.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/contrition-class-transport.jpg",
-    "faction": "Covenant",
     "type": "Ground",
     "appearances": []
   },
@@ -513,15 +504,6 @@
     "appearances": []
   },
   {
-    "id": "brhi-xur-pattern-leech",
-    "name": "Brhi Xur-pattern Leech",
-    "description": "This Brhi Xur-pattern Ship Breacher, known to humanity as the Leech, is a Covenant boarding craft specifically designed for boarding an enemy vessel.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/brhi-xur-pattern-leech.jpg",
-    "faction": "Covenant",
-    "type": "Space",
-    "appearances": []
-  },
-  {
     "id": "ahtulai-workshop-banshee",
     "name": "'Ahtulai Workshop Banshee",
     "description": "The 'Ahtulai Workshop Attack Flyer is a variant of Banshee ground-attack aircraft employed by the Banished. They are built upon the frames of older Oghal-pattern variants, unlike the more mainline Kaelum Workshop Banshees employed by Banished forces operating on Installation 07.",
@@ -576,48 +558,12 @@
     "appearances": []
   },
   {
-    "id": "combat-support-vehicle",
-    "name": "Combat support vehicle",
-    "description": "The combat support vehicle is a Covenant armored ground transport capable of carrying personnel, ammunition, explosives, medical supplies and liquified carrier gas to recharge plasma weaponry.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-support-vehicle.jpg",
-    "faction": "Covenant",
-    "type": "Space",
-    "appearances": []
-  },
-  {
-    "id": "combat-bridging-vehicle",
-    "name": "Combat bridging vehicle",
-    "description": "The combat bridging vehicle, colloquially known as a CBV, is a Covenant vehicle designed to launch a bridge of up to one kilometer in length over chasms that would otherwise be an obstacle to Covenant forces. The process to create this bridge takes less than a minute to complete.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-bridging-vehicle.jpg",
-    "faction": "Covenant",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
     "id": "dovotaa-workshop-griever",
     "name": "Dovotaa Workshop Griever",
     "description": "The Dovotaa Workshop lair waster, also known as the Griever fighter-bomber, is a bomber employed by the Banished in the post-war era.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/dovotaa-workshop-griever.jpg",
     "faction": "Banished",
     "type": "Air",
-    "appearances": []
-  },
-  {
-    "id": "bolroci-workshop-chopper",
-    "name": "Bolroci Workshop Chopper",
-    "description": "The Bolroci Workshop Attack Bike is a variant in the Chopper line of raiding vehicles, employed by the Banished.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/bolroci-workshop-chopper.jpg",
-    "faction": "Banished",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "catulus-chopper",
-    "name": "Catulus Chopper",
-    "description": "The Catulus Chopper, also known as Chieftain Chopper, is a modified variant of the Bolroci Workshop Chopper.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/catulus-chopper.jpg",
-    "faction": "Banished",
-    "type": "Ground",
     "appearances": []
   }
 ]

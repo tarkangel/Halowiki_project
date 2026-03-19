@@ -622,6 +622,17 @@ export async function fetchWeapons(limitPerCat = 15): Promise<Weapon[]> {
   return result;
 }
 
+// Individual named vehicles and stub entries that should not appear in the wiki.
+// These are specific unit instances (not classes) or pages too thin to be useful.
+const VEHICLE_BLOCKLIST = new Set([
+  '030569',                          // individual named Scorpion tank
+  'HJ3-213',                         // individual named Scorpion tank
+  "John Forge's Warthog",            // individual named vehicle
+  'Fireball Warthog',                // unique Halo Wars variant — too thin
+  'Long range stealth orbital drop pod', // equipment, not a vehicle class
+  'Civet',                           // Colonial Military Authority — too thin
+]);
+
 export async function fetchVehicles(limitPerCat = 20): Promise<Vehicle[]> {
   const [unsc, covenant, banished] = await Promise.all([
     fetchCategoryMembers('UNSC_vehicles', limitPerCat).catch(() => []),
@@ -632,10 +643,14 @@ export async function fetchVehicles(limitPerCat = 20): Promise<Vehicle[]> {
   const titles: string[] = [];
   for (const t of LORE_VEHICLES) { seen.add(t); titles.push(t); }
   for (const m of [...unsc, ...covenant, ...banished]) {
-    if (!seen.has(m.title)) { seen.add(m.title); titles.push(m.title); }
+    if (!seen.has(m.title) && !VEHICLE_BLOCKLIST.has(m.title)) {
+      seen.add(m.title); titles.push(m.title);
+    }
   }
   const summaries = await fetchPageSummariesBatched(titles);
-  const result = summaries.map(pageToVehicle);
+  const result = summaries
+    .map(pageToVehicle)
+    .filter(v => !VEHICLE_BLOCKLIST.has(v.name));
 
   const needsImage = result.filter(v => !v.imageUrl).map(v => v.name);
   if (needsImage.length > 0) {

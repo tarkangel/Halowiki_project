@@ -55,6 +55,13 @@ export const FACTION_OVERRIDES: Record<string, string> = {
   'Marauder Warchief':'Banished',
   'Ironclad Wraith':  'Banished',
   'Guntower':         'Banished',
+  'Harvester':            'Covenant',  // description mentions "Forerunner artefacts" — triggers false Forerunner
+  'H9 mid-capacity hauler': 'UNSC',    // description mentions "Covenant" in comparative context
+  'UNSC starship':          'UNSC',    // description mentions "Covenant ships" in comparative context
+  'Liang-Dortmund mining rig': 'UNSC', // civilian/UEG vehicle — no faction keywords in description
+  'Ceromax':                'UNSC',    // civilian/UEG vehicle — no faction keywords in description
+  'Cargo walker':           'UNSC',    // UNSC logistics exoskeleton
+  'Doozy':                  'UNSC',    // UNSC snowmobile
   'Breacher Exosuit': 'Banished',
   // ── Covenant ──────────────────────────────────────────────────────────────
   "Thel 'Vadam":      'Covenant',
