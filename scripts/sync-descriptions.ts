@@ -14,7 +14,7 @@ import { Storage } from '@google-cloud/storage';
 import { writeFileSync, existsSync, readFileSync } from 'fs';
 import { join } from 'path';
 import {
-  LORE_CHARACTERS, LORE_WEAPONS, LORE_VEHICLES, LORE_PLANETS, LORE_RACES,
+  LORE_CHARACTERS, LORE_WEAPONS, LORE_VEHICLES, LORE_PLANETS, LORE_RACES, LORE_GAMES,
 } from '../src/lore-titles.js';
 
 const PROJECT_ID  = process.env.GCP_PROJECT_ID!;
@@ -164,6 +164,36 @@ const CURATED: Record<string, string> = {
     "Anvarl is a world within the former Covenant sphere of influence, significant for Forerunner artefacts and installations discovered in its system. In the post-war era, competition among Covenant remnant factions, the Swords of Sanghelios, and UNSC survey teams for access to Forerunner technology made worlds like Anvarl flashpoints in the unstable politics of former Covenant space.",
   'Concord':
     "Concord is a human colony world in UNSC space that endured significant hardship during the Human-Covenant War. The planet's settlements and infrastructure bore the scars of Covenant raids and orbital engagements as the war pushed ever closer to the Inner Colonies. In the post-war era Concord became a focal point for reconstruction efforts, its surviving population working to rebuild civic life amid the fragile peace.",
+
+  // ── Games ─────────────────────────────────────────────────────────────────
+  'Halo: Combat Evolved':
+    "Halo: Combat Evolved is the first-person shooter that launched the Halo franchise in 2001. Players control Master Chief crash-landing on the mysterious ring world Installation 04, where a three-way conflict erupts between the UNSC, the Covenant, and the parasitic Flood. The game introduced many of the series' defining mechanics and set pieces, culminating in Master Chief and Cortana detonating the Pillar of Autumn's engines to destroy Alpha Halo and prevent the Flood's escape.",
+  'Halo 2':
+    "Halo 2 is the 2004 sequel that expanded the Halo universe by introducing the Arbiter as a second playable protagonist. The story follows Master Chief defending Earth from Covenant attack before pursuing the Covenant fleet to Installation 05, Delta Halo, while the Arbiter navigates the political collapse of the Covenant from within. Halo 2 introduced online multiplayer via Xbox Live and established many iconic multiplayer maps that defined competitive Halo.",
+  'Halo 3':
+    "Halo 3 is the 2007 conclusion to the original Halo trilogy, bringing the Human-Covenant War to its climactic end. Master Chief and the Arbiter pursue the Prophet of Truth to the Ark — the extragalactic superstructure from which the Halo Array was built and fired — where they defeat Truth, destroy the Gravemind, and prevent the activation of all Halo rings. Master Chief's fate after the battle, drifting in half a broken ship toward an unknown planet, set the stage for the next chapter of the saga.",
+  'Halo Wars':
+    "Halo Wars is a 2009 real-time strategy game set in 2531 during the early Human-Covenant War, following the crew of the UNSC Spirit of Fire — including Sergeant Forge and Professor Anders — as they confront the Covenant and an ancient Forerunner threat on the Forerunner Shield World Etran Harborage. The game was developed by Ensemble Studios and offered a deep look at the ground war decades before Master Chief's story, expanding the UNSC and Covenant lore with new factions and locations.",
+  'Halo 3: ODST':
+    "Halo 3: ODST is the 2009 campaign expansion set during the events of Halo 2, following a squad of Orbital Drop Shock Troopers — including the Rookie, Buck, Dutch, Mickey, Romeo, and Dare — as they navigate the Covenant-occupied ruins of New Mombasa, Earth. Played as an ODST rather than a Spartan, the game emphasised atmospheric exploration and a noir detective mystery structure, and introduced the beloved Firefight co-op survival mode.",
+  'Halo: Reach':
+    "Halo: Reach is the 2010 prequel to the original trilogy, telling the story of Noble Team — a squad of Spartan-IIIs — during the Fall of Reach in 2552, humanity's most devastating military defeat. Players experience the human cost of the Covenant invasion through the eyes of Noble Six, a lone wolf Spartan inserted into an existing team. The game is a tragic farewell to the planet Reach and the Spartans who died defending it, ending with Noble Six making a last stand to ensure the Pillar of Autumn's escape.",
+  'Halo: Combat Evolved Anniversary':
+    "Halo: Combat Evolved Anniversary is the 2011 remaster of the original Halo: Combat Evolved, developed by 343 Industries to celebrate the franchise's 10th anniversary. It features rebuilt high-definition visuals toggled seamlessly against the original art style, remastered audio, and integration with the Halo Waypoint service. The Anniversary edition added terminals throughout the campaign that expanded lore on the Forerunners, setting up the storyline of Halo 4.",
+  'Halo 4':
+    "Halo 4 is the 2012 entry that began the Reclaimer Saga, developed by 343 Industries. Master Chief and Cortana, drifting in the Forward Unto Dawn since the events of Halo 3, are pulled aboard Requiem — a Forerunner Shield World — where they awaken the Didact, a powerful Forerunner warrior who sees humanity as a threat to his vision for the galaxy. The game explored Cortana's rampancy and her deepening bond with Master Chief, ending with her sacrifice to save him, and introduced the Promethean enemies and Forerunner technology as a central part of the expanded universe.",
+  'Halo: Spartan Assault':
+    "Halo: Spartan Assault is the 2013 top-down twin-stick shooter that brought Halo gameplay to mobile and PC platforms. The story follows Spartan Sarah Palmer and Commander Spartan Davis during the early days of the Spartan-IV program as they fight Covenant remnant forces. Designed for shorter play sessions, it expanded lore around the post-war Covenant conflicts and the newly formed Spartan-IV branch.",
+  'Halo: The Master Chief Collection':
+    "Halo: The Master Chief Collection is the 2014 remastered anthology that bundles Halo: Combat Evolved Anniversary, Halo 2 Anniversary, Halo 3, and Halo 4 — with Halo 3: ODST and Halo: Reach added later — into a single package for Xbox One and PC. Each game received updated matchmaking, and Halo 2 was given a full Anniversary treatment with remastered cut-scenes produced by Blur Studio. The collection serves as the definitive entry point to the entire Master Chief storyline.",
+  'Halo: Spartan Strike':
+    "Halo: Spartan Strike is the 2015 sequel to Spartan Assault, another top-down twin-stick shooter following a Spartan operative during two campaign arcs: one set during the Battle of New Mombasa alongside the events of Halo 2 and ODST, and one set during the Requiem campaign of Halo 4. The game introduced new enemy types, weapon loadouts, and expanded the Spartan-IV storyline established in its predecessor.",
+  'Halo 5: Guardians':
+    "Halo 5: Guardians is the 2015 entry that split the campaign between two fireteams — Master Chief's Blue Team and Spartan Locke's Osiris — as they pursue each other across multiple worlds while Cortana assembles a galaxy-wide AI coalition called the Created. The game featured expanded Spartan abilities, four-player co-op campaign, and a dedicated multiplayer focus with the competitive Warzone mode. Its controversial ending — Cortana seizing control of Forerunner Guardians to impose forced peace — set up Halo Infinite's conflict.",
+  'Halo Wars 2':
+    "Halo Wars 2 is the 2017 real-time strategy sequel developed by 343 Industries and Creative Assembly. The crew of the UNSC Spirit of Fire awaken from cryo-sleep above the Ark — the extragalactic Forerunner superstructure — and find themselves facing a new Banished warlord, Atriox, one of the most powerful Jiralhanae in history. The game introduced the Banished as the primary antagonist faction of the modern Halo era and established the threat that would culminate in Halo Infinite.",
+  'Halo Infinite':
+    "Halo Infinite is the 2021 entry that returned to the open-world gameplay spirit of the original trilogy. Set on Installation 07 (Zeta Halo) six months after the Banished assault that destroyed the UNSC Infinity, a lone Master Chief is rescued by a UNSC pilot and must retake the massive ring from Escharum's Banished forces. The game introduced a grappleshot traversal mechanic, a semi-open world structure, and the enigmatic Harbinger as secondary antagonist. It is the most critically acclaimed entry of the modern Halo era.",
 };
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -253,6 +283,7 @@ async function main() {
     { type: 'vehicle',   titles: LORE_VEHICLES   },
     { type: 'planet',    titles: LORE_PLANETS     },
     { type: 'race',      titles: LORE_RACES       },
+    { type: 'game',      titles: LORE_GAMES       },
   ];
 
   let total = 0;

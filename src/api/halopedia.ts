@@ -858,7 +858,7 @@ function isUsablePlanet(p: Planet): boolean {
   return true;
 }
 
-const JUNK_GAME_PATTERNS = /^User(Wiki)?:|cancelled|canceled|rejected|sequel|GURPS|Saga|game jam|pitch|chronicles$/i;
+const JUNK_GAME_PATTERNS = /^User(Wiki)?:|cancelled|canceled|rejected|sequel|GURPS|Saga|game jam|pitch|chronicles|king of the hill$/i;
 
 /** Release year for sorting — unlisted titles sort to the end. */
 const GAME_RELEASE_YEAR: Record<string, number> = {

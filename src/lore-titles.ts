@@ -85,6 +85,23 @@ export const LORE_RACES = [
   'Precursor',
 ];
 
+export const LORE_GAMES = [
+  'Halo: Combat Evolved',
+  'Halo 2',
+  'Halo 3',
+  'Halo Wars',
+  'Halo 3: ODST',
+  'Halo: Reach',
+  'Halo: Combat Evolved Anniversary',
+  'Halo 4',
+  'Halo: Spartan Assault',
+  'Halo: The Master Chief Collection',
+  'Halo: Spartan Strike',
+  'Halo 5: Guardians',
+  'Halo Wars 2',
+  'Halo Infinite',
+];
+
 export const LORE_PLANETS = [
   // ── Iconic UNSC / human worlds ────────────────────────────────────────────
   'Reach',
