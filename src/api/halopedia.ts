@@ -74,8 +74,23 @@ export async function fetchPageSummaries(titles: string[]): Promise<PageSummary[
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Failed to fetch pages: ${res.status}`);
   const json = await res.json();
+
+  // Build redirect map: resolved title → original requested title.
+  // This ensures that e.g. "Plasma Rifle" (requested) is preserved as the
+  // page title even when Halopedia redirects to "Okarda'phaa-pattern plasma rifle",
+  // so that resolveDescription() can find the correct DB/curated entry.
+  const redirectMap = new Map<string, string>();
+  for (const r of (json.query?.redirects ?? []) as Array<{ from: string; to: string }>) {
+    redirectMap.set(r.to, r.from);
+  }
+
   const pages = json.query?.pages ?? {};
-  return Object.values(pages).filter((p: unknown) => (p as { pageid?: number }).pageid !== -1) as PageSummary[];
+  return (Object.values(pages) as PageSummary[])
+    .filter(p => p.pageid !== -1)
+    .map(p => ({
+      ...p,
+      title: redirectMap.get(p.title) ?? p.title,
+    }));
 }
 
 /** Fetch summaries for a large list of titles, batching in groups of 50 */
