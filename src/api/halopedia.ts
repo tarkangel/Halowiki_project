@@ -166,7 +166,9 @@ function slugify(title: string) {
 
 /**
  * Resolve final description for any entity.
- * Priority: Halopedia extract (if ≥ minLen) → descriptionDb → hardcoded override → raw extract
+ * Priority: descriptionDb (curated) → Halopedia extract (if ≥ minLen) → hardcoded override → raw extract
+ * descriptionDb wins because it holds hand-curated descriptions that are always higher quality
+ * than the raw Halopedia 6-sentence extract (which can be thin or off-topic for some pages).
  */
 function resolveDescription(
   title: string,
@@ -174,8 +176,9 @@ function resolveDescription(
   hardcodedOverride?: string,
   minLen = 80,
 ): string {
+  if (descriptionDb[title]) return descriptionDb[title];
   if (extract.trim().length >= minLen) return extract;
-  return descriptionDb[title] || hardcodedOverride || extract;
+  return hardcodedOverride || extract;
 }
 
 export function pageToWeapon(page: PageSummary): Weapon {

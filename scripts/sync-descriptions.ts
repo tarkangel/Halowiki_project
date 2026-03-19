@@ -329,7 +329,9 @@ async function main() {
     for (const title of titles) {
       const halopediaText = extracts.get(title) ?? '';
       const curated       = CURATED[title] ?? '';
-      const description   = halopediaText.length >= MIN_LEN ? halopediaText : (curated || halopediaText);
+      // CURATED wins when present (hand-crafted > thin Halopedia extract).
+      // Fall back to Halopedia extract only when no CURATED entry exists.
+      const description   = curated || (halopediaText.length >= MIN_LEN ? halopediaText : '');
 
       if (!description) {
         console.log(`  ⚠  no description available: ${title}`);
