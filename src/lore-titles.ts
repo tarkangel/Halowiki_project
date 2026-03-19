@@ -52,12 +52,27 @@ export const LORE_WEAPONS = [
 ];
 
 export const LORE_VEHICLES = [
-  'Lich',
+  // ── UNSC ─────────────────────────────────────────────────────────────────
+  'Warthog',
+  'Scorpion',
+  'Pelican',
+  'Falcon',
+  'Mongoose',
+  'Elephant',
   'Mantis',
+  // ── Covenant ─────────────────────────────────────────────────────────────
+  'Banshee',
+  'Ghost',
   'Wraith',
   'Phantom',
+  'Spirit',
+  'Scarab',
+  'Lich',
   'Locust',
   'Harvester',
+  // ── Banished ─────────────────────────────────────────────────────────────
+  'Chopper',
+  // ── Forerunner ───────────────────────────────────────────────────────────
   'Phaeton',
   'Guntower',
 ];

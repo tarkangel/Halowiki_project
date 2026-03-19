@@ -192,6 +192,21 @@ export function pageToWeapon(page: PageSummary): Weapon {
 
 // Curated descriptions for vehicles whose Halopedia extract is too thin (< 200 chars).
 const VEHICLE_DESCRIPTION_OVERRIDES: Record<string, string> = {
+  'Warthog':
+    'The Warthog is the UNSC\'s iconic all-terrain patrol and fire-support vehicle — a rugged, four-wheel-drive utility truck that has served on every major front of the Human-Covenant War and beyond. Built on a quad-independent suspension chassis for maximum cross-terrain capability, the standard M12 mounts a rear-facing M41 rotary cannon operated by a standing gunner, making it a lethal fast-attack and reconnaissance platform. The Warthog\'s reliability, speed, and adaptability have spawned a large family of variants including anti-air, missile, troop transport, and flamethrower configurations. It remains the most widely deployed UNSC ground vehicle.',
+
+  'Pelican':
+    'The Pelican is the UNSC\'s primary multi-role dropship and tactical transport aircraft, serving as the backbone of UNSC air mobility for decades. Its distinctive profile — a wide loading ramp at the rear, a heavily glazed cockpit, and twin engine nacelles — is immediately recognisable to any UNSC soldier. Pelicans carry fully equipped fireteams, Warthogs, and light vehicles from orbit to the surface, and their chin-mounted autocannon provides suppressive fire during insertions and extractions. Pelicans have delivered UNSC forces into every major engagement from the Fall of Reach to the Battle of Installation 00.',
+
+  'Mongoose':
+    'The Mongoose is the UNSC\'s M274 Ultra-Light All-Terrain Vehicle — a small, fast, open-topped quad bike designed for rapid messenger duty, reconnaissance, and personnel transport across contested terrain. Built for speed rather than armour, the Mongoose carries a driver and an optional rear passenger, making it ideal for fast flag captures and flanking manoeuvres. Its compact profile and minimal electronic signature make it difficult to detect, while its low weight allows it to be carried inside Pelicans. Despite offering no ballistic protection whatsoever, the Mongoose\'s blistering pace has saved countless lives.',
+
+  'Elephant':
+    'The Elephant is a massive UNSC mobile base — a colossal, slow-moving land vehicle the size of a small building, designed to serve as a self-propelled command post and logistics platform on large-scale battlefield exercises and training operations. Armed with a single heavy cannon turret for self-defence, the Elephant is not a front-line combat vehicle but a command and control asset, housing personnel, communications equipment, and the materiel needed to sustain extended operations. Its enormous size and minimal speed make it a high-value target, and defending an Elephant is a test of the discipline and coordination of any unit assigned to protect it.',
+
+  'Chopper':
+    'The Chopper is the Banished\'s primary fast-attack ground vehicle — a one-man Jiralhanae assault bike characterised by its two massive rotating front blades that can shred infantry and light vehicles on contact. Mounted with dual autocannons above the rear wheels and driven from a raised rider position, the Chopper combines lethal charging capability with effective ranged fire. Built in the workshop tradition of Banished vehicle culture, Choppers are heavily personalised by their riders with trophies and war markings. Their aggressive design philosophy — optimised for momentum kills — reflects the Jiralhanae preference for overwhelming, brutal assault tactics.',
+
   'Banshee':
     'The Banshee is the Covenant\'s primary atmospheric fighter and ground-support aircraft, deployed across every major engagement of the Human-Covenant War. A single-pilot anti-gravity flier built around a swept-wing hull of violet-purple alloy, it is armed with twin rapid-fire plasma cannons and a ventral fuel rod cannon for heavy strikes. Banshees are fast, agile, and capable of both atmospheric and brief exoatmospheric flight, making them versatile air superiority assets feared by UNSC pilots and ground forces alike.',
 
@@ -218,6 +233,18 @@ const VEHICLE_DESCRIPTION_OVERRIDES: Record<string, string> = {
 
   'Scorpion':
     'The Scorpion is the UNSC\'s primary main battle tank — a heavy tracked vehicle that has served as the backbone of UNSC armoured formations for decades. Armed with a 90mm high-velocity cannon capable of defeating most Covenant vehicles at range and a coaxial machine gun for anti-infantry work, the Scorpion is slow but extraordinarily durable. Its low silhouette and wide tracks give it stability on diverse terrain. During the Human-Covenant War, Scorpions formed the core of UNSC armoured counter-attacks and defensive lines, trading mobility for sheer firepower.',
+
+  'Locust':
+    'The Locust is a small Covenant quadrupedal walker operated by a single Lekgolo colony, serving as a light siege platform and infantry support vehicle. Standing roughly man-height on four articulated legs, it mounts a high-powered focus cannon capable of burning through fortifications and armoured personnel at medium range. The Locust was deployed to crack entrenched defensive positions ahead of heavier Covenant ground forces, its walker chassis allowing it to traverse rubble and obstacles that would immobilise wheeled or tracked vehicles. It represents a scaled-down application of the same Lekgolo-integrated walker technology used in the much larger Scarab.',
+
+  'Harvester':
+    'The Harvester is a colossal Covenant resource extraction and heavy assault walker — one of the largest ground-based vehicles ever deployed by the Covenant military. Designed primarily to excavate planetary surfaces for Forerunner artefacts and valuable materials, the Harvester\'s industrial drill arms and plasma processing systems make it an exceptionally dangerous combat platform when repurposed for battle. Its sheer mass and the scale of its excavation weaponry allow it to level fortifications and consume terrain as it advances. Encountered during the Fall of Reach, it represented a dual-purpose Covenant approach to conquest: resource extraction and military annihilation in a single platform.',
+
+  'Phaeton':
+    'The Phaeton is a Forerunner combat aircraft of ancient and elegant design — a swept-wing fighter-bomber of pale ivory alloy that predates the Human-Covenant War by a hundred thousand years. Recovered and reactivated by the Prometheans during the events on Requiem and Genesis, Phaetons combine hardlight pulse cannons with a guided missile pod, making them formidable in both air-to-air and air-to-ground roles. Their Forerunner engineering gives them exceptional agility and acceleration, far exceeding UNSC or Covenant fighters of comparable size. Some variants were equipped with hardlight energy shields for added durability.',
+
+  'Guntower':
+    'The Guntower is a Banished heavy stationary weapons platform — a large, anchored turret system deployed to defend key positions, installation approaches, and forward operating bases. Mounting heavy plasma or ballistic cannons on a rotating armoured chassis, Guntowers provide area denial and anti-air coverage that makes assaulting a Banished-held position extremely costly. Their robust construction and elevated firing position allow them to cover wide sectors of terrain. On Installation 07, Banished forces deployed Guntowers extensively around their command positions and excavation sites, forcing UNSC Spartan teams to neutralise them before any large-scale assault could proceed.',
 };
 
 export function pageToVehicle(page: PageSummary): Vehicle {
