@@ -14,8 +14,8 @@ const byText = (title: string, text: string) => inferFaction(title, text);
 // ─────────────────────────────────────────────────────────────────────────────
 
 describe('FACTION_OVERRIDES', () => {
-  it('covers all expected canonical characters', () => {
-    expect(Object.keys(FACTION_OVERRIDES).length).toBeGreaterThanOrEqual(24);
+  it('covers all expected canonical entries', () => {
+    expect(Object.keys(FACTION_OVERRIDES).length).toBeGreaterThanOrEqual(30);
   });
 
   it('classifies John-117 as UNSC even when description mentions Banished', () => {
@@ -57,6 +57,46 @@ describe('FACTION_OVERRIDES', () => {
 
   it('classifies Noble Six as UNSC', () => {
     expect(byName('Noble Six')).toBe('UNSC');
+  });
+
+  // ── UNSC vehicle regressions ──────────────────────────────────────────────
+  // Descriptions mention "Human-Covenant War" / "Covenant vehicles" which would
+  // otherwise make isCovenantKw = true and override isUNSCKw.
+
+  it('classifies Warthog as UNSC even though description says "Human-Covenant War"', () => {
+    expect(byText('Warthog', 'deployed on every major front of the Human-Covenant War')).toBe('UNSC');
+  });
+
+  it('classifies Scorpion as UNSC even though description says "Covenant vehicles at range"', () => {
+    expect(byText('Scorpion', 'capable of defeating most Covenant vehicles at range')).toBe('UNSC');
+  });
+
+  it('classifies Pelican as UNSC even though description says "Human-Covenant War"', () => {
+    expect(byText('Pelican', 'delivered UNSC forces into every engagement of the Human-Covenant War')).toBe('UNSC');
+  });
+
+  it('classifies Falcon as UNSC even though description says "Human-Covenant War"', () => {
+    expect(byText('Falcon', 'deployed during the Fall of Reach in the Human-Covenant War')).toBe('UNSC');
+  });
+
+  it('classifies Mongoose as UNSC', () => {
+    expect(byName('Mongoose')).toBe('UNSC');
+  });
+
+  it('classifies Elephant as UNSC', () => {
+    expect(byName('Elephant')).toBe('UNSC');
+  });
+
+  it('classifies Chopper as Banished', () => {
+    expect(byName('Chopper')).toBe('Banished');
+  });
+
+  it('classifies Banshee as Covenant', () => {
+    expect(byName('Banshee')).toBe('Covenant');
+  });
+
+  it('classifies Phaeton as Forerunner', () => {
+    expect(byName('Phaeton')).toBe('Forerunner');
   });
 });
 

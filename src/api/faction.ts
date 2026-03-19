@@ -8,6 +8,7 @@
 // Descriptions may mention enemy factions (e.g. "fought the Banished") which
 // would otherwise trigger a wrong classification.
 export const FACTION_OVERRIDES: Record<string, string> = {
+  // ── UNSC characters ───────────────────────────────────────────────────────
   'John-117':         'UNSC',
   'Cortana':          'UNSC',
   'Avery Johnson':    'UNSC',
@@ -21,17 +22,41 @@ export const FACTION_OVERRIDES: Record<string, string> = {
   'Noble Six':        'UNSC',
   'Catherine Halsey': 'UNSC',
   'Roland':           'UNSC',
+  // ── UNSC vehicles — descriptions mention "Covenant" in battle context ─────
+  'Warthog':   'UNSC',
+  'Scorpion':  'UNSC',
+  'Pelican':   'UNSC',
+  'Falcon':    'UNSC',
+  'Mongoose':  'UNSC',
+  'Elephant':  'UNSC',
+  'Mantis':    'UNSC',
+  // ── Banished ──────────────────────────────────────────────────────────────
   'Escharum':         'Banished',
   'Atriox':           'Banished',
   "Let 'Volir":       'Banished',
+  'Chopper':          'Banished',
+  'Marauder Warchief':'Banished',
+  'Ironclad Wraith':  'Banished',
+  'Guntower':         'Banished',
+  'Breacher Exosuit': 'Banished',
+  // ── Covenant ──────────────────────────────────────────────────────────────
   "Thel 'Vadam":      'Covenant',
   'Tartarus':         'Covenant',
   "Rtas 'Vadum":      'Covenant',
+  'Banshee':          'Covenant',
+  'Ghost':            'Covenant',
+  'Wraith':           'Covenant',
+  'Phantom':          'Covenant',
+  'Spirit':           'Covenant',
+  'Scarab':           'Covenant',
+  // ── Flood ─────────────────────────────────────────────────────────────────
   'Gravemind':        'Flood',
+  // ── Forerunner ────────────────────────────────────────────────────────────
   '343 Guilty Spark': 'Forerunner',
   'Didact':           'Forerunner',
   'Librarian':        'Forerunner',
   'Mendicant Bias':   'Forerunner',
+  'Phaeton':          'Forerunner',
 };
 
 // ── Main classifier ───────────────────────────────────────────────────────────

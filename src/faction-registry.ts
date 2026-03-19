@@ -39,8 +39,7 @@ export const FACTIONS: FactionEntry[] = [
       'M395 DMR', 'M7 SMG', 'M319 Grenade Launcher',
     ],
     vehicles: [
-      'M12 Warthog', 'Scorpion', 'Pelican', 'Falcon', 'Mantis',
-      'M274 Mongoose', 'Elephant', 'ODST Drop Pod', 'Shortsword', 'Longsword',
+      'Warthog', 'Scorpion', 'Pelican', 'Falcon', 'Mantis', 'Mongoose', 'Elephant',
     ],
     races: ['Human'],
     planets: ['Earth', 'Reach', 'Harvest', 'Meridian', 'Circumstance', 'Concord', 'Venezia', 'Gao'],
@@ -58,14 +57,13 @@ export const FACTIONS: FactionEntry[] = [
     ],
     weapons: [
       'Type-1 Energy Sword', 'Fuel Rod Gun', 'Concussion Rifle', 'Focus Rifle',
-      'Plasma Pistol', 'Plasma Rifle', 'Needler', 'Carbine', 'Plasma Caster',
-      'Gravity Hammer', 'Fuel Rod Cannon',
+      'Plasma Pistol', 'Plasma Rifle', 'Needler', 'Plasma Caster',
     ],
     vehicles: [
       'Banshee', 'Ghost', 'Wraith', 'Phantom', 'Spirit', 'Scarab',
-      'Lich', 'Locust', 'Harvester', 'Seraph', 'Vampire',
+      'Lich', 'Locust', 'Harvester', 'Seraph',
     ],
-    races: ["Sangheili", "San'Shyuum", 'Unggoy', 'Kig-Yar', 'Jiralhanae', 'Lekgolo', "Yanme'e", 'Huragok', 'Mgalekgolo'],
+    races: ["Sangheili", "San'Shyuum", 'Unggoy', 'Kig-Yar', 'Lekgolo', "Yanme'e", 'Huragok', 'Mgalekgolo'],
     planets: ['Sanghelios', 'High Charity', 'Doisac', 'Balaho', 'Te', 'Eayn', 'Kholo', 'Bhedalon'],
   },
   {
@@ -78,9 +76,9 @@ export const FACTIONS: FactionEntry[] = [
     characters: ['The Librarian', 'Guilty Spark', 'The Didact'],
     weapons: [
       'Incineration Cannon', 'Suppressor', 'Lightrifle', 'Boltshot',
-      'Binary Rifle', 'Railgun', 'Z-110 Boltshot', 'Scattershot', 'Forerunner Sentinel Beam',
+      'Binary Rifle', 'Scattershot', 'Forerunner Sentinel Beam',
     ],
-    vehicles: ['Phaeton', 'Forerunner Sentinel', 'Retriever Sentinel', 'Aggressor Sentinel'],
+    vehicles: ['Phaeton', 'Retriever Sentinel', 'Aggressor Sentinel'],
     races: ['Forerunner', 'Precursor'],
     planets: [
       'Installation 04', 'Installation 05', 'Installation 07', 'Installation 03',
@@ -94,14 +92,14 @@ export const FACTIONS: FactionEntry[] = [
     color: '#FF3366',
     description:
       'The Banished are a mercenary coalition founded by the Jiralhanae warlord Atriox after he broke free of the Covenant — refusing to die in a war fought for a lie. Unlike the Covenant\'s rigid theocracy, the Banished operate as a ruthless but pragmatic military force, accepting members of any species willing to fight and offering payment rather than promises of godhood. They are one of the most dangerous military powers in the post-Covenant War galaxy, and the primary antagonist force of Halo Wars 2 and Halo Infinite.',
-    characters: ['Escharum'],
+    characters: ['Escharum', 'Atriox'],
     weapons: [
-      'Plasma Pistol', 'Mangler', 'Needler', 'Plasma Caster',
-      'Fuel Rod Gun', 'Gravity Hammer', 'Banished Plasma Rifle', 'Disruptor',
+      'Plasma Pistol', 'Mangler', 'Needler', 'Gravity Hammer',
+      'Fuel Rod Gun', 'Disruptor',
     ],
     vehicles: [
-      'Banshee', 'Ghost', 'Wraith', 'Phantom', 'Scarab', 'Guntower',
-      'Marauder', 'Goliath', 'Brute Chopper', 'Revenent',
+      'Banshee', 'Ghost', 'Wraith', 'Phantom', 'Scarab', 'Chopper',
+      'Guntower', 'Marauder Warchief', 'Ironclad Wraith', 'Breacher Exosuit',
     ],
     races: ['Jiralhanae', 'Sangheili', 'Unggoy', 'Kig-Yar', 'Lekgolo'],
     planets: ['Installation 07', 'Reach', 'Harvest', 'Anvarl', 'Bhedalon'],
@@ -113,9 +111,9 @@ export const FACTIONS: FactionEntry[] = [
     color: '#00FF9F',
     description:
       'The Flood is an ancient parasitic species that can infect and assimilate any organism with sufficient neural complexity, transforming it into a combat form that serves the collective intelligence of the Gravemind. Originally created by the Precursors as revenge against the Forerunners, the Flood consumed most of the galaxy before the Halo Array was fired to starve it. Small outbreaks survived in Forerunner installations and were encountered by the UNSC and Covenant during the Human-Covenant War, nearly spreading beyond containment multiple times.',
-    characters: ['Guilty Spark', 'Dadab', 'Lighter Than Some'],
-    weapons: ['Flood Infection Form', 'Flood Combat Form', 'Gravemind Tentacle'],
-    vehicles: ['Flood Juggernaut', 'Pure Form', 'Flood Proto-Gravemind'],
+    characters: ['Gravemind'],
+    weapons: [],
+    vehicles: [],
     races: ['Flood', 'Precursor'],
     planets: [
       'Installation 04', 'Installation 05', 'The Ark', 'High Charity', 'Kholo',
