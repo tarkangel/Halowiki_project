@@ -170,7 +170,7 @@ export default function Sidebar() {
               animate={{ opacity: expanded ? 0.92 : 0 }}
               transition={{ duration: 0.2 }}
               className="flex-shrink-0 object-contain"
-              style={{ width: 66, height: 66, mixBlendMode: 'screen', filter: 'drop-shadow(0 0 8px #00B4D8aa)' }}
+              style={{ width: 66, height: 66, filter: 'drop-shadow(0 0 8px #00B4D8aa)' }}
             />
           </div>
           {/* Ring — below HW when collapsed */}
@@ -181,7 +181,7 @@ export default function Sidebar() {
             animate={{ opacity: expanded ? 0 : 0.85 }}
             transition={{ duration: 0.2 }}
             className="object-contain"
-            style={{ width: 56, height: 56, mixBlendMode: 'screen', filter: 'drop-shadow(0 0 8px #00B4D8aa)' }}
+            style={{ width: 56, height: 56, filter: 'drop-shadow(0 0 8px #00B4D8aa)' }}
           />
         </button>
 
