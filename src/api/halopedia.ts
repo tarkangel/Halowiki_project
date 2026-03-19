@@ -561,6 +561,14 @@ export async function fetchCharacters(limitPerSpecies = 15): Promise<Character[]
   // Fetch all summaries in batches of 50
   const summaries = await fetchPageSummariesBatched(allTitles);
 
+  // Sort so LORE_CHARACTERS always appear first regardless of API return order.
+  const loreOrder = new Map(LORE_CHARACTERS.map((t, i) => [t, i]));
+  summaries.sort((a, b) => {
+    const ai = loreOrder.get(a.title) ?? Infinity;
+    const bi = loreOrder.get(b.title) ?? Infinity;
+    return ai - bi;
+  });
+
   const result = summaries
     .map(page => ({
       ...pageToCharacter(page),
