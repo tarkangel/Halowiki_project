@@ -122,6 +122,7 @@ import _vehicleImages     from '../generated-vehicle-images.json'     assert { t
 import _characterImages   from '../generated-character-images.json'   assert { type: 'json' };
 import _raceImages        from '../generated-race-images.json'        assert { type: 'json' };
 import _planetImages      from '../generated-planet-images.json'      assert { type: 'json' };
+import _gameImages        from '../generated-game-images.json'        assert { type: 'json' };
 import _descriptions      from '../generated-descriptions.json'       assert { type: 'json' };
 
 /** Central description database — populated by scripts/sync-descriptions.ts */
@@ -134,6 +135,7 @@ const generatedImages: Record<string, string> = {
   ..._characterImages,
   ..._raceImages,
   ..._planetImages,
+  ..._gameImages,
 };
 
 import {
@@ -512,8 +514,8 @@ export function pageToGame(page: PageSummary): Game {
   return {
     id: slugify(page.title),
     name: page.title,
-    description: page.extract ?? '',
-    imageUrl: page.thumbnail?.source,
+    description: resolveDescription(page.title, page.extract ?? ''),
+    imageUrl: generatedImage(page.title) ?? page.thumbnail?.source,
   };
 }
 
@@ -858,37 +860,30 @@ function isUsablePlanet(p: Planet): boolean {
   return true;
 }
 
-const JUNK_GAME_PATTERNS = /^User(Wiki)?:|cancelled|canceled|rejected|sequel|GURPS|Saga|game jam|pitch|chronicles|king of the hill$/i;
-
-/** Release year for sorting — unlisted titles sort to the end. */
-const GAME_RELEASE_YEAR: Record<string, number> = {
-  'Halo: Combat Evolved':                    2001,
-  'Halo 2':                                  2004,
-  'Halo 3':                                  2007,
-  'Halo Wars':                               2009,
-  'Halo 3: ODST':                            2009,
-  'Halo: Reach':                             2010,
-  'Halo: Combat Evolved Anniversary':        2011,
-  'Halo 4':                                  2012,
-  'Halo: Spartan Assault':                   2013,
-  'Halo: The Master Chief Collection':       2014,
-  'Halo: Spartan Strike':                    2015,
-  'Halo 5: Guardians':                       2015,
-  'Halo Wars 2':                             2017,
-  'Halo Infinite':                           2021,
-};
+/** Canonical game list ordered by release year. Only these titles are shown. */
+const CANONICAL_GAMES: Array<{ title: string; year: number }> = [
+  { title: 'Halo: Combat Evolved',                    year: 2001 },
+  { title: 'Halo 2',                                  year: 2004 },
+  { title: 'Halo 3',                                  year: 2007 },
+  { title: 'Halo Wars',                               year: 2009 },
+  { title: 'Halo 3: ODST',                            year: 2009 },
+  { title: 'Halo: Reach',                             year: 2010 },
+  { title: 'Halo: Combat Evolved Anniversary',        year: 2011 },
+  { title: 'Halo 4',                                  year: 2012 },
+  { title: 'Halo: Spartan Assault',                   year: 2013 },
+  { title: 'Halo: The Master Chief Collection',       year: 2014 },
+  { title: 'Halo: Spartan Strike',                    year: 2015 },
+  { title: 'Halo 5: Guardians',                       year: 2015 },
+  { title: 'Halo Wars 2',                             year: 2017 },
+  { title: 'Halo Infinite',                           year: 2021 },
+];
 
 export async function fetchGames(): Promise<Game[]> {
-  const members = await fetchCategoryMembers('Halo_games', 50).catch(() => []);
-  const titles = members
-    .map(m => m.title)
-    .filter(t => !JUNK_GAME_PATTERNS.test(t));
+  // Fetch only the canonical list — no category scraping, no junk filtering needed.
+  const titles = CANONICAL_GAMES.map(g => g.title);
   const summaries = await fetchPageSummariesBatched(titles);
+  const yearMap = Object.fromEntries(CANONICAL_GAMES.map(g => [g.title, g.year]));
   return summaries
     .map(pageToGame)
-    .sort((a, b) => {
-      const ya = GAME_RELEASE_YEAR[a.name] ?? 9999;
-      const yb = GAME_RELEASE_YEAR[b.name] ?? 9999;
-      return ya - yb;
-    });
+    .sort((a, b) => (yearMap[a.name] ?? 9999) - (yearMap[b.name] ?? 9999));
 }

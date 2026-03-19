@@ -14,7 +14,7 @@ import { Storage } from '@google-cloud/storage';
 import { writeFileSync, existsSync, readFileSync } from 'fs';
 import { join } from 'path';
 import {
-  LORE_CHARACTERS, LORE_WEAPONS, LORE_VEHICLES, LORE_PLANETS, LORE_RACES,
+  LORE_CHARACTERS, LORE_WEAPONS, LORE_VEHICLES, LORE_PLANETS, LORE_RACES, LORE_GAMES,
 } from '../src/lore-titles.js';
 
 const PROJECT_ID  = process.env.GCP_PROJECT_ID!;
@@ -39,6 +39,7 @@ function jsonPath(type: string): string {
     vehicle:   'generated-vehicle-images.json',
     planet:    'generated-planet-images.json',
     race:      'generated-race-images.json',
+    game:      'generated-game-images.json',
   };
   return join(process.cwd(), 'src', fileMap[type]);
 }
@@ -196,6 +197,7 @@ async function main() {
   await mirrorType('vehicle',   LORE_VEHICLES);
   await mirrorType('planet',    LORE_PLANETS);
   await mirrorType('race',      LORE_RACES);
+  await mirrorType('game',      LORE_GAMES);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
