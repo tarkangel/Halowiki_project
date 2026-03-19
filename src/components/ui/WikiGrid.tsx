@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Card from './Card';
 import Spinner from './Spinner';
@@ -148,6 +149,20 @@ function DetailPanel({ item, onClose }: { item: WikiItem; onClose: () => void })
 
 export default function WikiGrid({ items, loading, error }: WikiGridProps) {
   const [selected, setSelected] = useState<WikiItem | null>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Auto-open item when navigating from Factions page (?open=item-id)
+  useEffect(() => {
+    const openId = searchParams.get('open');
+    if (!openId || !items) return;
+    const match = items.find(item => item.id === openId);
+    if (match) setSelected(match);
+  }, [items, searchParams]);
+
+  function handleClose() {
+    setSelected(null);
+    if (searchParams.has('open')) setSearchParams({}, { replace: true });
+  }
 
   if (loading) {
     return (
@@ -206,7 +221,7 @@ export default function WikiGrid({ items, loading, error }: WikiGridProps) {
 
       <AnimatePresence>
         {selected && (
-          <DetailPanel item={selected} onClose={() => setSelected(null)} />
+          <DetailPanel item={selected} onClose={handleClose} />
         )}
       </AnimatePresence>
     </>

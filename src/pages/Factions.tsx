@@ -11,10 +11,14 @@ const CATEGORY_META: Array<{ key: keyof FactionEntry; label: string; path: strin
   { key: 'planets',    label: 'Planets',    path: '/planets'    },
 ];
 
+function slugify(name: string) {
+  return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+}
+
 function EntityTag({ name, color, path }: { name: string; color: string; path: string }) {
   return (
     <Link
-      to={path}
+      to={`${path}?open=${slugify(name)}`}
       title={`View ${name}`}
       className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium transition-colors duration-150 hover:opacity-90"
       style={{
