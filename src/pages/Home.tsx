@@ -2,21 +2,82 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { fetchPageSummaries } from '../api/halopedia';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const FEATURED = [
-  { label: 'Weapons',    path: '/weapons',    representative: 'Energy sword',         description: 'UNSC, Covenant, Forerunner & Banished arsenal' },
-  { label: 'Vehicles',   path: '/vehicles',   representative: 'Scorpion',             description: 'Ground, air, naval and space craft',
-    imageUrl: 'https://halo.wiki.gallery/images/a/a3/Scorpion2011.png', objectFit: 'contain', objectPosition: 'center' },
-  { label: 'Characters', path: '/characters', representative: 'John-117',             description: 'Spartans, Elites, and key figures' },
-  { label: 'Races',      path: '/races',      representative: 'Sangheili',            description: 'Species across the Halo universe',
-    objectPosition: 'top' },
-  { label: 'Planets',    path: '/planets',    representative: 'Reach',                description: 'Worlds, Halos, and installations' },
-  { label: 'Games',      path: '/games',      representative: 'Halo: Combat Evolved', description: 'Every Halo title in the franchise',
-    objectPosition: 'top' },
+  {
+    path: '/weapons',
+    representative: 'Energy sword',
+    imageUrl: undefined as string | undefined,
+    objectFit: undefined as string | undefined,
+    objectPosition: undefined as string | undefined,
+    en: { label: 'Weapons',    description: 'UNSC, Covenant, Forerunner & Banished arsenal' },
+    es: { label: 'Armas',      description: 'Arsenal de UNSC, Covenant, Forerunner y Banished' },
+  },
+  {
+    path: '/vehicles',
+    representative: 'Scorpion',
+    imageUrl: 'https://halo.wiki.gallery/images/a/a3/Scorpion2011.png',
+    objectFit: 'contain',
+    objectPosition: 'center',
+    en: { label: 'Vehicles',   description: 'Ground, air, naval and space craft' },
+    es: { label: 'Vehículos',  description: 'Naves terrestres, aéreas, navales y espaciales' },
+  },
+  {
+    path: '/characters',
+    representative: 'John-117',
+    imageUrl: undefined,
+    objectFit: undefined,
+    objectPosition: undefined,
+    en: { label: 'Characters', description: 'Spartans, Elites, and key figures' },
+    es: { label: 'Personajes', description: 'Spartans, Elites y figuras clave' },
+  },
+  {
+    path: '/races',
+    representative: 'Sangheili',
+    imageUrl: undefined,
+    objectFit: undefined,
+    objectPosition: 'top',
+    en: { label: 'Races',      description: 'Species across the Halo universe' },
+    es: { label: 'Razas',      description: 'Especies del universo Halo' },
+  },
+  {
+    path: '/planets',
+    representative: 'Reach',
+    imageUrl: undefined,
+    objectFit: undefined,
+    objectPosition: undefined,
+    en: { label: 'Planets',    description: 'Worlds, Halos, and installations' },
+    es: { label: 'Planetas',   description: 'Mundos, Halos e instalaciones' },
+  },
+  {
+    path: '/games',
+    representative: 'Halo: Combat Evolved',
+    imageUrl: undefined,
+    objectFit: undefined,
+    objectPosition: 'top',
+    en: { label: 'Games',      description: 'Every Halo title in the franchise' },
+    es: { label: 'Juegos',     description: 'Todos los títulos de la saga Halo' },
+  },
 ];
 
+const UI = {
+  en: {
+    welcome: 'Welcome to',
+    subtitle: 'Your interactive encyclopedia for the Halo universe. Explore weapons, vehicles, characters, races, planets, and games.',
+    browse: 'Browse Categories',
+  },
+  es: {
+    welcome: 'Bienvenido a',
+    subtitle: 'Tu enciclopedia interactiva del universo Halo. Explora armas, vehículos, personajes, razas, planetas y juegos.',
+    browse: 'Explorar Categorías',
+  },
+};
+
 export default function Home() {
+  const { lang } = useLanguage();
   const [thumbs, setThumbs] = useState<Record<string, string>>({});
+  const t = UI[lang];
 
   useEffect(() => {
     const titles = FEATURED.map(f => f.representative);
@@ -39,22 +100,20 @@ export default function Home() {
     >
       <div className="px-8 pt-8 pb-6">
         <h1 className="text-4xl font-bold text-white mb-4">
-          Welcome to <span className="text-[#00B4D8]">Halo Wiki</span>
+          {t.welcome} <span className="text-[#00B4D8]">Halo Wiki</span>
         </h1>
-        <p className="text-zinc-400 text-lg">
-          Your interactive encyclopedia for the Halo universe.
-          Explore weapons, vehicles, characters, races, planets, and games.
-        </p>
+        <p className="text-zinc-400 text-lg">{t.subtitle}</p>
       </div>
 
       <div className="px-8">
-        <h2 className="text-xl font-semibold text-zinc-300 mb-4">Browse Categories</h2>
+        <h2 className="text-xl font-semibold text-zinc-300 mb-4">{t.browse}</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {FEATURED.map(({ label, path, representative, description, imageUrl, objectPosition, objectFit }, i) => {
-            const img = imageUrl ?? thumbs[representative];
+          {FEATURED.map((item, i) => {
+            const { label, description } = item[lang];
+            const img = item.imageUrl ?? thumbs[item.representative];
             return (
               <motion.div
-                key={label}
+                key={item.path}
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.06 }}
@@ -62,7 +121,7 @@ export default function Home() {
                 whileTap={{ scale: 0.97 }}
               >
                 <Link
-                  to={path}
+                  to={item.path}
                   className="block bg-zinc-800 rounded-lg overflow-hidden border border-zinc-700 hover:border-[#00B4D8] transition-colors"
                 >
                   {/* Thumbnail */}
@@ -70,9 +129,9 @@ export default function Home() {
                     {img ? (
                       <motion.img
                         src={img}
-                        alt={representative}
+                        alt={item.representative}
                         className="w-full h-full"
-                        style={{ objectFit: (objectFit as 'cover' | 'contain') ?? 'cover', objectPosition: objectPosition ?? 'center' }}
+                        style={{ objectFit: (item.objectFit as 'cover' | 'contain') ?? 'cover', objectPosition: item.objectPosition ?? 'center' }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.4 }}
@@ -93,7 +152,7 @@ export default function Home() {
                         className="text-xs font-bold tracking-widest text-zinc-400"
                         style={{ fontFamily: "'Orbitron', sans-serif" }}
                       >
-                        {representative}
+                        {item.representative}
                       </span>
                     </div>
                   </div>
