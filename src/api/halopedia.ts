@@ -858,7 +858,25 @@ function isUsablePlanet(p: Planet): boolean {
   return true;
 }
 
-const JUNK_GAME_PATTERNS = /^User(Wiki)?:|cancelled|canceled|rejected|sequel|GURPS|Saga|game jam|pitch$/i;
+const JUNK_GAME_PATTERNS = /^User(Wiki)?:|cancelled|canceled|rejected|sequel|GURPS|Saga|game jam|pitch|chronicles$/i;
+
+/** Release year for sorting — unlisted titles sort to the end. */
+const GAME_RELEASE_YEAR: Record<string, number> = {
+  'Halo: Combat Evolved':                    2001,
+  'Halo 2':                                  2004,
+  'Halo 3':                                  2007,
+  'Halo Wars':                               2009,
+  'Halo 3: ODST':                            2009,
+  'Halo: Reach':                             2010,
+  'Halo: Combat Evolved Anniversary':        2011,
+  'Halo 4':                                  2012,
+  'Halo: Spartan Assault':                   2013,
+  'Halo: The Master Chief Collection':       2014,
+  'Halo: Spartan Strike':                    2015,
+  'Halo 5: Guardians':                       2015,
+  'Halo Wars 2':                             2017,
+  'Halo Infinite':                           2021,
+};
 
 export async function fetchGames(): Promise<Game[]> {
   const members = await fetchCategoryMembers('Halo_games', 50).catch(() => []);
@@ -866,5 +884,11 @@ export async function fetchGames(): Promise<Game[]> {
     .map(m => m.title)
     .filter(t => !JUNK_GAME_PATTERNS.test(t));
   const summaries = await fetchPageSummariesBatched(titles);
-  return summaries.map(pageToGame);
+  return summaries
+    .map(pageToGame)
+    .sort((a, b) => {
+      const ya = GAME_RELEASE_YEAR[a.name] ?? 9999;
+      const yb = GAME_RELEASE_YEAR[b.name] ?? 9999;
+      return ya - yb;
+    });
 }

@@ -98,6 +98,15 @@ describe('FACTION_OVERRIDES', () => {
   it('classifies Phaeton as Forerunner', () => {
     expect(byName('Phaeton')).toBe('Forerunner');
   });
+
+  // Regression: Flood race entry described with heavy "Forerunner" context
+  it('classifies Flood (race) as Flood even though description mentions Forerunner', () => {
+    expect(byText('Flood', 'Originally created by the Precursors as vengeance against the Forerunners, the Flood nearly consumed all life before the Halo Array halted its spread')).toBe('Flood');
+  });
+
+  it('classifies Forerunner (race) as Forerunner', () => {
+    expect(byName('Forerunner')).toBe('Forerunner');
+  });
 });
 
 // ─────────────────────────────────────────────────────────────────────────────

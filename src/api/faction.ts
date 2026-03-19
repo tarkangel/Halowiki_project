@@ -51,7 +51,9 @@ export const FACTION_OVERRIDES: Record<string, string> = {
   'Scarab':           'Covenant',
   // ── Flood ─────────────────────────────────────────────────────────────────
   'Gravemind':        'Flood',
+  'Flood':            'Flood',   // race entry — description mentions "Forerunner" heavily
   // ── Forerunner ────────────────────────────────────────────────────────────
+  'Forerunner':       'Forerunner', // race entry
   '343 Guilty Spark': 'Forerunner',
   'Didact':           'Forerunner',
   'Librarian':        'Forerunner',
