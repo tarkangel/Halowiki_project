@@ -38,3 +38,13 @@ resource "google_storage_bucket_iam_member" "public_read" {
   role   = "roles/storage.objectViewer"
   member = "allUsers"
 }
+
+# Explicit bucket-level write access for the GitHub Actions SA.
+# The project-level binding in iam.tf is sufficient in most cases, but with
+# uniform_bucket_level_access = true, an explicit bucket-level binding avoids
+# propagation delays and org-policy edge cases.
+resource "google_storage_bucket_iam_member" "github_actions_write" {
+  bucket = google_storage_bucket.images.name
+  role   = "roles/storage.objectAdmin"
+  member = "serviceAccount:${google_service_account.github_actions.email}"
+}

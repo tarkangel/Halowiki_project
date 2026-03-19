@@ -34,8 +34,9 @@ async function fileExistsInGCS(gcsPath: string): Promise<boolean> {
 
 async function uploadToGCS(gcsPath: string, buf: Buffer): Promise<void> {
   const file = bucket.file(gcsPath);
+  // uniform_bucket_level_access is enabled; allUsers objectViewer is set at
+  // bucket level in Terraform — per-object makePublic() is not needed.
   await file.save(buf, { contentType: 'image/jpeg', resumable: false });
-  await file.makePublic();
 }
 
 async function halopediaFetch(params: Record<string, string>) {

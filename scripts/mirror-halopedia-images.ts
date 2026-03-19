@@ -66,8 +66,9 @@ async function downloadBuffer(url: string): Promise<Buffer> {
 
 async function uploadToGCS(gcsPath: string, buf: Buffer, contentType: string): Promise<void> {
   const file = bucket.file(gcsPath);
+  // uniform_bucket_level_access is enabled; allUsers objectViewer is set at
+  // bucket level in Terraform — per-object makePublic() is not needed.
   await file.save(buf, { contentType, resumable: false });
-  await file.makePublic();
 }
 
 function contentTypeFromUrl(url: string): string {
