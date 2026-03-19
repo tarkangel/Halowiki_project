@@ -82,5 +82,41 @@
     "name": "Halo Infinite",
     "description": "Halo Infinite es la entrega de 2021 que recuperó el espíritu de mundo abierto de la trilogía original. Ambientada en Installation 07 (Zeta Halo) seis meses después del asalto de los Banished que destruyó la UNSC Infinity, un Master Chief solitario es rescatado por un piloto de la UNSC y debe reconquistar el enorme anillo de las fuerzas Banished de Escharum. El juego introdujo una mecánica de desplazamiento con garfio, una estructura de mundo semiabierto y a la enigmática Harbinger como antagonista secundaria. Es la entrega más aclamada por la crítica de la era Halo moderna.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/game/halo-infinite.png"
+  },
+  {
+    "id": "halo-custom-edition",
+    "name": "Halo Custom Edition",
+    "description": "Halo Custom Edition es una expansión multijugador independiente para la versión de PC de Halo: Combat Evolved, lanzada por Gearbox Software en 2004. Proporcionó a la comunidad un kit de herramientas oficial y soporte para servidores dedicados, permitiendo a los jugadores crear y compartir mapas personalizados, modos de juego y mods de conversión total. Custom Edition se convirtió en la base de la escena de modificaciones de Halo en PC durante más de una década, produciendo miles de campañas y mapas multijugador creados por la comunidad.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/2/29/Custom_edition_menu.jpg/500px-Custom_edition_menu.jpg"
+  },
+  {
+    "id": "halo-online",
+    "name": "Halo Online",
+    "description": "Halo Online fue un juego multijugador gratuito oficial desarrollado por Saber Interactive para el mercado ruso, construido sobre un motor modificado de Halo 3, que entró en beta cerrada en 2015 antes de ser cancelado en 2016. Tras la cancelación, la comunidad hizo ingeniería inversa del cliente y lanzó ElDewrito — un parche no oficial que desbloqueó el juego a nivel mundial y restauró muchas funciones eliminadas. ElDewrito se convirtió en uno de los proyectos comunitarios más celebrados en la historia de Halo, ofreciendo multijugador de la era Halo 3 en alta fidelidad para PC.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/8/83/Halo_Online_logo.jpg/500px-Halo_Online_logo.jpg"
+  },
+  {
+    "id": "halo-campaign-evolved",
+    "name": "Halo: Campaign Evolved",
+    "description": "Halo: Campaign Evolved es un remake desde cero de Halo: Combat Evolved en desarrollo por Halo Studios utilizando Unreal Engine 5. A diferencia de la edición Anniversary de 2011, que solo actualizó los gráficos, este proyecto reconstruye el juego completamente con nuevo arte, sonido y tecnología de renderizado, preservando la jugabilidad original. El proyecto fue anunciado como parte del compromiso de Halo Studios de modernizar la experiencia clásica de Halo para una nueva generación.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/e/e6/HCEV_Keyart_Wallpaper.jpg/500px-HCEV_Keyart_Wallpaper.jpg"
+  },
+  {
+    "id": "halo-fireteam-raven",
+    "name": "Halo: Fireteam Raven",
+    "description": "Halo: Fireteam Raven es un shooter arcade cooperativo de luz y pistola desarrollado por Raw Thrills y lanzado en 2018, ambientado durante los eventos de Halo: Combat Evolved en Installation 04. Hasta cuatro jugadores controlan Orbital Drop Shock Troopers que combaten contra fuerzas del Covenant y el Flood en combate en rieles a través de ubicaciones icónicas del juego original. Inicialmente fue exclusivo de los locales de entretenimiento Dave & Buster's antes de expandirse a otros operadores de arcade a nivel internacional.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/7/74/HaloFireteamRaven.png/500px-HaloFireteamRaven.png"
+  },
+  {
+    "id": "halo-5-forge",
+    "name": "Halo 5: Forge",
+    "description": "Halo 5: Forge es un port gratuito de 2016 para PC del modo de creación de mapas Forge de Halo 5: Guardians, lanzado por 343 Industries para Windows 10. Permite a los jugadores construir y compartir mapas multijugador personalizados usando un conjunto completo de herramientas Forge, y soporta partidas personalizadas de hasta 16 jugadores. El lanzamiento llevó la creación de contenido comunitario de Halo a los jugadores de PC por primera vez, permitiendo el intercambio de mapas entre plataformas con Xbox One.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/1/12/H5F.jpg/500px-H5F.jpg"
+  },
+  {
+    "id": "halo-recruit",
+    "name": "Halo Recruit",
+    "description": "Halo Recruit es una experiencia gratuita de Windows Mixed Reality desarrollada por Endeavor One y lanzada en 2017, diseñada como introducción al universo Halo para nuevos jugadores. Ambientada en una simulación de entrenamiento de la UNSC, los jugadores interactúan con Élites y Grunts del Covenant y un Warthog en un entorno inmersivo de 360 grados optimizado para los auriculares Windows MR de Microsoft. Es la primera experiencia dedicada de realidad virtual de Halo y uno de los títulos de lanzamiento de la plataforma Windows Mixed Reality.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/1/18/Halo_recruit.png/500px-Halo_recruit.png"
   }
 ]
