@@ -510,18 +510,29 @@ function inferFaction(title: string, text: string): string {
 
   // "monitor" and "installation" removed — too common in English prose, caused
   // Covenant characters (Unggoy/Kig-Yar) to be falsely tagged as Forerunner.
+  // Vehicle-specific Forerunner names: phaeton, retriever/aggressor sentinel.
   const isForerunnerKw = isForerunnerHyphenName || isForerunnerRoleName
     || isForerunnerMonitorName || isForerunnerSpecificName
-    || /forerunner|promethean|hardlight|hard light|sentinel beam|lithos|composer/.test(combined);
+    || /forerunner|promethean|hardlight|hard light|sentinel beam|lithos|composer/.test(combined)
+    || /\bphaeton\b|\bretriever sentinel\b|\baggressor sentinel\b/.test(combined);
 
-  // Banished: faction keywords, workshop names, distinctive weapon/vehicle names.
-  const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b|barbed lance|berserker|fire-wand|loathsome thing|blamex|breacher exosuit|decimus/.test(combined);
+  // Banished: faction keywords, workshop names, distinctive vehicle/weapon names.
+  // Guntower and Marauder are Banished-exclusive; Chopper is Jiralhanae/Banished.
+  const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b|barbed lance|berserker|fire-wand|loathsome thing|blamex|breacher exosuit|decimus/.test(combined)
+    || /\bguntower\b/.test(combined);
 
-  // Covenant: species keywords + structural name patterns.
+  // Covenant: species keywords + structural name patterns + specific vehicle names.
+  // Lich, Locust, Harvester, Seraph are Covenant-origin craft (name-only fallback
+  // for when no description is available).
   // Jiralhanae included — Banished check runs first so Banished-affiliated
   // Jiralhanae still get the correct label.
   const isCovenantKw = isCovenantPatternItem || isSangheiliName
-    || /covenant|sangheili|elite|unggoy|grunt|kig-yar|jackal|jiralhanae|brute|huragok|engineer|yanme|drone|lekgolo|hunter|san.shyuum|prophet|methane rebreather|plasma (pistol|rifle|cannon|mortar|launcher|grenade)|assault cannon|anti-gravity barge|methane wagon|mudoat/.test(combined);
+    || /covenant|sangheili|elite|unggoy|grunt|kig-yar|jackal|jiralhanae|brute|huragok|engineer|yanme|drone|lekgolo|hunter|san.shyuum|prophet|methane rebreather|plasma (pistol|rifle|cannon|mortar|launcher|grenade)|assault cannon|anti-gravity barge|methane wagon|mudoat/.test(combined)
+    || /\blich\b|\blocust\b|\bharvester\b|\bseraph\b|\bvampire\b/.test(combined);
+
+  // Covenant-species indicator: Unggoy, Kig-Yar, Yanme'e, San'Shyuum by species name
+  // in description. Used to prevent "Forerunner location" from overriding species identity.
+  const isCovenantSpeciesKw = /\bunggoy\b|\bkig-yar\b|\byanme'e\b|\bsan'shyuum\b|\bdrone\b|\bgrunt\b|\bjackal\b/.test(combined);
 
   // UNSC: Spartan name formats, service branch keywords, named UNSC vehicles,
   // M-series prefix, BR battle rifles, CQS shotgun, ARC railgun, AIE machine guns.
@@ -533,14 +544,15 @@ function inferFaction(title: string, text: string): string {
     || /^arc-\d+/i.test(title)   // ARC-920 railgun
     || /^aie-\d+/i.test(title);  // AIE-207H, AIE-486H machine guns
 
-  // Flood
-  const isFloodKw = /gravemind|flood form|infection form|the flood/.test(combined)
+  // Flood: Gravemind, Flood combat/infection/pure forms.
+  const isFloodKw = /gravemind|flood form|infection form|the flood|flood pure|flood combat/.test(combined)
     || /^gravemind$/i.test(title);
 
   // ── Resolve priority (Forerunner > Banished > Covenant > UNSC > Flood) ───
-  // Sangheili apostrophe and Covenant patterns beat keyword-Forerunner to
-  // prevent Covenant characters from being falsely tagged as Forerunner.
-  if (!isSangheiliName && !isCovenantPatternItem && isForerunnerKw) return 'Forerunner';
+  // Guard: Sangheili names, Covenant -pattern items, and Covenant-species keywords
+  // all prevent "Forerunner location mention" from overriding the entity's true faction.
+  const isCovenantGuard = isSangheiliName || isCovenantPatternItem || isCovenantSpeciesKw;
+  if (!isCovenantGuard && isForerunnerKw) return 'Forerunner';
   if (isBanishedKw) return 'Banished';
   if (isCovenantKw) return 'Covenant';
   if (isUNSCKw) return 'UNSC';
