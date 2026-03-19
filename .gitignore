@@ -40,3 +40,6 @@ src/regeneration-progress*.json
 
 # Temp audit files
 src/faction-audit.json
+
+# Background music tracks (served locally, not in repo)
+public/music/

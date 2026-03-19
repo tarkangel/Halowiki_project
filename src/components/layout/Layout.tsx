@@ -4,6 +4,7 @@ import Sidebar from './Sidebar';
 import Header from './Header';
 import { SearchProvider } from '../../contexts/SearchContext';
 import { LanguageProvider } from '../../contexts/LanguageContext';
+import { MusicProvider } from '../../contexts/MusicContext';
 
 /**
  * Per-route background wallpapers.
@@ -63,6 +64,7 @@ export default function Layout() {
   const bg = PAGE_BG[location.pathname];
 
   return (
+    <MusicProvider>
     <LanguageProvider>
     <SearchProvider>
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
@@ -101,5 +103,6 @@ export default function Layout() {
     </div>
     </SearchProvider>
     </LanguageProvider>
+    </MusicProvider>
   );
 }

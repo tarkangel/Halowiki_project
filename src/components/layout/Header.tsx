@@ -5,6 +5,7 @@ import SearchBar from '../ui/SearchBar';
 import SearchOverlay from '../ui/SearchOverlay';
 import { useSearch } from '../../contexts/SearchContext';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { useMusic } from '../../contexts/MusicContext';
 
 const routeTitles: Record<string, Record<string, string>> = {
   en: { '/': 'Home', '/weapons': 'Weapons', '/vehicles': 'Vehicles', '/characters': 'Characters', '/races': 'Races', '/planets': 'Planets', '/games': 'Games', '/factions': 'Factions', '/about': 'About' },
@@ -15,6 +16,7 @@ export default function Header() {
   const location              = useLocation();
   const { query, setQuery }   = useSearch();
   const { lang, toggleLang }  = useLanguage();
+  const { isPlaying, toggle: toggleMusic } = useMusic();
   const [overlayOpen, setOverlayOpen] = useState(false);
   const title                 = routeTitles[lang][location.pathname] ?? 'Halo Wiki';
 
@@ -27,6 +29,25 @@ export default function Header() {
     <header className="fixed top-0 left-16 right-0 h-14 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between px-6 z-40">
       <h2 className="text-white font-semibold text-lg tracking-wide">{title}</h2>
       <div className="flex items-center gap-3">
+      {/* Music toggle */}
+      <motion.button
+        onClick={toggleMusic}
+        aria-label={isPlaying ? 'Pause music' : 'Play music'}
+        whileTap={{ scale: 0.82 }}
+        transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+        className="flex items-center justify-center w-7 h-7 rounded-full border transition-colors duration-300 cursor-pointer"
+        style={{
+          borderColor:     isPlaying ? '#00B4D8' : '#3f3f46',
+          backgroundColor: isPlaying ? 'rgba(0,180,216,0.1)' : 'transparent',
+          boxShadow:       isPlaying ? '0 0 8px #00B4D866, 0 0 16px #00B4D833' : 'none',
+          color:           isPlaying ? '#00B4D8' : '#52525b',
+        }}
+      >
+        <span className="text-sm leading-none select-none">
+          {isPlaying ? '♪' : '🔇'}
+        </span>
+      </motion.button>
+
       {/* 2-position language toggle */}
       <button
         onClick={toggleLang}
