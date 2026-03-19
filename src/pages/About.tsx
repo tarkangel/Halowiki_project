@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const STACK = [
   { label: 'React 18 + TypeScript',   tag: 'UI',    color: '#00B4D8' },
@@ -16,16 +17,51 @@ const STACK = [
   { label: 'Claude · Anthropic',      tag: 'AI',    color: '#FF9F00' },
 ];
 
-const FEATURES = [
-  { icon: '⚡', title: 'Two-phase loading', desc: 'Lore characters appear instantly; full category data loads in the background.' },
-  { icon: '🖼', title: 'AI-generated artwork', desc: 'Missing Halopedia images are filled with Vertex AI Imagen 3 illustrations, generated and cached in GCS.' },
-  { icon: '🔁', title: 'Official image mirroring', desc: 'Halopedia thumbnails for lore entities are mirrored to GCS at deploy time — no runtime API dependency for images.' },
-  { icon: '📝', title: 'Description database', desc: 'Every entity has a guaranteed description: Halopedia extract → GCS text archive → curated hand-written fallback.' },
-  { icon: '🏷', title: 'Faction registry', desc: 'Static cross-category catalog linking every character, weapon, vehicle, race, and planet to their faction.' },
-  { icon: '☁️', title: 'Full GCP infra as code', desc: 'Cloud Run, Artifact Registry, GCS, Workload Identity — all provisioned and destroyed via Terraform.' },
-];
+const UI = {
+  en: {
+    title: 'About',
+    subtitle: 'An unofficial, fan-built encyclopedia of the Halo universe — browsable, beautiful, and built to showcase what modern AI-assisted development looks like end-to-end.',
+    creatorLabel: 'Creator',
+    creatorDesc: 'DevOps and Cloud AI engineer with a passion for the Halo universe. Built this project to combine lore fandom with a hands-on showcase of GCP infrastructure, AI-driven image generation, CI/CD automation, and full-stack React development — all orchestrated through an AI-native workflow.',
+    copilotLabel: 'AI Co-pilot',
+    copilotDesc: 'Claude served as the AI co-pilot throughout this project — writing and debugging TypeScript, architecting the GCP infrastructure, crafting curated lore descriptions, designing CI/CD pipelines, and iterating on the UI alongside Angel. Every feature in this app was built in collaboration between a human developer and an AI assistant.',
+    featuresLabel: 'Key Features',
+    stackLabel: 'Tech Stack',
+    disclaimer: 'Halo Wiki is a fan project and is not affiliated with, endorsed, or sponsored by 343 Industries or Microsoft. All Halo IP, characters, and universe content are the property of their respective owners. Data sourced from the Halopedia community wiki.',
+    features: [
+      { icon: '⚡', title: 'Two-phase loading',        desc: 'Lore characters appear instantly; full category data loads in the background.' },
+      { icon: '🖼', title: 'AI-generated artwork',     desc: 'Missing Halopedia images are filled with Vertex AI Imagen 3 illustrations, generated and cached in GCS.' },
+      { icon: '🔁', title: 'Official image mirroring', desc: 'Halopedia thumbnails for lore entities are mirrored to GCS at deploy time — no runtime API dependency for images.' },
+      { icon: '📝', title: 'Description database',     desc: 'Every entity has a guaranteed description: Halopedia extract → GCS text archive → curated hand-written fallback.' },
+      { icon: '🏷', title: 'Faction registry',         desc: 'Static cross-category catalog linking every character, weapon, vehicle, race, and planet to their faction.' },
+      { icon: '☁️', title: 'Full GCP infra as code',   desc: 'Cloud Run, Artifact Registry, GCS, Workload Identity — all provisioned and destroyed via Terraform.' },
+    ],
+  },
+  es: {
+    title: 'Acerca de',
+    subtitle: 'Una enciclopedia no oficial creada por fans del universo Halo — navegable, visualmente atractiva, y construida para demostrar cómo luce el desarrollo moderno asistido por IA de principio a fin.',
+    creatorLabel: 'Creador',
+    creatorDesc: 'Ingeniero de DevOps y Cloud AI con pasión por el universo Halo. Construyó este proyecto para combinar el amor por el lore con una demostración práctica de infraestructura GCP, generación de imágenes con IA, automatización CI/CD y desarrollo full-stack con React — todo orquestado mediante un flujo de trabajo nativo de IA.',
+    copilotLabel: 'Copiloto IA',
+    copilotDesc: 'Claude actuó como copiloto de IA a lo largo de todo el proyecto — escribiendo y depurando TypeScript, diseñando la infraestructura GCP, redactando descripciones de lore, configurando pipelines de CI/CD e iterando en la interfaz junto a Angel. Cada funcionalidad de esta app fue construida en colaboración entre un desarrollador humano y un asistente de IA.',
+    featuresLabel: 'Características Principales',
+    stackLabel: 'Stack Tecnológico',
+    disclaimer: 'Halo Wiki es un proyecto de fans y no está afiliado, respaldado ni patrocinado por 343 Industries ni Microsoft. Todo el contenido de IP de Halo, personajes y universo son propiedad de sus respectivos dueños. Datos obtenidos de la wiki comunitaria Halopedia.',
+    features: [
+      { icon: '⚡', title: 'Carga en dos fases',           desc: 'Los personajes del lore aparecen al instante; los datos completos de categoría se cargan en segundo plano.' },
+      { icon: '🖼', title: 'Arte generado por IA',          desc: 'Las imágenes faltantes de Halopedia se completan con ilustraciones de Vertex AI Imagen 3, generadas y almacenadas en GCS.' },
+      { icon: '🔁', title: 'Espejado de imágenes oficiales',desc: 'Las miniaturas de Halopedia para entidades del lore se replican en GCS en tiempo de despliegue — sin dependencia de API en tiempo de ejecución.' },
+      { icon: '📝', title: 'Base de datos de descripciones', desc: 'Cada entidad tiene una descripción garantizada: extracto de Halopedia → archivo de texto en GCS → descripción curada escrita a mano.' },
+      { icon: '🏷', title: 'Registro de facciones',         desc: 'Catálogo estático entre categorías que vincula cada personaje, arma, vehículo, raza y planeta con su facción.' },
+      { icon: '☁️', title: 'Infraestructura GCP como código', desc: 'Cloud Run, Artifact Registry, GCS, Workload Identity — todo aprovisionado y destruido mediante Terraform.' },
+    ],
+  },
+};
 
 export default function About() {
+  const { lang } = useLanguage();
+  const t = UI[lang];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -35,7 +71,7 @@ export default function About() {
       {/* Hero */}
       <div className="mb-10">
         <h1 className="text-4xl font-bold text-white mb-2">
-          About{' '}
+          {t.title}{' '}
           <span
             className="text-[#00B4D8]"
             style={{ textShadow: '0 0 20px #00B4D866' }}
@@ -43,10 +79,7 @@ export default function About() {
             Halo Wiki
           </span>
         </h1>
-        <p className="text-zinc-400 text-sm leading-relaxed max-w-2xl">
-          An unofficial, fan-built encyclopedia of the Halo universe — browsable, beautiful,
-          and built to showcase what modern AI-assisted development looks like end-to-end.
-        </p>
+        <p className="text-zinc-400 text-sm leading-relaxed max-w-2xl">{t.subtitle}</p>
       </div>
 
       {/* Creator card */}
@@ -56,7 +89,7 @@ export default function About() {
       >
         <p className="text-xs font-black tracking-widest mb-3 uppercase"
           style={{ fontFamily: "'Orbitron', sans-serif", color: '#00B4D8', opacity: 0.8 }}>
-          Creator
+          {t.creatorLabel}
         </p>
         <div className="flex items-start gap-4">
           <div
@@ -70,19 +103,14 @@ export default function About() {
             <p className="text-zinc-400 text-xs mb-2 font-semibold tracking-wide uppercase" style={{ color: '#00B4D8' }}>
               DevOps · Cloud &amp; AI Engineer · Full-Stack
             </p>
-            <p className="text-zinc-400 text-sm leading-relaxed">
-              DevOps and Cloud AI engineer with a passion for the Halo universe. Built this project
-              to combine lore fandom with a hands-on showcase of GCP infrastructure, AI-driven
-              image generation, CI/CD automation, and full-stack React development — all
-              orchestrated through an AI-native workflow.
-            </p>
+            <p className="text-zinc-400 text-sm leading-relaxed">{t.creatorDesc}</p>
           </div>
         </div>
 
         <div className="mt-5 pt-5 border-t border-zinc-800">
           <p className="text-xs font-black tracking-widest mb-3 uppercase"
             style={{ fontFamily: "'Orbitron', sans-serif", color: '#FF9F00', opacity: 0.8 }}>
-            AI Co-pilot
+            {t.copilotLabel}
           </p>
           <div className="flex items-start gap-4">
             <div
@@ -96,12 +124,7 @@ export default function About() {
                 Claude{' '}
                 <span className="text-sm font-normal text-zinc-500">by Anthropic</span>
               </h2>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                Claude served as the AI co-pilot throughout this project — writing and debugging
-                TypeScript, architecting the GCP infrastructure, crafting curated lore descriptions,
-                designing CI/CD pipelines, and iterating on the UI alongside Angel. Every feature
-                in this app was built in collaboration between a human developer and an AI assistant.
-              </p>
+              <p className="text-zinc-400 text-sm leading-relaxed">{t.copilotDesc}</p>
             </div>
           </div>
         </div>
@@ -111,10 +134,10 @@ export default function About() {
       <div className="mb-10">
         <p className="text-xs font-black tracking-widest mb-4 uppercase"
           style={{ fontFamily: "'Orbitron', sans-serif", color: '#C77DFF', opacity: 0.8 }}>
-          Key Features
+          {t.featuresLabel}
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {FEATURES.map(f => (
+          {t.features.map(f => (
             <div
               key={f.title}
               className="rounded-xl border border-zinc-800 p-4 hover:border-zinc-700 transition-colors"
@@ -130,7 +153,7 @@ export default function About() {
       <div>
         <p className="text-xs font-black tracking-widest mb-4 uppercase"
           style={{ fontFamily: "'Orbitron', sans-serif", color: '#4895EF', opacity: 0.8 }}>
-          Tech Stack
+          {t.stackLabel}
         </p>
         <div className="flex flex-wrap gap-2">
           {STACK.map(({ label, tag, color }) => (
@@ -156,11 +179,7 @@ export default function About() {
       </div>
 
       {/* Disclaimer */}
-      <p className="mt-10 text-xs text-zinc-600 leading-relaxed">
-        Halo Wiki is a fan project and is not affiliated with, endorsed, or sponsored by
-        343 Industries or Microsoft. All Halo IP, characters, and universe content are the
-        property of their respective owners. Data sourced from the Halopedia community wiki.
-      </p>
+      <p className="mt-10 text-xs text-zinc-600 leading-relaxed">{t.disclaimer}</p>
     </motion.div>
   );
 }
