@@ -60,6 +60,7 @@ export async function fetchPageSummaries(titles: string[]): Promise<PageSummary[
   const url = buildUrl({
     action: 'query',
     titles: titles.slice(0, 50).join('|'),
+    redirects: '1',
     prop: 'extracts|pageimages|info',
     exintro: '1',
     explaintext: '1',
@@ -655,6 +656,8 @@ export async function fetchCharacters(limitPerSpecies = 15): Promise<Character[]
 
 /** Returns false for stub/junk character entries not worth showing */
 function isUsableCharacter(c: Character): boolean {
+  // Always keep hand-curated lore characters regardless of description length
+  if (LORE_CHARACTER_SET.has(c.name)) return true;
   // Must have a meaningful description
   if (!c.description || c.description.trim().length < 80) return false;
   const name = c.name.trim();
