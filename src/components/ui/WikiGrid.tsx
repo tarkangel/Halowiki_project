@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSearch } from '../../contexts/SearchContext';
@@ -71,33 +71,55 @@ function buildFields(item: WikiItem): Field[] {
 
 function DetailPanel({ item, onClose }: { item: WikiItem; onClose: () => void }) {
   const fields = buildFields(item);
+  const [scale, setScale] = useState(1);
+  const scaleRef = useRef(1);
+
+  // Scroll-to-zoom on the image area
+  function handleWheel(e: React.WheelEvent) {
+    e.preventDefault();
+    const next = Math.min(4, Math.max(0.5, scaleRef.current - e.deltaY * 0.0012));
+    scaleRef.current = next;
+    setScale(next);
+  }
+
+  // Reset zoom on item change
+  useEffect(() => {
+    scaleRef.current = 1;
+    setScale(1);
+  }, [item.id]);
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex flex-col"
+      className="fixed inset-0 z-50 flex flex-col overflow-hidden"
       initial={{ y: '100%' }}
       animate={{ y: 0 }}
       exit={{ y: '100%' }}
       transition={{ type: 'spring', damping: 32, stiffness: 280 }}
     >
-      {/* Full-screen image background */}
-      {item.imageUrl ? (
-        <img
-          src={item.imageUrl}
-          alt={item.name}
-          className="absolute inset-0 w-full h-full object-contain"
-          style={{ background: '#000' }}
-        />
-      ) : (
-        <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950 flex items-center justify-center">
-          <span
-            className="text-zinc-700 text-[20vw] font-black select-none"
-            style={{ fontFamily: "'Orbitron', sans-serif" }}
-          >
-            {item.name.charAt(0)}
-          </span>
-        </div>
-      )}
+      {/* Full-screen image background — scroll to zoom */}
+      <div
+        className="absolute inset-0 overflow-hidden"
+        style={{ background: '#000' }}
+        onWheel={handleWheel}
+      >
+        {item.imageUrl ? (
+          <img
+            src={item.imageUrl}
+            alt={item.name}
+            className="absolute inset-0 w-full h-full object-contain"
+            style={{ transform: `scale(${scale})`, transformOrigin: 'center center', transition: 'transform 0.08s ease-out' }}
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-950 flex items-center justify-center">
+            <span
+              className="text-zinc-700 text-[20vw] font-black select-none"
+              style={{ fontFamily: "'Orbitron', sans-serif" }}
+            >
+              {item.name.charAt(0)}
+            </span>
+          </div>
+        )}
+      </div>
 
       {/* Close button — top right, always visible */}
       <button
@@ -108,11 +130,19 @@ function DetailPanel({ item, onClose }: { item: WikiItem; onClose: () => void })
         ✕
       </button>
 
-      {/* Click upper area to close — z-[1] puts it above the absolute image but below the z-10 close button */}
+      {/* Zoom hint — top left, fades after first render */}
+      {scale === 1 && (
+        <div className="absolute top-4 left-4 z-10 px-2 py-1 rounded bg-black/40 text-zinc-400 text-xs select-none pointer-events-none">
+          scroll to zoom
+        </div>
+      )}
+
+      {/* Click upper area to close */}
       <div className="flex-1 cursor-pointer z-[1]" onClick={onClose} />
 
-      {/* Bottom 1/3 — floating text over image */}
-      <div className="relative z-10 max-h-[40vh] overflow-y-auto"
+      {/* Bottom panel — floating text over image, no scrollbar */}
+      <div
+        className="relative z-10"
         style={{ background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.75) 18%, rgba(0,0,0,0.95) 40%)' }}
       >
         <div className="px-6 pt-10 pb-8">
