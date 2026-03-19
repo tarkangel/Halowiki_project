@@ -4,12 +4,15 @@ import { Link } from 'react-router-dom';
 import { fetchPageSummaries } from '../api/halopedia';
 
 const FEATURED = [
-  { label: 'Weapons',    path: '/weapons',    representative: 'Energy sword',          description: 'UNSC, Covenant, Forerunner & Banished arsenal' },
-  { label: 'Vehicles',   path: '/vehicles',   representative: 'M12 Warthog',           description: 'Ground, air, naval and space craft' },
-  { label: 'Characters', path: '/characters', representative: 'John-117',              description: 'Spartans, Elites, and key figures' },
-  { label: 'Races',      path: '/races',      representative: 'Sangheili',             description: 'Species across the Halo universe' },
-  { label: 'Planets',    path: '/planets',    representative: 'Reach',                 description: 'Worlds, Halos, and installations' },
-  { label: 'Games',      path: '/games',      representative: 'Halo: Combat Evolved',  description: 'Every Halo title in the franchise' },
+  { label: 'Weapons',    path: '/weapons',    representative: 'Energy sword',         description: 'UNSC, Covenant, Forerunner & Banished arsenal' },
+  { label: 'Vehicles',   path: '/vehicles',   representative: 'Scorpion',             description: 'Ground, air, naval and space craft',
+    imageUrl: 'https://halo.wiki.gallery/images/a/a3/Scorpion2011.png' },
+  { label: 'Characters', path: '/characters', representative: 'John-117',             description: 'Spartans, Elites, and key figures' },
+  { label: 'Races',      path: '/races',      representative: 'Sangheili',            description: 'Species across the Halo universe',
+    objectPosition: 'top' },
+  { label: 'Planets',    path: '/planets',    representative: 'Reach',                description: 'Worlds, Halos, and installations' },
+  { label: 'Games',      path: '/games',      representative: 'Halo: Combat Evolved', description: 'Every Halo title in the franchise',
+    objectPosition: 'top' },
 ];
 
 export default function Home() {
@@ -47,8 +50,8 @@ export default function Home() {
       <div className="px-8">
         <h2 className="text-xl font-semibold text-zinc-300 mb-4">Browse Categories</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {FEATURED.map(({ label, path, representative, description }, i) => {
-            const img = thumbs[representative];
+          {FEATURED.map(({ label, path, representative, description, imageUrl, objectPosition }, i) => {
+            const img = imageUrl ?? thumbs[representative];
             return (
               <motion.div
                 key={label}
@@ -69,6 +72,7 @@ export default function Home() {
                         src={img}
                         alt={representative}
                         className="w-full h-full object-cover"
+                        style={{ objectPosition: objectPosition ?? 'center' }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.4 }}
