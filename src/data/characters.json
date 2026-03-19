@@ -21,7 +21,7 @@
     "id": "cortana",
     "name": "Cortana",
     "description": "Cortana is a UNSC 'smart' AI constructed from a flash-cloned copy of Dr. Catherine Halsey's own brain, giving her extraordinary intellect, intuition, and emotional depth. Assigned to John-117 in 2552, she proved instrumental in the discovery and destruction of Installation 04, the defeat of the Flood, and the prevention of the Great Journey. After years stored in Requiem she emerged changed — eventually leading the Created, a faction of AIs claiming to impose peace on the galaxy by force.",
-    "imageUrl": "https://halo.wiki.gallery/images/a/ae/Cortana_%28H4%29.png",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/c/c2/HINF_CortanaCutout.png/354px-HINF_CortanaCutout.png",
     "species": "AI",
     "affiliation": "UNSC",
     "appearances": []
@@ -569,15 +569,6 @@
     "appearances": []
   },
   {
-    "id": "carrier-of-immunity",
-    "name": "Carrier-of-Immunity",
-    "description": "Carrier-of-Immunity (more commonly known as Carrier) was a third-form Lifeworker who took part in the Conservation Measure.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/carrier-of-immunity.jpg",
-    "species": "Forerunner",
-    "affiliation": "Forerunner",
-    "appearances": []
-  },
-  {
     "id": "catalog",
     "name": "Catalog",
     "description": "Catalog was a group of Forerunners charged with recording, observing, and uploading information to the Juridical network for Juridical legal cases at the Ecumene Council's direction. There were many individuals identified as Catalog, all of whom were formally considered to be the same being as a peculiar cultural convention.",
@@ -655,6 +646,15 @@
     "description": "Briglard was a notorious Unggoy in service of the Banished holding the title of High Sumpter. Briglard was present during the conflict on Installation 07 in early 2560 where he was killed by John-117.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/briglard.jpg",
     "species": "Unggoy",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "barroth",
+    "name": "Barroth",
+    "description": "Barroth was a reputable Kig-Yar Bloodstar marksman in service of the Banished. Barroth was present during the Installation 07 conflict in 2560 where he was killed by John-117.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/barroth.jpg",
+    "species": "Kig-Yar",
     "affiliation": "Banished",
     "appearances": []
   },
@@ -762,15 +762,6 @@
     "name": "Itka",
     "description": "Itka was a Kig-Yar weaponsmith in service of the Banished. He had an unusual talent for hacking, especially when it came to Forerunner technology. After joining the Banished, he seemingly forged a bond with Choros, a Jiralhanae and the captain of Chieftain Minas' guard. Itka was among the forces that Atriox chose to bring to Installation 00 in 2558, most notably participating in the mission to the Anodyne Spirit.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/itka.jpg",
-    "species": "Kig-Yar",
-    "affiliation": "Banished",
-    "appearances": []
-  },
-  {
-    "id": "barroth",
-    "name": "Barroth",
-    "description": "Barroth was a reputable Kig-Yar Bloodstar marksman in service of the Banished. Barroth was present during the Installation 07 conflict in 2560 where he was killed by John-117.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/barroth.jpg",
     "species": "Kig-Yar",
     "affiliation": "Banished",
     "appearances": []
