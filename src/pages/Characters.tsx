@@ -63,7 +63,7 @@ export default function Characters() {
       </div>
       <p className="px-6 text-zinc-400 mt-1 mb-2">{t.sub}</p>
 
-      <WikiGrid items={shown} loading={loading} error={error} />
+      <WikiGrid items={shown} loading={loading} error={error} imageObjectFit="contain" />
 
       {hasMore && (
         <div ref={sentinelRef} className="flex justify-center py-8">
