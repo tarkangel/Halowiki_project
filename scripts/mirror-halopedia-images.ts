@@ -77,6 +77,17 @@ function contentTypeFromUrl(url: string): string {
   return 'image/jpeg';
 }
 
+async function canWriteToGCS(): Promise<boolean> {
+  const testPath = '_ci_write_test.txt';
+  try {
+    await bucket.file(testPath).save(Buffer.from('ok'), { resumable: false });
+    await bucket.file(testPath).delete().catch(() => {});
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 async function main() {
   if (!PROJECT_ID) {
     console.error('ERROR: GCP_PROJECT_ID is not set.');
@@ -84,6 +95,14 @@ async function main() {
   }
 
   console.log(`Bucket: gs://${BUCKET_NAME}`);
+
+  const writable = await canWriteToGCS();
+  if (!writable) {
+    console.warn('⚠  GCS bucket is not writable — skipping mirror step.');
+    console.warn('   Run `terraform apply` in /terraform to grant the SA write access.');
+    process.exit(0);
+  }
+
   console.log(`Checking ${LORE_CHARACTERS.length} lore characters for Halopedia thumbnails...\n`);
 
   // Only process characters that don't already have a GCS URL
