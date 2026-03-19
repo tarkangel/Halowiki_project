@@ -76,25 +76,16 @@
     "name": "Unggoy",
     "description": "The Unggoy — known to humans as Grunts — are a short, methane-breathing species from the frozen world of Balaho who were conquered by the Covenant and pressed into military service as its most numerous infantry. Despite being dismissed as cowardly by other Covenant species, Unggoy are resilient, breed rapidly, and in sufficient numbers form effective swarm forces. Their history includes the Unggoy Rebellion of 2462, in which they rose against Covenant oppression and were only subdued when the Huragok inadvertently pacified them with recreational narcotics. Today, Unggoy serve in the Swords of Sanghelios, Covenant remnants, and the Banished alike.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/unggoy.png",
-    "affiliation": "Covenant",
-    "appearances": [],
-    "affiliations": [
-      "Covenant",
-      "Swords of Sanghelios",
-      "Banished"
-    ]
+    "affiliation": "Banished",
+    "appearances": []
   },
   {
     "id": "kig-yar",
     "name": "Kig-Yar",
     "description": "The Kig-Yar — known to humans as Jackals and Skirmishers — are a mercenary avian-reptilian species of privateers from Eayn, a moon of the gas giant Te. Motivated by profit rather than religious devotion, the Kig-Yar joined the Covenant primarily for access to advanced technology and the chance to plunder human colonies. Their naturally keen eyesight and tactical patience made them exceptional scouts, snipers, and point-defence specialists within Covenant formations. Kig-Yar shield-bearers were notorious among UNSC Marines for projecting personal energy barriers that deflected small-arms fire while advancing. In the post-war era, Kig-Yar factions serve multiple employers including the Banished.",
     "imageUrl": "https://halo.wiki.gallery/images/b/b4/H5G-Render-Jackal.png",
-    "affiliation": "Covenant",
-    "appearances": [],
-    "affiliations": [
-      "Covenant",
-      "Banished"
-    ]
+    "affiliation": "Banished",
+    "appearances": []
   },
   {
     "id": "precursor",
