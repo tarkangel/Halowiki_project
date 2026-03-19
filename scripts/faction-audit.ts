@@ -125,7 +125,20 @@ async function fetchDescriptions(titles: string[]): Promise<Map<string, string>>
 // ── Faction detection — mirrors inferFaction() in src/api/halopedia.ts ───────
 // Keep in sync with that function so audit results reflect actual app behaviour.
 
+const FACTION_OVERRIDES: Record<string, string> = {
+  'John-117': 'unsc', 'Cortana': 'unsc', 'Avery Johnson': 'unsc',
+  'Miranda Keyes': 'unsc', 'Jacob Keyes': 'unsc', 'Jorge-052': 'unsc',
+  'Kat-320': 'unsc', 'Emile-A239': 'unsc', 'Jun-A266': 'unsc',
+  'Carter-A259': 'unsc', 'Noble Six': 'unsc', 'Catherine Halsey': 'unsc',
+  'Roland': 'unsc', 'Escharum': 'banished', 'Atriox': 'banished',
+  "Let 'Volir": 'banished', "Thel 'Vadam": 'covenant', 'Tartarus': 'covenant',
+  "Rtas 'Vadum": 'covenant', 'Gravemind': 'flood',
+  '343 Guilty Spark': 'forerunner', 'Didact': 'forerunner',
+  'Librarian': 'forerunner', 'Mendicant Bias': 'forerunner',
+};
+
 function detectFaction(name: string, desc: string): string {
+  if (FACTION_OVERRIDES[name]) return FACTION_OVERRIDES[name];
   const combined = (name + ' ' + desc).toLowerCase();
 
   // Pass 1: structural name patterns (fire on title alone, no desc needed)

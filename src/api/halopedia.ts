@@ -476,7 +476,39 @@ export function pageToGame(page: PageSummary): Game {
 
 // ── Inference helpers ─────────────────────────────────────────────────────────
 
+// Characters whose faction is unambiguous regardless of description content.
+// Descriptions may mention enemy factions (e.g. "fought the Banished") which
+// would otherwise trigger a wrong classification.
+const FACTION_OVERRIDES: Record<string, string> = {
+  'John-117':        'UNSC',
+  'Cortana':         'UNSC',
+  'Avery Johnson':   'UNSC',
+  'Miranda Keyes':   'UNSC',
+  'Jacob Keyes':     'UNSC',
+  'Jorge-052':       'UNSC',
+  'Kat-320':         'UNSC',
+  'Emile-A239':      'UNSC',
+  'Jun-A266':        'UNSC',
+  'Carter-A259':     'UNSC',
+  'Noble Six':       'UNSC',
+  'Catherine Halsey':'UNSC',
+  'Roland':          'UNSC',
+  'Escharum':        'Banished',
+  'Atriox':          'Banished',
+  'Let \'Volir':     'Banished',
+  "Thel 'Vadam":     'Covenant',
+  'Tartarus':        'Covenant',
+  "Rtas 'Vadum":     'Covenant',
+  'Gravemind':       'Flood',
+  '343 Guilty Spark':'Forerunner',
+  'Didact':          'Forerunner',
+  'Librarian':       'Forerunner',
+  'Mendicant Bias':  'Forerunner',
+};
+
 function inferFaction(title: string, text: string): string {
+  if (FACTION_OVERRIDES[title]) return FACTION_OVERRIDES[title];
+
   // ── Pass 1: name-only structural patterns ────────────────────────────────
   // Fire even when there is no description text.
 
