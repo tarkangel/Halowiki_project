@@ -71,7 +71,9 @@ export const FACTION_OVERRIDES: Record<string, string> = {
   'Flood':            'Flood',   // race entry — description mentions "Forerunner" heavily
   // ── Forerunner ────────────────────────────────────────────────────────────
   'Forerunner':       'Forerunner', // race entry
-  '343 Guilty Spark': 'Forerunner',
+  '343 Guilty Spark':       'Forerunner',
+  '2401 Penitent Tangent':  'Forerunner',
+  '031 Exuberant Witness':  'Forerunner',
   'Didact':           'Forerunner',
   'Librarian':        'Forerunner',
   'Mendicant Bias':   'Forerunner',

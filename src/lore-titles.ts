@@ -32,7 +32,9 @@ export const LORE_CHARACTERS = [
   'Emile-A239',
   // ── Forerunner / AI ─────────────────────────────────────────────────────
   'The Librarian',
-  'Guilty Spark',
+  '343 Guilty Spark',         // Monitor of Installation 04
+  '2401 Penitent Tangent',    // Monitor of Installation 05 — Halo 2
+  '031 Exuberant Witness',    // Monitor of Genesis — Halo 5
   // ── Unggoy ──────────────────────────────────────────────────────────────
   'Dadab',
   'Lighter Than Some',

@@ -56,8 +56,6 @@
   "Alsu 'Ahcuree": "https://storage.googleapis.com/halowiki-generated-images/character/alsu-ahcuree.jpg",
   "Cdel the Fair": "https://storage.googleapis.com/halowiki-generated-images/character/cdel-the-fair.jpg",
   "Atun 'Etaree": "https://storage.googleapis.com/halowiki-generated-images/character/atun-etaree.jpg",
-  "343 Guilty Spark": "https://storage.googleapis.com/halowiki-generated-images/character/343-guilty-spark.jpg",
-  "2401 Penitent Tangent": "https://storage.googleapis.com/halowiki-generated-images/character/2401-penitent-tangent.jpg",
   "Adjutant Reflex": "https://storage.googleapis.com/halowiki-generated-images/character/adjutant-reflex.jpg",
   "686 Ebullient Prism": "https://storage.googleapis.com/halowiki-generated-images/character/686-ebullient-prism.jpg",
   "48452-556-EPN644": "https://storage.googleapis.com/halowiki-generated-images/character/48452-556-epn644.jpg",
@@ -70,7 +68,6 @@
   "16807 Abashed Eulogy": "https://storage.googleapis.com/halowiki-generated-images/character/16807-abashed-eulogy.jpg",
   "859 Static Carillon": "https://storage.googleapis.com/halowiki-generated-images/character/859-static-carillon.jpg",
   "295 Enduring Bias": "https://storage.googleapis.com/halowiki-generated-images/character/295-enduring-bias.jpg",
-  "031 Exuberant Witness": "https://storage.googleapis.com/halowiki-generated-images/character/031-exuberant-witness.jpg",
   "Adalbert": "https://storage.googleapis.com/halowiki-generated-images/character/adalbert.jpg",
   "295 Harken Watch": "https://storage.googleapis.com/halowiki-generated-images/character/295-harken-watch.jpg",
   "091 Adjutant Veridity": "https://storage.googleapis.com/halowiki-generated-images/character/091-adjutant-veridity.jpg",
@@ -196,5 +193,7 @@
   "Mullins-C102": "https://storage.googleapis.com/halowiki-generated-images/character/mullins-c102.jpg",
   "Kat-B320": "https://storage.googleapis.com/halowiki-generated-images/character/kat-b320.png",
   "The Librarian": "https://storage.googleapis.com/halowiki-generated-images/character/the-librarian.png",
-  "Guilty Spark": "https://storage.googleapis.com/halowiki-generated-images/character/guilty-spark.png"
+  "343 Guilty Spark": "https://storage.googleapis.com/halowiki-generated-images/character/343-guilty-spark.png",
+  "2401 Penitent Tangent": "https://storage.googleapis.com/halowiki-generated-images/character/2401-penitent-tangent.png",
+  "031 Exuberant Witness": "https://storage.googleapis.com/halowiki-generated-images/character/031-exuberant-witness.png"
 }
