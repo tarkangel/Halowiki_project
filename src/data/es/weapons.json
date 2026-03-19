@@ -153,15 +153,6 @@
     "appearances": []
   },
   {
-    "id": "suppressor",
-    "name": "Suppressor",
-    "description": "El Supresor es un arma de energía automática Prometea que dispara rápidas ráfagas de fragmentos de luz dura a corto y medio alcance. Empuñado por Caballeros y Rastreadores Prometeos en Requiem y más allá, el Supresor prioriza la cadencia de fuego sobre la precisión, abrumando a los objetivos con proyectiles de luz dura que causan daño tanto cinético como térmico. Su inusual munición de luz dura lo diferencia de cualquier arma humana o del Covenant en el arsenal de la UNSC.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/suppressor.png",
-    "faction": "Forerunner",
-    "type": "",
-    "appearances": []
-  },
-  {
     "id": "focus-rifle",
     "name": "Focus Rifle",
     "description": "El Rifle de Enfoque es un arma de energía dirigida del Covenant que dispara un haz sostenido de partículas sobrecalentadas capaz de quemar escudos y armaduras a distancia. A diferencia de la mayoría de las armas del Covenant que disparan proyectiles discretos, proyecta un haz continuo que el usuario barre sobre los objetivos. La salida de calor sostenida lo hace particularmente efectivo para colapsar el blindaje energético al mantener el contacto el tiempo suficiente para que el escudo falle.",
@@ -222,15 +213,6 @@
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/12mm-comet.jpg",
     "faction": "",
     "type": "Pistol",
-    "appearances": []
-  },
-  {
-    "id": "covenant-weaponry",
-    "name": "Covenant weaponry",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/covenant-weaponry.jpg",
-    "faction": "Covenant",
-    "type": "",
     "appearances": []
   },
   {
@@ -344,8 +326,8 @@
   {
     "id": "bolroci-workshop-shade",
     "name": "Bolroci Workshop Shade",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/bolroci-workshop-shade.jpg",
+    "description": "El Bolroci Workshop Gun Pod es una torreta anti-infantería Banished derivada del diseño Shade de la era Covenant. Monta dos cañones de plasma de disparo rápido capaces de fuego de supresión sostenido que nunca se sobrecalientan, elevados sobre una base circular flotante. Un escudo de energía integrado protege al artillero de ataques frontales y laterales, haciéndolo considerablemente más resistente que las variantes Shade antiguas. Fabricado por Bolroci Workshop, un proveedor de armas Banished, se despliega habitualmente como emplazamiento defensivo en territorios controlados por los Banished.",
+    "imageUrl": "https://halo.wiki.gallery/images/b/bb/HINF_Deadlocke_Shade_Firing.png",
     "faction": "Banished",
     "type": "",
     "appearances": []

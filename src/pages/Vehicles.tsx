@@ -18,7 +18,7 @@ export default function Vehicles() {
         <h1 className="text-3xl font-bold text-white">{t.title}</h1>
         <p className="text-zinc-400 mt-1">{t.sub}</p>
       </div>
-      <WikiGrid items={data} loading={loading} error={error} />
+      <WikiGrid items={data} loading={loading} error={error} imageObjectFit="contain" />
     </div>
   );
 }
