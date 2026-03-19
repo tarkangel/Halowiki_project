@@ -169,14 +169,19 @@ function generatedImage(title: string): string | undefined {
 }
 
 /** Image URL logic:
+ *  - halo.wiki.gallery entry in generatedImages → explicit override, always wins
  *  - LORE characters → Halopedia thumbnail first (canonical art), AI as fallback
  *  - All others      → AI generated first (consistent style), Halopedia as fallback
  */
 function resolveCharacterImage(title: string, thumbnail: string | undefined): string | undefined {
+  const generated = generatedImage(title);
+  // An explicit halo.wiki.gallery URL in the image map means a specific screenshot
+  // was deliberately chosen (e.g. Cortana H4 portrait) — always prefer it.
+  if (generated?.startsWith('https://halo.wiki.gallery/')) return generated;
   if (LORE_CHARACTER_SET.has(title)) {
-    return thumbnail ?? generatedImage(title);
+    return thumbnail ?? generated;
   }
-  return generatedImage(title) ?? thumbnail;
+  return generated ?? thumbnail;
 }
 
 function slugify(title: string) {
