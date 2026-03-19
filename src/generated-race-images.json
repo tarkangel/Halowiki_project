@@ -1,12 +1,8 @@
 {
-  "Flood": "https://storage.googleapis.com/halowiki-generated-images/race/flood.jpg",
-  "Forerunner": "https://storage.googleapis.com/halowiki-generated-images/race/forerunner.jpg",
-  "Human": "https://storage.googleapis.com/halowiki-generated-images/race/human.jpg",
   "Lekgolo": "https://storage.googleapis.com/halowiki-generated-images/race/lekgolo.jpg",
   "Jiralhanae": "https://storage.googleapis.com/halowiki-generated-images/race/jiralhanae.jpg",
   "Huragok": "https://storage.googleapis.com/halowiki-generated-images/race/huragok.jpg",
   "Kig-Yar": "https://storage.googleapis.com/halowiki-generated-images/race/kig-yar.jpg",
-  "Mgalekgolo": "https://storage.googleapis.com/halowiki-generated-images/race/mgalekgolo.jpg",
   "Florian": "https://storage.googleapis.com/halowiki-generated-images/race/florian.jpg",
   "K'tamanune": "https://storage.googleapis.com/halowiki-generated-images/race/ktamanune.jpg",
   "B'ashamanune": "https://storage.googleapis.com/halowiki-generated-images/race/bashamanune.jpg",
@@ -19,5 +15,11 @@
   "Netherop species": "https://storage.googleapis.com/halowiki-generated-images/race/netherop-species.jpg",
   "Yanme'e": "https://storage.googleapis.com/halowiki-generated-images/race/yanmee.png",
   "San'Shyuum": "https://storage.googleapis.com/halowiki-generated-images/race/sanshyuum.jpg",
-  "Precursor": "https://storage.googleapis.com/halowiki-generated-images/race/precursor.png"
+  "Sangheili": "https://storage.googleapis.com/halowiki-generated-images/race/sangheili.png",
+  "Unggoy": "https://storage.googleapis.com/halowiki-generated-images/race/unggoy.png",
+  "Mgalekgolo": "https://storage.googleapis.com/halowiki-generated-images/race/mgalekgolo.png",
+  "Human": "https://storage.googleapis.com/halowiki-generated-images/race/human.jpg",
+  "Forerunner": "https://storage.googleapis.com/halowiki-generated-images/race/forerunner.png",
+  "Precursor": "https://storage.googleapis.com/halowiki-generated-images/race/precursor.png",
+  "Flood": "https://storage.googleapis.com/halowiki-generated-images/race/flood.png"
 }

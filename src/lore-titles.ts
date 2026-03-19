@@ -99,11 +99,22 @@ export const LORE_VEHICLES = [
 ];
 
 export const LORE_RACES = [
-  'Lekgolo',
-  "Yanme'e",
-  'Huragok',
-  "San'Shyuum",
+  // ── Covenant / Banished species ───────────────────────────────────────────
+  'Sangheili',          // Elites — Covenant military backbone
+  'Jiralhanae',         // Brutes — primate warriors
+  'Unggoy',             // Grunts — methane-breathing infantry
+  'Kig-Yar',            // Jackals — mercenary privateers
+  'Lekgolo',            // colonial worm organisms
+  'Mgalekgolo',         // Hunter bonded-pair combat form
+  "Yanme'e",            // Drones — insectoid aerial infantry
+  'Huragok',            // Engineers — Forerunner maintenance AI
+  "San'Shyuum",         // Prophets — Covenant leadership caste
+  // ── Human ─────────────────────────────────────────────────────────────────
+  'Human',
+  // ── Ancient / Parasitic ───────────────────────────────────────────────────
+  'Forerunner',
   'Precursor',
+  'Flood',
 ];
 
 export const LORE_GAMES = [
