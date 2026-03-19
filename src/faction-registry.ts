@@ -34,9 +34,9 @@ export const FACTIONS: FactionEntry[] = [
       'Kat-B320', 'Jorge-052', 'Emile-A239',
     ],
     weapons: [
-      'MA5 Assault Rifle', 'M6D Pistol', 'M90 Shotgun', 'SRS99 Sniper Rifle',
-      'M41 Rocket Launcher', 'M6 Spartan Laser', 'BR55 Battle Rifle',
-      'M395 DMR', 'M7 SMG', 'M319 Grenade Launcher',
+      'MA5B assault rifle', 'MA5C assault rifle', 'BR55 battle rifle',
+      'SRS99-S5 AM sniper rifle', 'M6D magnum', 'M90 shotgun',
+      'M41 SPNKr', 'CQS48 Bulldog',
     ],
     vehicles: [
       'Warthog', 'Scorpion', 'Pelican', 'Falcon', 'Mantis', 'Mongoose', 'Elephant',
@@ -56,8 +56,9 @@ export const FACTIONS: FactionEntry[] = [
       'Dadab', 'Lighter Than Some',
     ],
     weapons: [
-      'Type-1 Energy Sword', 'Fuel Rod Gun', 'Concussion Rifle', 'Focus Rifle',
-      'Plasma Pistol', 'Plasma Rifle', 'Needler', 'Plasma Caster',
+      'Type-1 Energy Sword', 'Needler', 'Plasma Pistol', 'Plasma Rifle',
+      'Carbine', 'Fuel Rod Gun', 'Gravity Hammer', 'Concussion Rifle',
+      'Focus Rifle', 'Plasma Caster',
     ],
     vehicles: [
       'Banshee', 'Ghost', 'Wraith', 'Phantom', 'Spirit', 'Scarab',
@@ -76,7 +77,7 @@ export const FACTIONS: FactionEntry[] = [
     characters: ['The Librarian', 'Guilty Spark', 'The Didact'],
     weapons: [
       'Incineration Cannon', 'Suppressor', 'Lightrifle', 'Boltshot',
-      'Binary Rifle', 'Scattershot', 'Forerunner Sentinel Beam',
+      'Cindershot', 'Heatwave',
     ],
     vehicles: ['Phaeton', 'Retriever Sentinel', 'Aggressor Sentinel'],
     races: ['Forerunner', 'Precursor'],
@@ -94,8 +95,7 @@ export const FACTIONS: FactionEntry[] = [
       'The Banished are a mercenary coalition founded by the Jiralhanae warlord Atriox after he broke free of the Covenant — refusing to die in a war fought for a lie. Unlike the Covenant\'s rigid theocracy, the Banished operate as a ruthless but pragmatic military force, accepting members of any species willing to fight and offering payment rather than promises of godhood. They are one of the most dangerous military powers in the post-Covenant War galaxy, and the primary antagonist force of Halo Wars 2 and Halo Infinite.',
     characters: ['Escharum', 'Atriox'],
     weapons: [
-      'Plasma Pistol', 'Mangler', 'Needler', 'Gravity Hammer',
-      'Fuel Rod Gun', 'Disruptor',
+      'Gravity Hammer', 'Fuel Rod Gun', 'Ravager', 'Mangler', 'Skewer',
     ],
     vehicles: [
       'Banshee', 'Ghost', 'Wraith', 'Phantom', 'Scarab', 'Chopper',

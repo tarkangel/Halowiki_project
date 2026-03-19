@@ -8,6 +8,23 @@
 // Descriptions may mention enemy factions (e.g. "fought the Banished") which
 // would otherwise trigger a wrong classification.
 export const FACTION_OVERRIDES: Record<string, string> = {
+  // ── UNSC weapons — MA5x names don't match /^m\d+/i (letter after M) ──────
+  'MA5B assault rifle':         'UNSC',
+  'MA5C assault rifle':         'UNSC',
+  'MA5D assault rifle':         'UNSC',
+  'SRS99-S5 AM sniper rifle':   'UNSC',
+  // ── Covenant weapons ──────────────────────────────────────────────────────
+  'Needler':                    'Covenant',
+  'Carbine':                    'Covenant',
+  'Plasma Pistol':              'Covenant',
+  'Plasma Rifle':               'Covenant',
+  // ── Banished weapons ──────────────────────────────────────────────────────
+  'Ravager':                    'Banished',
+  'Mangler':                    'Banished',
+  'Skewer':                     'Banished',
+  // ── Forerunner weapons ────────────────────────────────────────────────────
+  'Cindershot':                 'Forerunner',
+  'Heatwave':                   'Forerunner',
   // ── UNSC characters ───────────────────────────────────────────────────────
   'John-117':         'UNSC',
   'Cortana':          'UNSC',

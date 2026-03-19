@@ -86,5 +86,17 @@
   "Gravity Hammer": "https://storage.googleapis.com/halowiki-generated-images/weapon/gravity-hammer.jpg",
   "Suppressor": "https://storage.googleapis.com/halowiki-generated-images/weapon/suppressor.png",
   "Lightrifle": "https://storage.googleapis.com/halowiki-generated-images/weapon/lightrifle.png",
-  "Boltshot": "https://storage.googleapis.com/halowiki-generated-images/weapon/boltshot.png"
+  "Boltshot": "https://storage.googleapis.com/halowiki-generated-images/weapon/boltshot.png",
+  "MA5B assault rifle": "https://storage.googleapis.com/halowiki-generated-images/weapon/ma5b-assault-rifle.jpg",
+  "MA5C assault rifle": "https://storage.googleapis.com/halowiki-generated-images/weapon/ma5c-assault-rifle.jpg",
+  "SRS99-S5 AM sniper rifle": "https://storage.googleapis.com/halowiki-generated-images/weapon/srs99-s5-am-sniper-rifle.jpg",
+  "M6D magnum": "https://storage.googleapis.com/halowiki-generated-images/weapon/m6d-magnum.png",
+  "M90 shotgun": "https://storage.googleapis.com/halowiki-generated-images/weapon/m90-shotgun.jpg",
+  "M41 SPNKr": "https://storage.googleapis.com/halowiki-generated-images/weapon/m41-spnkr.png",
+  "Needler": "https://storage.googleapis.com/halowiki-generated-images/weapon/needler.jpg",
+  "Plasma Pistol": "https://storage.googleapis.com/halowiki-generated-images/weapon/plasma-pistol.png",
+  "Plasma Rifle": "https://storage.googleapis.com/halowiki-generated-images/weapon/plasma-rifle.png",
+  "Ravager": "https://storage.googleapis.com/halowiki-generated-images/weapon/ravager.png",
+  "Mangler": "https://storage.googleapis.com/halowiki-generated-images/weapon/mangler.png",
+  "Skewer": "https://storage.googleapis.com/halowiki-generated-images/weapon/skewer.png"
 }

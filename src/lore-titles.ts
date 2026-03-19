@@ -39,16 +39,37 @@ export const LORE_CHARACTERS = [
 ];
 
 export const LORE_WEAPONS = [
+  // ── UNSC rifles & sidearms ────────────────────────────────────────────────
+  'MA5B assault rifle',         // Halo CE iconic assault rifle
+  'MA5C assault rifle',         // Halo 2/3 assault rifle
+  'BR55 battle rifle',          // Halo 2/3 precision battle rifle
+  'SRS99-S5 AM sniper rifle',   // UNSC long-range anti-materiel rifle
+  'M6D magnum',                 // Halo CE iconic sidearm
+  'M90 shotgun',                // CE/2 close-assault shotgun
+  'M41 SPNKr',                  // Classic UNSC rocket launcher
+  'CQS48 Bulldog',              // Halo Infinite shotgun
+  // ── Covenant ─────────────────────────────────────────────────────────────
   'Type-1 Energy Sword',
+  'Needler',                    // Iconic homing crystal sidearm
+  'Plasma Pistol',              // Standard Covenant sidearm
+  'Plasma Rifle',               // Standard Covenant automatic rifle
+  'Carbine',                    // Covenant precision semi-auto (Type-51)
   'Fuel Rod Gun',
+  'Gravity Hammer',
   'Concussion Rifle',
   'Focus Rifle',
-  'Gravity Hammer',
+  'Plasma Caster',
+  // ── Forerunner ───────────────────────────────────────────────────────────
   'Incineration Cannon',
   'Suppressor',
   'Lightrifle',
   'Boltshot',
-  'Plasma Caster',
+  'Cindershot',                 // Halo Infinite bouncing grenade launcher
+  'Heatwave',                   // Halo Infinite dual-mode shotgun
+  // ── Banished ─────────────────────────────────────────────────────────────
+  'Ravager',                    // Banished plasma area-denial launcher
+  'Mangler',                    // Banished high-calibre revolver pistol
+  'Skewer',                     // Banished anti-vehicle spike launcher
 ];
 
 export const LORE_VEHICLES = [
