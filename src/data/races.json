@@ -106,9 +106,9 @@
   {
     "id": "tvaoan",
     "name": "T'vaoan",
-    "description": "",
+    "description": "The T'vaoan are a subspecies of Kig-Yar from the asteroid colony of T'vao in the Y'Deio home system — the variant known to UNSC forces as Skirmishers. Longer-limbed, faster, and more aggressive than their Eayn-origin Kig-Yar cousins, T'vaoan are characterised by feathered crests, superior reflexes, and a preference for high-mobility hit-and-run tactics over the point-defence shield work of standard Kig-Yar. The Covenant's designation of 'Skirmisher' reflects an ancient Kig-Yar combat role that the T'vaoan excel at, deployed to harass, flank, and outpace UNSC infantry. Encountered primarily during the Fall of Reach in 2552, their speed and aggression made them distinctly more dangerous in close quarters than standard Kig-Yar.",
     "imageUrl": "https://halo.wiki.gallery/images/thumb/7/7b/Halo_Reach_-_Skirmisher.png/326px-Halo_Reach_-_Skirmisher.png",
-    "affiliation": "",
+    "affiliation": "Covenant",
     "appearances": []
   },
   {
@@ -154,9 +154,9 @@
   {
     "id": "yonhet",
     "name": "Yonhet",
-    "description": "",
+    "description": "The Yonhet — colloquially nicknamed Smugglers — are a humanoid sapient species from the moon Yonhe, associated with the outer fringes of the Covenant as traders, black-market dealers, and information brokers. Part of the 'Covenant fringe', a loose network of species that orbited the empire's edges without full member status, the Yonhet occupied an ambiguous position as suppliers of goods and intelligence to both sides of conflicts. Their mercantile pragmatism and neutrality made them valuable intermediaries even as the Covenant collapsed. In the post-war era, Yonhet traders operated across former Covenant space, adapting quickly to the power vacuum by dealing with whoever had credits — UNSC, Banished, or Covenant remnants alike.",
     "imageUrl": "https://halo.wiki.gallery/images/thumb/3/37/Enc22-Yonhet-Closeup.png/500px-Enc22-Yonhet-Closeup.png",
-    "affiliation": "",
+    "affiliation": "Banished",
     "appearances": []
   },
   {
@@ -210,9 +210,9 @@
   {
     "id": "xalanyn",
     "name": "Xalanyn",
-    "description": "",
+    "description": "The Xalanyn — also known as the Endless — are an ancient and enigmatic species imprisoned by the Forerunners on Installation 07 (Zeta Halo) prior to 97,368 BCE, because of their extraordinary ability to survive the effects of the Halo Array. Their existence posed an existential problem for the Forerunners' ultimate weapon: the Array could not stop a species immune to it. The Xalanyn were sealed inside cylixes — Forerunner containment vessels — and hidden across the ring for millennia. Atriox discovered their cylixes during the Banished assault on Zeta Halo in 2560 and sought to weaponise their immunity, with the Harbinger — the last free Xalanyn — serving as the primary antagonist of Halo Infinite alongside Escharum.",
     "imageUrl": "https://halo.wiki.gallery/images/thumb/1/1a/HINF_HarbingerRender.png/197px-HINF_HarbingerRender.png",
-    "affiliation": "",
+    "affiliation": "Forerunner",
     "appearances": []
   },
   {

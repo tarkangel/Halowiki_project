@@ -117,6 +117,10 @@ export const LORE_RACES = [
   'Forerunner',
   'Precursor',
   'Flood',
+  // ── Covenant fringe & Halo Infinite species ───────────────────────────────
+  "T'vaoan",            // Skirmisher subspecies of Kig-Yar
+  'Yonhet',             // Trader/smuggler species from the Covenant fringe
+  'Xalanyn',            // The Endless — imprisoned by Forerunners on Zeta Halo
 ];
 
 export const LORE_GAMES = [
