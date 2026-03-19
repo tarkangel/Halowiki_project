@@ -164,24 +164,24 @@ export default function Sidebar() {
             </motion.span>
             {/* Ring — right of HALO WIKI when expanded */}
             <motion.img
-              src="https://halo.wiki.gallery/images/8/83/HW2-Halo.png"
+              src="https://halo.wiki.gallery/images/c/c8/FoR_-_Halo.png"
               alt=""
               aria-hidden
               animate={{ opacity: expanded ? 0.85 : 0 }}
               transition={{ duration: 0.2 }}
               className="flex-shrink-0 object-contain"
-              style={{ width: 18, height: 18, filter: 'drop-shadow(0 0 5px #00B4D8aa)' }}
+              style={{ width: 22, height: 22, filter: 'drop-shadow(0 0 5px #00B4D8aa)' }}
             />
           </div>
           {/* Ring — below HW when collapsed */}
           <motion.img
-            src="https://halo.wiki.gallery/images/8/83/HW2-Halo.png"
+            src="https://halo.wiki.gallery/images/c/c8/FoR_-_Halo.png"
             alt=""
             aria-hidden
             animate={{ opacity: expanded ? 0 : 0.75 }}
             transition={{ duration: 0.2 }}
             className="object-contain"
-            style={{ width: 20, height: 20, filter: 'drop-shadow(0 0 5px #00B4D8aa)' }}
+            style={{ width: 24, height: 24, filter: 'drop-shadow(0 0 5px #00B4D8aa)' }}
           />
         </button>
 
