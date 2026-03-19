@@ -209,8 +209,8 @@
   {
     "id": "harvester",
     "name": "Harvester",
-    "description": "El Harvester es una enorme plataforma de excavación y extracción de recursos del Covenant reconvertida en base avanzada móvil y plataforma de armas pesadas. Originalmente diseñada para perforar la corteza planetaria y extraer artefactos Forerunner, la escala industrial del Harvester y su durabilidad lo convierten en una presencia formidable en el campo de batalla. Su enorme tamaño y su casco fuertemente blindado lo hacen prácticamente impenetrable para las armas de infantería convencionales.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/harvester.jpg",
+    "description": "El Za'zayara-pattern Heavy Excavator, designado como Harvester, es uno de los vehículos terrestres Covenant más grandes jamás construidos, con hasta 272 metros de longitud y más de 211,000 toneladas de peso. Su imponente armazón en forma de insecto está parcialmente compuesto por una colonia viva de gusanos Lekgolo que se integra con los sistemas mecánicos del vehículo, operado por una tripulación de tres. Originalmente diseñado para excavación planetaria y recuperación de artefactos Forerunner, fue desplegado por el Covenant de Jul 'Mdama en Requiem durante la Campaña de Requiem de 2558.",
+    "imageUrl": "https://halo.wiki.gallery/images/d/d5/H4-Harvester-Artwork.jpg",
     "faction": "Covenant",
     "type": "Ground",
     "appearances": []
@@ -272,8 +272,8 @@
   {
     "id": "brhi-xur-pattern-leech",
     "name": "Brhi Xur-pattern Leech",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/brhi-xur-pattern-leech.jpg",
+    "description": "El Brhi Xur-pattern Ship Breacher, conocido informalmente como el Leech, es una nave de abordaje Covenant diseñada para ataques de precisión contra naves enemigas. Su diseño tubular incorpora una esclusa y un cañón de plasma pesado, permitiendo brechas rápidas en el casco durante el combate espacial. Originalmente desplegado como nave de abordaje dedicada durante la Guerra Humano-Covenant, las unidades supervivientes pasaron a funciones de transporte de carga civil en la era de posguerra.",
+    "imageUrl": "https://halo.wiki.gallery/images/6/6e/HINF_Brhi_Xur_Leech.png",
     "faction": "Covenant",
     "type": "Ground",
     "appearances": []
@@ -317,7 +317,7 @@
   {
     "id": "combat-support-vehicle",
     "name": "Combat support vehicle",
-    "description": "",
+    "description": "El Vehículo de Apoyo de Combate es un transporte terrestre blindado Covenant capaz de transportar personal, munición, suministros médicos y gas portador licuado por campos de batalla activos. Su chasis abultado en forma de escarabajo cuenta con puntales desplegables y puertas laterales tipo concha, con un compartimento de carga interno que puede alojar hasta veinte infantes. El vehículo tuvo un amplio despliegue durante la Guerra Humano-Covenant, con uso documentado para transportar fuerzas Yanme'e en las primeras etapas del conflicto.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-support-vehicle.jpg",
     "faction": "",
     "type": "Ground",
@@ -344,8 +344,8 @@
   {
     "id": "bolroci-workshop-chopper",
     "name": "Bolroci Workshop Chopper",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/bolroci-workshop-chopper.jpg",
+    "description": "El Bolroci Workshop Chopper es un vehículo terrestre de ataque rápido Banished construido sobre el diseño base del Chopper Jiralhanae, combinando la experiencia colectiva de seis clanes Jiralhanae distintos. Armado con cañones de picos gemelos y una rueda delantera militarizada capaz de destrozar infantería y vehículos ligeros, sacrifica blindaje por velocidad y maniobrabilidad. Fabricado por Bolroci Workshop, representa una interpretación más ágil de la plataforma Chopper optimizada para operaciones de asalto rápido.",
+    "imageUrl": "https://halo.wiki.gallery/images/c/c8/HINF_BolrociChopper.png",
     "faction": "Banished",
     "type": "Ground",
     "appearances": []
@@ -398,8 +398,8 @@
   {
     "id": "catulus-chopper",
     "name": "Catulus Chopper",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/catulus-chopper.jpg",
+    "description": "El Catulus Chopper es una variante personalizada del Bolroci Workshop Chopper, originalmente encargada como carro de guerra personal por un comandante Banished, distinguida por su chapado en oro y la mayor cadencia de fuego de sus cañones de picos. Durante el impulso, cuchillas de energía desplegables se extienden desde el frente y los lados, destrozando todo lo que encuentre a su paso. La variante ganó notoriedad durante la Batalla por el Halo Zeta en 2560, donde fue pilotada por Hyperius, el llamado Asesino de Spartans.",
+    "imageUrl": "https://halo.wiki.gallery/images/5/5f/HINF_CatulusChopper.png",
     "faction": "Banished",
     "type": "Ground",
     "appearances": []
