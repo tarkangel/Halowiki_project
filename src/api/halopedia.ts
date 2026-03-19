@@ -627,8 +627,9 @@ export async function fetchWeapons(limitPerCat = 15): Promise<Weapon[]> {
 const CHARACTER_BLOCKLIST = new Set([
   '343 Guilty Spark/Silver',
   'John-117/Silver',
-  "Makee/Silver",
+  'Makee/Silver',
   'Cortana/Silver',
+  'Atriox/Silver',
 ]);
 
 // Individual named vehicles and stub entries that should not appear in the wiki.
