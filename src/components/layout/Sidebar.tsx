@@ -10,6 +10,11 @@ const navItems = [
   { to: '/races',     label: 'Races',      tag: 'RCE', color: '#FF9F00', end: false },
   { to: '/planets',   label: 'Planets',    tag: 'PLN', color: '#4895EF', end: false },
   { to: '/games',     label: 'Games',      tag: 'GME', color: '#FFD60A', end: false },
+  { to: '/factions',  label: 'Factions',   tag: 'FCT', color: '#FF6B35', end: false },
+];
+
+const bottomItems = [
+  { to: '/about', label: 'About', tag: 'ABT', color: '#888888', end: false },
 ];
 
 export default function Sidebar() {
@@ -74,7 +79,6 @@ export default function Sidebar() {
                 whileHover={{ x: 3 }}
                 transition={{ duration: 0.15 }}
               >
-                {/* Neon tag replaces emoji */}
                 <span
                   className="text-xs font-black tracking-widest flex-shrink-0 w-8 text-center select-none"
                   style={{
@@ -88,8 +92,6 @@ export default function Sidebar() {
                 >
                   {tag}
                 </span>
-
-                {/* Full label */}
                 <motion.span
                   animate={{ opacity: expanded ? 1 : 0 }}
                   transition={{ duration: 0.2 }}
@@ -108,6 +110,59 @@ export default function Sidebar() {
           </NavLink>
         ))}
       </nav>
+
+      {/* Bottom: About link */}
+      <div className="border-t border-zinc-800 py-2">
+        {bottomItems.map(({ to, label, tag, color, end }) => (
+          <NavLink
+            key={to}
+            to={to}
+            end={end}
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-4 py-3 transition-colors duration-200 rounded-r-lg mr-2 ${
+                isActive
+                  ? 'bg-zinc-800/80 border-l-2'
+                  : 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50 border-l-2 border-transparent'
+              }`
+            }
+            style={({ isActive }) =>
+              isActive ? { borderLeftColor: color } : undefined
+            }
+          >
+            {({ isActive }) => (
+              <motion.div
+                className="flex items-center gap-3 w-full"
+                whileHover={{ x: 3 }}
+                transition={{ duration: 0.15 }}
+              >
+                <span
+                  className="text-xs font-black tracking-widest flex-shrink-0 w-8 text-center select-none"
+                  style={{
+                    fontFamily: "'Orbitron', sans-serif",
+                    color,
+                    textShadow: isActive ? `0 0 6px ${color}` : `0 0 4px ${color}66`,
+                    opacity: isActive ? 1 : 0.6,
+                  }}
+                >
+                  {tag}
+                </span>
+                <motion.span
+                  animate={{ opacity: expanded ? 1 : 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="whitespace-nowrap text-sm font-semibold tracking-wide"
+                  style={{
+                    fontFamily: "'Orbitron', sans-serif",
+                    color: isActive ? color : undefined,
+                    fontSize: '0.7rem',
+                  }}
+                >
+                  {label}
+                </motion.span>
+              </motion.div>
+            )}
+          </NavLink>
+        ))}
+      </div>
     </motion.aside>
   );
 }

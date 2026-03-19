@@ -10,6 +10,8 @@ const routeTitles: Record<string, string> = {
   '/races': 'Races',
   '/planets': 'Planets',
   '/games': 'Games',
+  '/factions': 'Factions',
+  '/about': 'About',
 };
 
 export default function Header() {
