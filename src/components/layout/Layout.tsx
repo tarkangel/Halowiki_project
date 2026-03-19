@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import { SearchProvider } from '../../contexts/SearchContext';
+import { LanguageProvider } from '../../contexts/LanguageContext';
 
 /**
  * Per-route background wallpapers.
@@ -62,6 +63,7 @@ export default function Layout() {
   const bg = PAGE_BG[location.pathname];
 
   return (
+    <LanguageProvider>
     <SearchProvider>
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
       <Sidebar />
@@ -98,5 +100,6 @@ export default function Layout() {
       </main>
     </div>
     </SearchProvider>
+    </LanguageProvider>
   );
 }

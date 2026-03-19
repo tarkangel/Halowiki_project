@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { fetchCharacters } from '../api/static';
+import { useLanguage } from '../contexts/LanguageContext';
 import type { Character } from '../types/character';
 import WikiGrid from '../components/ui/WikiGrid';
 
 const PAGE_SIZE = 32;
 
 export default function Characters() {
+  const { lang }               = useLanguage();
   const [items, setItems]      = useState<Character[]>([]);
   const [totalItems, setTotal] = useState(0);
   const [loading, setLoading]  = useState(true);
@@ -14,7 +16,8 @@ export default function Characters() {
   const sentinelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    fetchCharacters()
+    setLoading(true);
+    fetchCharacters(lang)
       .then(all => {
         setItems(all);
         setTotal(all.length);
@@ -24,7 +27,7 @@ export default function Characters() {
         setError((err as Error).message);
         setLoading(false);
       });
-  }, []);
+  }, [lang]);
 
   // Infinite scroll
   useEffect(() => {
@@ -44,17 +47,21 @@ export default function Characters() {
   const shown = items.slice(0, visible);
   const hasMore = visible < totalItems;
 
+  const t = lang === 'es'
+    ? { title: 'Personajes', sub: 'Héroes y villanos del universo Halo', loadMore: (n: number) => `Cargar más (${n} restantes)` }
+    : { title: 'Characters', sub: 'Heroes and villains of the Halo universe', loadMore: (n: number) => `Load more (${n} remaining)` };
+
   return (
     <div>
       <div className="px-6 pt-6 flex items-baseline gap-4">
-        <h1 className="text-3xl font-bold text-white">Characters</h1>
+        <h1 className="text-3xl font-bold text-white">{t.title}</h1>
         {totalItems > 0 && (
           <span className="text-zinc-500 text-sm">
             {Math.min(visible, totalItems)} / {totalItems}
           </span>
         )}
       </div>
-      <p className="px-6 text-zinc-400 mt-1 mb-2">Heroes and villains of the Halo universe</p>
+      <p className="px-6 text-zinc-400 mt-1 mb-2">{t.sub}</p>
 
       <WikiGrid items={shown} loading={loading} error={error} />
 
@@ -64,7 +71,7 @@ export default function Characters() {
             onClick={() => setVisible(v => Math.min(v + PAGE_SIZE, totalItems))}
             className="px-6 py-2 rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-sm transition-colors"
           >
-            Load more ({totalItems - visible} remaining)
+            {t.loadMore(totalItems - visible)}
           </button>
         </div>
       )}
