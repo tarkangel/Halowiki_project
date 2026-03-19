@@ -54,7 +54,6 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_HALOPEDIA_API_URL: https://www.halopedia.org/api.php
           VITE_APP_TITLE: Halo Wiki
 
       - name: Upload build artifact
@@ -107,6 +106,9 @@ jobs:
           GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
           GCS_BUCKET: ${{ vars.GCS_IMAGES_BUCKET || format('{0}-generated-images', secrets.GCP_PROJECT_ID) }}
 
+      - name: Sync entities to static JSON
+        run: npm run sync:entities
+
       - name: Generate missing images
         run: npx tsx scripts/generate-missing-images.ts
         env:
@@ -123,11 +125,17 @@ jobs:
                   src/generated-vehicle-images.json \
                   src/generated-planet-images.json \
                   src/generated-race-images.json \
-                  src/generated-descriptions.json
+                  src/generated-descriptions.json \
+                  src/data/characters.json \
+                  src/data/weapons.json \
+                  src/data/vehicles.json \
+                  src/data/races.json \
+                  src/data/planets.json \
+                  src/data/games.json
           if git diff --cached --quiet; then
             echo "No changes, skipping commit"
           else
-            git commit -m "chore: update image maps and description database [skip ci]"
+            git commit -m "chore: update image maps, descriptions, and entity data [skip ci]"
             git push
           fi
 

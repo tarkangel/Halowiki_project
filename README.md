@@ -14,20 +14,29 @@ This is not a tutorial clone or a template project. Every architectural decision
 
 The most technically distinctive aspect of this project is the **AI-driven asset pipeline** — a system that uses Google Vertex AI (Imagen 3) to generate contextually accurate images for every entity in the wiki (characters, weapons, vehicles, races, planets, locations). This required building a full orchestration layer on top of the raw API:
 
-- **Two-pass faction detection engine** — a deterministic classifier in TypeScript that identifies which Halo faction an entity belongs to (UNSC, Covenant, Banished, Forerunner, Flood) using structural name patterns first, then keyword scanning of live Halopedia descriptions. A `FACTION_OVERRIDES` table short-circuits inference for canonical characters (Master Chief, Cortana, Atriox, etc.) preventing description keywords from polluting the classifier. Priority ordering prevents false positives across 400+ entities.
+- **Two-pass faction detection engine** — a deterministic classifier in TypeScript that identifies which Halo faction an entity belongs to (UNSC, Covenant, Banished, Forerunner, Flood) using structural name patterns first, then keyword scanning of Halopedia descriptions. A `FACTION_OVERRIDES` table short-circuits inference for canonical characters (Master Chief, Cortana, Atriox, etc.) preventing description keywords from polluting the classifier. Priority ordering prevents false positives across 400+ entities.
 - **Prompt engineering pipeline** — a `buildPrompt()` function that constructs faction-aware, species-aware, type-aware art direction prompts. Jiralhanae characters get gorilla-primate anatomy descriptions; Forerunner monitors get floating-orb construct prompts; Flood entities get biomass horror framing — all automatically, from Halopedia metadata alone.
 - **Lore override system** — a curated `lore-prompts.ts` library of hand-crafted prompts for canonical named entities (Gravemind, Atriox, Master Chief, iconic vehicles) that override the automatic pipeline when a character warrants bespoke art direction.
 - **Resume-safe regeneration scripts** — CLI tools (`regenerate-titles.ts`, `regenerate-species.ts`) with progress-sidecar JSON files so long batch runs survive interruption and restart exactly where they left off.
 - **Species-targeted batch regeneration** — given a set of species tokens (e.g. `jiralhanae kig-yar unggoy flood`), the system fetches all Halopedia descriptions in batches of 50, filters to matching characters, and regenerates only those images — without touching the rest of the asset library.
 - **Faction audit tooling** — `scripts/faction-audit.ts` fetches live Halopedia descriptions for all 400+ entities and reports coverage, likely-wrong detections, and zero-faction entries — enabling continuous verification of classifier accuracy.
 
+### Static Data Architecture
+
+The browser never calls Halopedia. All entity data is **pre-fetched once by CI** and committed as static JSON, bundled directly into the SPA:
+
+- **`scripts/sync-entities.ts`** — runs on every CI push, calls the existing Halopedia fetch functions (characters, weapons, vehicles, races, planets, games), writes typed entity arrays to `src/data/*.json`, and commits them back to `main`. The browser reads only from these files.
+- **`src/api/static.ts`** — thin async wrappers over the JSON imports, exposing the same function signatures as the live client so page components need no other changes.
+- **Zero runtime API dependency** — pages load at bundle speed regardless of Halopedia availability. No CORS headers, no rate limits, no latency spikes mid-session.
+- **On-demand refresh** — `npm run sync:entities` regenerates all six JSON files locally in ~10s; CI does it automatically on every push to `main`.
+
 ### Description & Image Infrastructure
 
-Beyond image generation, a full **data reliability layer** ensures every entity in the wiki always has both an image and a description — regardless of Halopedia API availability:
+A full **data reliability layer** ensures every entity always has both an image and a description:
 
-- **Multi-tier description resolution** — `resolveDescription()` tries Halopedia live extract first, falls back to a GCS-backed text archive (`descriptions/{type}/{slug}.txt`), then to curated hand-written overrides. Descriptions contain faction keywords so the classifier works even when the API is down.
-- **Official image mirroring** — Halopedia thumbnails for all lore entities (characters, weapons, vehicles, races, planets) are mirrored to GCS at deploy time via `scripts/mirror-halopedia-images.ts`. The script follows MediaWiki redirects, maps resolved titles back to canonical keys, and never re-downloads already-mirrored assets.
-- **Description database sync** — `scripts/sync-descriptions.ts` fetches Halopedia extracts, falls back to curated content, writes `descriptions/{type}/{slug}.txt` to GCS as a source-of-truth archive, and updates `src/generated-descriptions.json` for bundling — all in one CI step.
+- **Multi-tier description resolution** — `resolveDescription()` checks the bundled description database first (curated hand-written entries always win), then falls back to the Halopedia extract if it meets a minimum length threshold. The curated database (`generated-descriptions.json`) is maintained by `scripts/sync-descriptions.ts` and committed to the repo.
+- **Official image mirroring** — Halopedia thumbnails for all lore entities are mirrored to GCS at CI time via `scripts/mirror-halopedia-images.ts`. The script follows MediaWiki redirects, maps resolved titles back to canonical keys, and never re-downloads already-mirrored assets.
+- **Description database sync** — `scripts/sync-descriptions.ts` fetches Halopedia extracts, applies curated overrides (which always win), writes `descriptions/{type}/{slug}.txt` to GCS as a source-of-truth archive, and updates `src/generated-descriptions.json` — all in one CI step.
 - **Build-time JSON maps** — `generated-{type}-images.json` files are committed and updated by CI, so the SPA resolves images with zero runtime API calls.
 
 ### Faction Registry
@@ -53,23 +62,25 @@ The entire stack runs on Google Cloud Platform with zero manual deployment steps
 
 ### CI/CD Pipeline (GitHub Actions)
 
-Five-stage pipeline triggers on every push to `main`:
+Six-stage pipeline triggers on every push to `main`:
 
 ```
-1. Lint              → TypeScript type-check (tsc -b)
+1. Lint              → TypeScript type-check (tsc -b) + unit tests
 2. Build             → Vite production bundle
 3. Mirror images     → Halopedia thumbnails → GCS (incremental, redirect-aware)
 4. Sync descriptions → Halopedia extracts → GCS text archive → generated-descriptions.json
-5. Docker            → Build image, push to Artifact Registry,
-                       run generate-missing-images for any new entities
-6. Deploy            → Zero-downtime deploy to Cloud Run
+5. Sync entities     → Halopedia API → src/data/*.json (characters, weapons, vehicles,
+                       races, planets, games) — committed back to main
+6. Generate images   → Vertex AI Imagen 3 → GCS (only missing assets)
+7. Docker            → Build image (bundles fresh src/data/*.json), push to Artifact Registry
+8. Deploy            → Zero-downtime deploy to Cloud Run
 ```
 
 Key pipeline decisions:
 - **Workload Identity Federation** instead of service account JSON keys — the pipeline authenticates to GCP using short-lived OIDC tokens, eliminating credential rotation risk.
 - **Content-hashed JS bundles + `no-cache` on `index.html`** — ensures browsers always fetch the latest entry point while aggressively caching immutable assets.
 - **Incremental image generation in CI** — the Docker build step runs the generation script, which checks GCS for existing images and only generates missing ones, keeping build times bounded as the wiki grows.
-- **Auto-commit of generated assets** — CI commits updated `generated-*-images.json` and `generated-descriptions.json` back to `main` after each run, keeping the image maps in sync with the live asset library without manual intervention.
+- **Auto-commit of generated assets** — CI commits updated `generated-*-images.json`, `generated-descriptions.json`, and `src/data/*.json` back to `main` after each run, keeping the static data in sync with the live Halopedia content without manual intervention.
 
 ### Frontend
 
@@ -81,12 +92,12 @@ Key pipeline decisions:
 | Animation | Framer Motion |
 | Routing | React Router v6 |
 | 3D | Three.js via @react-three/fiber |
-| Data | Halopedia MediaWiki API |
+| Data | Static JSON (pre-fetched by CI, bundled at build time) |
 | Container | Docker (nginx) |
 
 Key frontend engineering decisions:
 
-- **Two-phase character loading** — curated lore characters (Master Chief, Cortana, Thel 'Vadam…) appear instantly via a fast targeted fetch. The full category load runs in the background and merges without wiping the initial render — users see content in ~1s regardless of API latency.
+- **Static data, instant load** — all entity arrays (characters, weapons, vehicles, races, planets, games) are bundled as JSON imports via `src/api/static.ts`. Pages resolve data synchronously from the bundle — no spinner, no network round-trip, no external API dependency at runtime.
 - **IntersectionObserver infinite scroll** — a sentinel element 400px below the viewport triggers progressive disclosure of large entity lists, with a manual Load More fallback for environments where IntersectionObserver is unavailable.
 - **Per-route animated backgrounds** — each wiki section (characters, weapons, vehicles, factions…) renders a distinct Halo scene wallpaper as a fixed background layer. `AnimatePresence` crossfades between wallpapers (0.6s) on navigation. A layered dark overlay + bottom vignette keep all content readable over the image.
 - **Animated collapsible sidebar** — Framer Motion drives the expand/collapse with neon Orbitron tags that glow on active routes. Width transitions smoothly between icon-only (64px) and full-label (240px) modes.
@@ -101,15 +112,16 @@ Browser
         ├── React Router v6 (client-side routing)
         ├── Framer Motion (page transitions + animated backgrounds)
         ├── Three.js (3D model viewer)
-        └── src/api/halopedia.ts
-              ├── Halopedia MediaWiki API  (live wiki data + descriptions)
-              ├── GCS public CDN           (AI-generated + mirrored images)
-              └── inferFaction()           (classifier — name patterns + keyword scan)
+        └── src/api/static.ts
+              └── src/data/*.json  (pre-fetched static entity arrays, bundled at build time)
+                    characters.json · weapons.json · vehicles.json
+                    races.json      · planets.json · games.json
 
 CI/CD (GitHub Actions)
   ├── tsc + vite build
   ├── scripts/mirror-halopedia-images.ts   → GCS
   ├── scripts/sync-descriptions.ts         → GCS + generated-descriptions.json
+  ├── scripts/sync-entities.ts             → src/data/*.json  ← NEW
   ├── Docker → Artifact Registry
   ├── scripts/generate-missing-images.ts
   │     └── Vertex AI Imagen 3 → GCS
@@ -117,6 +129,7 @@ CI/CD (GitHub Actions)
 
 Image & Description Pipeline
   scripts/
+  ├── sync-entities.ts           ← pre-fetches all entity data → src/data/*.json
   ├── prompt-builder.ts          ← faction + species detection + prompt construction
   ├── lore-prompts.ts            ← curated overrides for canonical entities
   ├── generate-missing-images.ts ← CI entrypoint (incremental, GCS-checked)
@@ -126,10 +139,18 @@ Image & Description Pipeline
   ├── regenerate-titles.ts       ← targeted regeneration by title list
   └── regenerate-species.ts      ← species-targeted batch regeneration
 
-Static Data
+Static Data (all committed to git, bundled into the SPA)
   src/
+  ├── data/                      ← generated by sync-entities.ts
+  │   ├── characters.json
+  │   ├── weapons.json
+  │   ├── vehicles.json
+  │   ├── races.json
+  │   ├── planets.json
+  │   └── games.json
+  ├── api/static.ts              ← thin async wrappers over data/*.json
   ├── faction-registry.ts        ← cross-category faction catalog (zero runtime cost)
-  ├── generated-descriptions.json← bundled description fallback DB
+  ├── generated-descriptions.json← bundled curated description database
   └── generated-*-images.json    ← GCS image URL maps (updated by CI, committed)
 ```
 
@@ -148,9 +169,16 @@ Static Data
 git clone <repo-url>
 cd halowiki
 npm install
-cp .env.example .env.local
 npm run dev
 # → http://localhost:5173
+```
+
+### Refresh entity data from Halopedia
+
+```bash
+npm run sync:entities
+# Fetches fresh data from Halopedia → src/data/*.json
+# Commit the updated files to include in the next build.
 ```
 
 ### Docker
@@ -166,11 +194,12 @@ docker compose up preview  # production build preview → http://localhost:8080
 
 | Variable | Description |
 |---|---|
-| `VITE_HALOPEDIA_API_URL` | Halopedia MediaWiki API base URL |
 | `VITE_APP_TITLE` | App title shown in browser tab |
 | `GCP_PROJECT_ID` | GCP project (CI + image generation scripts) |
 | `GCP_REGION` | Cloud Run region (`us-central1`) |
 | `GCS_BUCKET` | GCS bucket for generated images (defaults to `{PROJECT_ID}-generated-images`) |
+
+> `VITE_HALOPEDIA_API_URL` is no longer used at runtime — the browser reads only from `src/data/*.json`. It is retained in `scripts/sync-entities.ts` for the CI data refresh step.
 
 ---
 
@@ -187,7 +216,7 @@ All GCP infrastructure is fully codified under `terraform/`. A single `terraform
 | `registry.tf` | Artifact Registry Docker repository |
 | `iam.tf` | GitHub Actions service account, IAM bindings, Workload Identity Federation pool + provider |
 | `cloudrun.tf` | Cloud Run v2 service (scale-to-zero, public ingress) |
-| `lb.tf` | Global Load Balancer, Cloud CDN, SSL certificate, custom domain routing |
+| `loadbalancer.tf` | Global Load Balancer, Cloud CDN, SSL certificate, custom domain routing |
 
 ### Bring the project up
 
@@ -242,35 +271,47 @@ Paste the three values into `github.com/<you>/<repo>/settings/secrets/actions`:
 
 ```
 src/
-├── api/                       # Halopedia API client, faction classifier, image resolution
+├── api/
+│   ├── static.ts                  # Static data loader — reads from data/*.json (no live API)
+│   ├── halopedia.ts               # Halopedia client + mappers (used by sync scripts only)
+│   └── faction.ts                 # Faction classifier (inferFaction + FACTION_OVERRIDES)
+├── data/                          # Pre-fetched entity arrays (generated by sync:entities)
+│   ├── characters.json
+│   ├── weapons.json
+│   ├── vehicles.json
+│   ├── races.json
+│   ├── planets.json
+│   └── games.json
 ├── components/
-│   ├── layout/                # Sidebar, Header, Layout (animated per-route backgrounds)
-│   └── ui/                    # Card, Badge, Spinner, SearchBar, WikiGrid
-├── hooks/                     # useFetch, useSearch
-├── pages/                     # Weapons, Vehicles, Characters, Races, Planets, Games,
-│                              # Factions, About
-├── types/                     # TypeScript interfaces
-├── faction-registry.ts        # Static cross-category faction catalog
-├── generated-descriptions.json# Bundled description fallback database
-└── generated-*-images.json    # GCS image URL maps (committed, updated by CI)
+│   ├── layout/                    # Sidebar, Header, Layout (animated per-route backgrounds)
+│   └── ui/                        # Card, Badge, Spinner, SearchBar, WikiGrid
+├── hooks/                         # useFetch, useSearch
+├── pages/                         # Weapons, Vehicles, Characters, Races, Planets, Games,
+│                                  # Factions, About
+├── types/                         # TypeScript interfaces
+├── faction-registry.ts            # Static cross-category faction catalog
+├── lore-titles.ts                 # Curated entity lists (LORE_CHARACTERS, LORE_WEAPONS…)
+├── generated-descriptions.json    # Bundled curated description database
+└── generated-*-images.json        # GCS image URL maps (committed, updated by CI)
 
 scripts/
-├── prompt-builder.ts          # Core: faction detection + prompt construction
-├── lore-prompts.ts            # Curated prompts for canonical entities
-├── generate-missing-images.ts # CI image generation entrypoint
-├── mirror-halopedia-images.ts # Official image mirroring (characters, weapons, vehicles, races, planets)
-├── sync-descriptions.ts       # Description sync → GCS archive + generated-descriptions.json
-├── faction-audit.ts           # Faction coverage + accuracy audit tool
-├── regenerate-titles.ts       # Targeted regeneration by title
-└── regenerate-species.ts      # Species-targeted batch regeneration
+├── sync-entities.ts               # Pre-fetch all entities → src/data/*.json
+├── prompt-builder.ts              # Core: faction detection + prompt construction
+├── lore-prompts.ts                # Curated prompts for canonical entities
+├── generate-missing-images.ts     # CI image generation entrypoint
+├── mirror-halopedia-images.ts     # Official image mirroring (characters, weapons, vehicles, races, planets, games)
+├── sync-descriptions.ts           # Description sync → GCS archive + generated-descriptions.json
+├── faction-audit.ts               # Faction coverage + accuracy audit tool
+├── regenerate-titles.ts           # Targeted regeneration by title
+└── regenerate-species.ts          # Species-targeted batch regeneration
 
 terraform/
-├── apis.tf                    # GCP service API enablement
-├── storage.tf                 # GCS bucket (public CDN)
-├── registry.tf                # Artifact Registry
-├── iam.tf                     # Service account, IAM, Workload Identity Federation
-├── cloudrun.tf                # Cloud Run v2 service
-└── lb.tf                      # Global Load Balancer + custom domain + SSL
+├── apis.tf                        # GCP service API enablement
+├── storage.tf                     # GCS bucket (public CDN)
+├── registry.tf                    # Artifact Registry
+├── iam.tf                         # Service account, IAM, Workload Identity Federation
+├── cloudrun.tf                    # Cloud Run v2 service
+└── loadbalancer.tf                # Global Load Balancer + custom domain + SSL
 ```
 
 ---
