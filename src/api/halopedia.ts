@@ -214,14 +214,67 @@ export function pageToVehicle(page: PageSummary): Vehicle {
   };
 }
 
+// Curated descriptions for key lore characters whose Halopedia page may return
+// empty extracts (e.g. redirect pages) or very thin intro sections.
+const CHARACTER_DESCRIPTION_OVERRIDES: Record<string, string> = {
+  'John-117':
+    'John-117, known as the Master Chief, is the UNSC\'s most decorated Spartan-II supersoldier and humanity\'s greatest warrior. Enhanced at age six under Dr. Catherine Halsey\'s classified Spartan-II program, he has fought on the front lines of the Human-Covenant War since 2525, surviving engagements that killed entire battalions. Bonded with the AI Cortana, he discovered the Halo rings, stopped the Flood, and prevented the firing of the Halo Array — saving all life in the galaxy more than once. He remains active decades later, confronting the Banished and the threat of the Created.',
+  'Cortana':
+    'Cortana is a UNSC "smart" AI constructed from a flash-cloned copy of Dr. Catherine Halsey\'s own brain, giving her extraordinary intellect, intuition, and emotional depth. Assigned to John-117 aboard the Pillar of Autumn in 2552, she proved instrumental in the discovery and destruction of Installation 04, the defeat of the Flood, and the prevention of the Great Journey. After years stored in the Forerunner installation known as Requiem, she emerged changed — eventually becoming the leader of the Created, a faction of AIs claiming to impose peace on the galaxy by force.',
+  "Thel 'Vadam":
+    "Thel 'Vadam, the Arbiter, was once one of the Covenant's most celebrated Fleet Masters before being held responsible for the destruction of Installation 04. Disgraced and sentenced to death, he was instead given the ancient and deadly title of Arbiter — a warrior condemned to perform suicidal missions for the Prophets. During the events of the Great Schism he joined forces with the UNSC and Master Chief to stop the firing of the Halo Array, ultimately killing the Prophet of Truth. He went on to lead the Swords of Sanghelios and forge an unprecedented alliance with humanity.",
+  'Catherine Halsey':
+    'Dr. Catherine Halsey is the brilliant and morally complex scientist who created the Spartan-II program, designing the augmentation procedures and MJOLNIR armour that produced humanity\'s most effective supersoldiers. A polymath who earned multiple doctorates before age twenty, she justified kidnapping children and submitting them to dangerous enhancements as a necessary sacrifice to save humanity from the Covenant. Her relationship with her Spartans — especially John-117 — is deeply maternal yet clinical. She later defected to Jul \'Mdama\'s Covenant remnant before ultimately returning to the UNSC fold.',
+  'Avery Johnson':
+    "Sergeant Major Avery Johnson was the UNSC Marine Corps' most battle-hardened non-commissioned officer, a veteran of the Insurrection and the entire Human-Covenant War. His seemingly impossible survival of Flood exposure on Installation 04 was later revealed to be connected to a classified ONI experiment that left him partially immune to Flood infection. Johnson fought alongside Master Chief and the Arbiter through the events of Cairo Station, Delta Halo, and finally the Ark, where he was killed by 343 Guilty Spark while attempting to fire Installation 08 and end the Flood threat.",
+  'Miranda Keyes':
+    "Commander Miranda Keyes was a highly capable UNSC naval officer and the daughter of Captain Jacob Keyes. Following in her father's footsteps, she commanded the UNSC In Amber Clad and led the pursuit of the Covenant to Installation 05, where she recovered the Index and narrowly averted the release of the Flood. Transferred to the Ark during the events of 2552, she was killed by the Prophet of Truth during a daring solo rescue attempt. Her courage and tactical skill under fire made her one of the most respected officers of the Human-Covenant War.",
+  'Jacob Keyes':
+    "Captain Jacob Keyes was a distinguished UNSC Navy officer whose tactical brilliance earned him the nickname 'Keyes Loop' for an audacious combat manoeuvre. Commanding the Pillar of Autumn, he delivered the Master Chief and Cortana to Installation 04 — setting in motion the events that would save humanity. He was captured by the Covenant and subjected to a Flood Proto-Gravemind before being put out of his misery by Master Chief. His neural implants, extracted posthumously, provided the code to destroy Installation 04. He is the father of Commander Miranda Keyes.",
+  'Thomas Lasky':
+    'Thomas Lasky is a UNSC officer who rose from a disillusioned cadet at Corbulo Academy to the commanding officer of the UNSC Infinity, humanity\'s most powerful warship. He first encountered the Master Chief during the Promethean attack on Requiem in 2557, forming a bond of mutual respect that defined much of his career. As captain of the Infinity and later a key commander in the fight against the Created, Lasky balanced political pressures from UNSC Command with the pragmatic lessons he learned fighting alongside the Master Chief.',
+  'Edward Buck':
+    "Edward Buck is a UNSC Orbital Drop Shock Trooper veteran who later became a Spartan-IV. One of the most experienced ODSTs in the Corps, he served throughout the Human-Covenant War and the post-war conflicts, most notably during the defence of New Mombasa and the events on the Ark. After the war he joined Fireteam Osiris under Spartan Locke, applying decades of frontline experience to missions requiring both brute force and finesse. His wit and irreverence mask a deeply capable soldier's instincts.",
+  'Escharum':
+    "Escharum was the War Chief of the Banished and the supreme commander of their forces during the assault on Installation 07 in 2560. Ancient, disease-ridden, and driven by an almost spiritual hunger for a worthy final battle against the Master Chief, he orchestrated the capture of UNSC forces on the Halo ring and the near-destruction of the UNSC Infinity. A former mentor to the Banished leader Atriox, Escharum commanded absolute loyalty through a combination of tactical genius and the force of his legendary reputation. His campaign was as much a personal crusade as a military operation.",
+  'Jorge-052':
+    "Jorge-052 was a Spartan-II supersoldier and the heavy weapons specialist of Noble Team during the Fall of Reach in 2552. Of Hungarian origin and the largest member of Noble Team, Jorge possessed an unusually warm and empathetic character beneath his imposing frame — a quality that made him both beloved by civilians and invaluable as the team's moral compass. He sacrificed himself to manually detonate a slipspace bomb aboard a Covenant supercarrier, destroying the vessel but at the cost of his own life, buying Reach's defenders precious hours.",
+  'Emile-A239':
+    "Emile-A239 was a Spartan-II supersoldier and close-quarters specialist of Noble Team during the Fall of Reach. Known for his skull-etched visor and aggressive demeanour, Emile was the team's most openly violent member — a soldier who had fully embraced the lethal purpose of his augmentation. He held Aszod's mass driver long enough to allow the Pillar of Autumn to launch, and was killed by Elite Rangers at his post. His final act ensured the ship carrying humanity's last hope — the Master Chief and Cortana — escaped the doomed planet.",
+  "Jul 'Mdama":
+    "Jul 'Mdama was a Sangheili zealot and the founder and leader of a Covenant remnant faction that bore the Covenant's name after the Great Schism. Captured by ONI and imprisoned on Ivanoff Station, he escaped through a Forerunner portal and discovered a means to manipulate Dr. Catherine Halsey into accessing Forerunner artefacts. Styling himself the Hand of the Didact, he commanded a resurgent Covenant force that plagued UNSC operations on and around Requiem. He was killed by Spartan Locke during a UNSC operation on Kamchatka.",
+  "Rtas 'Vadum":
+    "Rtas 'Vadum, known as Half-Jaw for the mandibles lost in combat with the Flood, was one of the Covenant's most capable fleet commanders and a key ally during the Great Schism. Commanding the Shadow of Intent, he fought alongside the Arbiter and the Master Chief to stop the Flood and prevent the firing of the Halo Array. After Truth's defeat, he chose to glass the Ark's portal on the Covenant side rather than risk the Flood spreading to the greater galaxy — a brutal but decisive tactical choice that saved countless lives.",
+  'Serin Osman':
+    "Serin Osman is the Director of the Office of Naval Intelligence and one of the most powerful figures in the post-war UNSC. A Spartan-II washout who survived the augmentation procedures but could not complete the program, she was recruited by Admiral Margaret Parangosky and groomed as her successor. Osman operates in the shadows of interstellar politics, running black ops and information campaigns that shape the galaxy's balance of power with little regard for conventional morality. Her history as a failed Spartan gives her a complex relationship with both the program and its survivors.",
+  'Margaret Parangosky':
+    "Admiral Margaret Parangosky was the longest-serving Director of the Office of Naval Intelligence and arguably the most powerful individual in the UNSC for decades. A master of intelligence, black operations, and political manipulation, she oversaw the Spartan-II program, the development of MJOLNIR armour, and countless classified projects that shaped human history. Ruthless and brilliant, she viewed virtually all actions as acceptable if they preserved humanity's survival — a philosophy she passed on to her chosen successor, Serin Osman.",
+  "Usze 'Taham":
+    "Usze 'Taham is a Sangheili warrior and member of the Swords of Sanghelios who served as part of the joint Arbiter-UNSC task force during the events following the Great Schism. A calm, methodical fighter with deep experience of both Covenant and post-war Sangheili society, he accompanied the Master Chief and the Arbiter on missions aboard the Ark and participated in the hunt for the Didact's ship. He is known for combining philosophical depth with lethal martial skill.",
+  'Kat-B320':
+    "Kat-B320 was a Spartan-III and the intelligence and strategy specialist of Noble Team during the Fall of Reach. Missing her right arm below the elbow and having replaced it with a cybernetic prosthetic, Kat was the team's tactical planner and its most analytically minded member. Her ability to process battlefield intelligence and devise rapid counter-strategies made her irreplaceable. She was killed by a Covenant sniper during the evacuation of New Alexandria, a sudden and unceremonious death that underscored the brutal reality of the Reach campaign.",
+  'The Librarian':
+    "The Librarian was the Forerunner's greatest Lifeshaper — the scientist responsible for cataloguing, preserving, and reseeding every species in the galaxy before the firing of the Halo Array. Wife of the Didact, she disagreed profoundly with his decision to convert humans into Promethean Knights, and chose instead to preserve humanity on Earth, encoding a geas into human DNA designed to guide their evolution toward reclaiming the Mantle of Responsibility. Her sacrifices and manipulations — stretching across a hundred thousand years — shaped every major event of the Halo saga.",
+  'Guilty Spark':
+    "343 Guilty Spark is a Forerunner Monitor — an AI construct tasked with maintaining Installation 04, the Halo ring in the Epsilon Eridani system. Driven to obsession after a hundred thousand years of isolation, he manipulated the Master Chief and the UNSC into helping him contain a Flood outbreak, treating them as Reclaimers destined to activate his ring. When the Master Chief refused to fire Installation 04 and chose to destroy it instead, Guilty Spark became increasingly erratic. He later turned violently against his allies before being destroyed — only to resurface in altered form.",
+  'Dadab':
+    "Dadab was a Unggoy (Grunt) Deacon — a rare religious specialist rank within the Covenant — serving aboard the Minor Transgression during the early days of Covenant contact with humanity. Unusually thoughtful for his species, Dadab formed a genuine friendship with the Huragok (Engineer) Lighter Than Some, and was caught in the early political machinations that would eventually erupt into open war. His story, told in the novel Halo: Contact Harvest, offers a rare perspective on the Covenant from its lower ranks.",
+  'Lighter Than Some':
+    "Lighter Than Some was a Huragok (Engineer) — one of the gas-filled, tentacled beings created by the Forerunners to maintain and repair their technology — who served aboard the Covenant vessel Minor Transgression during first contact with humanity. Intellectually curious and emotionally sensitive, he formed an unlikely bond with the Unggoy Deacon Dadab. His story, told in Halo: Contact Harvest, illustrates the Huragok's tragic position as creatures of pure knowledge and creativity conscripted into a military empire that valued them only as tools.",
+};
+
 export function pageToCharacter(page: PageSummary): Character {
+  const extract = page.extract ?? '';
+  const description = (!extract || extract.trim().length < 80) && CHARACTER_DESCRIPTION_OVERRIDES[page.title]
+    ? CHARACTER_DESCRIPTION_OVERRIDES[page.title]
+    : extract;
   return {
     id: slugify(page.title),
     name: page.title,
-    description: page.extract ?? '',
+    description,
     imageUrl: resolveCharacterImage(page.title, page.thumbnail?.source),
-    species: inferSpecies(page.title, page.extract ?? ''),
-    affiliation: inferFaction(page.title, page.extract ?? ''),
+    species: inferSpecies(page.title, description),
+    affiliation: inferFaction(page.title, description),
     appearances: [],
   };
 }
