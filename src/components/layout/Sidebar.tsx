@@ -135,31 +135,54 @@ export default function Sidebar() {
         {/* Logo / Toggle */}
         <button
           onClick={() => setExpanded(prev => !prev)}
-          className="flex items-center gap-3 px-4 py-5 focus:outline-none"
+          className="flex flex-col items-center px-4 pt-4 pb-3 gap-1 focus:outline-none w-full"
           aria-label="Toggle sidebar"
         >
-          <span
-            className="text-sm font-black tracking-widest flex-shrink-0 select-none"
-            style={{
-              fontFamily: "'Orbitron', sans-serif",
-              color: '#00B4D8',
-              textShadow: '0 0 8px #00B4D8, 0 0 20px #00B4D888',
-            }}
-          >
-            HW
-          </span>
-          <motion.span
-            animate={{ opacity: expanded ? 1 : 0 }}
+          {/* Row: HW + (HALO WIKI + ring when expanded) */}
+          <div className="flex items-center gap-2 w-full">
+            <span
+              className="text-sm font-black tracking-widest flex-shrink-0 select-none"
+              style={{
+                fontFamily: "'Orbitron', sans-serif",
+                color: '#00B4D8',
+                textShadow: '0 0 8px #00B4D8, 0 0 20px #00B4D888',
+              }}
+            >
+              HW
+            </span>
+            <motion.span
+              animate={{ opacity: expanded ? 1 : 0 }}
+              transition={{ duration: 0.2 }}
+              className="text-base font-black tracking-widest whitespace-nowrap"
+              style={{
+                fontFamily: "'Orbitron', sans-serif",
+                color: '#00B4D8',
+                textShadow: '0 0 10px #00B4D8, 0 0 30px #00B4D866',
+              }}
+            >
+              HALO WIKI
+            </motion.span>
+            {/* Ring — right of HALO WIKI when expanded */}
+            <motion.img
+              src="https://halo.wiki.gallery/images/8/83/HW2-Halo.png"
+              alt=""
+              aria-hidden
+              animate={{ opacity: expanded ? 0.85 : 0 }}
+              transition={{ duration: 0.2 }}
+              className="flex-shrink-0 object-contain"
+              style={{ width: 18, height: 18, filter: 'drop-shadow(0 0 5px #00B4D8aa)' }}
+            />
+          </div>
+          {/* Ring — below HW when collapsed */}
+          <motion.img
+            src="https://halo.wiki.gallery/images/8/83/HW2-Halo.png"
+            alt=""
+            aria-hidden
+            animate={{ opacity: expanded ? 0 : 0.75 }}
             transition={{ duration: 0.2 }}
-            className="text-base font-black tracking-widest whitespace-nowrap"
-            style={{
-              fontFamily: "'Orbitron', sans-serif",
-              color: '#00B4D8',
-              textShadow: '0 0 10px #00B4D8, 0 0 30px #00B4D866',
-            }}
-          >
-            HALO WIKI
-          </motion.span>
+            className="object-contain"
+            style={{ width: 20, height: 20, filter: 'drop-shadow(0 0 5px #00B4D8aa)' }}
+          />
         </button>
 
         <nav className="flex-1 flex flex-col gap-1 mt-2">
