@@ -104,8 +104,8 @@ function DetailPanel({ item, onClose }: { item: WikiItem; onClose: () => void })
         ✕
       </button>
 
-      {/* Click upper area to close */}
-      <div className="flex-1 cursor-pointer" onClick={onClose} />
+      {/* Click upper area to close — z-[1] puts it above the absolute image but below the z-10 close button */}
+      <div className="flex-1 cursor-pointer z-[1]" onClick={onClose} />
 
       {/* Bottom 1/3 — floating text over image */}
       <div className="relative z-10 max-h-[40vh] overflow-y-auto"
