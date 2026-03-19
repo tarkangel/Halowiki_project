@@ -7,10 +7,11 @@ interface CardProps {
   imageUrl?: string;
   badge?: string;
   badges?: string[];
+  imageObjectFit?: 'cover' | 'contain';
   onClick?: () => void;
 }
 
-export default function Card({ title, description, imageUrl, badge, badges, onClick }: CardProps) {
+export default function Card({ title, description, imageUrl, badge, badges, imageObjectFit = 'cover', onClick }: CardProps) {
   const allBadges = badges ?? (badge ? [badge] : []);
   return (
     <motion.div
@@ -20,7 +21,12 @@ export default function Card({ title, description, imageUrl, badge, badges, onCl
       className={`bg-zinc-800 rounded-lg overflow-hidden ${onClick ? 'cursor-pointer' : ''}`}
     >
       {imageUrl ? (
-        <img src={imageUrl} alt={title} className="w-full h-40 object-cover object-top" />
+        <img
+          src={imageUrl}
+          alt={title}
+          className="w-full h-40"
+          style={{ objectFit: imageObjectFit, objectPosition: imageObjectFit === 'contain' ? 'center' : 'top' }}
+        />
       ) : (
         <div className="w-full h-40 bg-gradient-to-br from-zinc-700 to-zinc-900 flex items-center justify-center">
           <span className="text-zinc-500 text-4xl">🌐</span>

@@ -29,6 +29,7 @@ interface WikiGridProps {
   items: WikiItem[] | null;
   loading: boolean;
   error: string | null;
+  imageObjectFit?: 'cover' | 'contain';
 }
 
 const UNKNOWN_VALUES = new Set(['unknown', 'n/a', 'none', '']);
@@ -150,7 +151,7 @@ function DetailPanel({ item, onClose }: { item: WikiItem; onClose: () => void })
 
 // ── WikiGrid ──────────────────────────────────────────────────────────────────
 
-export default function WikiGrid({ items, loading, error }: WikiGridProps) {
+export default function WikiGrid({ items, loading, error, imageObjectFit = 'cover' }: WikiGridProps) {
   const [selected, setSelected] = useState<WikiItem | null>(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const { query } = useSearch();
@@ -231,6 +232,7 @@ export default function WikiGrid({ items, loading, error }: WikiGridProps) {
               description={item.description}
               imageUrl={item.imageUrl}
               badges={knownBadges(item)}
+              imageObjectFit={imageObjectFit}
               onClick={() => setSelected(item)}
             />
           </motion.div>
