@@ -519,7 +519,7 @@ function inferFaction(title: string, text: string): string {
   // Banished: faction keywords, workshop names, distinctive vehicle/weapon names.
   // Guntower and Marauder are Banished-exclusive; Chopper is Jiralhanae/Banished.
   const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b|barbed lance|berserker|fire-wand|loathsome thing|blamex|breacher exosuit|decimus/.test(combined)
-    || /\bguntower\b/.test(combined);
+    || /\bguntower\b|\bgigas\b|\bn'weo\b/.test(combined);
 
   // Covenant: species keywords + structural name patterns + specific vehicle names.
   // Lich, Locust, Harvester, Seraph are Covenant-origin craft (name-only fallback

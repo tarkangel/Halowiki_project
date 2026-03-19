@@ -144,7 +144,7 @@ function detectFaction(name: string, desc: string): string {
     || /\bphaeton\b|\bretriever sentinel\b|\baggressor sentinel\b/.test(combined);
 
   const isBanishedKw = /banished|atriox|escharum|[- ]banish|barukaza|barug.qel|eklon.dal|bolroci|dovotaa|kaelum|ahtulai|catulus|ironclad wraith|marauder warchief|\bcrav\b|barbed lance|berserker|fire-wand|loathsome thing|blamex|breacher exosuit|decimus/.test(combined)
-    || /\bguntower\b/.test(combined);
+    || /\bguntower\b|\bgigas\b|\bn'weo\b/.test(combined);
 
   const isCovenantKw = isCovenantPatternItem || isSangheiliName
     || /covenant|sangheili|elite|unggoy|grunt|kig-yar|jackal|jiralhanae|brute|huragok|engineer|yanme|drone|lekgolo|hunter|san.shyuum|prophet|methane rebreather|plasma (pistol|rifle|cannon|mortar|launcher|grenade)|assault cannon|anti-gravity barge|methane wagon|mudoat/.test(combined)
