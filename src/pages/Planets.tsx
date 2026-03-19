@@ -1,5 +1,5 @@
 import { useFetch } from '../hooks/useFetch';
-import { fetchPlanets } from '../api/halopedia';
+import { fetchPlanets } from '../api/static';
 import WikiGrid from '../components/ui/WikiGrid';
 
 export default function Planets() {

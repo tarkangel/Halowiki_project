@@ -1,5 +1,5 @@
 import { useFetch } from '../hooks/useFetch';
-import { fetchVehicles } from '../api/halopedia';
+import { fetchVehicles } from '../api/static';
 import WikiGrid from '../components/ui/WikiGrid';
 
 export default function Vehicles() {

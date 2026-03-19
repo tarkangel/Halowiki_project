@@ -5,9 +5,13 @@
 
 import { inferFaction } from './faction';
 
-const BASE_URL =
-  (import.meta.env.VITE_HALOPEDIA_API_URL as string) ??
-  'https://www.halopedia.org/api.php';
+const BASE_URL = (() => {
+  try {
+    return (import.meta.env.VITE_HALOPEDIA_API_URL as string) ?? 'https://www.halopedia.org/api.php';
+  } catch {
+    return 'https://www.halopedia.org/api.php';
+  }
+})();
 
 // Add origin=* for CORS
 function buildUrl(params: Record<string, string>): string {

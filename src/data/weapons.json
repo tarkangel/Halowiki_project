@@ -1,0 +1,632 @@
+[
+  {
+    "id": "needler",
+    "name": "Needler",
+    "description": "The Needler — designated the Type-33 Guided Munitions Launcher — is one of the most distinctive weapons in the Covenant arsenal, firing shards of crystallised methane that home in on targets. On impact each crystal embeds itself in the target; enough shards hitting a single target simultaneously trigger a powerful supercombine explosion capable of disintegrating even heavily armoured enemies. The distinctive pink glow of its crystals and the organic homing mechanic made the Needler one of the most recognisable weapons of the Human-Covenant War. Wielded primarily by Unggoy infantry, it requires close-range commitment to be most effective.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/needler.jpg",
+    "faction": "Covenant",
+    "type": "Launcher",
+    "appearances": []
+  },
+  {
+    "id": "type-1-energy-sword",
+    "name": "Type-1 Energy Sword",
+    "description": "The Energy Sword is the iconic close-quarters weapon of the Sangheili warrior caste — a symbol of honour, martial prowess, and aristocratic rank within Covenant culture. Two curved plasma blades projected from a Covenant alloy hilt can cut through most infantry armour and vehicle hulls with a single strike. The Energy Sword is considered a sacred weapon whose use is a privilege earned through combat distinction.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/type-1-energy-sword.png",
+    "faction": "Covenant",
+    "type": "Melee",
+    "appearances": []
+  },
+  {
+    "id": "carbine",
+    "name": "Carbine",
+    "description": "The Carbine — designated the Vostu-pattern Type-51 carbine — is the Covenant's standard-issue precision semi-automatic rifle, chambering 9.5×40mm radioactive rounds from an 18-round tubular magazine. Unlike the Plasma Rifle, the Carbine fires solid projectiles rather than energy bolts, giving it excellent accuracy at range and reliable effectiveness against lightly shielded or unshielded targets. Its high rate of fire for a precision weapon and forgiving handling made it popular among Sangheili infantry who required rifles effective at longer engagement distances than the Plasma Rifle allowed. The Carbine saw widespread use from the earliest UNSC-Covenant engagements through to the post-war era.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/carbine.png",
+    "faction": "Covenant",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "plasma-rifle",
+    "name": "Plasma Rifle",
+    "description": "The Plasma Rifle — designated the Okarda'phaa-pattern plasma rifle — is the standard Covenant infantry automatic weapon and the alien counterpart to the UNSC assault rifle. Firing superheated plasma bolts in rapid semi-automatic succession, it is effective at suppressing infantry and eroding energy shielding through sustained fire. Wielded primarily by Sangheili and Jiralhanae warriors, the Plasma Rifle was one of the most common Covenant weapons across the galaxy. Its distinctive high-pitched plasma discharge became one of the defining sounds of the Human-Covenant War.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/plasma-rifle.png",
+    "faction": "Covenant",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "ma5b-assault-rifle",
+    "name": "MA5B assault rifle",
+    "description": "The MA5B Assault Rifle is the workhorse infantry weapon of the UNSC Marine Corps and the iconic rifle of Halo: Combat Evolved. Chambered for 7.62×51mm M118 ball ammunition and fed from a 60-round box magazine, the MA5B fires in fully automatic mode, providing suppressive fire capability. Its integrated ammunition counter and compass made it as much a navigation tool as a weapon. The MA5B's brute-force, high-capacity design reflects UNSC manufacturing priorities during a desperate war of attrition against the Covenant.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/ma5b-assault-rifle.jpg",
+    "faction": "UNSC",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "m90-shotgun",
+    "name": "M90 shotgun",
+    "description": "The M90 Close Assault Weapon System is the UNSC's primary close-quarters combat shotgun, chambering eight rounds of 8-gauge magnum ammunition in an under-barrel tubular magazine. Its devastating close-range output made it the weapon of choice for breaching operations, shipboard combat, and anti-Flood engagements where the parasite's resilience demanded overwhelming kinetic force. Slow to reload but brutally effective at point-blank range, the M90 became synonymous with desperate last-stand encounters aboard the Pillar of Autumn and the corridors of Installation 04. The M45 Tactical Shotgun later refined the design for the post-war era.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/m90-shotgun.jpg",
+    "faction": "UNSC",
+    "type": "Shotgun",
+    "appearances": []
+  },
+  {
+    "id": "m41-spnkr",
+    "name": "M41 SPNKr",
+    "description": "The M41 Surface-to-Surface Rocket Launcher — informally called the M41 SPNKR by Marines for its distinctive pronunciation — is the UNSC's standard anti-armour rocket launcher. Firing 102mm shaped-charge explosive rockets in a dual-tube configuration, the M41 provides infantry with the ability to defeat most vehicles and fortified positions at range. Two rapid-fire shots before reloading make it effective against fast-moving targets. The SPNKr became one of the most iconic weapons of the Human-Covenant War, as reliable and recognisable in UNSC service as the Warthog itself.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/m41-spnkr.png",
+    "faction": "Covenant",
+    "type": "Launcher",
+    "appearances": []
+  },
+  {
+    "id": "plasma-pistol",
+    "name": "Plasma Pistol",
+    "description": "The Plasma Pistol — designated the Eos'Mak-pattern plasma pistol — is the standard Covenant sidearm and one of the most widespread alien weapons encountered by the UNSC. In semi-automatic mode it fires rapid bolts of superheated plasma. Its signature capability is the charged shot: holding the trigger builds a large overcharged plasma bolt that instantly collapses energy shielding on impact — a critical tactical asset against shielded Spartan or Elite opponents. This overcharge drains the battery significantly and overheats the emitter, but the ability to strip shields in a single shot made the Plasma Pistol one of the most tactically versatile weapons of the war.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/plasma-pistol.png",
+    "faction": "Covenant",
+    "type": "Pistol",
+    "appearances": []
+  },
+  {
+    "id": "fuel-rod-gun",
+    "name": "Fuel Rod Gun",
+    "description": "The Fuel Rod Gun is a Covenant heavy support weapon that fires explosive plasma-charged fuel rod projectiles in a lobbing arc, providing infantry with indirect-fire capability against vehicles and fortified positions. The distinctive yellow-green glow of a fuel rod became one of the most recognisable and feared sights on any Human-Covenant War battlefield. Its area-of-effect detonation makes it effective against clustered infantry and light vehicles.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/fuel-rod-gun.png",
+    "faction": "Covenant",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "br55-battle-rifle",
+    "name": "BR55 battle rifle",
+    "description": "The BR55 Battle Rifle is the UNSC's premier mid-range precision weapon — a semi-automatic rifle that fires three-round bursts of 9.5×40mm M634 High Powered rounds from a 36-round magazine. Introduced to replace older assault rifles in roles requiring precision over volume of fire, the BR55 became the defining UNSC infantry weapon of the Halo 2 and Halo 3 era. Its three-round burst optimised for headshots against shielded Covenant infantry, combined with a 2× optical scope, made it effective from close to medium range. It is widely regarded as the most balanced and versatile UNSC infantry weapon ever produced.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/br55-battle-rifle.jpg",
+    "faction": "Covenant",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "gravity-hammer",
+    "name": "Gravity Hammer",
+    "description": "The Gravity Hammer is the ceremonial and combat weapon of the Jiralhanae warrior caste — a massive two-handed weapon combining devastating physical mass with a gravity impeller that releases a crushing shockwave on impact. Capable of destroying light vehicles and launching infantry through the air, the Gravity Hammer is as much a symbol of Jiralhanae martial culture as the Energy Sword is to the Sangheili.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/gravity-hammer.jpg",
+    "faction": "Covenant",
+    "type": "Melee",
+    "appearances": []
+  },
+  {
+    "id": "antimatter-charge",
+    "name": "Antimatter charge",
+    "description": "An antimatter charge, formally designated as a void maker, is a Covenant antimatter weapon employed as an explosive. Sizes and uses of antimatter charges vary, with some being a counterpart to the UNSC's tactical nuclear weapons. The UNSC are known to operate at least one model of antimatter bomb—the Type 14 Magnetic/Anti-Tank Mine.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/antimatter-charge.jpg",
+    "faction": "Covenant",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "ma5c-assault-rifle",
+    "name": "MA5C assault rifle",
+    "description": "The MA5C Individual Combat Weapon System is the refined evolution of the MA5 series, adopted as the UNSC's standard assault rifle following lessons learned in the early Human-Covenant War. Chambered for the same 7.62×51mm M118 round but redesigned for improved reliability, the MA5C fires from a 32-round magazine — trading the MA5B's capacity for better accuracy and handling. It became the most recognisable assault rifle of the Halo 2 and Halo 3 era, appearing in the hands of Spartan-IIs and Marine infantry alike.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/ma5c-assault-rifle.jpg",
+    "faction": "UNSC",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "m6d-magnum",
+    "name": "M6D magnum",
+    "description": "The M6D Personal Defense Weapon System is the semi-automatic sidearm that became legendary in the hands of Master Chief during the events of Installation 04 in 2552. Chambering the powerful 12.7×40mm M225 SAP-HE round from a 12-round magazine, the M6D's combination of accuracy, stopping power, and effective range made it far more capable than a typical sidearm — in skilled hands it could defeat Covenant Elite energy shielding with precision headshots. Fitted with a low-power scope, the M6D proved capable of engaging targets at carbine-like distances. It is considered by many veterans of the Human-Covenant War to be one of the finest handguns ever fielded by the UNSC.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/m6d-magnum.png",
+    "faction": "Covenant",
+    "type": "Pistol",
+    "appearances": []
+  },
+  {
+    "id": "aie-486h-machine-gun",
+    "name": "AIE-486H machine gun",
+    "description": "The AIE-486H heavy machine gun, nicknamed the Yeller, is a tri-barrelled rotary machine gun manufactured by Misriah Armory in service with the United Nations Space Command. A similar weapon, the AIE-207H, is also in service as a Warthog mount.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/aie-486h-machine-gun.jpg",
+    "faction": "UNSC",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "br55hb-battle-rifle",
+    "name": "BR55HB battle rifle",
+    "description": "The BR55 Heavy Barrel Service Rifle (BR55HB SR), also known as the \"Mammoth Stomper,\" is a select-fire rifle utilized by the United Nations Space Command and manufactured by Misriah Armory. Intended as a in-production upgrade, it is a heavy-barreled version of the BR55 Service Rifle.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/br55hb-battle-rifle.jpg",
+    "faction": "UNSC",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "assault-cannon",
+    "name": "Assault cannon",
+    "description": "Assault cannons are a family of heavy weapons utilised by the Covenant. They are most famously employed by the Mgalekgolo, or \"Hunters\" - heavy infantry forces that typically wield an assault cannon mounted to their right arm in place of a hand. However, they may also be used as a vehicle armament or emplacement, and have been used in conjunction with a wide variety of the Covenant's ground and aerial vehicles.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/assault-cannon.jpg",
+    "faction": "Covenant",
+    "type": "Heavy",
+    "appearances": []
+  },
+  {
+    "id": "suppressor",
+    "name": "Suppressor",
+    "description": "The Suppressor is a Promethean automatic energy weapon that fires rapid bursts of hard light shards at close to medium range. Wielded by Promethean Knights and Crawlers on Requiem and beyond, the Suppressor prioritises rate of fire over accuracy, overwhelming targets with hard light projectiles that cause both kinetic and thermal damage. Its unusual hard light ammunition makes it unlike any human or Covenant weapon in the UNSC arsenal.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/suppressor.png",
+    "faction": "Forerunner",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "focus-rifle",
+    "name": "Focus Rifle",
+    "description": "The Focus Rifle is a Covenant directed-energy weapon that fires a sustained beam of superheated particles capable of burning through shields and armour at range. Unlike most Covenant weapons that fire discrete projectiles, it projects a continuous beam that the user sweeps across targets. The sustained heat output makes it particularly effective at collapsing energy shielding by maintaining contact long enough for the shield to fail.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/focus-rifle.png",
+    "faction": "Covenant",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "concussion-rifle",
+    "name": "Concussion Rifle",
+    "description": "The Concussion Rifle is a Covenant carbine-style weapon that fires superheated plasma bolts with sufficient kinetic force to knock enemies off their feet and send vehicles spinning. Unlike most Covenant energy weapons, the Concussion Rifle carries significant physical impact alongside thermal energy, making it effective for disrupting enemy formations and disabling light vehicles at range.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/concussion-rifle.jpg",
+    "faction": "Covenant",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "arc-920-railgun",
+    "name": "ARC-920 railgun",
+    "description": "The Asymmetric Recoilless Carbine-920 (ARC-920), also known simply as the railgun, is a compact-channel linear accelerator weapon used by the United Nations Space Command. It is designed and manufactured by Acheron Security. The ARC-920 is one of the various limited-production electromagnetic launchers in service with the UNSC, and is widely considered the best among them.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/arc-920-railgun.jpg",
+    "faction": "UNSC",
+    "type": "Launcher",
+    "appearances": []
+  },
+  {
+    "id": "srs99-s5-am-sniper-rifle",
+    "name": "SRS99-S5 AM sniper rifle",
+    "description": "The SRS99-S5 Anti-Materiel Sniper Rifle System is the UNSC's premier long-range precision weapon, chambering the massive 14.5×114mm M225 APFSDS round in a four-round detachable box magazine. Capable of defeating virtually any infantry target — including shielded Sangheili — with a single precision shot, the SRS99 series has served as the backbone of UNSC sniper operations from the earliest days of the Human-Covenant War. Its 5× and 10× optical scope modes and exceptional ballistic accuracy make it an irreplaceable asset for reconnaissance and long-range fire support.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/srs99-s5-am-sniper-rifle.jpg",
+    "faction": "UNSC",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "lightrifle",
+    "name": "Lightrifle",
+    "description": "The Lightrifle is a Forerunner precision weapon that fires hard light bolts in either rapid semi-automatic mode for close range or a charged single-shot mode for extreme accuracy at long range. The charged shot compresses multiple hard light particles into a single devastating projectile capable of destroying energy shields in one hit. Its dual firing modes give a single user flexibility to engage effectively across all combat ranges.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/lightrifle.png",
+    "faction": "Forerunner",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "boltshot",
+    "name": "Boltshot",
+    "description": "The Boltshot is a Forerunner sidearm that fires a single hard light bolt in semi-automatic mode but can be charged to release a devastating close-range spread of hard light shards acting as a powerful shotgun blast. Its compact size and devastating charged shot made it the standard Forerunner sidearm. UNSC forces found the charge mode capable of one-shotting fully shielded Spartan armour at close range — an alarming capability for a pistol-sized weapon.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/boltshot.png",
+    "faction": "Forerunner",
+    "type": "Pistol",
+    "appearances": []
+  },
+  {
+    "id": "12mm-comet",
+    "name": "12mm Comet",
+    "description": "12mm Comets are oversized pistols manufactured by the New Tyne Armory in New Tyne, Venezia.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/12mm-comet.jpg",
+    "faction": "",
+    "type": "Pistol",
+    "appearances": []
+  },
+  {
+    "id": "covenant-weaponry",
+    "name": "Covenant weaponry",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/covenant-weaponry.jpg",
+    "faction": "Covenant",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "blaze-of-glory",
+    "name": "Blaze of Glory",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/blaze-of-glory.jpg",
+    "faction": "",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "appetite-for-destruction",
+    "name": "Appetite for Destruction",
+    "description": "The Appetite for Destruction is a named variant of the M739 Light Machine Gun. It is featured in Halo 5: Guardians as an Uncommon REQ variant of the SAW, reusing the latter's chassis but with additional green and red stripes decorating the weapon's body, along with a falcon emblem in front of the drum magazine.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/appetite-for-destruction.jpg",
+    "faction": "UNSC",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "bmurresh-pattern-shade",
+    "name": "Bmur'resh-pattern Shade",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/bmurresh-pattern-shade.jpg",
+    "faction": "Covenant",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "cqs48-bulldog",
+    "name": "CQS48 Bulldog",
+    "description": "The CQS48 Bulldog is the UNSC's next-generation combat shotgun introduced during the post-war era and standard equipment for Spartan operations during the Banished conflict on Installation 07. Unlike the pump-action M90 it replaces in many roles, the Bulldog features a semi-automatic rotating cylinder magazine holding seven 8-gauge shells, enabling a faster rate of fire without sacrificing stopping power. Its compact dimensions and improved ergonomics made it popular among Spartan operators for breaching and close-quarters combat. The Bulldog became a signature weapon of the UNSC arsenal in Halo Infinite.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/cqs48-bulldog.jpg",
+    "faction": "Banished",
+    "type": "Shotgun",
+    "appearances": []
+  },
+  {
+    "id": "ravager",
+    "name": "Ravager",
+    "description": "The Ravager — designated the Veporokk Workshop Ravager — is a Banished tri-barrel plasma launcher that fires lobbing bolts of superheated plasma on an arcing trajectory, creating persistent burning plasma pools on impact that deny terrain to enemies. Holding the trigger charges the weapon for a powerful overcharged shot with a larger area-of-effect splash. The plasma pools the Ravager creates make it extraordinarily effective at flushing infantry from cover. Deployed extensively by Banished forces across Installation 07 during their occupation in 2560, it became one of the most distinctive weapons of the Halo Infinite conflict.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/ravager.png",
+    "faction": "Banished",
+    "type": "Launcher",
+    "appearances": []
+  },
+  {
+    "id": "mangler",
+    "name": "Mangler",
+    "description": "The Mangler — designated the Ukala Workshop Mangler — is a Banished revolver-style pistol that fires large-calibre armour-piercing rounds with exceptional stopping power for a sidearm. Its oversized revolver mechanism delivers devastating kinetic energy on impact, capable of staggering shielded Spartan-IV operators and defeating light vehicle armour in sustained fire. While slower to fire than conventional semi-automatic pistols, the Mangler's raw power and precision make it effective at ranges where most sidearms struggle. It became a signature weapon of Banished infantry and officers on Zeta Halo.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/mangler.png",
+    "faction": "Banished",
+    "type": "Pistol",
+    "appearances": []
+  },
+  {
+    "id": "banished-shade",
+    "name": "Banished Shade",
+    "description": "This Shade design is a custom variant in the Shade line of deployment turrets, prominently used by the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/banished-shade.jpg",
+    "faction": "Banished",
+    "type": "Heavy",
+    "appearances": []
+  },
+  {
+    "id": "br75-battle-rifle",
+    "name": "BR75 battle rifle",
+    "description": "The BR75 Service Rifle is a battle rifle used by the UNSC, manufactured by Misriah Armory in Eos Chasma.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/br75-battle-rifle.jpg",
+    "faction": "UNSC",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "skewer",
+    "name": "Skewer",
+    "description": "The Skewer — designated the Flaktura Workshop Skewer — is a Banished anti-vehicle spike launcher that fires a hyper-velocity spike capable of impaling and destroying most vehicles with a single well-placed shot. At anti-vehicle ranges the spike punches through hulls and transmits its kinetic energy catastrophically through the vehicle's structure. Against infantry a Skewer hit is almost always fatal. Its bolt-action reloading mechanism and single-shot capacity require patience and accuracy, but in the right hands the Skewer is among the most lethal anti-armour weapons available to Banished infantry.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/skewer.png",
+    "faction": "Banished",
+    "type": "Launcher",
+    "appearances": []
+  },
+  {
+    "id": "blamex",
+    "name": "Blamex",
+    "description": "Blamex is a kind of high explosive employed by the Covenant remnants and Banished. It is manufactured from Subanese crystal (colloquially referred to as \"Blamite\") used in Needler ammunition.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/blamex.jpg",
+    "faction": "Banished",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "heatwave",
+    "name": "Heatwave",
+    "description": "The Heatwave is a Forerunner energy shotgun recovered on Zeta Halo that fires hard light pellets in two selectable modes: a horizontal spread for standard close-range use, or a vertical spread that bounces pellets off surfaces for indirect close-quarters coverage. Its unique dual firing mode geometry and hard light ammunition set it apart from any UNSC or Covenant shotgun equivalent. Fielded by UNSC forces during the events of Halo Infinite, the Heatwave proved effective in the tight corridors of Forerunner installations where its wall-bounce capability could clear rooms that would otherwise give enemies full cover.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/heatwave.jpg",
+    "faction": "Forerunner",
+    "type": "Shotgun",
+    "appearances": []
+  },
+  {
+    "id": "cindershot",
+    "name": "Cindershot",
+    "description": "The Cindershot is a Forerunner grenade launcher recovered from Zeta Halo that fires hard light charges which bounce off surfaces before detonating, enabling indirect fire around corners and over cover. A direct hit delivers the full explosive energy of the hard light charge, while a primed detonation mid-arc creates a shockwave capable of launching infantry into the air. Its bouncing hard light projectile mechanic makes the Cindershot uniquely effective in enclosed Forerunner structures where indirect angles of fire that would be useless with conventional weapons become devastating. It was widely adopted by UNSC forces on Installation 07 during the Banished conflict.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/cindershot.jpg",
+    "faction": "Forerunner",
+    "type": "Launcher",
+    "appearances": []
+  },
+  {
+    "id": "bolroci-workshop-shade",
+    "name": "Bolroci Workshop Shade",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/bolroci-workshop-shade.jpg",
+    "faction": "Banished",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "br75-breacher",
+    "name": "BR75 Breacher",
+    "description": "The BR75 Breacher is a modified variant of the BR75 battle rifle used by the UNSC Marine Corps.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/br75-breacher.jpg",
+    "faction": "UNSC",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "ad-victoriam",
+    "name": "Ad Victoriam",
+    "description": "Ad Victoriam is a specialised variant of the M57 Pilum shoulder-fired heavy weapon used by the United Nations Space Command.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/ad-victoriam.jpg",
+    "faction": "",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "arrow-of-time",
+    "name": "Arrow of Time",
+    "description": "Arrow of Time is a specialised variant of the SRS99-S5 AM sniper rifle developed by Misriah Armory.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/arrow-of-time.jpg",
+    "faction": "",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "arclight",
+    "name": "Arclight",
+    "description": "Arclight is a variant of Acheron Security's ARC-920 railgun weaponry.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/arclight.jpg",
+    "faction": "",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "abbey-lime",
+    "name": "Abbey Lime",
+    "description": "Abbey Lime, often shortened as Abbey, was a customised SRS99-S7 AM sniper rifle utilised by Spartan Nina Kovan. She utilised the weapon throughout the Requiem Campaign and ground campaign on Installation 07 between 2558 and 2560, though lost the weapon after the battle for UNSC Mortal Reverie in January 2560.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/abbey-lime.jpg",
+    "faction": "UNSC",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "bandit-evo",
+    "name": "Bandit Evo",
+    "description": "The Bandit Evo is a weapon variant of the M392 Bandit in Halo Infinite. It was released in Season 05: Reckoning.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/bandit-evo.jpg",
+    "faction": "UNSC",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "antlion",
+    "name": "Antlion",
+    "description": "Antlion is a name applied to a series of stationary artillery pieces employed by the Covenant and its remnants. These turrets are also colloquially known as \"mega-turrets\", due to their size and power.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/antlion.jpg",
+    "faction": "Covenant",
+    "type": "Heavy",
+    "appearances": []
+  },
+  {
+    "id": "berserkers-claw",
+    "name": "Berserker's Claw",
+    "description": "Berserker's Claw is a variant of the iconic arm-mounted assault cannons utilised by Mgalekgolo infantry.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/berserkers-claw.jpg",
+    "faction": "Banished",
+    "type": "Heavy",
+    "appearances": []
+  },
+  {
+    "id": "aie-207h-machine-gun",
+    "name": "AIE-207H machine gun",
+    "description": "The AIE-207H heavy machine gun is a tri-barrelled rotary machine gun used by the United Nations Space Command.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/aie-207h-machine-gun.jpg",
+    "faction": "UNSC",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "plasma-caster",
+    "name": "Plasma Caster",
+    "description": "The Plasma Caster is a Covenant heavy support weapon that lobs superheated plasma bolts in an arcing trajectory, functioning as an infantry-portable mortar. The bolts can be manually detonated mid-air to create airburst plasma detonations that shower enemies from above, engaging targets behind cover that direct-fire weapons cannot reach. It was a staple of Covenant siege operations throughout the Human-Covenant War.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/lore/plasma-caster.jpg",
+    "faction": "Covenant",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "incineration-cannon",
+    "name": "Incineration Cannon",
+    "description": "The Incineration Cannon is a Forerunner heavy weapon that fires a concentrated hard light bolt which detonates on impact, releasing secondary submunitions that scatter and detonate across a wide area. Combining pinpoint accuracy with area-of-effect devastation, it is among the most destructive man-portable weapons ever encountered by the UNSC. Its hard light projectiles bypass conventional energy shielding more effectively than plasma-based weapons.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/lore/incineration-cannon.jpg",
+    "faction": "Forerunner",
+    "type": "Heavy",
+    "appearances": []
+  },
+  {
+    "id": "class-1-directed-energy-cannon",
+    "name": "Class-1 directed energy cannon",
+    "description": "Class-1 directed energy cannon, colloquially referred to by the broad term plasma cannon or plasma turret, is a category of manned automatic plasma turrets used by the Covenant.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/class-1-directed-energy-cannon.jpg",
+    "faction": "Forerunner",
+    "type": "Heavy",
+    "appearances": []
+  },
+  {
+    "id": "halo-array",
+    "name": "Halo Array",
+    "description": "The Halo Array, sometimes known simply as Halo or the Array, is a network of colossal ring-shaped superweapons individually known as Halos or Halo rings, constructed by the Forerunners. The Halos were also referred to by the Covenant as the Sacred Rings, and labeled as Installations or infrequently referred to as Fortress Worlds by the Forerunners and their monitors.\nThe first array of twelve Halos was constructed by order of Master Builder Faber circa 98,445 BCE with the intent of being an ultimate weapon, one that would secure the preeminence of the Builder rate in Forerunner society. Later, the weapons would be refined further and a new array of six smaller and significantly more lethal installations was constructed; the newer Halos are known as the \"neoteric\" rings. Eventually, eleven were destroyed and/or lost while the remaining seven were used by the Forerunners as a last resort when combating the parasitic Flood. All sentient beings in the galaxy were killed, robbing the Flood of hosts and starving it to death.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/halo-array.jpg",
+    "faction": "Forerunner",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "gravity-wrench",
+    "name": "Gravity wrench",
+    "description": "The gravity wrench is a nickname given by humanity to a type of Forerunner weapon-tool, believed to have been designed and constructed by the rate of Miners.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/gravity-wrench.jpg",
+    "faction": "Forerunner",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "forerunner-automated-turret",
+    "name": "Forerunner automated turret",
+    "description": "The Forerunner automated turret, sometimes referred to as the autoturret and auto-turret, is a Forerunner construct that was used by the military forces of the Ecumene during the Forerunner-Flood war.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/forerunner-automated-turret.jpg",
+    "faction": "Forerunner",
+    "type": "Heavy",
+    "appearances": []
+  },
+  {
+    "id": "class-2-directed-energy-cannon",
+    "name": "Class-2 directed energy cannon",
+    "description": "Class-2 directed energy cannon, also referred to as the Class-2 energy gun, or medium plasma cannon, is a category of ubiquitous Covenant vehicle-mounted weapon systems, commonly used on the Karo'etba-pattern Ghosts, Type-26 Banshees and Shade turrets.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/class-2-directed-energy-cannon.jpg",
+    "faction": "Forerunner",
+    "type": "Heavy",
+    "appearances": []
+  },
+  {
+    "id": "enforcer-missile-launcher",
+    "name": "Enforcer missile launcher",
+    "description": "Sentinel Enforcers are equipped with a type of missile launcher mounted on their backs. The missile launcher is one of the Enforcer's two ranged weapons, aside the twin shard cannons.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/enforcer-missile-launcher.jpg",
+    "faction": "",
+    "type": "Launcher",
+    "appearances": []
+  },
+  {
+    "id": "covenant-proximity-mine",
+    "name": "Covenant proximity mine",
+    "description": "The proximity mine is a Covenant landmine. The grenade has a similar appearance to a Covenant Chershi-pattern antimatter charge. After being set off, the mine fires a series of needler projectiles in all directions.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/covenant-proximity-mine.jpg",
+    "faction": "Covenant",
+    "type": "Explosive",
+    "appearances": []
+  },
+  {
+    "id": "class-2-medium-plasma-mortar",
+    "name": "Class-2 medium plasma mortar",
+    "description": "The Class-2 medium plasma mortar is a variant of the Covenant plasma mortar mounted on the Rizvum-pattern Revenant and Eklon'Dal Workshop Marauder. It is a downscaled version of the heavy plasma mortar mounted on the Wraiths. While charging, the plasma possesses a bluish tinge, though it is red when it is fired. The weapon has a less pronounced parabolic arc than its larger cousin. The mortar can fire once every two to five seconds.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/class-2-medium-plasma-mortar.jpg",
+    "faction": "Banished",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "cheru-pattern-tyrant",
+    "name": "Cheru-pattern Tyrant",
+    "description": "The Cheru-pattern Sky Striker (UNSC Type classification: Type-38 Anti-Aircraft Cannon, T-38 AAC), nicknamed the Tyrant, is a large anti-aircraft artillery emplacement firing devastating bolts of superheated plasma at high velocities. The Tyrant can engage atmospheric craft in the air defense role and may also target starships in-orbit for planetary defense. Manufactured at the Assembly Forges, the Tyrant has been employed in the military forces of the former Covenant, its remnants, and even in the service of the human Venezian Militia.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/cheru-pattern-tyrant.jpg",
+    "faction": "Covenant",
+    "type": "Heavy",
+    "appearances": []
+  },
+  {
+    "id": "destructor-beam",
+    "name": "Destructor beam",
+    "description": "The term \"destructor beams\" was used by the Forerunner Bornstellar to describe directed energy weapons mounted on Forerunner ships.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/destructor-beam.jpg",
+    "faction": "Forerunner",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "dying-star",
+    "name": "Dying Star",
+    "description": "The Dying Star is a special Z-250 Directed Energy Engagement Weapon.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/dying-star.jpg",
+    "faction": "Forerunner",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "forerunner-turret",
+    "name": "Forerunner turret",
+    "description": "Forerunner turrets are a kind of defensive mechanism employed on Forerunner installations.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/forerunner-turret.jpg",
+    "faction": "Forerunner",
+    "type": "Heavy",
+    "appearances": []
+  },
+  {
+    "id": "didacts-signet",
+    "name": "Didact's Signet",
+    "description": "The Didact's Signet is a special Z-180 Close Combat Rifle/Asymmetric Engagement Mitigator made by the Ur-Didact.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/didacts-signet.jpg",
+    "faction": "Forerunner",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "closed-fist",
+    "name": "Closed Fist",
+    "description": "The Closed Fist is a special variant of the Z-110 Directed Energy Pistol/Exotic. Its appearance is identical to that of a standard Boltshot, albeit with the addition of orange stripes flowing through the weapon's main housing, particularly at the top and bottom areas.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/closed-fist.jpg",
+    "faction": "",
+    "type": "Pistol",
+    "appearances": []
+  },
+  {
+    "id": "barbed-lance",
+    "name": "Barbed Lance",
+    "description": "The Barbed Lance is a special variant of the Z-250 Directed Energy Engagement Weapon, featured in Halo 5: Guardians as an Ultra Rare REQ variant of the LightRifle. Its chassis is the same as that of the normal LightRifle, although it is decorated by additional orange stripes flowing around the weapon's scope and main body.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/barbed-lance.jpg",
+    "faction": "Banished",
+    "type": "Rifle",
+    "appearances": []
+  },
+  {
+    "id": "chershi-pattern-antimatter-charge",
+    "name": "Chershi-pattern antimatter charge",
+    "description": "The Chersi-pattern Void Maker is a large infantry-portable antimatter charge used by the Covenant. It is nicknamed No-matter and Zero-stuff.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/chershi-pattern-antimatter-charge.jpg",
+    "faction": "Covenant",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "arcane-sentinel-beam",
+    "name": "Arcane Sentinel Beam",
+    "description": "The Arcane Sentinel Beam is a variant of the sterilization beams used by the Sentinels.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/arcane-sentinel-beam.jpg",
+    "faction": "Forerunner",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "hard-light-stave",
+    "name": "Hard light stave",
+    "description": "Hard light staves are a kind of melee weapon produced and employed by the Forerunners, notably their armiger constructs. They are sometimes colloquially referred to as energy staves, though are distinctly different weapons to the energy staves operated by the Covenant Honor Guard. Instead, they operate on a principle more similar to the Covenant's own hard light glaives, employing hard light as their primary mechanism.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/hard-light-stave.jpg",
+    "faction": "Forerunner",
+    "type": "",
+    "appearances": []
+  },
+  {
+    "id": "backdraft-cindershot",
+    "name": "Backdraft Cindershot",
+    "description": "The Backdraft Cindershot is a modified variant of the Cindershot, a hardlight grenade launcher designed and created for use by the Forerunners.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/backdraft-cindershot.jpg",
+    "faction": "Forerunner",
+    "type": "Launcher",
+    "appearances": []
+  },
+  {
+    "id": "focus-beam",
+    "name": "Focus beam",
+    "description": "The focus beam is a Forerunner laser weapon employed by monitors and Facilitator-class ancilla.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/focus-beam.jpg",
+    "faction": "Forerunner",
+    "type": "",
+    "appearances": []
+  }
+]

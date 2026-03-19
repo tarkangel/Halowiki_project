@@ -1,5 +1,5 @@
 import { useFetch } from '../hooks/useFetch';
-import { fetchRaces } from '../api/halopedia';
+import { fetchRaces } from '../api/static';
 import WikiGrid from '../components/ui/WikiGrid';
 
 export default function Races() {

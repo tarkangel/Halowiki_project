@@ -1,0 +1,422 @@
+[
+  {
+    "id": "installation-05",
+    "name": "Installation 05",
+    "description": "Installation 05, known as Delta Halo, is a Forerunner Halo ring orbiting the gas giant Substance in the Coelest system. The site of the climactic events of Halo 2, Delta Halo was where the Arbiter was deployed on suicide missions, Miranda Keyes recovered the Index, and the Gravemind first communicated with both the Master Chief and the Arbiter. The ring became the flashpoint of the Great Schism when the Jiralhanae turned against the Sangheili on the Prophet of Truth's orders, triggering the collapse of the Covenant from within.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/installation-05.jpg",
+    "appearances": []
+  },
+  {
+    "id": "installation-04",
+    "name": "Installation 04",
+    "description": "Installation 04, known as Alpha Halo, was a Forerunner Halo ring approximately 10,000 kilometres in diameter, orbiting the gas giant Threshold in the Soell system. The first Halo ring ever discovered by humanity, it was the site of the opening events of the Human-Covenant War's final phase — where Master Chief and Cortana first learned the true purpose of the Halo Array, confronted the Flood, and ultimately destroyed the ring to prevent the parasite's escape. Its destruction sent a chain of events cascading across the galaxy that would define the next decade of the Halo saga.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/installation-04.jpg",
+    "appearances": []
+  },
+  {
+    "id": "the-ark",
+    "name": "The Ark",
+    "description": "The Ark, also known as Installation 00, is a vast extragalactic Forerunner superstructure located beyond the edge of the Milky Way galaxy, beyond the range of the Halo Array's firing radius. From the Ark, the Forerunners constructed and launched the Halo rings, and in a crisis could shelter life from the Array's pulse. During the events of Halo 3, the Prophet of Truth opened a portal from Earth to the Ark, intending to fire all Halo rings simultaneously. The Master Chief, Arbiter, and their allies pursued him across the Ark's vast landscape to prevent the Array's activation — ultimately destroying the Flood's central intelligence, the Gravemind, at the cost of Installation 08.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/the-ark.png",
+    "appearances": []
+  },
+  {
+    "id": "high-charity",
+    "name": "High Charity",
+    "description": "High Charity was the holy city and mobile capital of the Covenant — a massive artificial planetoid over 300 kilometres in diameter housing billions of Covenant citizens. Constructed around a captured Forerunner fuel source, High Charity served as the seat of the Hierarchs and the spiritual heart of the Covenant empire for thousands of years. During the Great Schism in 2552, the Flood breached High Charity and consumed its population, transforming the once-magnificent city into a massive Flood hive. The Gravemind directed it toward the Ark before Master Chief destroyed it in the closing hours of the Human-Covenant War.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/high-charity.jpg",
+    "appearances": []
+  },
+  {
+    "id": "reach",
+    "name": "Reach",
+    "description": "Reach, also known as Epsilon Eridani II, was humanity's most important military colony and the headquarters of the UNSC Armed Forces. Just 10.5 light-years from Earth, Reach hosted SPARTAN training facilities, vast orbital shipyards, and the largest fleet anchorage outside the Sol system. In August 2552 the Covenant launched a massive invasion that overwhelmed Reach's formidable defences. The Fall of Reach — humanity's greatest military defeat — cost the lives of most of the Spartan-II class and millions of civilians, and nearly opened a direct path to Earth itself.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/reach.jpg",
+    "appearances": []
+  },
+  {
+    "id": "earth",
+    "name": "Earth",
+    "description": "Earth, also known as Sol III or humanity's homeworld, is the capital world of the Unified Earth Government and the seat of UNSC High Command. Located in the Sol system, Earth hosts billions of people across its continents and a network of orbital defence platforms, including the powerful magnetic accelerator cannons of Cairo Station. In October 2552 the Covenant launched a direct assault on Earth, the Covenant's first and only direct attack on humanity's homeworld, which was ultimately repelled by the Master Chief, Arbiter, and UNSC forces before the Prophet of Truth opened a portal to the Ark.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/earth.png",
+    "appearances": []
+  },
+  {
+    "id": "ark",
+    "name": "Ark",
+    "description": "Ark is a name given to two massive Forerunner installations, both designed with the primary purpose of manufacturing Halo rings. Situated outside the Milky Way galaxy, they also served as Lifeworker research facilities, as well as conservational preserves for the numerous species of the galaxy, indexed by the Forerunners during the Conservation Measure. The Arks were shaped like massive flowers, consisting of several curved arms, similar to the petals of a flower, surrounding a circular Halo construction foundry in the center.\nTwo Arks existed during the Forerunner-Flood war; the greater Ark, which produced the original array of Halos 30,000 kilometers in diameter, and Installation 00 or the lesser Ark, which produced a newer series of rings each 10,000 kilometers in diameter. Both of these constructs are known to have been distinctly referred to as \"the Ark\"; originally, the term was more commonly applied to the greater Ark, whereas the lesser Ark and its newer, more efficient array of Halos was kept a well-guarded secret among Forerunners. With the greater Ark destroyed in the final days of the Flood war, the lesser Ark remained as the only Ark installation and is as such commonly known as \"the Ark\".",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/ark.jpg",
+    "appearances": []
+  },
+  {
+    "id": "harvest",
+    "name": "Harvest",
+    "description": "Harvest, also known as Epsilon Indi IV, was humanity's most remote Outer Colony and the first human world to be discovered and destroyed by the Covenant. Founded in 2468 as an agricultural 'breadbasket' colony, Harvest was a peaceful and prosperous world of rolling farmland. In 2525 a Covenant fleet made first contact in orbit and, deeming the planet sacred ground due to Forerunner artifacts, launched an orbital bombardment that glassed the surface — marking the true beginning of the Human-Covenant War.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/harvest.png",
+    "appearances": []
+  },
+  {
+    "id": "chi-ceti-iv",
+    "name": "Chi Ceti IV",
+    "description": "",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/a/a0/TFoR_AS_-_Chi_Ceti_IV.jpg/500px-TFoR_AS_-_Chi_Ceti_IV.jpg",
+    "appearances": []
+  },
+  {
+    "id": "beta-gabriel",
+    "name": "Beta Gabriel",
+    "description": "Beta Gabriel is a resort planet in the Epsilon Eridani system. A watery planet, Beta Gabriel is home to species resembling the whales and eels of Earth that were also found on Alluvion. Beta Gabriel is the location of UNSC Fathom, an Office of Naval Intelligence (ONI) underwater facility.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/beta-gabriel.jpg",
+    "appearances": []
+  },
+  {
+    "id": "deep-space-anomaly-0198",
+    "name": "Deep-Space Anomaly 0198",
+    "description": "",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/5/52/Halo_CE_Derelict.jpg/500px-Halo_CE_Derelict.jpg",
+    "appearances": []
+  },
+  {
+    "id": "flood-research-facility",
+    "name": "Flood research facility",
+    "description": "A Forerunner Flood Research Facility is a classified installation constructed to study the Flood parasite under strict quarantine conditions. Forerunner scientists used these sites to analyse Flood biology and behaviour, searching desperately for a cure or containment method as the parasite consumed the galaxy. Most such facilities were eventually compromised from within — the Gravemind's intelligence subverting containment protocols and turning centres of study into outposts of Flood expansion.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/flood-research-facility.jpg",
+    "appearances": []
+  },
+  {
+    "id": "atlas",
+    "name": "Atlas",
+    "description": "Atlas is a human colony world in UNSC space that served as a staging ground and base of operations during key post-war operations. The planet hosted civilian settlements and ONI-affiliated research infrastructure, making it strategically significant to both UNSC command and independent colonial factions seeking leverage in the power vacuum left after the Human-Covenant War. Investigations conducted on and around Atlas would draw UNSC special operations teams into conflicts with both Covenant remnants and human insurrectionists.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/atlas.jpg",
+    "appearances": []
+  },
+  {
+    "id": "sanghelios",
+    "name": "Sanghelios",
+    "description": "Sanghelios is the harsh, arid homeworld of the Sangheili species, orbiting the Urs star system in a trinary configuration. Dominated by vast plains, rugged mountain ranges, and ancient fortresses, Sanghelios is the seat of Sangheili warrior culture — a world shaped by millennia of clan warfare and military tradition long predating the Covenant. After the Great Schism, Sanghelios erupted into civil war between the Swords of Sanghelios loyal to the Arbiter and Covenant remnant factions. The planet became a primary theatre of the post-war Sangheili conflict resolved during the events of Halo 5: Guardians.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/sanghelios.jpg",
+    "appearances": []
+  },
+  {
+    "id": "balaho",
+    "name": "Balaho",
+    "description": "Balaho, also known as Tala IV, is the homeworld of the Unggoy and the fourth planet orbiting the blue star Tala. Hosting an atmosphere featuring large quantities of methane, Balaho is orbited by two natural satellites; Buwan and Padpad. Balaho is a hostile and frigid world, home to brackish tidal flats and numerous swamps, growing less hospitable due to environmental degradation.\nRegarded as a backwater, Balaho and the Unggoy were aggressively subjugated into the Covenant in 2142. After being stripped of its resources, Balaho was abandoned aside from a small population when the empire collapsed in 2552, until the Created brought the planet into its fold and sought to bring prosperity to a once volatile and unpredictable world.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/balaho.jpg",
+    "appearances": []
+  },
+  {
+    "id": "installation-07",
+    "name": "Installation 07",
+    "description": "Installation 07, known as Zeta Halo, is the largest of the Forerunner Halo rings and the setting of Halo Infinite. Located in the remote Ephsu system, Zeta Halo has a troubled history as the site of ancient Forerunner atrocities during the Forerunner-Flood War. In 2560, the Banished under Escharum launched a devastating assault that crippled the UNSC Infinity and seized control of much of the ring. Master Chief, stranded and alone, fought to retake Zeta Halo and stop Harbinger from completing a plan tied to the ring's ancient and terrible purpose.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/installation-07.png",
+    "appearances": []
+  },
+  {
+    "id": "arcadia",
+    "name": "Arcadia",
+    "description": "Arcadia is the fourth planet in the Procyon system, orbited by two natural satellites—Gihon and Pishon. Colonized in 2429, Arcadia was a human Outer Colony of the Unified Earth Government, home to a population of nearly three million. A thriving colony, Arcadia was a popular tourist destination, famed for its lush jungles and forests.\nOn February 9, 2531, Arcadia was attacked by the Covenant, leading to a brief, yet brutal, battle between the United Nations Space Command and the Covenant. Although Admiral Preston Cole successfully fought off the Covenant forces, Arcadia's major population centers were destroyed and the Arcadians abandoned their home. However, over the following years, many Arcadians slowly returned to their homeworld and began rebuilding their colony.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/arcadia.jpg",
+    "appearances": []
+  },
+  {
+    "id": "circumstance",
+    "name": "Circumstance",
+    "description": "Circumstance is a human Outer Colony world notable for its role in the turbulent political climate of the early 26th century. The planet's colonial government navigated the difficult balance between loyalty to the Unified Earth Government and growing insurrectionist sentiment fracturing the outer colonies. Circumstance became caught up in the escalating conflict between ONI and rebel factions in the decades before the Covenant War.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/lore/circumstance.jpg",
+    "appearances": []
+  },
+  {
+    "id": "kholo",
+    "name": "Kholo",
+    "description": "Kholo is a human Outer Colony world that was glassed by the Covenant during the Human-Covenant War, its surface rendered uninhabitable by sustained plasma bombardment. Before its destruction, Kholo was an inhabited colony with a sizeable civilian population. The planet's fall was one of the countless tragedies of the Covenant's systematic extermination campaign against humanity's outer colonies.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/kholo.png",
+    "appearances": []
+  },
+  {
+    "id": "meridian",
+    "name": "Meridian",
+    "description": "Meridian is a human colony world that served as a critical staging point for operations in the post-Covenant War era. By the 2550s the planet had developed substantial industrial and mining infrastructure, making it a target for both Covenant remnant forces and the Promethean threat that emerged from Forerunner installations in the region. During the events of Halo 5: Guardians, Meridian became a focal point in the hunt for Cortana.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/meridian.jpg",
+    "appearances": []
+  },
+  {
+    "id": "charum-hakkor",
+    "name": "Charum Hakkor",
+    "description": "",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/b/b3/H4_-_Charum_Hakkor.jpg/500px-H4_-_Charum_Hakkor.jpg",
+    "appearances": []
+  },
+  {
+    "id": "ben-nauk",
+    "name": "Ben Nauk",
+    "description": "Ben Nauk is one of the fifteen planets in the Nov Thasta system. It was one of the three planets in the system colonized by the Human Ancestors.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/ben-nauk.jpg",
+    "appearances": []
+  },
+  {
+    "id": "venezia",
+    "name": "Venezia",
+    "description": "Venezia is a human colony world outside direct UEG control, governed by an independent assembly that harboured anti-UNSC sentiment and provided sanctuary for insurrectionist factions. Located in the 23 Librae system, Venezia's black market and loose governance made it a hub for smuggling, illegal weapons trading, and political refugees. It appears prominently in the Kilo-Five Trilogy as a base of operations for both human insurrectionists and former Covenant operatives.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/venezia.jpg",
+    "appearances": []
+  },
+  {
+    "id": "concord",
+    "name": "Concord",
+    "description": "Concord is a human colony world in UNSC space that endured significant hardship during the Human-Covenant War. The planet's settlements and infrastructure bore the scars of Covenant raids and orbital engagements as the war pushed ever closer to the Inner Colonies. In the post-war era Concord became a focal point for reconstruction efforts, its surviving population working to rebuild civic life amid the fragile peace.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/concord.png",
+    "appearances": []
+  },
+  {
+    "id": "circinius-iv",
+    "name": "Circinius IV",
+    "description": "",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/b/b9/CAMS_-_afar.jpg/500px-CAMS_-_afar.jpg",
+    "appearances": []
+  },
+  {
+    "id": "andesia",
+    "name": "Andesia",
+    "description": "Andesia is a human colony planet governed by the Unified Earth Government and controlled by a mega-corporate council which serves as the planet's de facto administation. Despite its high-class appearance, Andesia has experienced civil strife and unrest.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/andesia.jpg",
+    "appearances": []
+  },
+  {
+    "id": "absolute-record",
+    "name": "Absolute Record",
+    "description": "The Absolute Record is a Forerunner artifact repository spread across multiple sites associated with the Janus Key. One of the Absolute Record's local facilities was overseen by the Contender-class ancilla, Invariant Bias.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/absolute-record.jpg",
+    "appearances": []
+  },
+  {
+    "id": "alluvion",
+    "name": "Alluvion",
+    "description": "Alluvion, also known as Bhaakto III, is the third planet in the Bhaakto system and a human Outer Colony of the Unified Earth Government. Alluvion is orbited by the natural satellites Fallow and Falgo. Once home to millions, Alluvion was glassed by the Covenant in 2543 during the Human-Covenant War. By 2554, Alluvion has been recolonized.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/alluvion.jpg",
+    "appearances": []
+  },
+  {
+    "id": "clinquant",
+    "name": "Clinquant",
+    "description": "Clinquant is a Forerunner installation of significant historical and strategic value, catalogued within the Forerunner administrative grid. Located in a remote stellar region, the installation maintained automated Forerunner systems long after the firing of the Halo Array, its onboard intelligence continuing to fulfil its original operational mandate in isolation. Post-war UNSC and Swords of Sanghelios expeditions to Clinquant encountered active Forerunner defences, suggesting its systems had never received the deactivation signal sent at the close of the Forerunner-Flood War.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/clinquant.jpg",
+    "appearances": []
+  },
+  {
+    "id": "anvarl",
+    "name": "Anvarl",
+    "description": "Anvarl is a world within the former Covenant sphere of influence, significant for Forerunner artefacts and installations discovered in its system. In the post-war era, competition among Covenant remnant factions, the Swords of Sanghelios, and UNSC survey teams for access to Forerunner technology made worlds like Anvarl flashpoints in the unstable politics of former Covenant space.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/anvarl.jpg",
+    "appearances": []
+  },
+  {
+    "id": "aleria",
+    "name": "Aleria",
+    "description": "Aleria, also known as Elduros II, is the second and outermost planet in the Elduros system and an impoverished Outer Colony on the frontier of human space. The planet was once a thriving Outer Colony famed for its rich ore deposits and robust economy, but Aleria's increasingly inhospitable climate and governmental mismanagement eventually led to an economic collapse.\nNow cut off from the Unified Earth Government, Aleria is a dry and desolate Third World colony ruled by courier guilds, groups of desperate and dangerous smugglers and pirates.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/aleria.jpg",
+    "appearances": []
+  },
+  {
+    "id": "aktis-iv",
+    "name": "Aktis IV",
+    "description": "Aktis IV, also known as F309-R 2 by the Forerunners, is the provisional designation for a planet outside of the human Outer Colonies in the Aktis system, a system previously uncharted by the Unified Earth Government.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/aktis-iv.jpg",
+    "appearances": []
+  },
+  {
+    "id": "cleyell",
+    "name": "Cleyell",
+    "description": "",
+    "imageUrl": "https://halo.wiki.gallery/images/a/a7/Escalation17_Cleyell.jpg",
+    "appearances": []
+  },
+  {
+    "id": "gao",
+    "name": "Gao",
+    "description": "Gao is a human Outer Colony world known for its independent colonial government — the Gao Republic — which maintained autonomy from the Unified Earth Government rare among the outer colonies. The planet's jungles concealed a Forerunner installation whose monitor produced a mysterious healing effect on human visitors. When the UNSC moved to secure the installation, the Republic's government and an insurrectionist faction resisted, creating a complex three-way conflict documented in the novel Halo: Last Light.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/gao.jpg",
+    "appearances": []
+  },
+  {
+    "id": "binterall",
+    "name": "Binterall",
+    "description": "Binterall is a barren planet situated among the Unified Earth Government's Outer Colonies and located within proximity to the human colony Conrad's Point.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/binterall.jpg",
+    "appearances": []
+  },
+  {
+    "id": "covert-support-base-4276",
+    "name": "Covert Support Base 4276",
+    "description": "Covert Support Base 4276 is a classified UNSC installation established by the Office of Naval Intelligence to support black operations in a strategically sensitive region. Facilities of this type provide logistical resupply, communications relay, and secure extraction services for ONI operatives working in denied territory. The base's remote positioning and strict information blackout ensured it remained unknown to Covenant intelligence networks throughout the Human-Covenant War.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/covert-support-base-4276.jpg",
+    "appearances": []
+  },
+  {
+    "id": "carrow",
+    "name": "Carrow",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/carrow.jpg",
+    "appearances": []
+  },
+  {
+    "id": "barugi",
+    "name": "Barugi",
+    "description": "Barugi is the fourth planet in the Tisiphone system and a former human colony. In 2541, a disaster caused the Unified Earth Government to quarantine the planet.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/barugi.jpg",
+    "appearances": []
+  },
+  {
+    "id": "bhedalon",
+    "name": "Bhedalon",
+    "description": "Bhedalon is a world of significance within Covenant and former Covenant space, positioned in a region shaped by the complex politics of the post-war era. Following the collapse of the Covenant in 2552, Bhedalon's strategic location made it a contested prize for various successor factions — Covenant remnants, the Swords of Sanghelios, and Banished warlords — all seeking to consolidate power over former Covenant territory.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/bhedalon.jpg",
+    "appearances": []
+  },
+  {
+    "id": "ansket-iv",
+    "name": "Ansket IV",
+    "description": "Ansket IV is a terrestrial planet orbiting the star, Ansket. It was the site of a Covenant Hydro-processing facility prior to being abandoned by the empire. The United Nations Space Command established a forward operating base at the site of the Covenant facility. In 2553, this UNSC base came under attack by the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/ansket-iv.jpg",
+    "appearances": []
+  },
+  {
+    "id": "alpha-corvi-ii",
+    "name": "Alpha Corvi II",
+    "description": "Alpha Corvi II is a human colony world that became a battleground during the early stages of the Human-Covenant War. UNSC forces mounted a fierce defensive action here against Covenant assault troops, engaging in brutal urban combat to protect the civilian population before an ordered withdrawal became unavoidable. The engagement at Alpha Corvi II exemplified the impossible odds faced by UNSC defenders as the Covenant systematically dismantled the outer colonies.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/alpha-corvi-ii.jpg",
+    "appearances": []
+  },
+  {
+    "id": "auric",
+    "name": "Auric",
+    "description": "Auric is a remote gas giant in the Myung system serving as the orbital anchor of Installation 01, one of the seven rings of the Forerunner Halo Array. The ring orbited Auric undisturbed for millennia under the guardianship of its ancient monitor, kept dormant far from the conflict that consumed the rest of the galaxy. Following the Human-Covenant War, the UNSC catalogued the installation as part of broader efforts to document surviving Forerunner superweapons.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/auric.jpg",
+    "appearances": []
+  },
+  {
+    "id": "boundary-lithos",
+    "name": "Boundary Lithos",
+    "description": "Boundary Lithos is a Forerunner Lithos installation — a type of large artificial rocky structure used to mark territorial boundaries and anchor sensor networks across the Forerunner ecumene. Lithos structures appear as ancient weathered stone formations to the untrained eye, concealing sophisticated monitoring and communication technology within their dense mineral matrices. Deployed at the edges of Forerunner-administered space, they maintained silent vigil over the boundaries of an empire that has long since ceased to exist.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/boundary-lithos.jpg",
+    "appearances": []
+  },
+  {
+    "id": "threshold-gas-mine",
+    "name": "Threshold gas mine",
+    "description": "The Threshold gas mine was a large Forerunner structure suspended in the atmosphere of the gas giant Threshold, the planet around which Installation 04 orbited. It was an expansive automated facility that was created and used by the Forerunners and later, by Sesa 'Refumee's heretic faction. It was destroyed when it fell into Threshold and was crushed by the planet's gravity. It was one of many similar facilities on Threshold.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/b/b8/H2A_-_Threshold_gas_mine.jpg/500px-H2A_-_Threshold_gas_mine.jpg",
+    "appearances": []
+  },
+  {
+    "id": "shield-world",
+    "name": "Shield world",
+    "description": "Shield worlds, also known simply as Shields, are Forerunner installations designed as a defensive strategy against the Flood and an alternative to the Halo Array. As opposed to sterilizing the whole galaxy at once, shield worlds would act as a more precise and conventional solution, serving as both refuges for local populations and powerful military fortresses from which to carry out strategic campaigns against the Flood. Several varieties of shield worlds were designed over nearly nine thousand years; in some iterations the interior was suspended in fractal slipspace, protecting organisms within from the Halos' destructive pulse. A prevalent variation of the shield world concept, known as the conservation sphere, was specifically designed in tandem with the Conservation Measure, sheltering various evacuated species from the Halo effect.\nScattered across the Forerunner ecumene, the shield worlds outnumber the Halos by a large margin, with over a thousand installations originally planned and at least 673 constructed, assuming their numeric designations were assigned sequentially. In the final iteration of the Forerunners' defense plan, the shield worlds were collectively known as \"Shields\" while the Halos were known as \"the Sword\".",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/shield-world.jpg",
+    "appearances": []
+  },
+  {
+    "id": "jat-krula",
+    "name": "Jat-Krula",
+    "description": "The Jat-Krula protected boundary or simply Jat-Krula, identified as the Maginot Line in translated Forerunner records, was a Forerunner defensive front that protected the ecumene's core worlds within the Orion complex. It consisted of numerous Line installations, defensive outposts which utilized a variety of measures to prevent enemy ships from entering the line. Millions of these fortifications formed a sphere along hundreds of outlying systems of the Orion complex, intended to cover every possible entry trajectory within both normal space and the higher dimensions of Slipstream space, particularly along the most trafficked and efficient slipspace routes. The Line was originally thought to be an impenetrable defense, since any enemy fleet would be forced to pass through the boundary in order to mount an assault on the systems within, and the entirety of the Line could supposedly be rendered impregnable at a moment's notice.\nThe Jat-Krula also includes a number of support bases designed to maintain the Line installations. Maintained by archeon-class ancillas and located in systems neighboring those housing the Line installations themselves, these facilities are designed to be indiscernible from natural terrain; for example, Covert Support Base 4276 on Gao was modeled to appear as an intricate system of caverns.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/jat-krula.jpg",
+    "appearances": []
+  },
+  {
+    "id": "line-installation-1-4",
+    "name": "Line Installation 1-4",
+    "description": "Line Installation 1-4 is a Forerunner Line Installation — a colossal linear ring megastructure constructed by the ancient Forerunner ecumene. Unlike the circular Halo rings built to fire the Array, Line Installations served administrative and sensor functions: scanning vast stellar regions for Flood contamination, managing resource logistics, and relaying data across the ecumene's galaxy-spanning communication network. This installation is one of many such structures left dormant following the activation of the Halo Array.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/line-installation-1-4.jpg",
+    "appearances": []
+  },
+  {
+    "id": "greater-ark",
+    "name": "Greater Ark",
+    "description": "The greater Ark, also referred to as the Ark, the senescent Ark, or the Beginning Place, was a Forerunner megastructure, and the first of the two Arks used to manufacture Halo rings. It produced the original Halo Array, comprised of rings 30,000 kilometers in diameter as opposed to the 10,000 kilometers of the final Array, which was produced by the smaller Installation 00 instead. Like Installation 00, the greater Ark was located outside the Milky Way galaxy, one-third of the way around the outer boundaries of the galaxy.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/greater-ark.jpg",
+    "appearances": []
+  },
+  {
+    "id": "line-installation",
+    "name": "Line installation",
+    "description": "A Forerunner Line Installation is a class of enormous linear ring megastructure built by the ancient Forerunner civilization. Distinct from the circular Halo rings designed to fire the Array, Line Installations fulfilled administrative, sensor, and logistical roles for the Forerunner ecumene — monitoring stellar systems for Flood contamination and coordinating the vast machinery of a galaxy-spanning civilization. Constructed of pale cream-ivory alloy with glowing orange hardlight conduits, they stand as silent monuments to an extinct empire.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/line-installation.jpg",
+    "appearances": []
+  },
+  {
+    "id": "x50",
+    "name": "X50",
+    "description": "X50, designated OR-3-212 e by the Forerunners, is an artificial satellite of the former Forerunner world of Draetheus V. The United Nations Space Command conducted a number of research projects on the moon, in particular the plentiful ice-covered sinkholes in its northern continent. X50 has an icy surface with numerous rocky formations.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/5/52/HSA_X50_full.jpg/500px-HSA_X50_full.jpg",
+    "appearances": []
+  },
+  {
+    "id": "line-installation-9-12",
+    "name": "Line Installation 9-12",
+    "description": "Line Installation 9-12 is one of the many fortifications that make up the Forerunners' Jat-Krula sphere, often translated as the \"Maginot Line\". The remains of human and Covenant vessels are strewn about the installation, but there are also ships belonging to undiscovered species.\nAfter the Human-Covenant War, scavengers found this site, but they were shot down by the installation. They created makeshift camps and hoped that they could find treasure. No help came and they eventually died on this world. Their transmissions contained detailed environment scans that were used by the UNSC to replicate the Line Installation in a War Games simulation aboard the UNSC Infinity.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/line-installation-9-12.jpg",
+    "appearances": []
+  },
+  {
+    "id": "x-40",
+    "name": "X-40",
+    "description": "X-40 was a Forerunner planet. Sometime after the Human-Covenant War, the UNSC discovered the planet, and used different locations on the planet for training simulations of the SPARTAN-IVs.\nGiven the installation's naming and appearance, it may be an orbital reformer.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/b/b1/HSA_X-40.jpg/500px-HSA_X-40.jpg",
+    "appearances": []
+  },
+  {
+    "id": "site-17",
+    "name": "Site 17",
+    "description": "Site 17 is a classified UNSC facility of strategic importance, established to support sensitive military and scientific operations in a contested region. Installations with this type of numerical designation are typically ONI-affiliated, constructed with security and deniability in mind rather than civilian accessibility. Site 17's operations contributed to UNSC intelligence efforts in the turbulent post-Covenant War period, supporting black operations that shaped the balance of power between the various factions competing to fill the vacuum left by the Covenant's collapse.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/lore/site-17.jpg",
+    "appearances": []
+  },
+  {
+    "id": "line-installation-444-447",
+    "name": "Line Installation 444-447",
+    "description": "Line Installation 444-447 was one of the many installations that made up the Forerunners' Jat-Krula sphere, often translated as the \"Maginot Line\". Located on the former ecumene colony of Shaps III in the Shaps system, the line installation had a support facility—Covert Support Base 4276—on the nearby planet of Gao in the Cordoba system.\nOn April 14, 2553, Shaps III was partially glassed by Sav Fel to demonstrate the destructive power of Ket-pattern battlecruiser Pious Inquisitor's energy projector to Staffan Sentzke. Fel glassed several Forerunner buildings on the planet, leading to Line Installation 444-447 sending out an automated distress signal to Covert Support Base 4276 on Gao, causing archeon-class ancilla Intrepid Eye to awaken from stasis. The ancilla's awakening led to a series of conflicts on the planet.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/line-installation-444-447.jpg",
+    "appearances": []
+  },
+  {
+    "id": "gateway",
+    "name": "Gateway",
+    "description": "The Gateway is a Forerunner Lithos on the shield world of Genesis. It is located in the coral highlands of the planet, hidden by the region's bio-readings. It serves as a link to the Domain.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/gateway.jpg",
+    "appearances": []
+  },
+  {
+    "id": "site-c",
+    "name": "Site C",
+    "description": "Site C is the United Nations Space Command's designation for a Forerunner installation within the Zeta Hydronis Secundus system. At the height of the Forerunners' power, the planetoids in the system hosted thriving colonies and impregnable fortresses, but during the Forerunner-Flood war the system fell before the parasite. When the system was discovered by the UNSC after the Human-Covenant War, Site C was one of a handful of intact Forerunner structures that remained.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/0/0a/H5G_-_Tyrant_4.jpg/500px-H5G_-_Tyrant_4.jpg",
+    "appearances": []
+  },
+  {
+    "id": "invicta",
+    "name": "Invicta",
+    "description": "Invicta is a Forerunner construction that was considered a key installation to the Ecumene. Located within the furthest reach of the Milky Way's Scutum-Centaurus arm, what remains of the Forerunners' legal and security system continues to monitor the status of Invicta.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/invicta.jpg",
+    "appearances": []
+  },
+  {
+    "id": "orbital-reformer",
+    "name": "Orbital reformer",
+    "description": "Orbital reformers, or simply reformers, are planetary-scale megastructures built by the Miner rate of the Forerunners. used for the purpose of collating raw materials on a massive scale. These materials were used in the construction of the Ecumene's signature megastructures by breaking down planets and megastructures into their core components, before reforming them into new constructions. Reformers take the form of a moon-sized world built around a reformation core, and base their production outputs on a design seed fed into them. Reformers have no modern-day equals.\nIn the modern day, a reformer was inadvertently discovered orbiting the human colony world of Draetheus V. Believed to be a natural satellite of Dratheus, the reformer designated X50 was activated by Merg Vol's Covenant during their invasion of the Draetheus system in 2554 in an attempt to destroy the colony world.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/orbital-reformer.jpg",
+    "appearances": []
+  },
+  {
+    "id": "seed-world",
+    "name": "Seed world",
+    "description": "A seed world is a kind of Forerunner megastructure designed for the purposes of terraforming and assisting with the Ecumene's mass-scale astroengineering. They were used by the Ecumene to deploy to dead, dying and marginal planets to prepare them for use by the Forerunners. Upon deploying to a given target planet, seed worlds were able to perform such tasks as turning dust into living flora and fauna or draining the soil to grow \"machinery of death\". Seed worlds were generally controlled by an ancilla and built to perform a purpose, with many continuing to do so long after the Forerunners' extinction.\nSeed worlds were constructed at the artificial shield world of Genesis, utilising raw materials mined directly from the celestial satellites placed in orbit around the installation. The seed worlds constructed at Genesis served as a key part of the Conservation Measure, by repopulating the Milky Way after the firing of the Halo Array with life forms gathered from Genesis' own surface.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/seed-world.jpg",
+    "appearances": []
+  },
+  {
+    "id": "site-22",
+    "name": "Site 22",
+    "description": "Site 22 was a location of a buried Forerunner starship on LV-31, an asteroid orbiting a gas giant in the Marcey system. In 2556, miners and engineers working for BXR Mining Corporation and Imbrium Machine Complex discovered and accessed the starship, inadvertently releasing the Flood. The asteroid and its colony were subsequently destroyed by a nuclear bombardment.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/site-22.jpg",
+    "appearances": []
+  }
+]

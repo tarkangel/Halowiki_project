@@ -1,0 +1,623 @@
+[
+  {
+    "id": "warthog",
+    "name": "Warthog",
+    "description": "The Warthog Force Application Vehicle, more commonly known as the Warthog or simply the Hog, is the name for a series of light utility vehicles serving as the United Nations Space Command's primary joint light tactical ground vehicle. Its variants are capable of performing armament carrier, utility, command and control (shelter), ambulance, reconnaissance and a variety of other tactical and logistic support roles. It is a highly mobile, all-wheel-drive, all-wheel-steering, hydrogen-injected ICE-powered vehicle equipped with a manual transmission.\nThe most ubiquitous model is the M12 Light Reconnaissance Vehicle and its variants, which is equipped with advanced surveillance and a turret-mounted machine gun for a basic defensive capability. The M12 has been a part of the UNSC's mechanized infantry divisions and armored vehicle divisions since 2319, and is the most publicly recognizable vehicle in their arsenal.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/warthog.jpg",
+    "faction": "UNSC",
+    "type": "Space",
+    "appearances": []
+  },
+  {
+    "id": "scarab",
+    "name": "Scarab",
+    "description": "\"Scarab\" is the name applied to a series of Covenant and Banished quadrupedal mining platforms.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/scarab.png",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "wraith",
+    "name": "Wraith",
+    "description": "\"Wraith\" is the name applied to a series of Covenant, Jul 'Mdama's Covenant, and Banished main armoured infantry support/assault gun vehicles.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/wraith.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "phantom",
+    "name": "Phantom",
+    "description": "Phantom is the name applied to a series of aerospace craft, most of them dropships.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/phantom.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "pelican",
+    "name": "Pelican",
+    "description": "\"Pelican\" is the name applied to a series of tactical aerospace lifters operated by the UNSC Air Force, the UNSC Marine Corps, the UNSC Navy, corporate entities and the civilian security forces.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/pelican.jpg",
+    "faction": "UNSC",
+    "type": "Air",
+    "appearances": []
+  },
+  {
+    "id": "scorpion",
+    "name": "Scorpion",
+    "description": "The Scorpion is the UNSC's primary main battle tank — a heavy tracked vehicle armed with a 90mm high-velocity cannon capable of defeating most vehicles at range and a coaxial machine gun for anti-infantry work. Slow but extraordinarily durable, the Scorpion formed the core of UNSC armoured counter-attacks and defensive lines throughout the Human-Covenant War, trading mobility for sheer firepower.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/scorpion.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "mongoose",
+    "name": "Mongoose",
+    "description": "The Mongoose is the name given to a series of ultra-light all-terrain utility vehicles employed by several human organisations. It is popular in both the Civilian market and within the United Nations Space Command. The Mongoose is produced by AMG Transport Dynamics and has been in service since 2483. Both the civilian and military versions are available with a variety of upgrade packages, including armored body panels, improved suspension systems, and alternate engines. The civilian version is not rated to carry Spartans without risking damage to the frame.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/mongoose.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "banshee",
+    "name": "Banshee",
+    "description": "Banshee is the name applied to a series of Covenant atmospheric/exatmospheric support aircraft.  The Office of Naval Intelligence has typically type-classified encountered banshee variants used during throughout the Human-Covenant War under the designation of the Type-26 Ground Support Aircraft (T-26 GSA).",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/banshee.jpg",
+    "faction": "Covenant",
+    "type": "Air",
+    "appearances": []
+  },
+  {
+    "id": "falcon",
+    "name": "Falcon",
+    "description": "The Falcon is a light aerospace vehicle introduced in Halo: Reach. It is a medium-sized aircraft.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/falcon.jpg",
+    "faction": "UNSC",
+    "type": "Air",
+    "appearances": []
+  },
+  {
+    "id": "doozy",
+    "name": "Doozy",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/doozy.jpg",
+    "faction": "",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "av-30-kestrel",
+    "name": "AV-30 Kestrel",
+    "description": "The AV-30 Light Assault VTOL, more commonly known as the Kestrel, is a combat vehicle used by the United Nations Space Command, manufactured by Misriah Armory.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/av-30-kestrel.jpg",
+    "faction": "UNSC",
+    "type": "Air",
+    "appearances": []
+  },
+  {
+    "id": "long-range-stealth-orbital-drop-pod",
+    "name": "Long range stealth orbital drop pod",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/long-range-stealth-orbital-drop-pod.jpg",
+    "faction": "",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "chopper",
+    "name": "Chopper",
+    "description": "Chopper is the name applied to a series of Covenant rapid assault vehicles used primarily by the Jiralhanae.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/chopper.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "barukaza-workshop-chopper",
+    "name": "Barukaza Workshop Chopper",
+    "description": "The Barukaza Workshop Assault Bike (UNSC Type classification: Type-25 Rapid Assault Vehicle, T-25 RAV), commonly known as the Brute Chopper or simply Chopper by UNSC personnel, is a Covenant ground assault vehicle used exclusively by the Jiralhanae.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/barukaza-workshop-chopper.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "12-9f5",
+    "name": "12-9F5",
+    "description": "12-9F5 was a specialized M808B Scorpion tank in service with the UNSC Marine Corps. The tank featured a wider-set track and an enhanced undercarriage, making it ideal for urban warfare. As well as its modifications, the vehicle appeared to have a black chess piece in the form of a knight painted on its front left tread cover.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/12-9f5.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "957-a3",
+    "name": "957-A3",
+    "description": "The 957-A3 was a locally-produced variant of the M808B Scorpion tank in service with the UNSC during the Human-Covenant War. It was codified by the UNSC Army. The tank featured enhanced electronics for more accurate firing. As well as its modifications, it had what appeared to be an arrowhead or lambda symbol painted on its left front tread cover.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/957-a3.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "hj3-213",
+    "name": "HJ3-213",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/hj3-213.jpg",
+    "faction": "",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "spirit",
+    "name": "Spirit",
+    "description": "Spirit is a name applied to a series of troop transports and logistical dropships employed by the Covenant and its remnants.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/spirit.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "anti-gravity-barge",
+    "name": "Anti-gravity barge",
+    "description": "Anti-gravity barges are vehicles used by the Covenant for civilian transportation in their cities and major installations.\nThe barges use anti-gravity generators for lift. They are used in major cities such as High Charity, and are normally used to transport large numbers of Unggoy and Kig-Yar. The barges can be overloaded, causing them to crash, which was a normal occurrence on High Charity. On High Charity, they were controlled by the city's transportation grid. Many higher ranking members in the Covenant have their own personal gravity barge for their own use.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/anti-gravity-barge.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "bkowenei-pattern-vampire",
+    "name": "Bkowe'nei-pattern Vampire",
+    "description": "The Bkowe'nei-pattern Support Fighter (UNSC Type classification: Type-29 Close-Support Fighter), more commonly known as the Vampire, is an atmospheric anti-aircraft fighter formerly in service with the Covenant military. Manufactured by Assembly Forges, the Vampire was used during the early years of the Human-Covenant War. However, its role was eventually overtaken by better-armed and more versatile vehicles, leading to the Vampire seldom seeing deployment in the war.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/bkowenei-pattern-vampire.jpg",
+    "faction": "Covenant",
+    "type": "Air",
+    "appearances": []
+  },
+  {
+    "id": "030569",
+    "name": "030569",
+    "description": "030569 was a UNSC M808B Main Battle Tank that was attached to Fireteam Zulu during the Battle of Installation 04 in September 2552.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/030569.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "ghost",
+    "name": "Ghost",
+    "description": "The Ghost is the Covenant's standard rapid-assault one-man speeder bike — a low-profile anti-gravity vehicle combining blistering speed with twin rapid-fire plasma cannons. Ridden in a reclined forward posture with the pilot enclosed by curved sponsons, Ghosts are deployed as light cavalry for reconnaissance, flanking manoeuvres, and infantry harassment. Their small profile, high speed, and all-terrain capability make them among the most versatile vehicles in the Covenant and Banished arsenal.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/ghost.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "locust",
+    "name": "Locust",
+    "description": "The Locust is a Covenant light walker designed for anti-fortification and precision fire-support roles. Standing on four articulated legs, the Locust mounts a powerful plasma focus beam capable of cutting through fortified walls, hardened bunkers, and armoured vehicle hulls with surgical precision. Smaller and faster than the Scarab, the Locust sacrifices raw firepower for mobility, allowing it to advance with infantry formations and engage fixed targets in difficult terrain.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/locust.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "mantis",
+    "name": "Mantis",
+    "description": "The HRUNTING/YGGDRASIL Mark IX Armor Defense System, commonly known as the Mantis, is a powered exoskeleton/armored fighting vehicle used by the UNSC Marine Corps, UNSC Army, Office of Naval Intelligence, and private security forces after the Human-Covenant War. It is derived, if tangentially, from the HRUNTING and YGGDRASIL teams' earlier Mark I Armor Defense System.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/mantis.jpg",
+    "faction": "UNSC",
+    "type": "Naval",
+    "appearances": []
+  },
+  {
+    "id": "lich",
+    "name": "Lich",
+    "description": "The Lich is a massive Covenant capital assault dropship and forward operating platform — one of the largest atmosphere-capable craft in the Covenant fleet. Dwarfing even the Phantom in scale, the Lich serves as a mobile command post, heavy fire-support platform, and troop delivery vessel for large-scale planetary assaults. Its gravity lift can deploy dozens of infantry and multiple vehicles simultaneously, while its heavy plasma turrets provide devastating suppressive fire.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/lich.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "harvester",
+    "name": "Harvester",
+    "description": "The Harvester is an enormous Covenant excavation and resource extraction platform repurposed as a mobile forward base and heavy weapons platform. Originally designed to bore through planetary crust and extract Forerunner artefacts, the Harvester's industrial scale and durability make it a formidable battlefield presence. Its sheer size and heavily armoured hull render it nearly impervious to conventional infantry weapons.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/harvester.jpg",
+    "faction": "Forerunner",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "civet",
+    "name": "Civet",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/civet.jpg",
+    "faction": "",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "phaeton",
+    "name": "Phaeton",
+    "description": "The Phaeton is a Forerunner atmospheric fighter and gunship, combining speed, agility, and hard light weaponry in an elegant swept-hull design. Deployed by Promethean forces on Forerunner installations, the Phaeton is significantly more advanced than either UNSC or Covenant atmospheric craft. Its hard light weaponry can pierce conventional energy shielding more effectively than plasma-based Covenant weapons, and its Forerunner construction enables self-repair.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/phaeton.png",
+    "faction": "Forerunner",
+    "type": "Air",
+    "appearances": []
+  },
+  {
+    "id": "cargo-walker",
+    "name": "Cargo walker",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/cargo-walker.jpg",
+    "faction": "",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "052496",
+    "name": "052496",
+    "description": "052496 was a UNSC M808B Scorpion. It has a camouflage design to suit the terrain it is used in.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/052496.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "barukaza-workshop-scarab",
+    "name": "Barukaza Workshop Scarab",
+    "description": "The Barakuza Workshop Fortress Breaker is one of the Scarab variants utilized by the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/barukaza-workshop-scarab.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "barukaza-workshop-locust",
+    "name": "Barukaza Workshop Locust",
+    "description": "The Barakuza Workshop Siege Crawler is a variant of the Locust line of vehicles operated by the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/barukaza-workshop-locust.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "barugqel-workshop-chopper",
+    "name": "Barug'qel Workshop Chopper",
+    "description": "The Barug'qel Workshop Attack Bike is a variant in the Chopper line of vehicles, used by the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/barugqel-workshop-chopper.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "armored-warthog",
+    "name": "Armored Warthog",
+    "description": "The Armored Warthog is an up-armored variant of the M12B Warthog employed by the forces of the UNSC Spirit of Fire on Installation 00.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/armored-warthog.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "fireball-warthog",
+    "name": "Fireball Warthog",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/fireball-warthog.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "john-forges-warthog",
+    "name": "John Forge's Warthog",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/john-forges-warthog.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "bloodfuel-locust",
+    "name": "Bloodfuel Locust",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/bloodfuel-locust.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "unsc-starship",
+    "name": "UNSC starship",
+    "description": "",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/4/47/HM_Infinity.jpg/500px-HM_Infinity.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "h9-mid-capacity-hauler",
+    "name": "H9 mid-capacity hauler",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/h9-mid-capacity-hauler.jpg",
+    "faction": "",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "liang-dortmund-mining-rig",
+    "name": "Liang-Dortmund mining rig",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/liang-dortmund-mining-rig.jpg",
+    "faction": "",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "0383",
+    "name": "0383",
+    "description": "0383 was an M808C Scorpion. It featured a stenciled image of a human skull along it's side.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/0383.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "957-a4",
+    "name": "957-A4",
+    "description": "957-A4 was a Scorpion tank that appeared in War Games simulations.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/957-a4.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "barukaza-workshop-siege-hauler",
+    "name": "Barukaza Workshop siege-hauler",
+    "description": "The Barukaza Workshop siege-hauler is a type of heavy-lift transport craft employed by the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/barukaza-workshop-siege-hauler.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "ceromax",
+    "name": "Ceromax",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/ceromax.jpg",
+    "faction": "",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "barugqel-workshop-trespasser",
+    "name": "Barug'qel Workshop Trespasser",
+    "description": "The Barug'qel Workshop Sky Raider, colloquially known as the Trespasser, is a transport aircraft employed by the Banished and other ex-Covenant raiders.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/barugqel-workshop-trespasser.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "ancient-sangheili-galley",
+    "name": "Ancient Sangheili galley",
+    "description": "This unidentified galley was employed by the ancient Sangheili of the Former Age, the era prior to the foundation of the Covenant empire.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/ancient-sangheili-galley.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "adsk-pattern-shadow",
+    "name": "Adsk-pattern Shadow",
+    "description": "The Adsk-pattern Light Transport is an infantry carrying vehicle in the Shadow series of armoured transports used by the Covenant.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/adsk-pattern-shadow.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "elephant",
+    "name": "Elephant",
+    "description": "The Heavy Recovery Vehicle or \"Elephant\" is a line of heavy Mobile Assault, Support, and Recovery (MASR) platforms developed and manufactured by JOTUN Heavy Industries.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/elephant.jpg",
+    "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "abatyar-pattern-revenant",
+    "name": "Abatyar-pattern Revenant",
+    "description": "The Abatyar-pattern Revenant is a variant in the Revenant family of infantry support vehicles, employed by Sali 'Nyon's Covenant.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/abatyar-pattern-revenant.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "guntower",
+    "name": "Guntower",
+    "description": "The Guntower is a Banished fixed defensive emplacement — a towering automated plasma cannon installation deployed to control chokepoints and key terrain features on captured worlds and installations. Equipped with rapid-fire plasma cannons capable of tracking both infantry and armoured vehicles, a single Guntower can deny entire corridors to enemy forces. The Banished deployed Guntowers extensively across Installation 07 during their occupation in 2560.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/lore/guntower.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "contrition-class-transport",
+    "name": "Contrition-class transport",
+    "description": "The Contrition-class transport is an older Covenant military transport.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/contrition-class-transport.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "gydrozka-workshop-blisterback",
+    "name": "Gydrozka Workshop Blisterback",
+    "description": "The Gydrozka Workshop Siege Crawler, colloquially known as the Blisterback, is a hexapedal heavy air vehicle designed and used by the Banished.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/1/1b/HW2_Blisterback_render.png/500px-HW2_Blisterback_render.png",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "eklondal-workshop-marauder",
+    "name": "Eklon'Dal Workshop Marauder",
+    "description": "The Eklon'Dal Workshop War-Sled, colloquially known as the Marauder, is a fast, medium-size infantry-fighting vehicle used by the Banished.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/f/f2/HW2_Blitz_Marauder.png/500px-HW2_Blitz_Marauder.png",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "dovotaa-workshop-reaver",
+    "name": "Dovotaa Workshop Reaver",
+    "description": "The Dovotaa Workshop Sky Protector, commonly known as the Reaver, is a bipedal anti-aircraft walker used by the Banished. The Reaver is capable of using its missiles as a propulsion system briefly in order to cover long distances or smash into enemies, similar to a Spartan's ground pound.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/dovotaa-workshop-reaver.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "eklondal-workshop-wraith-invader",
+    "name": "Eklon'Dal Workshop Wraith Invader",
+    "description": "The Eklon'Dal Workshop Warrior Carriage, colloquially known as Wraith Invader, is a troop transport in the Wraith family vehicles operated by the Banished.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/f/fc/HW2_wraith_invader.png/500px-HW2_wraith_invader.png",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "zaagokelu-workshop-ghost",
+    "name": "Zaagokelu Workshop Ghost",
+    "description": "The Zaagokelu Workshop Scout Bike is a light scout vehicle used by the Banished. It is a part of the Ghost series of scout bikes.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/1/1a/HW2_Blitz_Ghost.png/500px-HW2_Blitz_Ghost.png",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "eklondal-workshop-goblin",
+    "name": "Eklon'Dal Workshop Goblin",
+    "description": "The Eklon'Dal Workshop Balaho Battlesuit is a modified variant of the Pnap-pattern Goblin employed by the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/eklondal-workshop-goblin.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "brhi-xur-pattern-leech",
+    "name": "Brhi Xur-pattern Leech",
+    "description": "This Brhi Xur-pattern Ship Breacher, known to humanity as the Leech, is a Covenant boarding craft specifically designed for boarding an enemy vessel.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/brhi-xur-pattern-leech.jpg",
+    "faction": "Covenant",
+    "type": "Space",
+    "appearances": []
+  },
+  {
+    "id": "ahtulai-workshop-banshee",
+    "name": "'Ahtulai Workshop Banshee",
+    "description": "The 'Ahtulai Workshop Attack Flyer is a variant of Banshee ground-attack aircraft employed by the Banished. They are built upon the frames of older Oghal-pattern variants, unlike the more mainline Kaelum Workshop Banshees employed by Banished forces operating on Installation 07.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/ahtulai-workshop-banshee.jpg",
+    "faction": "Banished",
+    "type": "Air",
+    "appearances": []
+  },
+  {
+    "id": "eklondal-workshop-lich",
+    "name": "Eklon'Dal Workshop Lich",
+    "description": "The Eklon'Dal World Patroller is a Lich variant employed by the Banished in their campaigns against their enemies.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/eklondal-workshop-lich.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "breacher-exosuit",
+    "name": "Breacher Exosuit",
+    "description": "The Breacher exosuit is a type of powered exoskeleton employed by the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/breacher-exosuit.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "enduring-blisterback",
+    "name": "Enduring Blisterback",
+    "description": "The Enduring Blisterback is a vehicle employed by the Banished.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/d/dd/HW2_Blitz_Enduring_Blisterback.png/500px-HW2_Blitz_Enduring_Blisterback.png",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "enduring-locust",
+    "name": "Enduring Locust",
+    "description": "Enduring Locust are a specialised type of Locust employed by the Banished.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/0/04/HW2-EnduringLocustblitz.jpg/500px-HW2-EnduringLocustblitz.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "decimus-exoskeleton",
+    "name": "Decimus' exoskeleton",
+    "description": "Decimus' exoskeleton is a type of powered exoskeleton employed by the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/decimus-exoskeleton.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "combat-support-vehicle",
+    "name": "Combat support vehicle",
+    "description": "The combat support vehicle is a Covenant armored ground transport capable of carrying personnel, ammunition, explosives, medical supplies and liquified carrier gas to recharge plasma weaponry.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-support-vehicle.jpg",
+    "faction": "Covenant",
+    "type": "Space",
+    "appearances": []
+  },
+  {
+    "id": "combat-bridging-vehicle",
+    "name": "Combat bridging vehicle",
+    "description": "The combat bridging vehicle, colloquially known as a CBV, is a Covenant vehicle designed to launch a bridge of up to one kilometer in length over chasms that would otherwise be an obstacle to Covenant forces. The process to create this bridge takes less than a minute to complete.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-bridging-vehicle.jpg",
+    "faction": "Covenant",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "dovotaa-workshop-griever",
+    "name": "Dovotaa Workshop Griever",
+    "description": "The Dovotaa Workshop lair waster, also known as the Griever fighter-bomber, is a bomber employed by the Banished in the post-war era.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/dovotaa-workshop-griever.jpg",
+    "faction": "Banished",
+    "type": "Air",
+    "appearances": []
+  },
+  {
+    "id": "bolroci-workshop-chopper",
+    "name": "Bolroci Workshop Chopper",
+    "description": "The Bolroci Workshop Attack Bike is a variant in the Chopper line of raiding vehicles, employed by the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/bolroci-workshop-chopper.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "catulus-chopper",
+    "name": "Catulus Chopper",
+    "description": "The Catulus Chopper, also known as Chieftain Chopper, is a modified variant of the Bolroci Workshop Chopper.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/catulus-chopper.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  }
+]

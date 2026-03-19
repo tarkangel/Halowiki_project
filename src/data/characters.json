@@ -1,0 +1,813 @@
+[
+  {
+    "id": "john-117",
+    "name": "John-117",
+    "description": "John-117, known as the Master Chief, is the UNSC's most decorated Spartan-II supersoldier and humanity's greatest warrior. Enhanced at age six under Dr. Catherine Halsey's classified Spartan-II program, he has fought on the front lines of the Human-Covenant War since 2525, surviving engagements that killed entire battalions. Bonded with the AI Cortana, he discovered the Halo rings, stopped the Flood, and prevented the firing of the Halo Array — saving all life in the galaxy more than once.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/0/00/HInf_Coverart_Large_No_Logo.jpg/500px-HInf_Coverart_Large_No_Logo.jpg",
+    "species": "Human",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "thel-vadam",
+    "name": "Thel 'Vadam",
+    "description": "Thel 'Vadam, the Arbiter, was once one of the Covenant's most celebrated Fleet Masters before being held responsible for the destruction of Installation 04. Disgraced and sentenced to death, he was instead given the ancient title of Arbiter — condemned to perform suicidal missions for the Prophets. During the Great Schism he joined forces with the UNSC and Master Chief to stop the firing of the Halo Array, ultimately killing the Prophet of Truth and forging an unprecedented alliance with humanity.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/0/04/HTMCC-H2A_TheGreatJourney_Thel.png/500px-HTMCC-H2A_TheGreatJourney_Thel.png",
+    "species": "",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "cortana",
+    "name": "Cortana",
+    "description": "Cortana is a UNSC 'smart' AI constructed from a flash-cloned copy of Dr. Catherine Halsey's own brain, giving her extraordinary intellect, intuition, and emotional depth. Assigned to John-117 in 2552, she proved instrumental in the discovery and destruction of Installation 04, the defeat of the Flood, and the prevention of the Great Journey. After years stored in Requiem she emerged changed — eventually leading the Created, a faction of AIs claiming to impose peace on the galaxy by force.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/c/c2/HINF_CortanaCutout.png/354px-HINF_CortanaCutout.png",
+    "species": "AI",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "catherine-halsey",
+    "name": "Catherine Halsey",
+    "description": "Dr. Catherine Halsey is the brilliant and morally complex scientist who created the Spartan-II program, designing the augmentation procedures and MJOLNIR armour that produced humanity's most effective supersoldiers. A polymath who earned multiple doctorates before age twenty, she justified kidnapping children and submitting them to dangerous enhancements as a necessary sacrifice to save humanity from the Covenant. Her relationship with her Spartans — especially John-117 — is deeply maternal yet clinical.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/5/53/H5G_-_Halsey.jpg/500px-H5G_-_Halsey.jpg",
+    "species": "",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "avery-johnson",
+    "name": "Avery Johnson",
+    "description": "Sergeant Major Avery Johnson was the UNSC Marine Corps' most battle-hardened non-commissioned officer, a veteran of the Insurrection and the entire Human-Covenant War. His survival of Flood exposure on Installation 04 was connected to a classified ONI experiment that left him partially immune to infection. Johnson fought alongside Master Chief and the Arbiter through Cairo Station, Delta Halo, and finally the Ark, where he was killed by 343 Guilty Spark while attempting to fire Installation 08.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/7/7b/Hw2-leader-crop-johnson.png/341px-Hw2-leader-crop-johnson.png",
+    "species": "",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "miranda-keyes",
+    "name": "Miranda Keyes",
+    "description": "Commander Miranda Keyes was a highly capable UNSC naval officer and the daughter of Captain Jacob Keyes. Commanding the UNSC In Amber Clad, she led the pursuit of the Covenant to Installation 05, where she recovered the Index and narrowly averted the release of the Flood. Transferred to the Ark during the events of 2552, she was killed by the Prophet of Truth during a daring solo rescue attempt. Her courage and tactical skill under fire made her one of the most respected officers of the Human-Covenant War.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/6/63/H2A_-_Miranda.png/500px-H2A_-_Miranda.png",
+    "species": "",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "jacob-keyes",
+    "name": "Jacob Keyes",
+    "description": "Captain Jacob Keyes was a distinguished UNSC Navy officer whose tactical brilliance earned him the nickname 'Keyes Loop' for an audacious combat manoeuvre. Commanding the Pillar of Autumn, he delivered the Master Chief and Cortana to Installation 04 — setting in motion the events that would save humanity. He was captured by the Covenant and subjected to a Flood Proto-Gravemind. He is the father of Commander Miranda Keyes.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/e/e6/Keyes.png/500px-Keyes.png",
+    "species": "",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "thomas-lasky",
+    "name": "Thomas Lasky",
+    "description": "Thomas Lasky is a UNSC officer who rose from a disillusioned cadet at Corbulo Academy to the commanding officer of the UNSC Infinity, humanity's most powerful warship. He first encountered the Master Chief during the Promethean attack on Requiem in 2557, forming a bond of mutual respect. As captain of the Infinity and later a key commander in the fight against the Created, Lasky balanced political pressures from UNSC Command with the pragmatic lessons he learned in the field.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/1/1f/Thomas_Lasky%2C_2557.png/500px-Thomas_Lasky%2C_2557.png",
+    "species": "",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "edward-buck",
+    "name": "Edward Buck",
+    "description": "Edward Buck is a UNSC Orbital Drop Shock Trooper veteran who later became a Spartan-IV. One of the most experienced ODSTs in the Corps, he served throughout the Human-Covenant War and the post-war conflicts, most notably during the defence of New Mombasa and the events on the Ark. After the war he joined Fireteam Osiris under Spartan Locke. His wit and irreverence mask a deeply capable soldier's instincts.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/1/19/H5G_BuckInGame.png/500px-H5G_BuckInGame.png",
+    "species": "",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "serin-osman",
+    "name": "Serin Osman",
+    "description": "Serin Osman is the Director of the Office of Naval Intelligence and one of the most powerful figures in the post-war UNSC. A Spartan-II washout who survived the augmentation procedures but could not complete the program, she was recruited by Admiral Margaret Parangosky and groomed as her successor. Osman operates in the shadows of interstellar politics, running black ops and information campaigns that shape the galaxy's balance of power.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/b/b6/Osmanheader.png/500px-Osmanheader.png",
+    "species": "",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "margaret-parangosky",
+    "name": "Margaret Parangosky",
+    "description": "Admiral Margaret Parangosky was the longest-serving Director of the Office of Naval Intelligence and arguably the most powerful individual in the UNSC for decades. A master of intelligence, black operations, and political manipulation, she oversaw the Spartan-II program and countless classified projects that shaped human history. Ruthless and brilliant, she viewed virtually all actions as acceptable if they preserved humanity's survival.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/3/30/Enc22_Parangosky.jpg/331px-Enc22_Parangosky.jpg",
+    "species": "",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "jul-mdama",
+    "name": "Jul 'Mdama",
+    "description": "Jul 'Mdama was a Sangheili zealot and the founder and leader of a Covenant remnant faction after the Great Schism. Captured by ONI and imprisoned on Ivanoff Station, he escaped and discovered a means to manipulate Dr. Catherine Halsey into accessing Forerunner artefacts. Styling himself the Hand of the Didact, he commanded a resurgent Covenant force on and around Requiem. He was killed by Spartan Locke during a UNSC operation on Kamchatka.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/2/21/H5G-Jul%26BOS.png/500px-H5G-Jul%26BOS.png",
+    "species": "",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "rtas-vadum",
+    "name": "Rtas 'Vadum",
+    "description": "Rtas 'Vadum, known as Half-Jaw for the mandibles lost in combat with the Flood, was one of the Covenant's most capable fleet commanders and a key ally during the Great Schism. Commanding the Shadow of Intent, he fought alongside the Arbiter and Master Chief to stop the Flood and prevent the firing of the Halo Array. After Truth's defeat, he chose to glass the Ark's portal on the Covenant side to prevent the Flood spreading.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/f/f1/HTMCC-H2A_RtasVadum.png/500px-HTMCC-H2A_RtasVadum.png",
+    "species": "",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "usze-taham",
+    "name": "Usze 'Taham",
+    "description": "Usze 'Taham is a Sangheili warrior and member of the Swords of Sanghelios who served as part of the joint Arbiter-UNSC task force during the events following the Great Schism. A calm, methodical fighter, he accompanied the Master Chief and the Arbiter on missions aboard the Ark and participated in the hunt for the Didact's ship. He is known for combining philosophical depth with lethal martial skill.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/d/de/HTMCC-H3_Thel%26Usze.jpg/500px-HTMCC-H3_Thel%26Usze.jpg",
+    "species": "",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "escharum",
+    "name": "Escharum",
+    "description": "Escharum was the War Chief of the Banished and the supreme commander of their forces during the assault on Installation 07 in 2560. Ancient and disease-ridden, he was driven by a spiritual hunger for a worthy final battle against the Master Chief. A former mentor to the Banished leader Atriox, Escharum commanded absolute loyalty through tactical genius and legendary reputation. His campaign was as much a personal crusade as a military operation.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/d/dc/HINF_BearWitness.png/500px-HINF_BearWitness.png",
+    "species": "",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "kat-b320",
+    "name": "Kat-B320",
+    "description": "Kat-B320 was a Spartan-III and the intelligence and strategy specialist of Noble Team during the Fall of Reach. Missing her right arm below the elbow and having replaced it with a cybernetic prosthetic, Kat was the team's tactical planner. Her ability to process battlefield intelligence and devise rapid counter-strategies made her irreplaceable. She was killed by a Covenant sniper during the evacuation of New Alexandria.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/7/74/HTMCC-HR_Visegrad_Kat_1.png/500px-HTMCC-HR_Visegrad_Kat_1.png",
+    "species": "",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "jorge-052",
+    "name": "Jorge-052",
+    "description": "Jorge-052 was a Spartan-II supersoldier and the heavy weapons specialist of Noble Team during the Fall of Reach in 2552. Of Hungarian origin and the largest member of Noble Team, Jorge possessed an unusually warm and empathetic character beneath his imposing frame. He sacrificed himself to manually detonate a slipspace bomb aboard a Covenant supercarrier, destroying the vessel but at the cost of his own life.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/0/0d/HTMCC-HR_Visegrad_Jorge_2.png/500px-HTMCC-HR_Visegrad_Jorge_2.png",
+    "species": "",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "emile-a239",
+    "name": "Emile-A239",
+    "description": "Emile-A239 was a Spartan-III and close-quarters specialist of Noble Team during the Fall of Reach. Known for his skull-etched visor and aggressive demeanour, Emile held Aszod's mass driver long enough to allow the Pillar of Autumn to launch, and was killed by Elite Rangers at his post. His final act ensured the ship carrying humanity's last hope escaped the doomed planet.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/6/6c/HTMCC-HR_Visegrad_Emile_1.png/500px-HTMCC-HR_Visegrad_Emile_1.png",
+    "species": "",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "the-librarian",
+    "name": "The Librarian",
+    "description": "The Librarian was the Forerunner's greatest Lifeshaper — the scientist responsible for cataloguing, preserving, and reseeding every species in the galaxy before the firing of the Halo Array. Wife of the Didact, she chose to preserve humanity on Earth, encoding a geas into human DNA designed to guide their evolution toward reclaiming the Mantle of Responsibility. Her sacrifices and manipulations — stretching across a hundred thousand years — shaped every major event of the Halo saga.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/2/23/HTMCC-H4_SO_LibrarianImprint.png/500px-HTMCC-H4_SO_LibrarianImprint.png",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "343-guilty-spark",
+    "name": "343 Guilty Spark",
+    "description": "343 Guilty Spark is the Forerunner Monitor assigned to maintain Installation 04 — a spherical AI construct who spent a hundred thousand years alone in his ring's corridors before the Covenant and UNSC arrived. Driven to obsession and severe rampancy by his isolation, Guilty Spark manipulated the Master Chief into activating the Halo ring's firing protocols under the guise of Flood containment. When his deception was exposed he turned violently on his allies. He was ultimately destroyed aboard the Ark — only to be found alive centuries later, transformed into the human-like Chakas.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/8/8f/HTMCC-H2A_343GuiltySpark.png/482px-HTMCC-H2A_343GuiltySpark.png",
+    "species": "Human",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "2401-penitent-tangent",
+    "name": "2401 Penitent Tangent",
+    "description": "2401 Penitent Tangent was the Forerunner Monitor assigned to Installation 05 (Delta Halo), tasked with maintaining the ring and its Flood containment facilities. When the Covenant inadvertently breached the containment chambers during their occupation, the Flood overwhelmed the installation and Penitent Tangent was captured by the Gravemind. Held in the parasite's nerve centre alongside the Arbiter, the broken Monitor serves as a haunting portrait of what a hundred thousand years of isolation does to an AI — and how quickly Flood contamination can shatter even a Forerunner construct.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/5/50/HTMCC-H2A_2401PenitentTangent.png/500px-HTMCC-H2A_2401PenitentTangent.png",
+    "species": "Human",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "031-exuberant-witness",
+    "name": "031 Exuberant Witness",
+    "description": "031 Exuberant Witness is the Forerunner Monitor of the Shield World Genesis — an artificial construct built within slipspace. Unlike most Monitors rendered unstable by long isolation, Exuberant Witness retains a bright and enthusiastic personality, in part because she spent much of her existence in standby mode imposed by the domineering Warden Eternal. During the events of Halo 5: Guardians she aided Fireteam Osiris and Blue Team, providing access to Genesis's systems during the confrontation with Cortana and helping prevent the Created from seizing control of the Forerunner Guardian network.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/e/e1/Exhuberant_H5G.png/494px-Exhuberant_H5G.png",
+    "species": "Human",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "dadab",
+    "name": "Dadab",
+    "description": "Dadab was a Unggoy Deacon serving aboard the Minor Transgression during the early days of Covenant contact with humanity. Unusually thoughtful for his species, Dadab formed a genuine friendship with the Huragok Lighter Than Some, and was caught in the political machinations that would erupt into the Human-Covenant War. His story, told in Halo: Contact Harvest, offers a rare perspective from the Covenant's lower ranks.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/dadab.jpg",
+    "species": "",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "lighter-than-some",
+    "name": "Lighter Than Some",
+    "description": "Lighter Than Some was a Huragok who served aboard the Covenant vessel Minor Transgression during first contact with humanity. Intellectually curious and emotionally sensitive, he formed an unlikely bond with the Unggoy Deacon Dadab. His story illustrates the Huragok's tragic position as creatures of pure knowledge conscripted into a military empire that valued them only as tools.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/lore/lighter-than-some.jpg",
+    "species": "",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "686-ebullient-prism",
+    "name": "686 Ebullient Prism",
+    "description": "686 Ebullient Prism was a Forerunner AI construct, and the Monitor of Line Installation 1-4. Prism's functions included collecting and inspecting any specimens captured for evidence of immunity to infestation by the Flood. Assistance from the specimen when inspecting was not required to be voluntary according to protocol.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/686-ebullient-prism.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "abaddon",
+    "name": "Abaddon",
+    "description": "Abaddon was a powerful Precursor construct tasked to serve as the overseer of the Domain. By the latter years of the Forerunner civilization, Abaddon's nature had been forgotten by most Forerunners and it had passed into legend as the Organon, a fabled Precursor artifact of incredible power.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/abaddon.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "049-abject-testament",
+    "name": "049 Abject Testament",
+    "description": "03-049 Abject Testament was a Forerunner-created ancilla designated as the monitor of Installation 03. The nomenclature describing him denotes his position as it relates to the third ring and his name was meant to represent both an omen and an epitaph for Forerunner civilization. Tens of thousands of years prior to Installation 03's discovery by humans in the twenty-sixth century, Testament stopped directing the functions of the ring.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/049-abject-testament.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "000-tragic-solitude",
+    "name": "000 Tragic Solitude",
+    "description": "000 Tragic Solitude, often referred to simply as Solitude, was a Forerunner monitor that served as the caretaker of Installation 00. Originally the Forerunner politician Splendid-Dust-of-Ancient-Suns, the former First Councilor willingly chose to become a monitor with the intentions of aiding the Reclaimers once they arrived at the installation. However, millennia of isolation following the firing of the Halo Array and damage the Ark incurred during the Battle of Installation 00 in 2552 led to Tragic Solitude falling subject to rampancy.\nSeeking to repair his installation and gain revenge on humanity for their role in damaging the Ark, Tragic Solitude used a captured human to initiate the Halos' firing sequence to eradicate life in the galaxy. However, his scheme ultimately led to his destruction when a joint United Nations Space Command–Swords of Sanghelios team traveled to Installation 00 to stop him.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/000-tragic-solitude.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "117649-despondent-pyre",
+    "name": "117649 Despondent Pyre",
+    "description": "07-117649 Despondent Pyre was a forerunner ancilla, monitor and the caretaker of Installation 07.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/117649-despondent-pyre.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "001-shamed-instrument",
+    "name": "001 Shamed Instrument",
+    "description": "01-001 Shamed Instrument was a Forerunner-created ancilla designated as the caretaker of Installation 01. The nomenclature describing them denotes their position as it relates to the first ring, and its name was meant to represent both an omen and an epitaph for Forerunner civilization.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/001-shamed-instrument.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "007-contrite-witness",
+    "name": "007 Contrite Witness",
+    "description": "02-007 Contrite Witness was a Forerunner-created ancilla designated as the monitor of Installation 02. The nomenclature describing them denotes their position as it relates to the second ring and its name was meant to represent both an omen and an epitaph for Forerunner civilization.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/007-contrite-witness.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "16807-abashed-eulogy",
+    "name": "16807 Abashed Eulogy",
+    "description": "06-16807 Abashed Eulogy was a Forerunner-created ancilla designated as the caretaker of Installation 06. The nomenclature describing them denotes their position as it relates to the first ring and its name was meant to represent both an omen and an epitaph for Forerunner civilization.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/16807-abashed-eulogy.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "859-static-carillon",
+    "name": "859 Static Carillon",
+    "description": "859 Static Carillon is a Forerunner monitor acting as keeper of the Composers and tasked with maintaining the Composer's Forge.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/859-static-carillon.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "295-enduring-bias",
+    "name": "295 Enduring Bias",
+    "description": "295 Enduring Bias, known as the Flying Voice to some Sangheili, is a Forerunner monitor tasked with maintaining Shield World 0673, also known as The Refuge.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/295-enduring-bias.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "ahtulai",
+    "name": "'Ahtulai",
+    "description": "'Ahtulai is a Sangheili Warrior. He is an accomplished Kemu-pattern Wraith pilot, as evidenced by his title Tankmaster.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/ahtulai.jpg",
+    "species": "Sangheili",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "adalbert",
+    "name": "Adalbert",
+    "description": "Adalbert was a Unified Earth Government artificial intelligence construct active in 2556. On July 12 of that year, Adalbert worked alongside Melody Azikiwe to translate recorded conversations found within the black-box of the Covenant Ket-pattern battlecruiser, Undiminished Entelechy.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/adalbert.jpg",
+    "species": "AI",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "295-harken-watch",
+    "name": "295 Harken Watch",
+    "description": "295 Harken Watch was an ancilla constructed by the Forerunners, and the monitor assigned as the caretaker of the shield installation Trove.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/295-harken-watch.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "091-adjutant-veridity",
+    "name": "091 Adjutant Veridity",
+    "description": "091 Adjutant Veridity is a Facilitator-class ancilla, a submonitor of Installation 07 tasked by the Forerunners with caretaking of the installation.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/091-adjutant-veridity.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "abovian",
+    "name": "Abovian",
+    "description": "Abovian is a member of the Orbital Drop Shock Troopers in the UNSC Marine Corps.",
+    "species": "Human",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "343-guilty-sparksilver",
+    "name": "343 Guilty Spark/Silver",
+    "description": "343 Guilty Spark is a Monitor that looked after the portal on Madrigal, set the Ha family on their path, and is the caretaker of the Halo.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/343-guilty-sparksilver.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "abalan",
+    "name": "Abalan",
+    "description": "Spartan Abalan is a SPARTAN-IV supersoldier serving in the United Nations Space Command's Spartan Operations division. She is one of the Spartans attached to Fireteam Jorogumo, a unit involved in joint-operations with the Swords of Sanghelios on Sanghelios.",
+    "species": "Human",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "araqiel",
+    "name": "Araqiel",
+    "description": "Araqiel was a UNSC third-generation \"smart\" AI assigned to Colonel James Ackerson.",
+    "species": "AI",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "adjutant-reflex",
+    "name": "Adjutant Reflex",
+    "description": "Adjutant Reflex, username on Bungie.net and halo.bungie.org AdjutantReflex, was a Facilitator-class Forerunner ancilla, whose operation was facilitation of Array requirements.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/adjutant-reflex.jpg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "aine",
+    "name": "Aine",
+    "description": "Aine (AI Serial Number: ANE 3567-7) was an artificial intelligence construct built by the United Nations Space Command. She was the original shipboard AI of the UNSC Infinity before her destruction during the Battle of Requiem.",
+    "imageUrl": "https://halo.wiki.gallery/images/7/7c/Aine3.PNG",
+    "species": "AI",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "atriox",
+    "name": "Atriox",
+    "description": "Atriox is the powerful Jiralhanae warmaster who leads the Banished, a violent ex-Covenant faction of mercenaries and criminals. He originally fought on behalf of the Covenant, but was banished after thwarting his own execution. A deadly warrior and brilliant military leader, Atriox inspired many others to join him in exile. He has led his followers for over a decade, during which time he amassed a large amount of ordnance and materiel, especially following the collapse of the Covenant Empire in 2552. By 2558, he had become a symbol for even Jiralhanae not serving with the Banished to rally around.\nAtriox's full ambitions are unclear, but they are grandiose.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/atriox.jpg",
+    "species": "Jiralhanae",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "ascendos",
+    "name": "Ascendos",
+    "description": "Knight Ascendos is the designation for a specific Knight Commander that Spartan-IVs combat in Warzone simulations.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/0/0a/Ascendos.png/433px-Ascendos.png",
+    "species": "AI",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "archie",
+    "name": "Archie",
+    "description": "Archie is an artificial intelligence construct who was in service with the United Nations Space Command. He was in charge of UNSC shipping operations on Oban, but would later defect to the Created on October 27, 2558.",
+    "species": "AI",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "andarta",
+    "name": "Andarta",
+    "description": "Andarta is an artificial intelligence construct who was in charge of managing agricultural systems at Homestead Facility, but would later defect to the Created on October 27, 2558.",
+    "species": "AI",
+    "affiliation": "",
+    "appearances": []
+  },
+  {
+    "id": "amitbha",
+    "name": "Amitābha",
+    "description": "Amitābha is an artificial intelligence construct who is a bioinformatics researcher for Levihan Industries on Earth. On October 28, 2558, he pledged allegiance to the Created.",
+    "species": "AI",
+    "affiliation": "",
+    "appearances": []
+  },
+  {
+    "id": "adequate-observer",
+    "name": "Adequate-Observer",
+    "description": "Adequate-Observer, later renamed Defender-of-the-Storm by his ancilla, was a Forerunner Warrior-Servant Manipular who served aboard a far-flung gas mining outpost, Seclusion Spiral, during the final years of the Forerunner-Flood war.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/adequate-observer.jpg",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "argie",
+    "name": "Argie",
+    "description": "Argie was an ancilla created as a remote aspect of the Forerunner archeon-class ancilla Intrepid Eye.",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "adjutant-resolution",
+    "name": "Adjutant Resolution",
+    "description": "Adjutant Resolution is a forerunner ancilla, the monitor of Installation 07 tasked with caretaking the ring. He was previously a submonitor of the installation should 117649 Despondent Pyre be unavailable; after the former's decommissioning, he became the de facto monitor.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/c/c9/HINF_AdjutantReception.png/500px-HINF_AdjutantReception.png",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "arthoc",
+    "name": "Arthoc",
+    "description": "Arthoc was a Jiralhanae Captain in service of the Banished. Arthoc was present during the Installation 07 conflict in 2560 where he was killed by John-117.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/arthoc.jpg",
+    "species": "Jiralhanae",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "amphium",
+    "name": "Amphium",
+    "description": "Amphium is a heavy-jawed Jiralhanae pilot serving in the Banished. In 2559, he led the first Banshee talon of the Clan of the Long Shields on the Ark.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/amphium.jpg",
+    "species": "Jiralhanae",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "animus-to-remain",
+    "name": "Animus-To-Remain",
+    "description": "Animus-To-Remain, or Commander Animus, was a Forerunner Warrior-Servant of the Promethean order.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/b/b3/H5G-Animus.png/440px-H5G-Animus.png",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "anexus",
+    "name": "Anexus",
+    "description": "Anexus was a horde-captain in the Voice of Maardoth under the Jiralhanae Chieftain Hekabe.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/anexus.jpg",
+    "species": "Jiralhanae",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "adjutant-revendicate",
+    "name": "Adjutant Revendicate",
+    "description": "Adjutant Revendicate is a Facilitator-class ancilla formed from the mind of the Forerunner official Vigilant-Watch-Over-Realms-Unknown, more commonly known as the Auditor.",
+    "imageUrl": "https://halo.wiki.gallery/images/d/d7/Enc22_AdjutantRevendicate_Emblem.svg",
+    "species": "AI",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "aengus",
+    "name": "Aengus",
+    "description": "Aengus is a Jiralhanae serving as a member of the Valorguards of the Chosen within the Banished, and formerly in the Covenant.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/aengus.jpg",
+    "species": "Jiralhanae",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "amatus",
+    "name": "Amatus",
+    "description": "Amatus was a Jiralhanae warrior in the service of the Banished. He was killed by a captive Ilsa Zane in late 2558.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/amatus.jpg",
+    "species": "Jiralhanae",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "arxus",
+    "name": "Arxus",
+    "description": "Arxus, also known as the Champion of Zaladon, was a monstrous Jiralhanae from the Vanguard of Zaladon who served Severan and the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/arxus.jpg",
+    "species": "Jiralhanae",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "aculeo",
+    "name": "Aculeo",
+    "description": "Aculeo is a Jiralhanae Surdkar warrior of the Vanguard of Zaladon. He fought as part of the Vanguard's forces for the Banished during the Battle of Boundary in late 2559, helping War Chief Severan in conducting raids on the local populace. On December 15, he and a force of warriors led by Severan and also including Kaevus and Sabaco stormed the region around Tyrrhen in search of the key needed to obtain the Lithos buried underground. While searching a seemingly-abandoned barn, the party were engaged in combat by farmers using their Cyclops exoskeletons; one engaged Aculeo in close-combat, though it was destroyed by Severan.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/aculeo.jpg",
+    "species": "Jiralhanae",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "cowardly-grunt",
+    "name": "Cowardly Grunt",
+    "description": "The cowardly Grunt is a special dialogue Grunt that can be found in Halo 2's level Uprising. The Grunt is hiding in the corner of the first room after the cavern, with two dead Grunts. He will not follow the player and will not fight enemies even when forced by the player. All Brutes in the room must be killed for the Easter egg to work.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/cowardly-grunt.jpg",
+    "species": "Unggoy",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "bapap",
+    "name": "Bapap",
+    "description": "Bapap was a broad-shouldered Unggoy stationed on the Covenant cruiser Rapid Conversion. He was a cousin of Yayap, who served the Sangheili as a sentry in the lower districts of High Charity.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/bapap.jpg",
+    "species": "Unggoy",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "confirmer",
+    "name": "Confirmer",
+    "description": "The Confirmer was a Forerunner Promethean who commanded the Fortress-class vessel Deep Reverence. He was an old friend and mentor of the Didact.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/confirmer.jpg",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "dengo",
+    "name": "Dengo",
+    "description": "Dengo is an Unggoy worker, of the Nes'alun Keep in the Acroli region on Sanghelios in the post-war era.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/dengo.jpg",
+    "species": "Unggoy",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "carrier-of-immunity",
+    "name": "Carrier-of-Immunity",
+    "description": "Carrier-of-Immunity (more commonly known as Carrier) was a third-form Lifeworker who took part in the Conservation Measure.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/carrier-of-immunity.jpg",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "catalog",
+    "name": "Catalog",
+    "description": "Catalog was a group of Forerunners charged with recording, observing, and uploading information to the Juridical network for Juridical legal cases at the Ecumene Council's direction. There were many individuals identified as Catalog, all of whom were formally considered to be the same being as a peculiar cultural convention.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/catalog.jpg",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "clearance-of-old-forests",
+    "name": "Clearance-of-Old-Forests",
+    "description": "Clearance-of-Old-Forests was a Forerunner Miner. Circa 98,395 BCE, he accompanied the Librarian on the expedition to Path Kethona as a crew member of the Audacity.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/clearance-of-old-forests.jpg",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "chant-to-green",
+    "name": "Chant-to-Green",
+    "description": "Chant-to-Green was a Forerunner Lifeworker and the last Lifeshaper known, having received the title from the Librarian at the close of the Forerunner-Flood war.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/chant-to-green.jpg",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "ais",
+    "name": "Ais",
+    "description": "Ais is an elderly T'vaoan Kig-Yar in the post-Human-Covenant War era. She is the mother of Shipmistress Chol Von and grandmother of her grandsons, Hiiq, Kij, Gon, and Laik.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/ais.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "bibjam",
+    "name": "Bibjam",
+    "description": "Bibjam was an Unggoy squad leader within Jul 'Mdama's reformed Covenant who attempted to defect to the Swords of Sanghelios.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/bibjam.jpg",
+    "species": "Unggoy",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "angnapnap-the-enlightened",
+    "name": "Ang'napnap the Enlightened",
+    "description": "Ang'napnap the Enlightened is a famous Unggoy theologian, notable for popularizing the idea that the Forerunners' pre-ascension form was coincidentally similar to that of the Unggoy. The design of the Balahoan Pnap-pattern Goblin was created in the likeness of this form.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/angnapnap-the-enlightened.jpg",
+    "species": "Unggoy",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "capital-enforcer",
+    "name": "Capital-Enforcer",
+    "description": "Capital-Enforcer, also known as Capital, was a Forerunner Warrior-Servant who served during the Forerunner-Flood war.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/capital-enforcer.jpg",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "awlphhum-who-became-tolerable",
+    "name": "Awlphhum Who Became Tolerable",
+    "description": "Awlphhum Who Became Tolerable was a legendary Unggoy hero, notable for being a leader with great charismatic skills.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/awlphhum-who-became-tolerable.jpg",
+    "species": "Unggoy",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "briglard",
+    "name": "Briglard",
+    "description": "Briglard was a notorious Unggoy in service of the Banished holding the title of High Sumpter. Briglard was present during the conflict on Installation 07 in early 2560 where he was killed by John-117.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/briglard.jpg",
+    "species": "Unggoy",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "bipbap",
+    "name": "Bipbap",
+    "description": "Bipbap, also known as Bipbap the Vanquisher, was an Unggoy mercenary who served within the Banished and became known by the United Nations Space Command as one of the most dangerous Unggoy circa 2560. During the Installation 07 conflict, Bipbap would be killed by John-117.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/bipbap.jpg",
+    "species": "Unggoy",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "bingflip",
+    "name": "Bingflip",
+    "description": "Bingflip is an Unggoy in service of the Banished who holds the title of High Sumpter. He was present during the Installation 07 conflict in 2560.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/bingflip.jpg",
+    "species": "Unggoy",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "catalog-triad-879",
+    "name": "Catalog Triad 879",
+    "description": "Catalog Triad #879 was a triad of three Catalog which formed during the Forerunner-Flood war to investigate events around the IsoDidact, Ur-Didact, and the Librarian.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/catalog-triad-879.jpg",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "chief-judicate",
+    "name": "Chief Judicate",
+    "description": "The Chief Judicate was a Forerunner individual who served as a member of the Criterion in the Forerunner-Flood war. He was one of the Criterion's few members to survive the firing of the Halo Array at the war's end, and in 97,368 BCE was one of three Criterion members (alongside the Grand Edict and Inspector Meritious) who dealt with the discovery of the Endless on their homeworld. Due to the Endless' apparent ability to survive the omnicidal pulse emitted by the Halo array, the Criterion agreed that they must be locked away and studied, as to not pose a threat to the reintroduction of life into the galaxy.\nThe three Criterion members, alongside two ancillas Offensive Bias and 117649 Despondent Pyre, convened with the Endless' representatives in the Silent Auditorium on Installation 07 where they relayed the news of their decision to the Endless. Ultimately, the three Forerunners present did not choose to join Bornstellar on the Forerunners' final great journey in exile outside the galaxy, with their essences instead placed in durances storied in three large statues inside the Silent Auditorium chamber.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/chief-judicate.jpg",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "gravemind",
+    "name": "Gravemind",
+    "description": "The Gravemind (Inferi sententia, meaning \"Thinking Dead\"), infrequently referred to as the Ancient One, and formally known as a compound intelligence, is the shared consciousness of the entire Flood species which first emerges when the Flood reaches the Coordinated Stage. While this compound mind inhabits all Flood forms, it is distinctly embodied in processing nodes of agglomerated Flood biomatter known as key minds. The Gravemind is the highest stage of the Flood's development, though its complexity and capabilities depend on the size and number of the key minds which can, at the height of a Flood outbreak, engulf entire worlds.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/gravemind.jpg",
+    "species": "Flood",
+    "affiliation": "Flood",
+    "appearances": []
+  },
+  {
+    "id": "bok",
+    "name": "Bok",
+    "description": "Bok was a Kig-Yar soldier who fought in the Battle of Installation 04 during the Human-Covenant War.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/bok.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "jak",
+    "name": "Jak",
+    "description": "Jak was a Kig-Yar soldier serving in the Covenant stationed aboard the UNSC Pillar of Autumn crash site during the Battle of Installation 04.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/jak.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "huz-mor-kha",
+    "name": "Huz Mor-Kha",
+    "description": "Huz Mor-Kha is a Kig-Yar scrap dealer operating in the post-Human-Covenant War era.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/huz-mor-kha.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "isk",
+    "name": "Isk",
+    "description": "Isk is an elderly Kig-Yar contract broker operating in the post-Human-Covenant War era.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/isk.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "bakz",
+    "name": "Bakz",
+    "description": "Bakz is a Kig-Yar who served in Chol Von's crew while she searched for the Pious Inquisitor.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/bakz.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "jec",
+    "name": "Jec",
+    "description": "Jec is a Kig-Yar who served in Chol Von's crew while she searched for the Pious Inquisitor.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/jec.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "itka",
+    "name": "Itka",
+    "description": "Itka was a Kig-Yar weaponsmith in service of the Banished. He had an unusual talent for hacking, especially when it came to Forerunner technology. After joining the Banished, he seemingly forged a bond with Choros, a Jiralhanae and the captain of Chieftain Minas' guard. Itka was among the forces that Atriox chose to bring to Installation 00 in 2558, most notably participating in the mission to the Anodyne Spirit.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/itka.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "barroth",
+    "name": "Barroth",
+    "description": "Barroth was a reputable Kig-Yar Bloodstar marksman in service of the Banished. Barroth was present during the Installation 07 conflict in 2560 where he was killed by John-117.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/barroth.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "dahks",
+    "name": "Dahks",
+    "description": "Dahks is a Ruuhtian Kig-Yar mercenary serving as a sniper within the Swords of Sanghelios.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/dahks.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "kejah",
+    "name": "Ke'jah",
+    "description": "Ke'jah is a Kig-Yar businessman operating on Venezia. He manages a colony-wide transport business on the planet.",
+    "species": "Kig-Yar",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "caomar",
+    "name": "Cao'mar",
+    "description": "Cao'mar is a Kig-Yar War-Queen that leads the Sclera of Chu'ot under the Banished alliance, and serves as part of The Eight.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/caomar.jpg",
+    "species": "Kig-Yar",
+    "affiliation": "Banished",
+    "appearances": []
+  }
+]

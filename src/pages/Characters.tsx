@@ -1,25 +1,23 @@
 import { useState, useEffect, useRef } from 'react';
-import { fetchLoreCharacters, fetchCharacters } from '../api/halopedia';
+import { fetchCharacters } from '../api/static';
 import type { Character } from '../types/character';
 import WikiGrid from '../components/ui/WikiGrid';
 
 const PAGE_SIZE = 32;
 
 export default function Characters() {
-  const [items, setItems]         = useState<Character[]>([]);
-  const [totalItems, setTotal]    = useState(0);
-  const [loading, setLoading]     = useState(true);
-  const [error, setError]         = useState<string | null>(null);
-  const [visible, setVisible]     = useState(PAGE_SIZE);
-  const [fullLoaded, setFullLoaded] = useState(false);
+  const [items, setItems]      = useState<Character[]>([]);
+  const [totalItems, setTotal] = useState(0);
+  const [loading, setLoading]  = useState(true);
+  const [error, setError]      = useState<string | null>(null);
+  const [visible, setVisible]  = useState(PAGE_SIZE);
   const sentinelRef = useRef<HTMLDivElement>(null);
 
-  // Phase 1 — show LORE characters immediately (fast, ~1s)
   useEffect(() => {
-    fetchLoreCharacters()
-      .then(lore => {
-        setItems(lore);
-        setTotal(lore.length);
+    fetchCharacters()
+      .then(all => {
+        setItems(all);
+        setTotal(all.length);
         setLoading(false);
       })
       .catch(err => {
@@ -28,20 +26,7 @@ export default function Characters() {
       });
   }, []);
 
-  // Phase 2 — full category fetch in background; merge keeping order
-  useEffect(() => {
-    fetchCharacters(30)
-      .then(all => {
-        if (all.length > 0) {
-          setItems(all);
-          setTotal(all.length);
-          setFullLoaded(true);
-        }
-      })
-      .catch(() => { /* keep phase-1 result */ });
-  }, []);
-
-  // Infinite scroll — load more cards as user scrolls down
+  // Infinite scroll
   useEffect(() => {
     const sentinel = sentinelRef.current;
     if (!sentinel || visible >= totalItems) return;
@@ -66,7 +51,6 @@ export default function Characters() {
         {totalItems > 0 && (
           <span className="text-zinc-500 text-sm">
             {Math.min(visible, totalItems)} / {totalItems}
-            {!fullLoaded && ' · loading more…'}
           </span>
         )}
       </div>
@@ -74,7 +58,6 @@ export default function Characters() {
 
       <WikiGrid items={shown} loading={loading} error={error} />
 
-      {/* Sentinel + manual load-more fallback */}
       {hasMore && (
         <div ref={sentinelRef} className="flex justify-center py-8">
           <button

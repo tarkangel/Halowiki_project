@@ -1,5 +1,5 @@
 import { useFetch } from '../hooks/useFetch';
-import { fetchWeapons } from '../api/halopedia';
+import { fetchWeapons } from '../api/static';
 import WikiGrid from '../components/ui/WikiGrid';
 
 export default function Weapons() {

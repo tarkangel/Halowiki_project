@@ -1,5 +1,5 @@
 import { useFetch } from '../hooks/useFetch';
-import { fetchGames } from '../api/halopedia';
+import { fetchGames } from '../api/static';
 import WikiGrid from '../components/ui/WikiGrid';
 
 export default function Games() {

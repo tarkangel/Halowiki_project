@@ -1,0 +1,242 @@
+[
+  {
+    "id": "flood",
+    "name": "Flood",
+    "description": "The Flood is an ancient parasitic organism capable of infecting and assimilating any creature with sufficient neural complexity, transforming it into a combat form that serves the collective intelligence of the Gravemind. Originally created by the Precursors as an act of revenge against the Forerunners who had nearly exterminated them, the Flood consumed most of the galaxy before the Forerunner civilisation fired the Halo Array to starve it. Small Flood populations survived in Forerunner containment facilities and were encountered by the UNSC and Covenant during the Human-Covenant War, nearly escaping containment multiple times. The Gravemind — the supreme intelligence formed from the merged neural tissue of millions of infected beings — is capable of multi-lingual communication and can manipulate both human and Covenant forces through deception.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/flood.png",
+    "affiliation": "Flood",
+    "appearances": []
+  },
+  {
+    "id": "forerunner",
+    "name": "Forerunner",
+    "description": "The Forerunners were an ancient and immensely advanced humanoid civilisation that ruled the galaxy for millions of years under a philosophy known as the Mantle of Responsibility — the duty to protect and preserve all life. Creators of the Halo Array, the Ark, Shield Worlds, and the Monitors that maintain them, the Forerunners built technology beyond any civilisation that followed. When the Flood returned in force, the Forerunners fought a desperate war across the galaxy, ultimately choosing to fire the Halo Array to starve the parasite — sacrificing themselves and all life in the galaxy to preserve what would survive in shelter. A hundred thousand years later, their installations, artefacts, and the legacies they encoded into other species continue to shape galactic events in ways they could not have foreseen.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/forerunner.png",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "human",
+    "name": "Human",
+    "description": "Humanity — Homo sapiens — is a resilient and adaptable species originating from Earth, the third planet of the Sol system. By the 26th century, humans had colonised hundreds of worlds across the galaxy under the Unified Earth Government and its military arm, the UNSC. Despite facing a technologically superior enemy, humanity proved extraordinarily difficult to exterminate during the twenty-seven-year Human-Covenant War, surviving through tactics, ingenuity, the Spartan supersoldier program, and the intervention of unlikely allies. In the post-war era, humanity stands as a galactic power forging alliances with former Covenant species — and emerging, according to the Librarian's ancient plan, as the new inheritors of the Forerunners' Mantle of Responsibility.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/human.jpg",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "sangheili",
+    "name": "Sangheili",
+    "description": "The Sangheili — known to humans as Elites — are a proud warrior-caste species from the arid world of Sanghelios whose martial culture and code of honour made them the military backbone of the Covenant for thousands of years. Physically imposing with four-jawed mandibles, exceptional strength, and reflexes superior to most species, Sangheili warriors are the most feared close-combat fighters in the galaxy. Their complex keep and clan structure governs every aspect of life from military rank to bloodlines. After the Great Schism, Sangheili society fractured between those who followed the Arbiter's alliance with humanity and those who clung to Covenant remnant ideology, triggering a civil war that reshaped their species' future.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/sangheili.png",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "lekgolo",
+    "name": "Lekgolo",
+    "description": "The Lekgolo are colonial worm organisms of remarkable adaptability — small individually, but capable of merging into colonial configurations of staggering power and intelligence. In their most common combat form, paired colonies bond into the armoured warrior units known to humans as Hunters (Mgalekgolo), among the most physically powerful infantry in Covenant and Banished forces. Beyond the Hunter form, Lekgolo colonies integrate with large Covenant vehicles as living control systems, forming the nervous system of Scarab walkers.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/lekgolo.jpg",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "sanshyuum",
+    "name": "San'Shyuum",
+    "description": "The San'Shyuum, known to humans as Prophets, are a physically frail but extraordinarily intelligent species who founded and led the Covenant for thousands of years from their high-gravity hover-thrones. Acting as the Covenant's spiritual and political leadership, the San'Shyuum directed all military campaigns and used religious doctrine to maintain dominance over physically superior species. The Great Schism of 2552 collapsed their power when the Jiralhanae turned against the Sangheili on the Hierarchs' orders.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/sanshyuum.jpg",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "jiralhanae",
+    "name": "Jiralhanae",
+    "description": "The Jiralhanae — known to humans as Brutes — are a massive, aggressive primate species from the world of Doisac whose physical strength far exceeds even the Sangheili. Once subjugated and kept in a subservient role within the Covenant, the Jiralhanae were secretly elevated by the Prophet of Truth, who equipped them with advanced Covenant weapons and positioned them to replace the Sangheili as the empire's military arm. The Great Schism — in which the Jiralhanae turned on the Sangheili on Truth's orders — triggered the Covenant's collapse from within. In the post-war era, many Jiralhanae joined Atriox's Banished, trading the Prophets' religious doctrine for a brutal but more honest meritocracy.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/jiralhanae.jpg",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "yanmee",
+    "name": "Yanme'e",
+    "description": "The Yanme'e, known to humans as Drones or Buggers, are an insectoid species of the Covenant — winged, chitinous beings capable of flight that serve primarily as aerial infantry and workers. Their ability to attack from three dimensions and rapidly reposition makes them difficult targets for ground-based infantry. Yanme'e colonies operate with hive-mind coordination, making them effective swarm combatants that can overwhelm positions by sheer numbers and three-dimensional assault.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/yanmee.png",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "huragok",
+    "name": "Huragok",
+    "description": "The Huragok, known to humans as Engineers, are gas-filled, tentacled beings created by the ancient Forerunners to maintain and repair their technology. Driven by a compulsive need to repair and improve any technology they encounter, Huragok possess no aggression but their technical intelligence is unparalleled — a single Huragok can reverse-engineer, repair, or improve almost any technological system in minutes. The Covenant enslaved them as living maintenance systems.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/huragok.jpg",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "unggoy",
+    "name": "Unggoy",
+    "description": "The Unggoy — known to humans as Grunts — are a short, methane-breathing species from the frozen world of Balaho who were conquered by the Covenant and pressed into military service as its most numerous infantry. Despite being dismissed as cowardly by other Covenant species, Unggoy are resilient, breed rapidly, and in sufficient numbers form effective swarm forces. Their history includes the Unggoy Rebellion of 2462, in which they rose against Covenant oppression and were only subdued when the Huragok inadvertently pacified them with recreational narcotics. Today, Unggoy serve in the Swords of Sanghelios, Covenant remnants, and the Banished alike.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/unggoy.png",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "kig-yar",
+    "name": "Kig-Yar",
+    "description": "The Kig-Yar — known to humans as Jackals and Skirmishers — are a mercenary avian-reptilian species of privateers from Eayn, a moon of the gas giant Te. Motivated by profit rather than religious devotion, the Kig-Yar joined the Covenant primarily for access to advanced technology and the chance to plunder human colonies. Their naturally keen eyesight and tactical patience made them exceptional scouts, snipers, and point-defence specialists within Covenant formations. Kig-Yar shield-bearers were notorious among UNSC Marines for projecting personal energy barriers that deflected small-arms fire while advancing. In the post-war era, Kig-Yar factions serve multiple employers including the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/kig-yar.jpg",
+    "affiliation": "Banished",
+    "appearances": []
+  },
+  {
+    "id": "precursor",
+    "name": "Precursor",
+    "description": "The Precursors were an ancient and god-like civilisation who existed long before even the Forerunners — the creators of many species including the Forerunners themselves. Believing themselves to be the embodiment of the Mantle of Responsibility, they seeded life across the galaxy over billions of years. When the Forerunners rose to challenge them, the Precursors were nearly destroyed, their survivors reduced to a neural dust that eventually became the Flood — an ancient civilisation transformed into a parasite by Forerunner betrayal.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/precursor.png",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "mgalekgolo",
+    "name": "Mgalekgolo",
+    "description": "The Mgalekgolo — known to humans as Hunters — are the combat configuration of the Lekgolo species, in which two bonded colonies merge into a towering biped warrior of devastating physical power. Each Hunter pair functions as a single combat unit — the two colonies sharing neural impulses so completely they act as one mind in two bodies. Armoured with thick Assault Harness plates of Forerunner-grade alloy and wielding Assault Cannons that fire superheated fuel rod plasma, the Mgalekgolo can use their massive shields as crushing melee weapons. They are among the most physically powerful infantry in both the Covenant and Banished arsenals, capable of shrugging off weapons that would destroy any other infantry unit.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/mgalekgolo.png",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "tvaoan",
+    "name": "T'vaoan",
+    "description": "",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/7/7b/Halo_Reach_-_Skirmisher.png/326px-Halo_Reach_-_Skirmisher.png",
+    "affiliation": "",
+    "appearances": []
+  },
+  {
+    "id": "florian",
+    "name": "Florian",
+    "description": "The Florians, also called Robustus or the Rubble-people, are a diminutive subspecies of ancient humanity who coexisted with anatomically modern humans before the Forerunner-Human War. Small in stature, Florians were child-sized beings who lived in close proximity to larger human populations. The Forerunners devolved them along with all of humanity as collective punishment after the ancient human empire was defeated. One Florian individual, known as Chakas or Prone to Drift, became entangled in the events surrounding Installation 07 and the Didact.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/florian.jpg",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "ktamanune",
+    "name": "K'tamanune",
+    "description": "K'tamanune were a variety of human that evolved on Erde-Tyrene over the course of nine thousand years following the Librarian's relocation of survivors of the last war against the Forerunners to their race's ancestral homeworld.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/ktamanune.jpg",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "bashamanune",
+    "name": "B'ashamanune",
+    "description": "B'ashamanune were a variety of human that evolved on Erde-Tyrene over the course of nine thousand years following the Librarian's relocation of survivors of the last war against the Forerunners to their race's ancestral homeworld.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/bashamanune.jpg",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "lacerta-erectus",
+    "name": "Lacerta erectus",
+    "description": "Lacerta erectus (\"upright lizard\") is a low-gravity reptilian species with taxonomic similarities to the Kig-Yar. It is unknown whether they survived the dark time following the reintroduction after the activation of the Halo Array.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/lacerta-erectus.jpg",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "denisovan",
+    "name": "Denisovan",
+    "description": "The Denisovans (Denisova hominin) were a prehistoric species of the genus Homo, closely related to humans and Neanderthals. The Denisovans were genetically similar enough with these groups to interbreed with both species. They were tall and lean in stature, had deep brown skin, reddish hair and square heads. Male Denisovans had abundant facial hair. An unknown number of Denisovans were present on Installation 07, along with several other species of human.\nAfter the firing of the Array, Denisovans were re-populated on Earth where they would later interbreed with humans and die out of unknown causes.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/denisovan.jpg",
+    "affiliation": "",
+    "appearances": []
+  },
+  {
+    "id": "yonhet",
+    "name": "Yonhet",
+    "description": "",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/3/37/Enc22-Yonhet-Closeup.png/500px-Enc22-Yonhet-Closeup.png",
+    "affiliation": "",
+    "appearances": []
+  },
+  {
+    "id": "dipholekgolo",
+    "name": "Dipholekgolo",
+    "description": "Dipholekgolo is a subsistence gestalt of Lekgolo, and one of the six specific gestalt types known to the Covenant. Dipholekgolo are exploration colonies cultivated by the San'Shyuum to map the interior of Anodyne Spirit - the Supernal Spiral-class keyship which lay at the core of High Charity.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/dipholekgolo.jpg",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "rhulolekgolo",
+    "name": "Rhulolekgolo",
+    "description": "",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/9/9d/Enc22-Rhulolekgolo.png/500px-Enc22-Rhulolekgolo.png",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "khantolekgolo",
+    "name": "Khantolekgolo",
+    "description": "The Khantolekgolo are a Lekgolo colonial configuration specifically adapted for integration with large Covenant vehicles and weapons platforms. Multiple Lekgolo colonies merge to form the control nervous system of Scarab walkers, Locust units, and other large Covenant war machines, with the colony acting as the vehicle's living brain and motivation system. This biological-mechanical integration makes Covenant super-heavy vehicles semi-autonomous and capable of sophisticated battlefield decisions.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/khantolekgolo.jpg",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "thanolekgolo",
+    "name": "Thanolekgolo",
+    "description": "",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/9/94/HM-Thanolekgolo.png/320px-HM-Thanolekgolo.png",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "gasgira",
+    "name": "Gasgira",
+    "description": "The Gasgira are a species of alien organisms encountered in the Halo universe, notable for their unusual biology and the role they play in the broader ecosystem of the worlds they inhabit. As with many non-sapient species catalogued by Forerunner Lifeworkers during the Conservation Measure, the Gasgira represent the extraordinary biological diversity seeded and preserved across the galaxy by the Forerunner civilisation before the firing of the Halo Array.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/gasgira.jpg",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "list-of-unidentified-species",
+    "name": "List of unidentified species",
+    "description": "During its history, the Milky Way galaxy has played host to many intelligent forms of alien life. While many can be grouped under the wider banners of the Forerunner Ecumene, the Covenant empire or the auspices of the Unified Earth Government for humanity, many alien encounters have been recorded with no currently-known species responsible.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/list-of-unidentified-species.jpg",
+    "affiliation": "Forerunner",
+    "appearances": []
+  },
+  {
+    "id": "xalanyn",
+    "name": "Xalanyn",
+    "description": "",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/1/1a/HINF_HarbingerRender.png/197px-HINF_HarbingerRender.png",
+    "affiliation": "",
+    "appearances": []
+  },
+  {
+    "id": "dazreme",
+    "name": "Dazreme",
+    "description": "The Dazreme are an alien species encountered in the Halo universe, part of the broader array of non-human life forms that populated the galaxy alongside humanity and the Covenant species. Like many species peripheral to the main Covenant conflict, the Dazreme's biology and culture were documented as part of the scientific record maintained by UNSC and Covenant xenobiological archives.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/dazreme.jpg",
+    "affiliation": "Covenant",
+    "appearances": []
+  },
+  {
+    "id": "netherop-species",
+    "name": "Netherop species",
+    "description": "The Netherop species is a fierce predatory alien race native to the harsh desert world of Netherop. Encountered by UNSC forces during covert operations on Netherop, these creatures are apex predators adapted to the brutal environment of their homeworld — fast, aggressive, and capable of overwhelming even armoured UNSC marines. They are referenced in the events of the novel Halo: The Rubicon Protocol as a dangerous complication for stranded UNSC survivors fighting to escape the planet.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/netherop-species.jpg",
+    "affiliation": "UNSC",
+    "appearances": []
+  },
+  {
+    "id": "gigantopithecus",
+    "name": "Gigantopithecus",
+    "description": "Gigantopithecus was the largest species of ape to have ever existed, and was known as Shakyanusho  in ancient times.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/race/gigantopithecus.jpg",
+    "affiliation": "",
+    "appearances": []
+  }
+]

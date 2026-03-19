@@ -17,7 +17,8 @@
     "generate:merge": "tsx scripts/merge-generated-images.ts",
     "generate:all": "FORCE_ALL=true tsx scripts/generate-type.ts",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "sync:entities": "npx tsx scripts/sync-entities.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
