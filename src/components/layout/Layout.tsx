@@ -11,49 +11,49 @@ import { SearchProvider } from '../../contexts/SearchContext';
  */
 const PAGE_BG: Record<string, { url: string; position?: string }> = {
   '/': {
-    // Installation 04 — the iconic Halo ring, Halo CE
-    url: 'https://halo.wiki.gallery/images/4/43/HCE_Installation04_Exterior.jpg',
-    position: 'center 30%',
+    // Spirit of Fire in deep space — Halo Wars cinematic 4K
+    url: 'https://halo.wiki.gallery/images/3/3d/HaloWars-SOF-Space.jpg',
+    position: 'center center',
   },
   '/characters': {
-    // Halo Infinite cover art — Master Chief
-    url: 'https://halo.wiki.gallery/images/0/00/HInf_Coverart_Large_No_Logo.jpg',
-    position: 'center top',
+    // Spartan under fire — Halo Wars 2 cinematic
+    url: 'https://halo.wiki.gallery/images/5/59/HW2-Banished_ejected.png',
+    position: 'center 40%',
   },
   '/weapons': {
-    // Covenant energy sword / combat key art
-    url: 'https://halo.wiki.gallery/images/c/ce/H2A-EnergySword-Concept.jpg',
+    // Atriox cinematic — Halo Wars 2 dark Brute warriors
+    url: 'https://halo.wiki.gallery/images/3/3f/HW2-Atriox-01.jpg',
     position: 'center center',
   },
   '/vehicles': {
-    // Warthog on a Halo ring landscape
-    url: 'https://halo.wiki.gallery/images/b/b3/H3-WarthogJump-Concept.jpg',
-    position: 'center 60%',
+    // Atriox vs Sangheili — Halo Wars 2 announcement cinematic
+    url: 'https://halo.wiki.gallery/images/b/bb/HW2-Atriox-02.jpg',
+    position: 'center center',
   },
   '/races': {
-    // Covenant alien species gathering
-    url: 'https://halo.wiki.gallery/images/1/1e/H3-Brute-ConceptArt.jpg',
+    // Banished warriors — Halo Wars 2 cinematic
+    url: 'https://halo.wiki.gallery/images/2/21/HW2-Banishedtrio.png',
     position: 'center center',
   },
   '/planets': {
-    // Reach from orbit — planet panorama
-    url: 'https://halo.wiki.gallery/images/8/87/Reach-Orbit-HaloReach.jpg',
+    // Spirit of Fire approaching a planet — Halo Wars 1
+    url: 'https://halo.wiki.gallery/images/f/fc/HaloWars-SOF-Sunset.jpg',
     position: 'center center',
   },
   '/games': {
-    // Halo Anniversary panorama
-    url: 'https://halo.wiki.gallery/images/e/e3/HCE-Halo-Anniversary-Panorama.jpg',
-    position: 'center 40%',
+    // Anders meets a Guardian — Halo Wars 2 cinematic
+    url: 'https://halo.wiki.gallery/images/9/97/HW2-Anders_meets_a_Guardian.png',
+    position: 'center bottom',
   },
   '/factions': {
-    // UNSC vs Covenant battle scene
-    url: 'https://halo.wiki.gallery/images/7/72/H5G-UNSC-vs-Covenant-KeyArt.jpg',
+    // Banished fleet above a planet — Halo Wars 2
+    url: 'https://halo.wiki.gallery/images/f/fb/HW2-Banishedfleet.png',
     position: 'center center',
   },
   '/about': {
-    // Installation 07 — Zeta Halo scenic, Halo Infinite
-    url: 'https://halo.wiki.gallery/images/2/20/HINF-Installation07-Surface.jpg',
-    position: 'center 55%',
+    // Anders & Cutter at holotable above the Ark — Halo Wars 2
+    url: 'https://halo.wiki.gallery/images/a/a9/HW2-Anders%26CutteraboveArk.png',
+    position: 'center center',
   },
 };
 
