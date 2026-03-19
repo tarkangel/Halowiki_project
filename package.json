@@ -15,7 +15,9 @@
     "generate:race": "GEN_TYPE=race tsx scripts/generate-type.ts",
     "generate:planet": "GEN_TYPE=planet tsx scripts/generate-type.ts",
     "generate:merge": "tsx scripts/merge-generated-images.ts",
-    "generate:all": "FORCE_ALL=true tsx scripts/generate-type.ts"
+    "generate:all": "FORCE_ALL=true tsx scripts/generate-type.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
@@ -34,6 +36,7 @@
     "google-auth-library": "^9.15.1",
     "tsx": "^4.21.0",
     "typescript": "~5.6.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vitest": "^4.1.0"
   }
 }
