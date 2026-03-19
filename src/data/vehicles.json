@@ -209,7 +209,7 @@
   {
     "id": "harvester",
     "name": "Harvester",
-    "description": "The Za'zayara-pattern Heavy Excavator, designated the Harvester, is one of the largest Covenant land vehicles ever constructed, measuring up to 272 meters in length and weighing over 211,000 tons. Its towering insectoid frame is partially composed of a living Lekgolo worm colony that integrates with the vehicle's mechanical systems, operated by a crew of three. Originally engineered for planetary excavation and Forerunner artefact recovery, it was deployed by Jul 'Mdama's Covenant on Requiem during the 2558 Requiem Campaign.",
+    "description": "The Harvester is an enormous Covenant excavation and resource extraction platform repurposed as a mobile forward base and heavy weapons platform. Originally designed to bore through planetary crust and extract Forerunner artefacts, the Harvester's industrial scale and durability make it a formidable battlefield presence. Its sheer size and heavily armoured hull render it nearly impervious to conventional infantry weapons.",
     "imageUrl": "https://halo.wiki.gallery/images/d/d5/H4-Harvester-Artwork.jpg",
     "faction": "Covenant",
     "type": "Ground",
@@ -272,7 +272,7 @@
   {
     "id": "brhi-xur-pattern-leech",
     "name": "Brhi Xur-pattern Leech",
-    "description": "The Brhi Xur-pattern Ship Breacher, known informally as the Leech, is a Covenant boarding craft engineered for precision attacks on enemy vessels. Its tube-like design incorporates an airlock and a heavy plasma cannon, enabling rapid hull breaches during space combat. Originally deployed as a dedicated boarding vessel during the Human-Covenant War, surviving units later transitioned to civilian cargo transport roles in the post-war era.",
+    "description": "",
     "imageUrl": "https://halo.wiki.gallery/images/6/6e/HINF_Brhi_Xur_Leech.png",
     "faction": "Covenant",
     "type": "Ground",
@@ -317,7 +317,7 @@
   {
     "id": "combat-support-vehicle",
     "name": "Combat support vehicle",
-    "description": "The Combat Support Vehicle is a Covenant armored ground transport capable of carrying personnel, ammunition, medical supplies, and liquified carrier gas across active battlefields. Its bulbous, beetle-like chassis features deployable struts and clamshell side doors, with an internal cargo compartment accommodating up to twenty infantry. The vehicle saw extensive deployment during the Human-Covenant War, with documented use transporting Yanme'e forces during the early stages of the conflict.",
+    "description": "",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-support-vehicle.jpg",
     "faction": "",
     "type": "Ground",
@@ -344,7 +344,7 @@
   {
     "id": "bolroci-workshop-chopper",
     "name": "Bolroci Workshop Chopper",
-    "description": "The Bolroci Workshop Chopper is a Banished fast-attack ground vehicle built on the foundational Jiralhanae Chopper design, drawing on the collective expertise of six disparate Jiralhanae clans. Armed with twin spike cannons and a weaponized front wheel capable of shredding infantry and light vehicles, it trades armor for speed and maneuverability. Manufactured by Bolroci Workshop, it represents a leaner interpretation of the Chopper platform optimized for rapid assault operations.",
+    "description": "",
     "imageUrl": "https://halo.wiki.gallery/images/c/c8/HINF_BolrociChopper.png",
     "faction": "Banished",
     "type": "Ground",
@@ -398,7 +398,7 @@
   {
     "id": "catulus-chopper",
     "name": "Catulus Chopper",
-    "description": "The Catulus Chopper is a custom-built variant of the Bolroci Workshop Chopper, originally commissioned as a personal war-chariot by a Banished commander and distinguished by its gold plating and enhanced spike cannon fire rate. During boost, deployable energy blades extend from the front and sides, shredding anything in the vehicle's path. The variant gained notoriety during the Battle for Zeta Halo in 2560, where it was piloted by Hyperius, the so-called Spartan Killer.",
+    "description": "",
     "imageUrl": "https://halo.wiki.gallery/images/5/5f/HINF_CatulusChopper.png",
     "faction": "Banished",
     "type": "Ground",
