@@ -92,21 +92,27 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Mirror Halopedia images to GCS
+        run: npx tsx scripts/mirror-halopedia-images.ts
+        env:
+          GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+          GCS_BUCKET: ${{ vars.GCS_IMAGES_BUCKET || format('{0}-generated-images', secrets.GCP_PROJECT_ID) }}
+
       - name: Generate missing images
         run: npx tsx scripts/generate-missing-images.ts
         env:
           GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
           GCS_BUCKET: ${{ vars.GCS_IMAGES_BUCKET || format('{0}-generated-images', secrets.GCP_PROJECT_ID) }}
 
-      - name: Commit updated image map
+      - name: Commit updated image maps
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/generated-images.json
+          git add src/generated-images.json src/generated-character-images.json
           if git diff --cached --quiet; then
             echo "No new images, skipping commit"
           else
-            git commit -m "chore: update generated-images.json [skip ci]"
+            git commit -m "chore: update generated image maps [skip ci]"
             git push
           fi
 
