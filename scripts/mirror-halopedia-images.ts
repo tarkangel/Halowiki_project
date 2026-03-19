@@ -123,10 +123,17 @@ async function mirrorType(type: string, titles: string[]): Promise<void> {
 
   const imageMap = loadImageMap(type);
 
-  // Only fetch thumbnails for titles not already mirrored to GCS
-  const needed = titles.filter(t => !imageMap[t]?.startsWith('https://storage.googleapis.com/'));
+  // Only fetch thumbnails for titles not already covered:
+  //   • GCS-backed URLs  → already mirrored, skip
+  //   • halo.wiki.gallery URLs → intentional manual override (e.g. specific game
+  //     screenshot chosen over Halopedia's default thumbnail), preserve as-is
+  const needed = titles.filter(t => {
+    const url = imageMap[t];
+    return !url?.startsWith('https://storage.googleapis.com/')
+        && !url?.startsWith('https://halo.wiki.gallery/');
+  });
   if (needed.length === 0) {
-    console.log(`[${type}] All entries already mirrored — skipping.`);
+    console.log(`[${type}] All entries already covered — skipping.`);
     return;
   }
 
