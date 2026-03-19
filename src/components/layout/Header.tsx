@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import SearchBar from '../ui/SearchBar';
 import SearchOverlay from '../ui/SearchOverlay';
 import { useSearch } from '../../contexts/SearchContext';
@@ -26,14 +27,40 @@ export default function Header() {
     <header className="fixed top-0 left-16 right-0 h-14 bg-zinc-950 border-b border-zinc-800 flex items-center justify-between px-6 z-40">
       <h2 className="text-white font-semibold text-lg tracking-wide">{title}</h2>
       <div className="flex items-center gap-3">
+      {/* 2-position language toggle */}
       <button
         onClick={toggleLang}
-        title={lang === 'en' ? 'Cambiar a Español' : 'Switch to English'}
-        className="flex items-center gap-1.5 px-3 py-1 rounded border border-zinc-700 bg-zinc-900 hover:border-[#00B4D8] hover:text-[#00B4D8] text-zinc-400 text-xs font-bold tracking-widest transition-colors"
-        style={{ fontFamily: "'Orbitron', sans-serif" }}
+        aria-label={lang === 'en' ? 'Cambiar a Español' : 'Switch to English'}
+        className="relative flex items-center h-7 rounded-full border border-zinc-700 bg-zinc-900 p-0.5 gap-0 cursor-pointer"
+        style={{ width: 104 }}
       >
-        <span>{lang === 'en' ? '🇲🇽' : '🇺🇸'}</span>
-        <span>{lang === 'en' ? 'ES' : 'EN'}</span>
+        {/* sliding pill */}
+        <motion.span
+          layout
+          transition={{ type: 'spring', stiffness: 500, damping: 38 }}
+          className="absolute top-0.5 bottom-0.5 w-[48px] rounded-full bg-[#00B4D8]/20 border border-[#00B4D8]"
+          style={{ left: lang === 'en' ? 2 : 'calc(100% - 50px)' }}
+        />
+        {/* EN label */}
+        <span
+          className="relative z-10 flex items-center justify-center gap-1 w-[50px] text-[10px] font-black tracking-widest transition-colors"
+          style={{
+            fontFamily: "'Orbitron', sans-serif",
+            color: lang === 'en' ? '#00B4D8' : '#52525b',
+          }}
+        >
+          <span>🇺🇸</span> EN
+        </span>
+        {/* ES label */}
+        <span
+          className="relative z-10 flex items-center justify-center gap-1 w-[50px] text-[10px] font-black tracking-widest transition-colors"
+          style={{
+            fontFamily: "'Orbitron', sans-serif",
+            color: lang === 'es' ? '#00B4D8' : '#52525b',
+          }}
+        >
+          <span>🇲🇽</span> ES
+        </span>
       </button>
       <div className="relative w-72">
         <SearchBar
