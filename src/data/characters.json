@@ -354,28 +354,28 @@
     "id": "abovian",
     "name": "Abovian",
     "description": "Abovian is a member of the Orbital Drop Shock Troopers in the UNSC Marine Corps.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/abovian.jpg",
     "species": "Human",
     "affiliation": "UNSC",
-    "appearances": [],
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/abovian.jpg"
+    "appearances": []
   },
   {
     "id": "abalan",
     "name": "Abalan",
     "description": "Spartan Abalan is a SPARTAN-IV supersoldier serving in the United Nations Space Command's Spartan Operations division. She is one of the Spartans attached to Fireteam Jorogumo, a unit involved in joint-operations with the Swords of Sanghelios on Sanghelios.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/abalan.jpg",
     "species": "Human",
     "affiliation": "UNSC",
-    "appearances": [],
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/abalan.jpg"
+    "appearances": []
   },
   {
     "id": "araqiel",
     "name": "Araqiel",
     "description": "Araqiel was a UNSC third-generation \"smart\" AI assigned to Colonel James Ackerson.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/araqiel.jpg",
     "species": "AI",
     "affiliation": "UNSC",
-    "appearances": [],
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/araqiel.jpg"
+    "appearances": []
   },
   {
     "id": "aine",
@@ -408,28 +408,28 @@
     "id": "archie",
     "name": "Archie",
     "description": "Archie is an artificial intelligence construct who was in service with the United Nations Space Command. He was in charge of UNSC shipping operations on Oban, but would later defect to the Created on October 27, 2558.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/archie.jpg",
     "species": "AI",
     "affiliation": "UNSC",
-    "appearances": [],
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/archie.jpg"
+    "appearances": []
   },
   {
     "id": "andarta",
     "name": "Andarta",
     "description": "Andarta is an artificial intelligence construct who was in charge of managing agricultural systems at Homestead Facility, but would later defect to the Created on October 27, 2558.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/andarta.jpg",
     "species": "AI",
     "affiliation": "",
-    "appearances": [],
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/andarta.jpg"
+    "appearances": []
   },
   {
     "id": "amitbha",
     "name": "Amitābha",
     "description": "Amitābha is an artificial intelligence construct who is a bioinformatics researcher for Levihan Industries on Earth. On October 28, 2558, he pledged allegiance to the Created.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/amitbha.jpg",
     "species": "AI",
     "affiliation": "",
-    "appearances": [],
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/amitbha.jpg"
+    "appearances": []
   },
   {
     "id": "adequate-observer",
@@ -444,10 +444,10 @@
     "id": "argie",
     "name": "Argie",
     "description": "Argie was an ancilla created as a remote aspect of the Forerunner archeon-class ancilla Intrepid Eye.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/argie.jpg",
     "species": "AI",
     "affiliation": "Forerunner",
-    "appearances": [],
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/argie.jpg"
+    "appearances": []
   },
   {
     "id": "adjutant-resolution",
@@ -786,10 +786,10 @@
     "id": "kejah",
     "name": "Ke'jah",
     "description": "Ke'jah is a Kig-Yar businessman operating on Venezia. He manages a colony-wide transport business on the planet.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/kejah.jpg",
     "species": "Kig-Yar",
     "affiliation": "Covenant",
-    "appearances": [],
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/character/kejah.jpg"
+    "appearances": []
   },
   {
     "id": "caomar",
