@@ -153,6 +153,15 @@
     "appearances": []
   },
   {
+    "id": "suppressor",
+    "name": "Suppressor",
+    "description": "The Suppressor is a Promethean automatic energy weapon that fires rapid bursts of hard light shards at close to medium range. Wielded by Promethean Knights and Crawlers on Requiem and beyond, the Suppressor prioritises rate of fire over accuracy, overwhelming targets with hard light projectiles that cause both kinetic and thermal damage. Its unusual hard light ammunition makes it unlike any human or Covenant weapon in the UNSC arsenal.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/lore/suppressor.jpg",
+    "faction": "Forerunner",
+    "type": "",
+    "appearances": []
+  },
+  {
     "id": "focus-rifle",
     "name": "Focus Rifle",
     "description": "The Focus Rifle is a Covenant directed-energy weapon that fires a sustained beam of superheated particles capable of burning through shields and armour at range. Unlike most Covenant weapons that fire discrete projectiles, it projects a continuous beam that the user sweeps across targets. The sustained heat output makes it particularly effective at collapsing energy shielding by maintaining contact long enough for the shield to fail.",
@@ -213,6 +222,15 @@
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/12mm-comet.jpg",
     "faction": "",
     "type": "Pistol",
+    "appearances": []
+  },
+  {
+    "id": "covenant-weaponry",
+    "name": "Covenant weaponry",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/covenant-weaponry.jpg",
+    "faction": "Covenant",
+    "type": "",
     "appearances": []
   },
   {
@@ -326,7 +344,7 @@
   {
     "id": "bolroci-workshop-shade",
     "name": "Bolroci Workshop Shade",
-    "description": "The Bolroci Workshop Gun Pod is a Banished anti-infantry turret derived from the Covenant-era Shade design. It mounts two rapid-fire plasma cannons capable of sustained suppressing fire that never overheat, elevated above a hovering circular base. An integrated energy shield protects the gunner from frontal and side attacks, making it considerably more durable than older Shade variants. Manufactured by Bolroci Workshop, a Banished arms supplier, it is commonly deployed as a defensive emplacement across Banished-controlled territories.",
+    "description": "",
     "imageUrl": "https://halo.wiki.gallery/images/b/bb/HINF_Deadlocke_Shade_Firing.png",
     "faction": "Banished",
     "type": "",
