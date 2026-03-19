@@ -644,13 +644,34 @@ function isUsableCharacter(c: Character): boolean {
   // Must have a meaningful description
   if (!c.description || c.description.trim().length < 80) return false;
   const name = c.name.trim();
+  // Too short to be a real name
+  if (name.length < 3) return false;
   // Pure radio callsigns: "4 Charlie 27", "2 Lima 4", "'D'", "'S'"
   const callsign = /^[\d\s'"`]+$|^\d[\w\s'-]{0,12}\d$|^'[A-Z]'$/;
   if (callsign.test(name)) return false;
   // Pure SPARTAN designations with no given name (SPARTAN-B170, SPARTAN-G059)
   // Keep names like "Carter-A259" or "Jun-A266" (real name + tag)
   if (/^SPARTAN-[A-Z0-9]+$/i.test(name)) return false;
+  // Serial number patterns: "00476-97392-BB", "B-021-331", "07162-00133-DC"
+  if (/^\d{4,}-\d+-[A-Z]{1,3}$/.test(name)) return false;
+  if (/^[A-Z]-\d{3}-\d{3}$/.test(name)) return false;
+  // ONI/AI serial codes: "48452-556-EPN644", "J-011-422"
+  if (/^[A-Z0-9]+-\d{3}-[A-Z0-9]+$/.test(name)) return false;
+  // Pure uppercase acronyms 2-4 chars with no spaces (e.g. "HXA", "UNK")
+  if (/^[A-Z]{2,4}$/.test(name)) return false;
+  // Adjunct/Field designation strings: "Adjunct Field Officer 311-112b"
+  if (/\d{3,}-\d{2,}[a-z]?$/.test(name)) return false;
   return true;
+}
+
+/** Fetch only the curated LORE_CHARACTERS — fast path used for immediate display. */
+export async function fetchLoreCharacters(): Promise<Character[]> {
+  const summaries = await fetchPageSummariesBatched(LORE_CHARACTERS);
+  const loreOrder = new Map(LORE_CHARACTERS.map((t, i) => [t, i]));
+  summaries.sort((a, b) => (loreOrder.get(a.title) ?? 99) - (loreOrder.get(b.title) ?? 99));
+  return summaries
+    .map(page => ({ ...pageToCharacter(page), species: inferSpecies(page.title, page.extract ?? '') }))
+    .filter(isUsableCharacter);
 }
 
 export async function fetchRaces(limit = 30): Promise<Race[]> {
