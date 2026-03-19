@@ -133,8 +133,22 @@ import {
   LORE_CHARACTERS, LORE_WEAPONS, LORE_VEHICLES, LORE_RACES, LORE_PLANETS,
 } from '../lore-titles';
 
+// Titles that must always use the canonical Halopedia thumbnail instead of AI art.
+const LORE_CHARACTER_SET = new Set(LORE_CHARACTERS);
+
 function generatedImage(title: string): string | undefined {
   return (generatedImages as Record<string, string>)[title];
+}
+
+/** Image URL logic:
+ *  - LORE characters → Halopedia thumbnail first (canonical art), AI as fallback
+ *  - All others      → AI generated first (consistent style), Halopedia as fallback
+ */
+function resolveCharacterImage(title: string, thumbnail: string | undefined): string | undefined {
+  if (LORE_CHARACTER_SET.has(title)) {
+    return thumbnail ?? generatedImage(title);
+  }
+  return generatedImage(title) ?? thumbnail;
 }
 
 function slugify(title: string) {
@@ -204,7 +218,7 @@ export function pageToCharacter(page: PageSummary): Character {
     id: slugify(page.title),
     name: page.title,
     description: page.extract ?? '',
-    imageUrl: generatedImage(page.title) ?? page.thumbnail?.source,
+    imageUrl: resolveCharacterImage(page.title, page.thumbnail?.source),
     species: inferSpecies(page.title, page.extract ?? ''),
     affiliation: inferFaction(page.title, page.extract ?? ''),
     appearances: [],
@@ -666,12 +680,15 @@ function isUsableCharacter(c: Character): boolean {
 
 /** Fetch only the curated LORE_CHARACTERS — fast path used for immediate display. */
 export async function fetchLoreCharacters(): Promise<Character[]> {
-  const summaries = await fetchPageSummariesBatched(LORE_CHARACTERS);
+  const summaries = await fetchPageSummariesBatched([...LORE_CHARACTERS]);
   const loreOrder = new Map(LORE_CHARACTERS.map((t, i) => [t, i]));
   summaries.sort((a, b) => (loreOrder.get(a.title) ?? 99) - (loreOrder.get(b.title) ?? 99));
   return summaries
-    .map(page => ({ ...pageToCharacter(page), species: inferSpecies(page.title, page.extract ?? '') }))
-    .filter(isUsableCharacter);
+    .map(page => ({
+      ...pageToCharacter(page),
+      species: inferSpecies(page.title, page.extract ?? ''),
+    }))
+    .filter(c => !!c.description && c.description.trim().length >= 50);
 }
 
 export async function fetchRaces(limit = 30): Promise<Race[]> {
