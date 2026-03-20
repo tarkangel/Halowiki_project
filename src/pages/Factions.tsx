@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FACTIONS, type FactionEntry } from '../faction-registry';
+import { Link, useSearchParams } from 'react-router-dom';
+import { FACTIONS, FACTION_MAP, type FactionEntry } from '../faction-registry';
 
 const CATEGORY_META: Array<{ key: keyof FactionEntry; label: string; path: string }> = [
   { key: 'characters', label: 'Characters', path: '/characters' },
@@ -106,7 +106,20 @@ function FactionCard({ faction, isSelected, onSelect }: {
 }
 
 export default function Factions() {
-  const [selected, setSelected] = useState<FactionEntry>(FACTIONS[0]);
+  const [searchParams] = useSearchParams();
+  const [selected, setSelected] = useState<FactionEntry>(() => {
+    const id = searchParams.get('faction');
+    return (id && FACTION_MAP.get(id)) ?? FACTIONS[0];
+  });
+
+  // Sync when URL param changes (e.g. navigating from a badge link)
+  useEffect(() => {
+    const id = searchParams.get('faction');
+    if (id) {
+      const faction = FACTION_MAP.get(id);
+      if (faction) setSelected(faction);
+    }
+  }, [searchParams]);
 
   return (
     <motion.div
@@ -166,10 +179,22 @@ export default function Factions() {
                 </h2>
               </div>
 
-              {/* Description */}
-              <p className="text-sm text-zinc-300 leading-relaxed mb-6">
-                {selected.description}
-              </p>
+              {/* Description + image side by side */}
+              <div className="flex gap-5 mb-6">
+                <p className="text-sm text-zinc-300 leading-relaxed flex-1">
+                  {selected.description}
+                </p>
+                {selected.imageUrl && (
+                  <div className="flex-shrink-0 w-64 xl:w-80 rounded-lg overflow-hidden border" style={{ borderColor: `${selected.color}33` }}>
+                    <img
+                      src={selected.imageUrl}
+                      alt={selected.name}
+                      className="w-full h-full object-cover"
+                      style={{ maxHeight: 180 }}
+                    />
+                  </div>
+                )}
+              </div>
 
               <div
                 className="h-px mb-6"

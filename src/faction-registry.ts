@@ -13,6 +13,7 @@ export interface FactionEntry {
   tag: string;
   color: string;
   description: string;
+  imageUrl?: string;
   characters: string[];
   weapons: string[];
   vehicles: string[];
@@ -26,6 +27,7 @@ export const FACTIONS: FactionEntry[] = [
     name: 'UNSC',
     tag: 'UNSC',
     color: '#4895EF',
+    imageUrl: 'https://halo.wiki.gallery/images/a/a9/UNSC_Attack.jpg',
     description:
       'The United Nations Space Command is humanity\'s military, exploratory, and scientific agency. Founded in the 22nd century to combat the Insurrection, the UNSC bore the full weight of the Human-Covenant War, fielding Spartan supersoldiers, powerful warships, and improvised ingenuity against an overwhelmingly superior enemy. Post-war, it remains humanity\'s primary defence against Covenant remnants, the Banished, and the Forerunner AI threat of the Created.',
     characters: [
@@ -49,6 +51,7 @@ export const FACTIONS: FactionEntry[] = [
     name: 'Covenant',
     tag: 'COV',
     color: '#C77DFF',
+    imageUrl: 'https://halo.wiki.gallery/images/2/29/HM-HighCharityBC.png',
     description:
       'The Covenant was a theocratic hegemony of alien species united under the religious belief that activating the Forerunner Halo rings — the so-called "Sacred Rings" — would trigger the Great Journey and elevate them to godhood. For nearly thirty years their fleets prosecuted a genocidal war against humanity before the Great Schism tore them apart from within. Covenant remnant factions and splinter groups continue to operate long after the empire\'s collapse in 2552.',
     characters: [
@@ -72,6 +75,7 @@ export const FACTIONS: FactionEntry[] = [
     name: 'Forerunner',
     tag: 'FRN',
     color: '#FFD60A',
+    imageUrl: 'https://storage.googleapis.com/halowiki-generated-images/faction/forerunner.jpg',
     description:
       'The Forerunners were an ancient and immensely advanced humanoid civilisation that ruled a galaxy-spanning empire for millions of years. Creators of the Halo Array, the Ark, Shield Worlds, and the Monitors that maintain them, they sacrificed themselves to stop the Flood — firing their weapons and perishing to save all remaining life in the galaxy. Their technology, artefacts, and installations continue to shape galactic events a hundred thousand years after their extinction.',
     characters: ['The Librarian', 'Guilty Spark', 'The Didact'],
@@ -91,6 +95,7 @@ export const FACTIONS: FactionEntry[] = [
     name: 'Banished',
     tag: 'BNS',
     color: '#FF3366',
+    imageUrl: 'https://halo.wiki.gallery/images/d/d6/HW2-Banished.png',
     description:
       'The Banished are a mercenary coalition founded by the Jiralhanae warlord Atriox after he broke free of the Covenant — refusing to die in a war fought for a lie. Unlike the Covenant\'s rigid theocracy, the Banished operate as a ruthless but pragmatic military force, accepting members of any species willing to fight and offering payment rather than promises of godhood. They are one of the most dangerous military powers in the post-Covenant War galaxy, and the primary antagonist force of Halo Wars 2 and Halo Infinite.',
     characters: ['Escharum', 'Atriox'],
@@ -109,6 +114,7 @@ export const FACTIONS: FactionEntry[] = [
     name: 'Flood',
     tag: 'FLD',
     color: '#00FF9F',
+    imageUrl: 'https://halo.wiki.gallery/images/c/c1/HINF_FloodHorde_Concept.png',
     description:
       'The Flood is an ancient parasitic species that can infect and assimilate any organism with sufficient neural complexity, transforming it into a combat form that serves the collective intelligence of the Gravemind. Originally created by the Precursors as revenge against the Forerunners, the Flood consumed most of the galaxy before the Halo Array was fired to starve it. Small outbreaks survived in Forerunner installations and were encountered by the UNSC and Covenant during the Human-Covenant War, nearly spreading beyond containment multiple times.',
     characters: ['Gravemind'],
@@ -124,6 +130,7 @@ export const FACTIONS: FactionEntry[] = [
     name: 'Swords of Sanghelios',
     tag: 'SOS',
     color: '#00B4D8',
+    imageUrl: 'https://halo.wiki.gallery/images/2/2a/H5G-SOSformation.png',
     description:
       'The Swords of Sanghelios is the Sangheili faction led by Arbiter Thel \'Vadam following the Great Schism and the collapse of the Covenant. Rejecting the religious doctrine of the Prophets, the Swords embrace a new path of military honour, political sovereignty, and alliance with humanity through the UNSC. They serve as a major UNSC partner against both Covenant remnant factions and the Banished, while working to restore stability to Sangheili society after centuries of theocratic rule.',
     characters: ["Thel 'Vadam", "Rtas 'Vadum", "Usze 'Taham"],
