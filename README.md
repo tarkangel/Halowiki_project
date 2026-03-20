@@ -43,8 +43,10 @@ A full **data reliability layer** ensures every entity always has both an image 
 
 A static cross-category catalog linking every character, weapon, vehicle, race, and planet to their faction — with zero runtime cost:
 
-- **`src/faction-registry.ts`** — six factions (UNSC, Covenant, Forerunner, Banished, Flood, Swords of Sanghelios), each with a full entity catalog across all categories.
-- **Factions page** — animated detail panel per faction showing every associated entity as deep-linked colored tags, navigating to the relevant catalog section.
+- **`src/faction-registry.ts`** — six factions (UNSC, Covenant, Forerunner, Banished, Flood, Swords of Sanghelios), each with a full entity catalog across all categories and a curated faction description.
+- **Factions page** — animated detail panel per faction showing a canonical faction image alongside the description, and every associated entity as deep-linked colored tags that navigate to the relevant catalog section.
+- **Faction badge navigation** — `<Badge>` components throughout the wiki auto-resolve faction labels to `/factions?faction=<id>` deep links. The Factions page reads the `?faction=` URL param on mount and syncs selection via `useEffect` when it changes (e.g. navigating from a badge).
+- **Faction images** — each faction entry includes a `imageUrl` pointing to a Halopedia canonical screenshot or an Imagen 3–generated illustration (Forerunner), displayed in the detail panel.
 - **Continuous accuracy verification** — `faction-audit.ts` cross-references live Halopedia data against detected factions and flags mismatches. Reduced likely-wrong detections from 56 → 29 and no-faction entries from 224 → 118 through iterative classifier improvements.
 
 ### GCP Infrastructure
@@ -100,7 +102,10 @@ Key frontend engineering decisions:
 - **Static data, instant load** — all entity arrays (characters, weapons, vehicles, races, planets, games) are bundled as JSON imports via `src/api/static.ts`. Pages resolve data synchronously from the bundle — no spinner, no network round-trip, no external API dependency at runtime.
 - **IntersectionObserver infinite scroll** — a sentinel element 400px below the viewport triggers progressive disclosure of large entity lists, with a manual Load More fallback for environments where IntersectionObserver is unavailable.
 - **Per-route animated backgrounds** — each wiki section (characters, weapons, vehicles, factions…) renders a distinct Halo scene wallpaper as a fixed background layer. `AnimatePresence` crossfades between wallpapers (0.6s) on navigation. A layered dark overlay + bottom vignette keep all content readable over the image.
-- **Animated collapsible sidebar** — Framer Motion drives the expand/collapse with neon Orbitron tags that glow on active routes. Width transitions smoothly between icon-only (64px) and full-label (240px) modes.
+- **Animated collapsible sidebar** — Framer Motion drives the expand/collapse with neon Orbitron tags that glow on active routes. Width transitions smoothly between icon-only (64px) and full-label (240px) modes. The sidebar logo is an Imagen 3–generated Halo ring with a transparent background and a living biome on its inner surface.
+- **Scroll-to-zoom on entity images** — the detail panel image supports pinch/scroll zoom (0.5×–4×) via an `onWheel` handler with a `useRef` state mirror for closure safety. Replaces the non-functional vertical scrollbar that previously appeared in the detail panel.
+- **Faction badge deep-links** — faction labels rendered as `<Badge>` components resolve to `/factions?faction=<id>` links. Clicking a badge navigates directly to that faction's detail panel. `e.stopPropagation()` prevents the parent card click from firing simultaneously.
+- **Community and spin-off games** — the Games section includes both mainline titles and fan/community releases (Halo Custom Edition, Halo Online, Halo: Campaign Evolved, Halo: Fireteam Raven, Halo 5: Forge, Halo Recruit) with full EN+ES descriptions.
 
 ---
 
@@ -137,7 +142,8 @@ Image & Description Pipeline
   ├── sync-descriptions.ts       ← description sync to GCS + JSON
   ├── faction-audit.ts           ← coverage + accuracy verification tool
   ├── regenerate-titles.ts       ← targeted regeneration by title list
-  └── regenerate-species.ts      ← species-targeted batch regeneration
+  ├── regenerate-species.ts      ← species-targeted batch regeneration
+  └── generate-ring-icon.ts      ← one-off: Imagen 3 sidebar ring icon generation
 
 Static Data (all committed to git, bundled into the SPA)
   src/
@@ -303,7 +309,8 @@ scripts/
 ├── sync-descriptions.ts           # Description sync → GCS archive + generated-descriptions.json
 ├── faction-audit.ts               # Faction coverage + accuracy audit tool
 ├── regenerate-titles.ts           # Targeted regeneration by title
-└── regenerate-species.ts          # Species-targeted batch regeneration
+├── regenerate-species.ts          # Species-targeted batch regeneration
+└── generate-ring-icon.ts          # One-off: Imagen 3 sidebar ring icon (transparent PNG)
 
 terraform/
 ├── apis.tf                        # GCP service API enablement
