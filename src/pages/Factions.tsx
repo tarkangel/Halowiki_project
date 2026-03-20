@@ -109,7 +109,7 @@ export default function Factions() {
   const [searchParams] = useSearchParams();
   const [selected, setSelected] = useState<FactionEntry>(() => {
     const id = searchParams.get('faction');
-    return (id && FACTION_MAP.get(id)) ?? FACTIONS[0];
+    return FACTION_MAP.get(id ?? '') ?? FACTIONS[0];
   });
 
   // Sync when URL param changes (e.g. navigating from a badge link)
