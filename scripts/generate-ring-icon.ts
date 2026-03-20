@@ -7,7 +7,7 @@ const BUCKET_NAME = `${PROJECT_ID}-generated-images`;
 const LOCATION    = 'us-central1';
 const MODEL       = 'imagen-3.0-generate-002';
 
-const PROMPT = `A Halo ring megastructure (Forerunner installation) floating in space, seen from outside at a dramatic angle showing the full ring as a tilted ellipse. The ring has a metallic silver-gray structure with glowing cyan-blue light strips along its edges. The ring is isolated on a pure white background with no other elements. Product render style, clean cutout, crisp edges, high detail. No stars, no planets, no space background. Pure white background. Square composition 1:1.`;
+const PROMPT = `A Halo ring megastructure (Forerunner installation) seen from outside at a dramatic angle showing the full ring as a tilted ellipse. The outer ring structure is dark metallic gray with glowing cyan-blue LED light strips along the edges. The inner concave surface of the ring — the habitable face — is clearly visible and shows a lush living biome: green continents, blue oceans, white cloud formations, like the inside of a terraformed world curving around the ring interior. High detail. Isolated on a pure white background with no other elements, no stars, no space background. Product render style, clean cutout, crisp edges. Square composition 1:1.`;
 
 async function main() {
   const auth = new GoogleAuth({ scopes: 'https://www.googleapis.com/auth/cloud-platform' });
@@ -28,8 +28,8 @@ async function main() {
   if (!res.ok) throw new Error(JSON.stringify(json));
   
   const buf = Buffer.from(json.predictions[0].bytesBase64Encoded, 'base64');
-  writeFileSync('/tmp/halo-ring-whitebg.png', buf);
-  console.log('Saved to /tmp/halo-ring-whitebg.png');
+  writeFileSync('/tmp/halo-ring-v3-whitebg.png', buf);
+  console.log('Saved to /tmp/halo-ring-v3-whitebg.png');
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
