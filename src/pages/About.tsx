@@ -92,12 +92,12 @@ export default function About() {
           {t.creatorLabel}
         </p>
         <div className="flex items-start gap-4">
-          <div
-            className="w-14 h-14 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
-            style={{ background: '#00B4D818', border: '1px solid #00B4D833' }}
-          >
-            👾
-          </div>
+          <img
+            src="https://storage.googleapis.com/halowiki-generated-images/about/yo.png"
+            alt="Angel Calderon"
+            className="w-14 h-14 rounded-xl object-cover flex-shrink-0"
+            style={{ border: '1px solid #00B4D833' }}
+          />
           <div>
             <h2 className="text-xl font-bold text-white mb-1">Angel Calderon</h2>
             <p className="text-zinc-400 text-xs mb-2 font-semibold tracking-wide uppercase" style={{ color: '#00B4D8' }}>

@@ -164,7 +164,7 @@ export default function Sidebar() {
             </motion.span>
             {/* Ring — right of HALO WIKI when expanded */}
             <motion.img
-              src="https://storage.googleapis.com/halowiki-generated-images/ui/halo-ring-icon.png"
+              src="https://storage.googleapis.com/halowiki-generated-images/ui/halo-ring-v2.png"
               alt=""
               aria-hidden
               animate={{ opacity: expanded ? 0.92 : 0 }}
@@ -175,7 +175,7 @@ export default function Sidebar() {
           </div>
           {/* Ring — below HW when collapsed */}
           <motion.img
-            src="https://storage.googleapis.com/halowiki-generated-images/ui/halo-ring-icon.png"
+            src="https://storage.googleapis.com/halowiki-generated-images/ui/halo-ring-v2.png"
             alt=""
             aria-hidden
             animate={{ opacity: expanded ? 0 : 0.85 }}
