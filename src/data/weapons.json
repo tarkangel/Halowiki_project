@@ -329,7 +329,7 @@
     "description": "The Bolroci Workshop Shade is a heavy plasma turret emplacement manufactured by the Bolroci Workshop and deployed by the Banished. A descendant of the Covenant's long-serving Shade turret lineage, the Bolroci variant retains the characteristic rotating plasma cannon mounted on a fixed pedestal but has been modified with Banished-standard reinforcement and power systems for sustained high-output fire. Operated by a single gunner seated within the turret housing, it provides area-denial fire against infantry and light vehicles. Banished forces deployed these emplacements extensively on Installation 07 during the events of Halo Infinite.",
     "imageUrl": "https://halo.wiki.gallery/images/b/bb/HINF_Deadlocke_Shade_Firing.png",
     "faction": "Banished",
-    "type": "",
+    "type": "Heavy",
     "appearances": []
   },
   {
