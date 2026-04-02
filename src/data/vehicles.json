@@ -234,6 +234,15 @@
     "appearances": []
   },
   {
+    "id": "dovotaa-workshop-reaver",
+    "name": "Dovotaa Workshop Reaver",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/dovotaa-workshop-reaver.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
     "id": "052496",
     "name": "052496",
     "description": "052496 was a UNSC M808B Scorpion. It has a camouflage design to suit the terrain it is used in.",
@@ -279,6 +288,24 @@
     "appearances": []
   },
   {
+    "id": "ahtulai-workshop-banshee",
+    "name": "'Ahtulai Workshop Banshee",
+    "description": "The 'Ahtulai Workshop Attack Flyer is a variant of Banshee ground-attack aircraft employed by the Banished. They are built upon the frames of older Oghal-pattern variants, unlike the more mainline Kaelum Workshop Banshees employed by Banished forces operating on Installation 07.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/ahtulai-workshop-banshee.jpg",
+    "faction": "Banished",
+    "type": "Air",
+    "appearances": []
+  },
+  {
+    "id": "eklondal-workshop-lich",
+    "name": "Eklon'Dal Workshop Lich",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/eklondal-workshop-lich.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
     "id": "armored-warthog",
     "name": "Armored Warthog",
     "description": "The Armored Warthog is an up-armored variant of the M12B Warthog employed by the forces of the UNSC Spirit of Fire on Installation 00.",
@@ -297,12 +324,30 @@
     "appearances": []
   },
   {
+    "id": "breacher-exosuit",
+    "name": "Breacher Exosuit",
+    "description": "The Breacher exosuit is a type of powered exoskeleton employed by the Banished.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/breacher-exosuit.jpg",
+    "faction": "Banished",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
     "id": "unsc-starship",
     "name": "UNSC starship",
     "description": "UNSC starships are the military and civilian vessels operated by the United Nations Space Command, ranging from small prowlers and frigates to the massive Infinity-class supercarrier. Built across dozens of shipyards throughout human space, UNSC warships are characterised by their use of magnetic accelerator cannons — railgun-based weapons that accelerate kinetic projectiles to a fraction of the speed of light — alongside missile batteries and point-defence autocannons. Unlike Covenant ships which rely on plasma-based energy weapons, UNSC vessels emphasise kinetic firepower and armour. The backbone of UNSC fleet doctrine, these vessels defended human space throughout the Human-Covenant War and beyond.",
     "imageUrl": "https://halo.wiki.gallery/images/thumb/4/47/HM_Infinity.jpg/500px-HM_Infinity.jpg",
     "faction": "UNSC",
     "type": "Space",
+    "appearances": []
+  },
+  {
+    "id": "decimus-exoskeleton",
+    "name": "Decimus' exoskeleton",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/decimus-exoskeleton.jpg",
+    "faction": "Banished",
+    "type": "Ground",
     "appearances": []
   },
   {
@@ -320,6 +365,15 @@
     "description": "The Liang-Dortmund mining rig is a massive mobile surface-mining and processing platform manufactured by the Liang-Dortmund Corporation, deployed primarily on Meridian for large-scale mineral extraction. Built on enormous tracked undercarriage, the rig moves slowly across the planetary surface while its drilling arrays bore into rock strata, processing extracted material on-board. Its industrial scale dwarfs most conventional vehicles — the rig effectively constitutes a moving facility rather than a vehicle in the traditional sense. The UNSC and UEG came to rely on Liang-Dortmund's extraction infrastructure to sustain the post-war rebuilding effort across the outer colonies.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/liang-dortmund-mining-rig.jpg",
     "faction": "UNSC",
+    "type": "Ground",
+    "appearances": []
+  },
+  {
+    "id": "dovotaa-workshop-griever",
+    "name": "Dovotaa Workshop Griever",
+    "description": "",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/dovotaa-workshop-griever.jpg",
+    "faction": "Banished",
     "type": "Ground",
     "appearances": []
   },
@@ -414,15 +468,6 @@
     "appearances": []
   },
   {
-    "id": "dovotaa-workshop-reaver",
-    "name": "Dovotaa Workshop Reaver",
-    "description": "The Dovotaa Workshop Sky Protector, commonly known as the Reaver, is a bipedal anti-aircraft walker used by the Banished. The Reaver is capable of using its missiles as a propulsion system briefly in order to cover long distances or smash into enemies, similar to a Spartan's ground pound.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/dovotaa-workshop-reaver.jpg",
-    "faction": "Banished",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
     "id": "eklondal-workshop-wraith-invader",
     "name": "Eklon'Dal Workshop Wraith Invader",
     "description": "The Eklon'Dal Workshop Warrior Carriage, colloquially known as Wraith Invader, is a troop transport in the Wraith family vehicles operated by the Banished.",
@@ -436,24 +481,6 @@
     "name": "Zaagokelu Workshop Ghost",
     "description": "The Zaagokelu Workshop Scout Bike is a light scout vehicle used by the Banished. It is a part of the Ghost series of scout bikes.",
     "imageUrl": "https://halo.wiki.gallery/images/thumb/1/1a/HW2_Blitz_Ghost.png/500px-HW2_Blitz_Ghost.png",
-    "faction": "Banished",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "eklondal-workshop-lich",
-    "name": "Eklon'Dal Workshop Lich",
-    "description": "The Eklon'Dal World Patroller is a Lich variant employed by the Banished in their campaigns against their enemies.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/eklondal-workshop-lich.jpg",
-    "faction": "Banished",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "breacher-exosuit",
-    "name": "Breacher Exosuit",
-    "description": "The Breacher exosuit is a type of powered exoskeleton employed by the Banished.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/breacher-exosuit.jpg",
     "faction": "Banished",
     "type": "Ground",
     "appearances": []
@@ -474,24 +501,6 @@
     "imageUrl": "https://halo.wiki.gallery/images/thumb/0/04/HW2-EnduringLocustblitz.jpg/500px-HW2-EnduringLocustblitz.jpg",
     "faction": "Banished",
     "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "decimus-exoskeleton",
-    "name": "Decimus' exoskeleton",
-    "description": "Decimus' exoskeleton is a type of powered exoskeleton employed by the Banished.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/decimus-exoskeleton.jpg",
-    "faction": "Banished",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "dovotaa-workshop-griever",
-    "name": "Dovotaa Workshop Griever",
-    "description": "The Dovotaa Workshop lair waster, also known as the Griever fighter-bomber, is a bomber employed by the Banished in the post-war era.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/dovotaa-workshop-griever.jpg",
-    "faction": "Banished",
-    "type": "Air",
     "appearances": []
   }
 ]
