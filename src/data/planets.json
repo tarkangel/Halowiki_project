@@ -42,13 +42,6 @@
     "appearances": []
   },
   {
-    "id": "ark",
-    "name": "Ark",
-    "description": "Ark is a name given to two massive Forerunner installations, both designed with the primary purpose of manufacturing Halo rings. Situated outside the Milky Way galaxy, they also served as Lifeworker research facilities, as well as conservational preserves for the numerous species of the galaxy, indexed by the Forerunners during the Conservation Measure. The Arks were shaped like massive flowers, consisting of several curved arms, similar to the petals of a flower, surrounding a circular Halo construction foundry in the center.\nTwo Arks existed during the Forerunner-Flood war; the greater Ark, which produced the original array of Halos 30,000 kilometers in diameter, and Installation 00 or the lesser Ark, which produced a newer series of rings each 10,000 kilometers in diameter. Both of these constructs are known to have been distinctly referred to as \"the Ark\"; originally, the term was more commonly applied to the greater Ark, whereas the lesser Ark and its newer, more efficient array of Halos was kept a well-guarded secret among Forerunners. With the greater Ark destroyed in the final days of the Flood war, the lesser Ark remained as the only Ark installation and is as such commonly known as \"the Ark\".",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/ark.jpg",
-    "appearances": []
-  },
-  {
     "id": "harvest",
     "name": "Harvest",
     "description": "Harvest, also known as Epsilon Indi IV, was humanity's most remote Outer Colony and the first human world to be discovered and destroyed by the Covenant. Founded in 2468 as an agricultural 'breadbasket' colony, Harvest was a peaceful and prosperous world of rolling farmland. In 2525 a Covenant fleet made first contact in orbit and, deeming the planet sacred ground due to Forerunner artifacts, launched an orbital bombardment that glassed the surface — marking the true beginning of the Human-Covenant War.",
@@ -101,7 +94,7 @@
     "id": "balaho",
     "name": "Balaho",
     "description": "Balaho, also known as Tala IV, is the homeworld of the Unggoy and the fourth planet orbiting the blue star Tala. Hosting an atmosphere featuring large quantities of methane, Balaho is orbited by two natural satellites; Buwan and Padpad. Balaho is a hostile and frigid world, home to brackish tidal flats and numerous swamps, growing less hospitable due to environmental degradation.\nRegarded as a backwater, Balaho and the Unggoy were aggressively subjugated into the Covenant in 2142. After being stripped of its resources, Balaho was abandoned aside from a small population when the empire collapsed in 2552, until the Created brought the planet into its fold and sought to bring prosperity to a once volatile and unpredictable world.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/balaho.jpg",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/balaho-official.jpg",
     "appearances": []
   },
   {
@@ -170,8 +163,8 @@
   {
     "id": "circinius-iv",
     "name": "Circinius IV",
-    "description": "",
-    "imageUrl": "https://halo.wiki.gallery/images/thumb/b/b9/CAMS_-_afar.jpg/500px-CAMS_-_afar.jpg",
+    "description": "Circinius IV was a Unified Earth Government Outer Colony world in the Circinius system. The planet was orbited by at least three natural satellites. It was the location of the Corbulo Academy of Military Science, an officer training school for the offspring of high-ranking UNSC officials. The space elevator located at Corbulo Academy was considered one of the planet's most spectacular sites.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/circinius-iv-official.jpg",
     "appearances": []
   },
   {
@@ -185,14 +178,14 @@
     "id": "absolute-record",
     "name": "Absolute Record",
     "description": "The Absolute Record is a Forerunner artifact repository spread across multiple sites associated with the Janus Key. One of the Absolute Record's local facilities was overseen by the Contender-class ancilla, Invariant Bias.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/absolute-record.jpg",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/absolute-record-official.jpg",
     "appearances": []
   },
   {
     "id": "alluvion",
     "name": "Alluvion",
     "description": "Alluvion, also known as Bhaakto III, is the third planet in the Bhaakto system and a human Outer Colony of the Unified Earth Government. Alluvion is orbited by the natural satellites Fallow and Falgo. Once home to millions, Alluvion was glassed by the Covenant in 2543 during the Human-Covenant War. By 2554, Alluvion has been recolonized.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/alluvion.jpg",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/alluvion-official.jpg",
     "appearances": []
   },
   {
@@ -226,8 +219,8 @@
   {
     "id": "cleyell",
     "name": "Cleyell",
-    "description": "",
-    "imageUrl": "https://halo.wiki.gallery/images/a/a7/Escalation17_Cleyell.jpg",
+    "description": "Cleyell was a colony planet of the Unified Earth Government located among the Outer Colonies.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/cleyell-official.jpg",
     "appearances": []
   },
   {
@@ -254,8 +247,8 @@
   {
     "id": "carrow",
     "name": "Carrow",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/carrow.jpg",
+    "description": "Carrow, referred to by the Sangheili as Rakoi, is a planet and former human Outer Colony in a Joint-Occupation Zone. Following the Human-Covenant War, the planet was settled as a Sangheili colony, eventually acting as a home for both humans and Sangheili.",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/carrow-official.jpg",
     "appearances": []
   },
   {
@@ -276,7 +269,7 @@
     "id": "ansket-iv",
     "name": "Ansket IV",
     "description": "Ansket IV is a terrestrial planet orbiting the star, Ansket. It was the site of a Covenant Hydro-processing facility prior to being abandoned by the empire. The United Nations Space Command established a forward operating base at the site of the Covenant facility. In 2553, this UNSC base came under attack by the Banished.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/ansket-iv.jpg",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/ansket-iv-official.png",
     "appearances": []
   },
   {
@@ -297,7 +290,7 @@
     "id": "boundary-lithos",
     "name": "Boundary Lithos",
     "description": "Boundary Lithos is a Forerunner Lithos installation — a type of large artificial rocky structure used to mark territorial boundaries and anchor sensor networks across the Forerunner ecumene. Lithos structures appear as ancient weathered stone formations to the untrained eye, concealing sophisticated monitoring and communication technology within their dense mineral matrices. Deployed at the edges of Forerunner-administered space, they maintained silent vigil over the boundaries of an empire that has long since ceased to exist.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/boundary-lithos.jpg",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/boundary-lithos-official.jpg",
     "appearances": []
   },
   {
