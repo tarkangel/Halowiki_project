@@ -51,7 +51,7 @@ A static cross-category catalog linking every character, weapon, vehicle, race, 
 
 ### GCP Infrastructure
 
-The entire stack runs on Google Cloud Platform with zero manual deployment steps after the initial setup:
+The entire stack runs on Google Cloud Platform and Cloudflare with zero manual deployment steps after the initial setup:
 
 | Service | Role |
 |---|---|
@@ -163,6 +163,25 @@ Static Data (all committed to git, bundled into the SPA)
 
 ---
 
+## Analytics
+
+Two CLI scripts query live traffic data without any third-party SDK:
+
+```bash
+# Cloudflare: daily requests, unique visitors, bandwidth, top countries
+npx tsx scripts/analytics.ts          # last 7 days
+npx tsx scripts/analytics.ts 30       # last 30 days
+
+# Cloud Run logs + ip-api.com: city / region / ISP per visitor IP, bots filtered
+npx tsx scripts/analytics-geo.ts      # last 24 hours
+npx tsx scripts/analytics-geo.ts 48   # last 48 hours
+npx tsx scripts/analytics-geo.ts --all  # include bots/crawlers
+```
+
+Requires `CF_TOKEN` and `CF_ZONE_ID` env vars (Cloudflare API token + Zone ID) and `gcloud` authenticated for geo lookups.
+
+---
+
 ## Local Development
 
 ### Prerequisites
@@ -248,7 +267,7 @@ git commit --allow-empty -m "chore: trigger deploy" && git push
 terraform destroy
 ```
 
-The GCS images bucket is **preserved by default** — your generated image library survives the teardown. Only Cloud Run, Artifact Registry, WIF, and the service account are destroyed. Storage cost while paused: ~$0.02/GB/month.
+The GCS images bucket is **preserved by default** — your generated image library survives the teardown. Only Cloud Run, Artifact Registry, WIF, service account, and domain mappings are destroyed. Storage cost while paused: ~$0.02/GB/month.
 
 To also wipe the images bucket:
 
