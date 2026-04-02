@@ -669,6 +669,14 @@ const VEHICLE_BLOCKLIST = new Set([
   'Fireball Warthog',                // unique Halo Wars variant — too thin
   'Long range stealth orbital drop pod', // equipment, not a vehicle class
   'Civet',                           // Colonial Military Authority — too thin
+  'Ahtulai Workshop Banshee',        // workshop variant — too thin
+  "Eklon'Dal Workshop Goblin",       // workshop variant — too thin
+  'Abatyar-pattern Revenant',        // pattern variant — too thin
+  'Adsk-pattern Shadow',             // pattern variant — too thin
+  'Ceromax',                         // obscure stub
+  'Bolroci Workshop Chopper',        // workshop variant — too thin
+  'H9 mid-capacity hauler',          // civilian logistics vehicle — too thin
+  'Combat bridging vehicle',         // support equipment — too thin
 ]);
 
 export async function fetchVehicles(limitPerCat = 20): Promise<Vehicle[]> {
