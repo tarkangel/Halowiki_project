@@ -217,6 +217,8 @@ const WEAPON_BLOCKLIST = new Set([
 const WEAPON_DESCRIPTION_OVERRIDES: Record<string, string> = {
   'Blaze of Glory':
     'The Blaze of Glory is a Legendary-tier named variant of the M45D Tactical Shotgun, featured in Halo 5: Guardians as a rare REQ unlock. Built on the same robust pump-action chassis as the standard M45D, the Blaze of Glory is distinguished by enhanced stopping power and a unique visual finish. Like all M45D variants, it fires eight-gauge shells capable of devastating targets at close range, making it a preferred choice for Spartan operators in breaching operations and tight-quarters engagements. Its rarity and performance have made it a coveted item among SPARTAN-IV fireteam members.',
+  'Bolroci Workshop Shade':
+    'The Bolroci Workshop Shade is a heavy plasma turret emplacement manufactured by the Bolroci Workshop and deployed by the Banished. A descendant of the Covenant\'s long-serving Shade turret lineage, the Bolroci variant retains the characteristic rotating plasma cannon mounted on a fixed pedestal but has been modified with Banished-standard reinforcement and power systems for sustained high-output fire. Operated by a single gunner seated within the turret housing, it provides area-denial fire against infantry and light vehicles. Banished forces deployed these emplacements extensively on Installation 07 during the events of Halo Infinite.',
 };
 
 export function pageToWeapon(page: PageSummary): Weapon {
