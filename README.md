@@ -56,7 +56,8 @@ The entire stack runs on Google Cloud Platform with zero manual deployment steps
 | Service | Role |
 |---|---|
 | **Cloud Run** | Serverless container hosting — scales to zero, zero ops overhead |
-| **Global Load Balancer + Cloud CDN** | Custom domain (`halo-wiki.com`) with SSL, global edge caching |
+| **Cloudflare** | Custom domain (`halo-wiki.com`) with SSL, CDN, DDoS protection — free tier, replaces GCP Global Load Balancer |
+| **Cloud Run Domain Mappings** | Google-managed TLS cert for `halo-wiki.com` and `www.halo-wiki.com` — no load balancer needed |
 | **Artifact Registry** | Private Docker image registry |
 | **Cloud Storage (GCS)** | Public CDN for AI-generated images (~500+ assets) |
 | **Vertex AI — Imagen 3** | `imagen-3.0-generate-002` model for image generation |
@@ -222,7 +223,7 @@ All GCP infrastructure is fully codified under `terraform/`. A single `terraform
 | `registry.tf` | Artifact Registry Docker repository |
 | `iam.tf` | GitHub Actions service account, IAM bindings, Workload Identity Federation pool + provider |
 | `cloudrun.tf` | Cloud Run v2 service (scale-to-zero, public ingress) |
-| `loadbalancer.tf` | Global Load Balancer, Cloud CDN, SSL certificate, custom domain routing |
+| `loadbalancer.tf` | Cloud Run domain mappings for `halo-wiki.com` and `www.halo-wiki.com` (replaces Global Load Balancer) |
 
 ### Bring the project up
 
@@ -318,7 +319,7 @@ terraform/
 ├── registry.tf                    # Artifact Registry
 ├── iam.tf                         # Service account, IAM, Workload Identity Federation
 ├── cloudrun.tf                    # Cloud Run v2 service
-└── loadbalancer.tf                # Global Load Balancer + custom domain + SSL
+└── loadbalancer.tf                # Cloud Run domain mappings (halo-wiki.com + www) — replaces Global Load Balancer
 ```
 
 ---

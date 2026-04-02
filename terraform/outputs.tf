@@ -1,6 +1,11 @@
-output "load_balancer_ip" {
-  description = "Global static IP — create an A record in Cloudflare pointing to this"
-  value       = google_compute_global_address.halowiki_ip.address
+output "domain_mapping_cname_root" {
+  description = "CNAME target para halo-wiki.com — pegar en Cloudflare DNS (registro @)"
+  value       = length(google_cloud_run_domain_mapping.root.status) > 0 ? google_cloud_run_domain_mapping.root.status[0].resource_records[0].rrdata : "provisioning — re-run terraform output en ~5 minutos"
+}
+
+output "domain_mapping_cname_www" {
+  description = "CNAME target para www.halo-wiki.com — pegar en Cloudflare DNS (registro www)"
+  value       = length(google_cloud_run_domain_mapping.www.status) > 0 ? google_cloud_run_domain_mapping.www.status[0].resource_records[0].rrdata : "provisioning — re-run terraform output en ~5 minutos"
 }
 
 output "cloud_run_url" {
