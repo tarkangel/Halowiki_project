@@ -306,28 +306,10 @@
     "appearances": []
   },
   {
-    "id": "h9-mid-capacity-hauler",
-    "name": "H9 mid-capacity hauler",
-    "description": "The H9 mid-capacity hauler is a military-grade heavy truck manufactured by AMG Transport Dynamics for UNSC service, introduced late in the Human-Covenant War for logistics and resupply operations. Designed for maximum load capacity combined with cross-terrain reliability, the H9 is used across UNSC Army and Marine Corps supply chains to move ammunition, provisions, and equipment between forward positions. Its armoured cab and reinforced chassis allow it to operate in contested areas where standard civilian trucks would not survive. Seen on Reach and other UNSC worlds, the H9 became a backbone vehicle of UNSC ground logistics in the war's final years.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/h9-mid-capacity-hauler.jpg",
-    "faction": "UNSC",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
     "id": "combat-support-vehicle",
     "name": "Combat support vehicle",
     "description": "",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-support-vehicle.jpg",
-    "faction": "",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "combat-bridging-vehicle",
-    "name": "Combat bridging vehicle",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-bridging-vehicle.jpg",
     "faction": "",
     "type": "Ground",
     "appearances": []
@@ -338,15 +320,6 @@
     "description": "The Liang-Dortmund mining rig is a massive mobile surface-mining and processing platform manufactured by the Liang-Dortmund Corporation, deployed primarily on Meridian for large-scale mineral extraction. Built on enormous tracked undercarriage, the rig moves slowly across the planetary surface while its drilling arrays bore into rock strata, processing extracted material on-board. Its industrial scale dwarfs most conventional vehicles — the rig effectively constitutes a moving facility rather than a vehicle in the traditional sense. The UNSC and UEG came to rely on Liang-Dortmund's extraction infrastructure to sustain the post-war rebuilding effort across the outer colonies.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/liang-dortmund-mining-rig.jpg",
     "faction": "UNSC",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "bolroci-workshop-chopper",
-    "name": "Bolroci Workshop Chopper",
-    "description": "",
-    "imageUrl": "https://halo.wiki.gallery/images/c/c8/HINF_BolrociChopper.png",
-    "faction": "Banished",
     "type": "Ground",
     "appearances": []
   },
@@ -378,15 +351,6 @@
     "appearances": []
   },
   {
-    "id": "ceromax",
-    "name": "Ceromax",
-    "description": "The Ceromax is a heavy utility truck platform manufactured by Braithwaite Ltd and adopted by both the Unified Earth Government and the UNSC in the years following the Human-Covenant War. Designed for multi-role logistical use — cargo transport, equipment transfer, and forward supply — the Ceromax's modular flatbed configuration allows it to be rapidly reconfigured for different payloads. Its robust construction and straightforward mechanical design make it easy to maintain in field conditions, contributing to its widespread adoption during the post-war reconstruction era when durable, simple logistics vehicles were in urgent demand across rebuilding human colonies.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/ceromax.jpg",
-    "faction": "UNSC",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
     "id": "barugqel-workshop-trespasser",
     "name": "Barug'qel Workshop Trespasser",
     "description": "The Barug'qel Workshop Sky Raider, colloquially known as the Trespasser, is a transport aircraft employed by the Banished and other ex-Covenant raiders.",
@@ -414,29 +378,11 @@
     "appearances": []
   },
   {
-    "id": "adsk-pattern-shadow",
-    "name": "Adsk-pattern Shadow",
-    "description": "The Adsk-pattern Light Transport is an infantry carrying vehicle in the Shadow series of armoured transports used by the Covenant.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/adsk-pattern-shadow.jpg",
-    "faction": "Covenant",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
     "id": "elephant",
     "name": "Elephant",
     "description": "The Heavy Recovery Vehicle or \"Elephant\" is a line of heavy Mobile Assault, Support, and Recovery (MASR) platforms developed and manufactured by JOTUN Heavy Industries.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/elephant.jpg",
     "faction": "UNSC",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "abatyar-pattern-revenant",
-    "name": "Abatyar-pattern Revenant",
-    "description": "The Abatyar-pattern Revenant is a variant in the Revenant family of infantry support vehicles, employed by Sali 'Nyon's Covenant.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/abatyar-pattern-revenant.jpg",
-    "faction": "Covenant",
     "type": "Ground",
     "appearances": []
   },
@@ -492,24 +438,6 @@
     "imageUrl": "https://halo.wiki.gallery/images/thumb/1/1a/HW2_Blitz_Ghost.png/500px-HW2_Blitz_Ghost.png",
     "faction": "Banished",
     "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "eklondal-workshop-goblin",
-    "name": "Eklon'Dal Workshop Goblin",
-    "description": "The Eklon'Dal Workshop Balaho Battlesuit is a modified variant of the Pnap-pattern Goblin employed by the Banished.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/eklondal-workshop-goblin.jpg",
-    "faction": "Banished",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "ahtulai-workshop-banshee",
-    "name": "'Ahtulai Workshop Banshee",
-    "description": "The 'Ahtulai Workshop Attack Flyer is a variant of Banshee ground-attack aircraft employed by the Banished. They are built upon the frames of older Oghal-pattern variants, unlike the more mainline Kaelum Workshop Banshees employed by Banished forces operating on Installation 07.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/ahtulai-workshop-banshee.jpg",
-    "faction": "Banished",
-    "type": "Air",
     "appearances": []
   },
   {
