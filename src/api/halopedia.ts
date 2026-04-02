@@ -936,6 +936,7 @@ const GENERIC_PLANET_NAMES = new Set([
   'penal colony', 'agriculture world', 'human colonies',
   'outer colonies', 'inner colonies',
   'ark', // duplicate of "The Ark" (Installation 00)
+  'deep-space anomaly 0198', // Halo CE multiplayer map, not a planet
 ]);
 
 function isUsablePlanet(p: Planet): boolean {
