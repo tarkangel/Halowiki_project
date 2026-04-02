@@ -523,6 +523,15 @@ const PLANET_DESCRIPTION_OVERRIDES: Record<string, string> = {
 
   'Bhedalon':
     'Bhedalon is a world of significance within Covenant and former Covenant space, positioned in a region shaped by the complex politics of the post-war era. Following the collapse of the Covenant in 2552, Bhedalon\'s strategic location made it a contested prize for the various successor factions — Covenant remnants, the Swords of Sanghelios, and Banished warlords — all seeking to consolidate power over former Covenant territory. UNSC intelligence flagged the planet as a flashpoint in the years of political instability that followed the end of the Human-Covenant War.',
+
+  'Circinius IV':
+    'Circinius IV was a Unified Earth Government Outer Colony world in the Circinius system. The planet was orbited by at least three natural satellites. It was the location of the Corbulo Academy of Military Science, an officer training school for the offspring of high-ranking UNSC officials. The space elevator located at Corbulo Academy was considered one of the planet\'s most spectacular sites.',
+
+  'Cleyell':
+    'Cleyell was a colony planet of the Unified Earth Government located among the Outer Colonies.',
+
+  'Carrow':
+    'Carrow, referred to by the Sangheili as Rakoi, is a planet and former human Outer Colony in a Joint-Occupation Zone. Following the Human-Covenant War, the planet was settled as a Sangheili colony, eventually acting as a home for both humans and Sangheili.',
 };
 
 export function pageToPlanet(page: PageSummary): Planet {
@@ -902,6 +911,7 @@ async function fetchFallbackImages(pageNames: string[]): Promise<Map<string, str
 const GENERIC_PLANET_NAMES = new Set([
   'penal colony', 'agriculture world', 'human colonies',
   'outer colonies', 'inner colonies',
+  'ark', // duplicate of "The Ark" (Installation 00)
 ]);
 
 function isUsablePlanet(p: Planet): boolean {
