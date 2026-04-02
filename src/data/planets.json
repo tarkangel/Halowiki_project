@@ -42,6 +42,13 @@
     "appearances": []
   },
   {
+    "id": "ark",
+    "name": "Ark",
+    "description": "Ark is a name given to two massive Forerunner installations, both designed with the primary purpose of manufacturing Halo rings. Situated outside the Milky Way galaxy, they also served as Lifeworker research facilities, as well as conservational preserves for the numerous species of the galaxy, indexed by the Forerunners during the Conservation Measure. The Arks were shaped like massive flowers, consisting of several curved arms, similar to the petals of a flower, surrounding a circular Halo construction foundry in the center.\nTwo Arks existed during the Forerunner-Flood war; the greater Ark, which produced the original array of Halos 30,000 kilometers in diameter, and Installation 00 or the lesser Ark, which produced a newer series of rings each 10,000 kilometers in diameter. Both of these constructs are known to have been distinctly referred to as \"the Ark\"; originally, the term was more commonly applied to the greater Ark, whereas the lesser Ark and its newer, more efficient array of Halos was kept a well-guarded secret among Forerunners. With the greater Ark destroyed in the final days of the Flood war, the lesser Ark remained as the only Ark installation and is as such commonly known as \"the Ark\".",
+    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/ark.jpg",
+    "appearances": []
+  },
+  {
     "id": "harvest",
     "name": "Harvest",
     "description": "Harvest, also known as Epsilon Indi IV, was humanity's most remote Outer Colony and the first human world to be discovered and destroyed by the Covenant. Founded in 2468 as an agricultural 'breadbasket' colony, Harvest was a peaceful and prosperous world of rolling farmland. In 2525 a Covenant fleet made first contact in orbit and, deeming the planet sacred ground due to Forerunner artifacts, launched an orbital bombardment that glassed the surface — marking the true beginning of the Human-Covenant War.",
@@ -163,7 +170,7 @@
   {
     "id": "circinius-iv",
     "name": "Circinius IV",
-    "description": "Circinius IV was a Unified Earth Government Outer Colony world in the Circinius system. The planet was orbited by at least three natural satellites. It was the location of the Corbulo Academy of Military Science, an officer training school for the offspring of high-ranking UNSC officials. The space elevator located at Corbulo Academy was considered one of the planet's most spectacular sites.",
+    "description": "",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/circinius-iv-official.jpg",
     "appearances": []
   },
@@ -219,7 +226,7 @@
   {
     "id": "cleyell",
     "name": "Cleyell",
-    "description": "Cleyell was a colony planet of the Unified Earth Government located among the Outer Colonies.",
+    "description": "",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/cleyell-official.jpg",
     "appearances": []
   },
@@ -247,7 +254,7 @@
   {
     "id": "carrow",
     "name": "Carrow",
-    "description": "Carrow, referred to by the Sangheili as Rakoi, is a planet and former human Outer Colony in a Joint-Occupation Zone. Following the Human-Covenant War, the planet was settled as a Sangheili colony, eventually acting as a home for both humans and Sangheili.",
+    "description": "",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/carrow-official.jpg",
     "appearances": []
   },
