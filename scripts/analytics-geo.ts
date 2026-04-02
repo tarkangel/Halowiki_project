@@ -123,16 +123,38 @@ for (let i = 0; i < uniqueIps.length; i += batchSize) {
   for (const g of data) geoMap[g.query] = g;
 }
 
+// ── Filtrar bots por ISP conocido ─────────────────────────────────────────────
+
+const BOT_ISP_KEYWORDS = [
+  'google', 'cloudflare', 'microsoft', 'amazon', 'alibaba', 'tencent',
+  'datacamp', 'digitalocean', 'linode', 'akamai', 'censys', 'shodan',
+  'unique ip solutions', 'limited network', 'hostglobal', 'vpsvaulthost',
+  'detai prosperous', 'lnk systems', 'techoff', 'hydra communications',
+  'iomart', 'blix solutions', 'global connectivity', 'leibniz',
+  'ophl', 'serrana', 'fusion communications', 'rcn',
+];
+
+function isBot(geo: GeoResult): boolean {
+  const isp = (geo.isp + ' ' + geo.org).toLowerCase();
+  return BOT_ISP_KEYWORDS.some(k => isp.includes(k));
+}
+
 // ── Mostrar resultados ────────────────────────────────────────────────────────
 
+const showAll = process.argv.includes('--all');
 const sorted = uniqueIps.sort((a, b) => ipCount[b] - ipCount[a]);
 const totalReqs = Object.values(ipCount).reduce((s, n) => s + n, 0);
+const humanIps = sorted.filter(ip => showAll || !geoMap[ip] || !isBot(geoMap[ip]));
+const botIps   = sorted.filter(ip => geoMap[ip] && isBot(geoMap[ip]));
 
-console.log(`── halo-wiki.com — últimas ${HOURS}h — ${totalReqs} requests de ${uniqueIps.length} IPs únicas ──\n`);
+console.log(`── halo-wiki.com — últimas ${HOURS}h — ${totalReqs} requests de ${uniqueIps.length} IPs únicas ──`);
+if (!showAll) console.log(`   (${botIps.length} bots/crawlers filtrados — usa --all para verlos todos)\n`);
+else console.log();
+
 console.log('  Reqs  IP               Ciudad                 Región           País       ISP');
 console.log('  ' + '─'.repeat(90));
 
-for (const ip of sorted) {
+for (const ip of humanIps) {
   const geo = geoMap[ip];
   const reqs = String(ipCount[ip]).padStart(4);
   const ipPad = ip.padEnd(15);
@@ -146,8 +168,9 @@ for (const ip of sorted) {
   const region = (geo.regionName || '?').padEnd(16).slice(0, 16);
   const country = (geo.country || '?').padEnd(10).slice(0, 10);
   const isp = geo.isp || geo.org || '?';
+  const tag = isBot(geo) ? ' [bot]' : '';
 
-  console.log(`  ${reqs}  ${ipPad}  ${city}  ${region}  ${country}  ${isp}`);
+  console.log(`  ${reqs}  ${ipPad}  ${city}  ${region}  ${country}  ${isp}${tag}`);
 }
 
 console.log();
