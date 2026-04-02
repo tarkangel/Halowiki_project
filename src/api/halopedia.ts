@@ -205,9 +205,23 @@ function resolveDescription(
   return hardcodedOverride || extract;
 }
 
+// Weapon entries that should never appear in the wiki —
+// generic category pages, stubs, or entries covered by a better canonical entry.
+const WEAPON_BLOCKLIST = new Set([
+  'Covenant weaponry',    // generic category page — individual weapons cover this
+  "Bmur'resh-pattern Shade", // stub with no meaningful content
+  'Antlion',              // Covenant stationary turret — too thin/obscure
+]);
+
+// Curated descriptions for weapons whose Halopedia extract is too thin.
+const WEAPON_DESCRIPTION_OVERRIDES: Record<string, string> = {
+  'Blaze of Glory':
+    'The Blaze of Glory is a Legendary-tier named variant of the M45D Tactical Shotgun, featured in Halo 5: Guardians as a rare REQ unlock. Built on the same robust pump-action chassis as the standard M45D, the Blaze of Glory is distinguished by enhanced stopping power and a unique visual finish. Like all M45D variants, it fires eight-gauge shells capable of devastating targets at close range, making it a preferred choice for Spartan operators in breaching operations and tight-quarters engagements. Its rarity and performance have made it a coveted item among SPARTAN-IV fireteam members.',
+};
+
 export function pageToWeapon(page: PageSummary): Weapon {
   const extract     = page.extract ?? '';
-  const description = resolveDescription(page.title, extract);
+  const description = resolveDescription(page.title, extract, WEAPON_DESCRIPTION_OVERRIDES[page.title]);
   return {
     id: slugify(page.title),
     name: page.title,
@@ -623,7 +637,7 @@ export async function fetchWeapons(limitPerCat = 15): Promise<Weapon[]> {
     if (!seen.has(m.title)) { seen.add(m.title); titles.push(m.title); }
   }
   const summaries = await fetchPageSummariesBatched(titles);
-  const result = summaries.map(pageToWeapon);
+  const result = summaries.map(pageToWeapon).filter(w => !WEAPON_BLOCKLIST.has(w.name));
 
   const needsImage = result.filter(w => !w.imageUrl).map(w => w.name);
   if (needsImage.length > 0) {

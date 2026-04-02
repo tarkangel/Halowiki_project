@@ -225,18 +225,9 @@
     "appearances": []
   },
   {
-    "id": "covenant-weaponry",
-    "name": "Covenant weaponry",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/covenant-weaponry.jpg",
-    "faction": "Covenant",
-    "type": "",
-    "appearances": []
-  },
-  {
     "id": "blaze-of-glory",
     "name": "Blaze of Glory",
-    "description": "",
+    "description": "The Blaze of Glory is a Legendary-tier named variant of the M45D Tactical Shotgun, featured in Halo 5: Guardians as a rare REQ unlock. Built on the same robust pump-action chassis as the standard M45D, the Blaze of Glory is distinguished by enhanced stopping power and a unique visual finish. Like all M45D variants, it fires eight-gauge shells capable of devastating targets at close range, making it a preferred choice for Spartan operators in breaching operations and tight-quarters engagements. Its rarity and performance have made it a coveted item among SPARTAN-IV fireteam members.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/blaze-of-glory.jpg",
     "faction": "",
     "type": "",
@@ -248,15 +239,6 @@
     "description": "The Appetite for Destruction is a named variant of the M739 Light Machine Gun. It is featured in Halo 5: Guardians as an Uncommon REQ variant of the SAW, reusing the latter's chassis but with additional green and red stripes decorating the weapon's body, along with a falcon emblem in front of the drum magazine.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/appetite-for-destruction.jpg",
     "faction": "UNSC",
-    "type": "",
-    "appearances": []
-  },
-  {
-    "id": "bmurresh-pattern-shade",
-    "name": "Bmur'resh-pattern Shade",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/bmurresh-pattern-shade.jpg",
-    "faction": "Covenant",
     "type": "",
     "appearances": []
   },
@@ -402,15 +384,6 @@
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/bandit-evo.jpg",
     "faction": "UNSC",
     "type": "",
-    "appearances": []
-  },
-  {
-    "id": "antlion",
-    "name": "Antlion",
-    "description": "Antlion is a name applied to a series of stationary artillery pieces employed by the Covenant and its remnants. These turrets are also colloquially known as \"mega-turrets\", due to their size and power.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/antlion.jpg",
-    "faction": "Covenant",
-    "type": "Heavy",
     "appearances": []
   },
   {
