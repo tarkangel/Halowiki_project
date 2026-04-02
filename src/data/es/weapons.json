@@ -234,15 +234,6 @@
     "appearances": []
   },
   {
-    "id": "bmurresh-pattern-shade",
-    "name": "Bmur'resh-pattern Shade",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/bmurresh-pattern-shade.jpg",
-    "faction": "Covenant",
-    "type": "",
-    "appearances": []
-  },
-  {
     "id": "cqs48-bulldog",
     "name": "CQS48 Bulldog",
     "description": "El CQS48 Bulldog es la escopeta de combate de nueva generación de la UNSC introducida durante la era posterior a la guerra y el equipamiento estándar para operaciones Spartan durante el conflicto de los Banished en Installation 07. A diferencia de la M90 de acción de bombeo a la que reemplaza en muchos roles, el Bulldog presenta un cargador cilíndrico rotatorio semiautomático que contiene siete cartuchos de calibre 8, lo que permite una mayor cadencia de fuego sin sacrificar potencia de detención. Sus compactas dimensiones y ergonomía mejorada lo hicieron popular entre los operadores Spartan para las operaciones de asalto y combate cercano. El Bulldog se convirtió en un arma característica del arsenal de la UNSC en Halo Infinite.",
@@ -384,15 +375,6 @@
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/bandit-evo.jpg",
     "faction": "UNSC",
     "type": "",
-    "appearances": []
-  },
-  {
-    "id": "antlion",
-    "name": "Antlion",
-    "description": "Antlion es el nombre aplicado a una serie de piezas de artillería estacionaria empleadas por el Covenant y sus remanentes. Estas torretas también se conocen coloquialmente como \"mega-torretas\", debido a su tamaño y potencia.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/weapon/antlion.jpg",
-    "faction": "Covenant",
-    "type": "Heavy",
     "appearances": []
   },
   {

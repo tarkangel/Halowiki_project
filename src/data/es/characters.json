@@ -799,5 +799,14 @@
     "species": "Kig-Yar",
     "affiliation": "Banished",
     "appearances": []
+  },
+  {
+    "id": "the-didact",
+    "name": "The Didact",
+    "description": "El Didact, nacido IsoDidact y conocido en registros antiguos como el Ur-Didact, fue el comandante supremo del ejército Forerunner. Originalmente un Guerrero-Sirviente compasivo, fue quebrantado por sucesivos conflictos con el Flood y la pérdida de sus hijos, lo que le llevó a componer a los humanos en Caballeros Prometeos — guerreros mecánicos despojados de sus formas orgánicas. Encarcelado en Requiem durante cien mil años, fue liberado en 2557 cuando el Master Chief y Cortana activaron la instalación. Emprendió la destrucción de la humanidad como amenaza para el Manto, empleando el Compositor y naves de guerra Forerunner en una campaña truncada por John-117 a bordo de la nave del Didact sobre la Tierra.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/2/2e/H4_-_Didact.png/500px-H4_-_Didact.png",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
   }
 ]

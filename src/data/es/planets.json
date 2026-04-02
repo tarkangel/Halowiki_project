@@ -42,13 +42,6 @@
     "appearances": []
   },
   {
-    "id": "ark",
-    "name": "Ark",
-    "description": "Ark es el nombre dado a dos masivas instalaciones Forerunner, ambas diseñadas con el propósito principal de fabricar anillos Halo. Situadas fuera de la galaxia Vía Láctea, también sirvieron como instalaciones de investigación de los Trabajadores de Vida, así como reservas de conservación para las numerosas especies de la galaxia, indexadas por los Forerunners durante la Medida de Conservación. Los Arks tenían forma de flores masivas, compuestas por varios brazos curvos, similares a los pétalos de una flor, que rodeaban una fundición circular de construcción de Halos en el centro.\nDurante la guerra Forerunner-Flood existían dos Arks: el Ark mayor, que produjo el array original de Halos de 30.000 kilómetros de diámetro, y Installation 00 o el Ark menor, que produjo una serie más nueva de anillos de 10.000 kilómetros de diámetro cada uno. Se sabe que ambas construcciones fueron denominadas distinctamente como \"el Ark\"; originalmente, el término se aplicaba más comúnmente al Ark mayor, mientras que el Ark menor y su serie más nueva y eficiente de Halos se mantenía como un secreto bien guardado entre los Forerunners. Con el Ark mayor destruido en los últimos días de la guerra contra el Flood, el Ark menor permaneció como la única instalación Ark y, por lo tanto, se conoce comúnmente como \"el Ark\".",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/ark.jpg",
-    "appearances": []
-  },
-  {
     "id": "harvest",
     "name": "Harvest",
     "description": "Harvest, también conocida como Epsilon Indi IV, era la Colonia Exterior más remota de la humanidad y el primer mundo humano descubierto y destruido por el Covenant. Fundada en 2468 como una colonia agrícola 'granero del universo', Harvest era un mundo pacífico y próspero de extensas tierras de cultivo. En 2525 una flota del Covenant hizo el primer contacto en órbita y, considerando el planeta tierra sagrada por sus artefactos Forerunner, lanzó un bombardeo orbital que arrasó la superficie — marcando el verdadero inicio de la Guerra Humano-Covenant.",
@@ -58,7 +51,7 @@
   {
     "id": "chi-ceti-iv",
     "name": "Chi Ceti IV",
-    "description": "",
+    "description": "Chi Ceti IV es el cuarto planeta del sistema Chi Ceti y la ubicación de la Instalación de Pruebas de Materiales de Damasco, donde se fabricó y almacenó la primera generación de la Armadura de Asalto Motorizada MJOLNIR. En 2525, el UNSC Commonwealth bajo el mando del Capitán Wallace trasladó a los candidatos Spartan-II hasta aquí para que se equiparan con su armadura MJOLNIR por primera vez. Durante la visita, una nave Covenant atacó al Commonwealth, y John-117 lideró un equipo de Spartans en un combate EVA en el espacio abierto — un enfrentamiento en el que logró su primera baja Sangheili confirmada.",
     "imageUrl": "https://halo.wiki.gallery/images/thumb/a/a0/TFoR_AS_-_Chi_Ceti_IV.jpg/500px-TFoR_AS_-_Chi_Ceti_IV.jpg",
     "appearances": []
   },
@@ -67,13 +60,6 @@
     "name": "Beta Gabriel",
     "description": "Beta Gabriel es un planeta turístico en el sistema Epsilon Eridani. Un planeta acuático, Beta Gabriel alberga especies que recuerdan a las ballenas y anguilas de la Tierra que también se encontraron en Alluvion. Beta Gabriel es la ubicación de UNSC Fathom, una instalación submarina de la Oficina de Inteligencia Naval (ONI).",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/planet/beta-gabriel.jpg",
-    "appearances": []
-  },
-  {
-    "id": "deep-space-anomaly-0198",
-    "name": "Deep-Space Anomaly 0198",
-    "description": "",
-    "imageUrl": "https://halo.wiki.gallery/images/thumb/5/52/Halo_CE_Derelict.jpg/500px-Halo_CE_Derelict.jpg",
     "appearances": []
   },
   {
@@ -142,7 +128,7 @@
   {
     "id": "charum-hakkor",
     "name": "Charum Hakkor",
-    "description": "",
+    "description": "Charum Hakkor fue el mundo capital fortificado del imperio de la humanidad ancestral y el lugar de su última y desesperada resistencia contra los Forerunners hace aproximadamente 107.000 años. El planeta estaba reforzado con estructuras Precursor de material casi indestructible — endurecido contra las armas convencionales — convirtiéndolo en la posición militar más formidable que la humanidad había poseído jamás. Tras un prolongado asedio, los Forerunners quebraron sus defensas, desmantelaron la civilización humana y devolvieron a los supervivientes a un estado primitivo. Bajo Charum Hakkor, aprisionado en una instalación del Eterno, se encontraba el Primordial — el último Precursor superviviente — cuyos diálogos con el Didact sentaron las bases filosóficas para la eventual liberación del Flood.",
     "imageUrl": "https://halo.wiki.gallery/images/thumb/b/b3/H4_-_Charum_Hakkor.jpg/500px-H4_-_Charum_Hakkor.jpg",
     "appearances": []
   },

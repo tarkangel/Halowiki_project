@@ -799,5 +799,14 @@
     "species": "Kig-Yar",
     "affiliation": "Banished",
     "appearances": []
+  },
+  {
+    "id": "the-didact",
+    "name": "The Didact",
+    "description": "The Didact, born IsoDidact and known in ancient records as the Ur-Didact, was the supreme commander of the Forerunner military. Originally a compassionate Warrior-Servant, he was broken by repeated conflicts with the Flood and the loss of his children, leading him to compose humans into Promethean Knights — mechanical warriors stripped of their organic forms. Imprisoned on Requiem for a hundred thousand years, he was released in 2557 when Master Chief and Cortana activated the installation. He pursued the destruction of humanity as a threat to the Mantle, wielding the Composer and Forerunner warships in a campaign cut short by John-117 aboard the Didact's ship above Earth.",
+    "imageUrl": "https://halo.wiki.gallery/images/thumb/2/2e/H4_-_Didact.png/500px-H4_-_Didact.png",
+    "species": "Forerunner",
+    "affiliation": "Forerunner",
+    "appearances": []
   }
 ]

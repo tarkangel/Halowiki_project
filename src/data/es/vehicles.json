@@ -306,28 +306,10 @@
     "appearances": []
   },
   {
-    "id": "h9-mid-capacity-hauler",
-    "name": "H9 mid-capacity hauler",
-    "description": "El transportador de capacidad media H9 es un camión pesado de grado militar fabricado por AMG Transport Dynamics para el servicio de la UNSC, introducido a finales de la Guerra Humano-Covenant para operaciones de logística y reabastecimiento. Diseñado para máxima capacidad de carga combinada con fiabilidad en terreno variado, el H9 se utiliza en las cadenas de suministro del Ejército y el Cuerpo de Marines de la UNSC para mover munición, provisiones y equipo entre posiciones avanzadas. Su cabina blindada y su chasis reforzado le permiten operar en zonas en disputa donde los camiones civiles estándar no sobrevivirían. Visto en Reach y otros mundos de la UNSC, el H9 se convirtió en un vehículo clave de la logística terrestre de la UNSC en los últimos años de la guerra.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/h9-mid-capacity-hauler.jpg",
-    "faction": "UNSC",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
     "id": "combat-support-vehicle",
     "name": "Combat support vehicle",
     "description": "El Vehículo de Apoyo de Combate es un transporte terrestre blindado Covenant capaz de transportar personal, munición, suministros médicos y gas portador licuado por campos de batalla activos. Su chasis abultado en forma de escarabajo cuenta con puntales desplegables y puertas laterales tipo concha, con un compartimento de carga interno que puede alojar hasta veinte infantes. El vehículo tuvo un amplio despliegue durante la Guerra Humano-Covenant, con uso documentado para transportar fuerzas Yanme'e en las primeras etapas del conflicto.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-support-vehicle.jpg",
-    "faction": "",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "combat-bridging-vehicle",
-    "name": "Combat bridging vehicle",
-    "description": "",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/combat-bridging-vehicle.jpg",
     "faction": "",
     "type": "Ground",
     "appearances": []
@@ -338,15 +320,6 @@
     "description": "La plataforma de minería Liang-Dortmund es una enorme plataforma móvil de minería y procesamiento de superficie fabricada por la Corporación Liang-Dortmund, desplegada principalmente en Meridian para la extracción de minerales a gran escala. Construida sobre un enorme tren de rodaje de cadenas, la plataforma se desplaza lentamente por la superficie planetaria mientras sus conjuntos de perforación penetran los estratos rocosos, procesando el material extraído a bordo. Su escala industrial eclipsa a la mayoría de los vehículos convencionales — la plataforma constituye efectivamente una instalación en movimiento más que un vehículo en el sentido tradicional. La UNSC y el UEG llegaron a depender de la infraestructura de extracción de Liang-Dortmund para sostener el esfuerzo de reconstrucción posterior a la guerra en las colonias exteriores.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/liang-dortmund-mining-rig.jpg",
     "faction": "UNSC",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "bolroci-workshop-chopper",
-    "name": "Bolroci Workshop Chopper",
-    "description": "El Bolroci Workshop Chopper es un vehículo terrestre de ataque rápido Banished construido sobre el diseño base del Chopper Jiralhanae, combinando la experiencia colectiva de seis clanes Jiralhanae distintos. Armado con cañones de picos gemelos y una rueda delantera militarizada capaz de destrozar infantería y vehículos ligeros, sacrifica blindaje por velocidad y maniobrabilidad. Fabricado por Bolroci Workshop, representa una interpretación más ágil de la plataforma Chopper optimizada para operaciones de asalto rápido.",
-    "imageUrl": "https://halo.wiki.gallery/images/c/c8/HINF_BolrociChopper.png",
-    "faction": "Banished",
     "type": "Ground",
     "appearances": []
   },
@@ -378,15 +351,6 @@
     "appearances": []
   },
   {
-    "id": "ceromax",
-    "name": "Ceromax",
-    "description": "El Ceromax es una plataforma de camión utilitario pesado fabricada por Braithwaite Ltd y adoptada tanto por el Gobierno Unificado de la Tierra como por la UNSC en los años posteriores a la Guerra Humano-Covenant. Diseñado para uso logístico multifunción — transporte de carga, traslado de equipos y suministro avanzado — la configuración modular de plataforma plana del Ceromax permite reconfigurarlo rápidamente para diferentes cargas. Su sólida construcción y sencillo diseño mecánico lo hacen fácil de mantener en condiciones de campaña, lo que contribuyó a su amplia adopción durante la era de reconstrucción posterior a la guerra, cuando los vehículos logísticos duraderos y sencillos eran demandados urgentemente en las colonias humanas en reconstrucción.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/ceromax.jpg",
-    "faction": "UNSC",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
     "id": "barugqel-workshop-trespasser",
     "name": "Barug'qel Workshop Trespasser",
     "description": "El Asaltador de Cielo de Barug'qel Workshop, conocido coloquialmente como el Trespasser, es una aeronave de transporte empleada por los Banished y otros piratas ex-Covenant.",
@@ -414,29 +378,11 @@
     "appearances": []
   },
   {
-    "id": "adsk-pattern-shadow",
-    "name": "Adsk-pattern Shadow",
-    "description": "El Transporte Ligero patrón Adsk es un vehículo de transporte de infantería de la serie Shadow de transportes blindados utilizados por el Covenant.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/adsk-pattern-shadow.jpg",
-    "faction": "Covenant",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
     "id": "elephant",
     "name": "Elephant",
     "description": "El Vehículo de Recuperación Pesada o \"Elephant\" es una línea de plataformas pesadas de Asalto, Soporte y Recuperación Móvil (MASR) desarrolladas y fabricadas por JOTUN Heavy Industries.",
     "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/elephant.jpg",
     "faction": "UNSC",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "abatyar-pattern-revenant",
-    "name": "Abatyar-pattern Revenant",
-    "description": "El Revenant patrón Abatyar es una variante de la familia de vehículos de apoyo de infantería Revenant, empleada por el Covenant de Sali 'Nyon.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/abatyar-pattern-revenant.jpg",
-    "faction": "Covenant",
     "type": "Ground",
     "appearances": []
   },
@@ -490,15 +436,6 @@
     "name": "Zaagokelu Workshop Ghost",
     "description": "La Moto Exploradora de Zaagokelu Workshop es un vehículo explorador ligero utilizado por los Banished. Forma parte de la serie de motos exploradoras Ghost.",
     "imageUrl": "https://halo.wiki.gallery/images/thumb/1/1a/HW2_Blitz_Ghost.png/500px-HW2_Blitz_Ghost.png",
-    "faction": "Banished",
-    "type": "Ground",
-    "appearances": []
-  },
-  {
-    "id": "eklondal-workshop-goblin",
-    "name": "Eklon'Dal Workshop Goblin",
-    "description": "El Traje de Batalla Balaho de Eklon'Dal Workshop es una variante modificada del Goblin patrón Pnap empleada por los Banished.",
-    "imageUrl": "https://storage.googleapis.com/halowiki-generated-images/vehicle/eklondal-workshop-goblin.jpg",
     "faction": "Banished",
     "type": "Ground",
     "appearances": []
